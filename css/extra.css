@@ -1,5 +1,4 @@
 body {line-height: 1.4;}
-code {font-size: 120%;}
 caption {
     text-align:left;
     font-size: 120%;
@@ -10,15 +9,19 @@ table {
     width:100%;
     border-collapse: collapse;
     border: 1px solid #630;
-    font: normal 80% arial, Verdana, helvetica, sans-serif;
+    font: normal 81.25% arial, Verdana, helvetica, sans-serif;
 }
-
 th, td {
     text-align: left;
     vertical-align: top;
     padding: 0.3em;
     border-collapse: collapse;
     border: 1px solid #630;
+}
+th code, td code {font-size: 123%;}
+code {color: #D93B00;}
+code *:link, code *:visited {
+  color: inherit;
 }
 .warning {color: #990000; font-size: x-large; font-weight: normal;}
 .map-table, .details {clear: left; margin-bottom: 2em;}
