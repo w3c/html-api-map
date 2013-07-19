@@ -102,7 +102,19 @@
                         <td>Yes</td>
                         <td><code>link</code> role </td>
                         <td>ROLE_SYSTEM_LINK. Also, apply special rule to expose STATE_LINKED to link and all its descendants.<br><br>Use MSAA or UIA guidance</td>
-                        <td>ROLE_SYSTEM_LINK. Also, apply special rule to expose STATE_LINKED to link and all its descendants.</td>
+                        <td>
+                          <div class="role">
+                            <span class="type">Role: </span>ROLE_SYSTEM_LINK
+                          </div>
+                          <div class="states">
+                            <span class="type">States: </span>
+                            STATE_SYSTEM_LINKED to link and all its descendants. If link is visited then STATE_SYSTEM_TRAVERSED.
+                          </div>
+                          <div class="actions">
+                            <span class="type">Actions: </span>
+                            "jump" action on link and all its descendants.
+                          </div>
+                        </td>
                         <td>HyperLink</td>
                         <td>ROLE_LINK</td>
                         <td>AXLink<br>(null)<br>link</td>
@@ -113,7 +125,12 @@
                         <td>Yes</td>
                         <td>none</td>
                         <td>ROLE_SYSTEM_TEXT<br><br>Use MSAA or UIA guidance</td>
-                        <td>ROLE_SYSTEM_TEXT</td>
+                        <td>
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            tag name BSTR (MSAA) and IA2_ROLE_TEXT_FRAME
+                          </div>
+                        </td>
                         <td>Text</td>
                         <td>ROLE_TEXT</td>
                         <td>AXGroup<br>(null)<br>group</td>
@@ -124,7 +141,17 @@
                         <td>Yes</td>
                         <td>none</td>
                         <td>ROLE_SYSTEM_TEXT<br><br>Use MSAA or UIA guidance</td>
-                        <td>IA2_ROLE_TEXT_FRAME</td>
+                        <td>
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            tag name BSTR (MSAA) and IA2_ROLE_TEXT_FRAME
+                          </div>
+                          <div class="objattrs">
+                            <span class="type">Object attributes: </span>
+                            "abbr" attribute on the containing HTML td if a single child,
+                            text content used as a value
+                          </div>
+                        </td>
                         <td>Text</td>
                         <td><p>ROLE_TEXT</p>
                     <p>Object attribute role="abbr"</p></td>
@@ -136,8 +163,16 @@
                         <td>Yes</td>
                         <td>none</td>
                         <td>ROLE_SYSTEM_GROUPING<br><br>Use MSAA or UIA guidance</td>
-                        <td><p>IA2_ROLE_PARAGRAPH</p>
-                      <p>Object attribute role="address"</p></td>
+                        <td>
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            tag name BSTR (MSAA) and IA2_ROLE_PARAGRAPH
+                          </div>
+                          <div class="objattrs">
+                            <span class="type">Object attributes: </span>
+                            "xml-roles: address"
+                          </div>
+                        </td>
                         <td>Group</td>
                         <td><p>ROLE_PARAGRAPH</p>
                     <p>Object attribute role="address"</p></td>
@@ -149,7 +184,16 @@
                         <td>Yes</td>
                         <td><code title="attr-aria-role-link">link</code> role </td>
                         <td>ROLE_SYSTEM_LINK. Also, apply special rule to expose STATE_LINKED to link and all its descendants.<br><br>Use MSAA or UIA guidance</td>
-                        <td>ROLE_SYSTEM_LINK. Also, apply special rule to expose STATE_LINKED to link and all its descendants.</td>
+                        <td>
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            ROLE_SYSTEM_LINK exposed as a child of connected HTML:img element
+                          </div>
+                          <div class="states">
+                            <span class="type">States: </span>
+                            STATE_LINKED
+                          </div>
+                        </td>
                         <td>HyperLink</td>
                         <td>ROLE_LINK</td>
                         <td>AXLink<br>(null)<br>link</td>
@@ -160,7 +204,12 @@
                         <td>Yes</td>
                         <td>none</td>
                         <td>ROLE_SYSTEM_TEXT<br><br>Use MSAA or UIA guidance</td>
-                        <td>ROLE_SYSTEM_TEXT</td>
+                        <td>
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            tag name BSTR (MSAA) and IA2_ROLE_SHAPE
+                          </div>
+                        </td>
                         <td>Text</td>
                         <td>ROLE_TEXT</td>
                         <td>Not mapped</td>
@@ -171,7 +220,20 @@
                         <td>Yes</td>
                         <td><code title="attr-aria-role-article">article</code> role </td>
                         <td>ROLE_SYSTEM_DOCUMENT + STATE_SYSTEM_READONLY<br><br>??ROLE_SYSTEM_GROUPING?<br><br>Use MSAA or UIA guidance</td>
-                        <td>ROLE_SYSTEM_DOCUMENT + STATE_SYSTEM_READONLY</td>
+                        <td>
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            ROLE_SYSTEM_DOCUMENT
+                          </div>
+                          <div class="states">
+                            <span class="type">States: </span>
+                            STATE_SYSTEM_READONLY
+                          </div>
+                          <div class="objattrs">
+                            <span class="type">Object attributes: </span>
+                            "xml-roles: article"
+                          </div>
+                        </td>
                         <td>??Group or Text??</td>
                         <td>ROLE_DOCUMENT_FRAME + do not expose STATE_EDITABLE</td>
                         <td>AXGroup<br>AXDocumentArticle<br>article</td>
@@ -182,7 +244,16 @@
                         <td>Yes</td>
                         <td><code title="attr-aria-role-note">complementary</code> role </td>
                         <td>ROLE_SYSTEM_GROUPING<br><br>Use MSAA or UIA guidance</td>
-                        <td>IA2_ROLE_COMPLEMENTARY_CONTENT<br><br>Object attribute role="complementary"</td>
+                        <td>
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            tag name BSTR (MSAA) and IA2_ROLE_NOTE
+                          </div>
+                          <div class="objattrs">
+                            <span class="type">Object attributes: </span>
+                            "xml-roles: complementary"
+                          </div>
+                        </td>
                         <td>Group</td>
                         <td>ROLE_SECTION<br><br>Object attribute role="complementary"</td>
                         <td>AXGroup<br>AXLandmarkComplementary<br>complementary</td>
@@ -193,7 +264,12 @@
                         <td>Yes</td>
                         <td>none</td>
                         <td>ROLE_SYSTEM_GROUPING<br><br>?</td>
-                        <td>ROLE_SYSTEM_GROUPING</td>
+                        <td>
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            ROLE_SYSTEM_GROUPING
+                          </div>
+                        </td>
                         <td>Group</td>
                         <td>ROLE_PANEL</td>
                         <td><p>AXGroup<br>(null)<br>group</p><p><strong>Note: </strong>UI controls within the audio element exposed as AXToolbar.</p></td>
@@ -204,7 +280,12 @@
                         <td>Yes</td>
                         <td>none</td>
                         <td>ROLE_SYSTEM_TEXT<br><br>Use MSAA or UIA guidance</td>
-                        <td>ROLE_SYSTEM_TEXT</td>
+                        <td>
+                          <div class="general">Doesn't have an accessible, exposed as
+                            "font-weight" text attribute on the text container.
+                            The value depends on the platform.
+                          </div>
+                        </td>
                         <td>Text</td>
                         <td>ROLE_TEXT</td>
                         <td>AXGroup<br>(null)<br>group</td>
@@ -215,7 +296,9 @@
                         <td>Yes</td>
                         <td>none</td>
                         <td>Not mapped<br><br>Not mapped</td>
-                        <td>Not mapped</td>
+                        <td>
+                          <div class="general">Not mapped</div>
+                        </td>
                         <td>Not mapped</td>
                         <td>Not mapped</td>
                         <td>Not mapped</td>
@@ -226,7 +309,11 @@
                         <td></td>
                         <td>none</td>
                         <td></td>
-                        <td></td>
+                        <td>
+                          <div class="general">Doesn't have an accessible. May affect on
+                            "writing-mode" text attribute on the text container.
+                          </div>
+                        </td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -237,7 +324,11 @@
                         <td>Yes</td>
                         <td>none</td>
                         <td>ROLE_SYSTEM_TEXT<br><br>Use MSAA or UIA guidance</td>
-                        <td>ROLE_SYSTEM_TEXT</td>
+                        <td>
+                          <div class="general">Doesn't have an accessible.
+                              Exposed as "writing-mode" text attribute on the text container.
+                          </div>
+                        </td>
                         <td>text</td>
                         <td>ROLE_TEXT</td>
                         <td>AXGroup<br>(null)<br>group</td>
@@ -248,7 +339,12 @@
                         <td>Yes</td>
                         <td>none</td>
                         <td>ROLE_SYSTEM_GROUPING<br><br>Use MSAA or UIA guidance</td>
-                        <td>IA2_ROLE_SECTION</td>
+                        <td>
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            tag name BSTR (MSAA) and IA2_ROLE_SECTION
+                          </div>
+                        </td>
                         <td>Group</td>
                         <td>ROLE_SECTION </td>
                         <td>AXGroup<br>(null)<br>group</td>
@@ -259,7 +355,12 @@
                         <td>Yes</td>
                         <td><code title="attr-aria-role-document">document</code> role </td>
                         <td>ROLE_SYSTEM_DOCUMENT + STATE_SYSTEM_READONLY<br><br>Use MSAA or UIA guidance</td>
-                        <td>ROLE_SYSTEM_DOCUMENT + STATE_SYSTEM_READONLY</td>
+                        <td>
+                          <div class="general">
+                            Doesn't have an accessible. All DOM attributes are
+                            proccessed as they belonged to its document accessible.
+                          </div>
+                        </td>
                         <td>Document</td>
                         <td>ROLE_DOCUMENT_FRAME + STATE_READONLY</td>
                         <td>AXGroup<br>(null)<br>group</td>
@@ -270,7 +371,12 @@
                         <td>Yes</td>
                         <td>none</td>
                         <td>ROLE_SYSTEM_ WHITESPACE<br><br>?</td>
-                        <td>ROLE_SYSTEM_ WHITESPACE</td>
+                        <td>
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            ROLE_SYSTEM_WHITESPACE
+                          </div>
+                        </td>
                         <td>?</td>
                         <td>?</td>
                         <td>Not mapped</td>
@@ -281,7 +387,19 @@
                         <td>Yes</td>
                         <td><code title="attr-aria-role-button">button</code> role </td>
                         <td>ROLE_SYSTEM_PUSHBUTTON.<br><br>Use MSAA or UIA guidance</td>
-                        <td>ROLE_SYSTEM_PUSHBUTTON</td>
+                        <td>
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            ROLE_SYSTEM_PUSHBUTTON
+                          </div>
+                          <div class="states">
+                            <span class="type">States: </span>
+                            STATE_SYSTEM_DEFAULT if the button is default
+                          </div>
+                          <div class="actions">
+                            <span class="type">Actions: </span>"press"
+                          </div>
+                        </td>
                         <td>Button<br><br>?? When it is in a &lt;menu&gt; it defines a command.&nbsp; Is it still a button, or is it a menuitem??</td>
                         <td>ROLE_PUSH_BUTTON</td>
                         <td>AXButton<br>(null)<br>button</td>
@@ -292,7 +410,12 @@
                         <td>Yes</td>
                         <td>none</td>
                         <td>SYSTEM_ROLE_GRAPHIC<br><br>Use MSAA or UIA guidance</td>
-                        <td>IA2_ROLE_CANVAS</td>
+                        <td>
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            tag name BSTR (MSAA) and IA2_ROLE_CANVAS
+                          </div>
+                        </td>
                         <td>Image<br><br>NOTE: subdom elements will be mapped separately</td>
                         <td>ROLE_CANVAS</td>
                         <td>AXImage<br>(null)<br>image</td>
@@ -303,7 +426,16 @@
                         <td>Yes</td>
                         <td>none</td>
                         <td>ROLE_SYSTEM_TEXT<br>+ STATE_SYSTEM_READONLY<br><br>Use MSAA or UIA guidance</td>
-                        <td>IA2_ROLE_CAPTION</td>
+                        <td>
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            tag name BSTR (MSAA) and IA2_ROLE_CAPTION
+                          </div>
+                          <div class="relations">
+                            <span class="type">Relations: </span>
+                            RELATION_LABELLED_BY / RELATION_LABEL_FOR with containing HTML table accessible
+                          </div>
+                        </td>
                         <td>text<br>The parent table has a UIA_LabeledByPropertyId pointing to the UIA element for the caption element.</td>
                         <td>ROLE_CAPTION</td>
                         <td>AXGroup<br>(null)<br>group</td>
@@ -314,7 +446,12 @@
                         <td>Yes</td>
                         <td>none</td>
                         <td>ROLE_SYSTEM_TEXT<br><br>??GROUP??<br><br>text</td>
-                        <td>ROLE_SYSTEM_TEXT</td>
+                        <td>
+                          <div class="general">
+                            Doesn't have an accessible. Default styles are
+                            mapped into text attributes on the text container.
+                          </div>
+                        </td>
                         <td>text<br>??group??</td>
                         <td>ROLE_TEXT</td>
                         <td>AXGroup<br>(null)<br>group</td>
@@ -325,7 +462,12 @@
                         <td>Yes</td>
                         <td>none</td>
                         <td>ROLE_SYSTEM_TEXT<br><br>text</td>
-                        <td>ROLE_SYSTEM_TEXT</td>
+                        <td>
+                          <div class="general">
+                            Doesn't have an accessible. Default styles are
+                            mapped into text attributes on the text container.
+                          </div>
+                        </td>
                         <td>text</td>
                         <td>ROLE_TEXT</td>
                         <td>AXGroup<br>(null)<br>group</td>
@@ -336,7 +478,9 @@
                         <td>Yes</td>
                         <td>none</td>
                         <td>?ROLE_SYSTEM_COLUMN</td>
-                        <td>not mapped</td>
+                        <td>
+                          <div class="general">Not mapped</div>
+                        </td>
                         <td>?</td>
                         <td>not mapped</td>
                         <td>Not mapped</td>
@@ -347,7 +491,9 @@
                         <td>Yes</td>
                         <td>none</td>
                         <td>?ROLE_SYSTEM_GROUPING<br><br>?TODO:&nbsp; look in more detail at UIA table implemenation</td>
-                        <td>not mapped</td>
+                        <td>
+                          <div class="general">Not mapped</div>
+                        </td>
                         <td>?TODO:&nbsp; look in more detail at UIA table implemenation</td>
                         <td>not mapped</td>
                         <td>Not mapped</td>
@@ -391,7 +537,9 @@
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td></td>
+                        <td>
+                          <div class="general">Not mapped</div>
+                        </td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -402,7 +550,15 @@
                         <td>Yes</td>
                         <td><code>listbox</code> role, with the <code>aria-multiselectable</code> property set to "false" </td>
                         <td>ROLE_SYSTEM_COMBOBOX + STATE_SYSTEM_HASPOPUP.<br><br>Use UIA guidance </td>
-                        <td>ROLE_SYSTEM_COMBOBOX + STATE_SYSTEM_HASPOPUP.</td>
+                        <td>
+                          <div class="general">
+                            Used to constuct a list of options for autocompletes (in other words it might not accessible itself)
+                          </div>
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            ROLE_SYSTEM_LIST
+                          </div>
+                         </td>
                         <td>Combobox</td>
                         <td>ROLE_COMBO_BOX + STATE_EXPANDABLE </td>
                         <td>AXComboBox<br>(null)<br>combo box</td>
@@ -413,7 +569,12 @@
                         <td>Yes</td>
                         <td>none</td>
                         <td>ROLE_SYSTEM_TEXT<br><br>?</td>
-                        <td>IA2_ROLE_PARAGRAPH</td>
+                        <td>
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            tag name BSTR (MSAA) and IA2_ROLE_PARAGRAPH
+                          </div>
+                        </td>
                         <td>?</td>
                         <td>ROLE_TEXT</td>
                         <td>AXGroup<br>AXDefinition<br>definition</td>
@@ -424,7 +585,12 @@
                         <td>Yes</td>
                         <td>none</td>
                         <td>ROLE_SYSTEM_TEXT<br><br>?</td>
-                        <td>ROLE_SYSTEM_TEXT</td>
+                        <td>
+                          <div class="general">
+                            Doesn't have an accessible. Default styles are mapped
+                            into text attributes on the text container.
+                          </div>
+                        </td>
                         <td>?</td>
                         <td>ROLE_TEXT</td>
                         <td>AXGroup<br>(null)<br>group</td>
@@ -435,7 +601,12 @@
                         <td>Yes</td>
                         <td>none<br>??dialog seems closer??</td>
                         <td>ROLE_SYSTEM_GROUPING<br><br>&nbsp;</td>
-                        <td>ROLE_SYSTEM_GROUPING</td>
+                        <td>
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            ROLE_SYSTEM_GROUPING
+                          </div>
+                        </td>
                         <td>Group<br>??window??</td>
                         <td>ROLE_PANEL</td>
                         <td>?</td>
@@ -446,7 +617,12 @@
                         <td>Yes</td>
                         <td>none</td>
                         <td>ROLE_SYSTEM_TEXT<br><br>&nbsp;</td>
-                        <td>ROLE_SYSTEM_TEXT</td>
+                        <td>
+                          <div class="general">
+                            Doesn't have an accessible. Default styles are
+                            exposed by text attributes on the text container.
+                          </div>
+                        </td>
                         <td>?</td>
                         <td>ROLE_TEXT</td>
                         <td>AXGroup<br>(null)<br>group</td>
@@ -457,7 +633,12 @@
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td></td>
+                        <td>
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            ROLE_SYSTEM_DIALOG
+                          </div>
+                        </td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -468,7 +649,15 @@
                         <td>Yes</td>
                         <td>none</td>
                         <td>ROLE_SYSTEM_GROUPING<br><br>&nbsp;</td>
-                        <td>IA2_ROLE_SECTION</td>
+                        <td>
+                          <div class="general">
+                            May not have an accessible if has no semantic meaning. Otherwise
+                          </div>
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            tag name BSTR (MSAA) and IA2_ROLE_SECTION
+                           </div>
+                        </td>
                         <td>?</td>
                         <td>ROLE_SECTION</td>
                         <td>AXGroup<br>(null)<br>group</td>
@@ -479,7 +668,16 @@
                         <td>Yes</td>
                         <td>none</td>
                         <td>ROLE_SYSTEM_LIST + STATE_SYSTEM_READONLY<br><br>Use MSAA or UIA guidance</td>
-                        <td>ROLE_SYSTEM_LIST + STATE_SYSTEM_READONLY</td>
+                        <td>
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            ROLE_SYSTEM_LIST
+                          </div>
+                          <div class="states">
+                            <span class="type">States: </span>
+                            STATE_SYSTEM_READONLY
+                          </div>
+                        </td>
                         <td>List</td>
                         <td>ROLE_LIST + do not expose STATE_EDITABLE</td>
                         <td>AXList<br>AXDefinitionList<br>definition list</td>
@@ -490,7 +688,16 @@
                         <td>Yes</td>
                         <td>none</td>
                         <td>ROLE_SYSTEM_LISTITEM + STATE_SYSTEM_READONLY<br><br>&nbsp;</td>
-                        <td>ROLE_SYSTEM_LISTITEM + STATE_SYSTEM_READONLY</td>
+                        <td>
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            ROLE_SYSTEM_LISTITEM
+                          </div>
+                          <div class="states">
+                            <span class="type">States: </span>
+                            STATE_SYSTEM_READONLY
+                          </div>
+                        </td>
                         <td>ListItem</td>
                         <td>ROLE_LISTITEM + do not expose STATE_EDITABLE</td>
                         <td>AXGroup<br>AXTerm<br>term</td>

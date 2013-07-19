@@ -45,3 +45,12 @@ summary:hover, summary:focus, details[open] summary:hover, details[open] summary
 .show-hide-cols .action {position: absolute; left: -9999em;}
 .show-col {background: url(../img/cross.png) no-repeat right center;}
 .hide-col {background: url(../img/tick.png) no-repeat right center;}
+
+.general, .role, .states, .actions, .objattrs, .textattrs, .relations {
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.type {
+  font-weight: bold;
+}
