@@ -46,7 +46,8 @@ summary:hover, summary:focus, details[open] summary:hover, details[open] summary
 .show-col {background: url(../img/cross.png) no-repeat right center;}
 .hide-col {background: url(../img/tick.png) no-repeat right center;}
 
-.general, .role, .states, .actions, .objattrs, .textattrs, .relations, .ctrltype, .ctrlpattern, .properties {
+.general, .role, .states, .name, .actions, .objattrs, .textattrs, .relations,
+.children, .ctrltype, .ctrlpattern, .properties {
     margin: 0 0 6px;
 }
 

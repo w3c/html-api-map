@@ -836,7 +836,11 @@
                         <td>Yes</td>
                         <td>none</td>
                         <td>ROLE_SYSTEM_TEXT<br><br>&nbsp;</td>
-                        <td>ROLE_SYSTEM_TEXT</td>
+                        <td>
+                          <div class="general">Doesn't have an accessible.
+                            Default styles are mapped into text attributes on the text container.
+                          </div>
+                        </td>
                         <td>?</td>
                         <td>ROLE_TEXT</td>
                         <td>AXGroup<br>(null)<br>group</td>
@@ -847,7 +851,16 @@
                         <td>Yes</td>
                         <td>none</td>
                         <td>ROLE_SYSTEM_CLIENT<br><br>&nbsp;</td>
-                        <td>ROLE_SYSTEM_CLIENT</td>
+                        <td>
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            tag name BSTR (MSAA) and IA2_ROLE_EMBEDDED_OBJECT
+                          </div>
+                          <div class="states">
+                            <span class="type">States:</span>
+                              STATE_SYSTEM_UNAVAILABLE for windowless plugin
+                          </div>
+                        </td>
                         <td>
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>?Pane? Window?
@@ -862,7 +875,16 @@
                         <td>Yes</td>
                         <td>none</td>
                         <td>ROLE_SYSTEM_GROUPING<br><br>Use UIA or MSAA guidance</td>
-                        <td>ROLE_SYSTEM_GROUPING</td>
+                        <td>
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            ROLE_SYSTEM_GROUPING
+                          </div>
+                          <div class="relations">
+                            <span class="type">Relations:</span>
+                            RELATION_LABELLED_BY with child HTML:legend element
+                          </div>
+                        </td>
                         <td>
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>Group
@@ -877,7 +899,16 @@
                         <td>Yes</td>
                         <td>none</td>
                         <td>ROLE_SYSTEM_TEXT<br><br>se UIA or MSAA guidance</td>
-                        <td><p>IA2_ROLE_CAPTION<br>Object attribute role="figcaption"</p></td>
+                        <td>
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            tag name BSTR (MSAA) and IA2_ROLE_CAPTION
+                          </div>
+                          <div class="relations">
+                            <span class="type">Relations: </span>
+                            RELATION_LABEL_FOR with parent HTML:figure element
+                          </div>
+                        </td>
                         <td>
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>Text
@@ -893,7 +924,23 @@
                         <td>Yes</td>
                         <td>none</td>
                         <td>ROLE_SYSTEM_GROUPING<br><br>se UIA or MSAA guidance</td>
-                        <td><p>ROLE_SYSTEM_GROUPING<br>Object attribute role="figure"</p><p><strong>note:</strong> accessible name from child figcaption</p></td>
+                        <td>
+                          <div class="role">
+                            <span class="type">Role: </span>ROLE_SYSTEM_GROUPING
+                          </div>
+                          <div class="objattrs">
+                            <span class="type">Object attributes: </span>
+                            xml-roles:figure
+                          </div>
+                          <div class="name">
+                            <span class="type">Name: </span>
+                            related HTML:figcaption content
+                          </div>
+                          <div class="relations">
+                            <span class="type">Relations: </span>
+                            RELATION_LABELLED_BY with child HTML:figcaption element
+                          </div>
+                        </td>
                         <td>
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>Group
@@ -910,8 +957,16 @@
                         <td>Yes</td>
                         <td>none </td>
                         <td>ROLE_SYSTEM_GROUPING<br><br>se UIA or MSAA guidance</td>
-                        <td><p>ROLE_SYSTEM_GROUPING</p>
-                      <p>Object attribute role="footer"</p></td>
+                        <td>
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            tag name BSTR (MSAA) and IA2_ROLE_FOOTER
+                          </div>
+                          <div class="objattrs">
+                            <span class="type">Object attributes: </span>
+                            xml-roles:contentinfo if not contained by HTML article or HTML section elements
+                          </div>
+                        </td>
                         <td>
                             <div class="general">Expose as text string "footer" in UIAutomationType_String<br>??discuss exposing localized type for all unmapped elements, or is it better to expose as Group??</div>
                         </td>
@@ -933,7 +988,12 @@
                         <td>Yes</td>
                         <td><code>form </code>role</td>
                         <td>ROLE_SYSTEM_GROUPING<br><br>se UIA or MSAA guidance</td>
-                        <td>IA2_ROLE_FORM</td>
+                        <td>
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            tag name BSTR (MSAA) and IA2_ROLE_FORM
+                          </div>
+                        </td>
                         <td>
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>Group
@@ -948,7 +1008,16 @@
                         <td>No</td>
                         <td>&nbsp;</td>
                         <td>ROLE_SYSTEM_DOCUMENT + STATE_SYSTEM_READONLY<br><br>??currently mapped as pane not document.&nbsp; the document inside is mapped as document??</td>
-                        <td>ROLE_SYSTEM_DOCUMENT + STATE_SYSTEM_READONLY</td>
+                        <td>
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            tag name BSTR (MSAA) and IA2_ROLE_INTERNAL_FRAME
+                          </div>
+                          <div class="children">
+                            <span class="type">Child: </span>
+                            ROLE_SYSTEM_DOCUMENT having STATE_SYSTEM_READONLY
+                          </div>
+                        </td>
                         <td>
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>Document
@@ -963,7 +1032,13 @@
                         <td>No</td>
                         <td>&nbsp;</td>
                         <td>?</td>
-                        <td>?</td>
+                        <td>
+                          <div class="general">
+                            Doesn't have an accessible. All DOM attributes are
+                            proccessed as they belonged to its document accessible.
+                            Similar to HTML:body element.
+                          </div>
+                        </td>
                         <td>?</td>
                         <td>?</td>
                         <td>Not mapped</td>
@@ -1607,7 +1682,16 @@
                         <td>Yes</td>
                         <td>none</td>
                         <td>ROLE_SYSTEM_TEXT<br><br>SHOULD use UIA_LabeledByPropertyId (see UIA column)</td>
-                        <td>IA2_ROLE_LABEL</td>
+                        <td>
++                          <div class="role">
++                            <span class="type">Role :</span>
++                            ROLE_SYSTEM_STATICTEXT and IA2_ROLE_LABEL
++                          </div>
++                          <div class="relations">
++                            <span class="type">Relations: </span>
++                            RELATION_LABEL_FOR with parent HTML:fieldset element
++                          </div>
++                       </td>
                         <td>
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>Text
