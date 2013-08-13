@@ -2314,26 +2314,47 @@
                         <td>Not mapped</td>
                         <td>Not mapped</td>
                     </tr>
-                    <tr tabindex="-1" id="el-105">
+                    <tr tabindex="-1" id="el_object">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-object-element">object</a></code></th>
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>no role</td>
                         <td>?? would pane or window work??<br><br>depends on format of data file. examples include document, client, graphic and unknown (tested using <a href="http://www.student.oulu.fi/%7Esairwas/object-test/">object</a> test suite).<br><br>Use MSAA or UIA guidance</td>
-                        <td>Refer to MSAA</td>
+                        <td class="ia2">
+                          <div class="general">
+                            Depends on format of data file. If contains a plugin then
+                          </div>
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            tag name BSTR (MSAA) and IA2_ROLE_EMBEDDED_OBJECT
+                          </div>
+                          <div class="states">
+                            <span class="type">States:</span>
+                              STATE_SYSTEM_UNAVAILABLE for windowless plugin
+                          </div>
+                        </td>
                         <td>
                             <div class="general">Depends on format of data file.</div>
                         </td>
                         <td>ROLE_EMBEDDED</td>
                         <td>depends on format of data file.</td>
                     </tr>
-                    <tr tabindex="-1" id="el-106">
+                    <tr tabindex="-1" id="el_ol">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-ol-element">ol</a></code></th>
                         <td>Yes</td>
                         <td>Yes</td>
                         <td><code>list</code> role </td>
                         <td>ROLE_SYSTEM_LIST + STATE_SYSTEM_READONLY<br><br>Use MSAA or UIA guidance</td>
-                        <td>ROLE_SYSTEM_LIST + STATE_SYSTEM_READONLY</td>
+                        <td class="ia2">
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            ROLE_SYSTEM_LIST
+                          </div>
+                          <div class="states">
+                            <span class="type">States: </span>
+                            STATE_SYSTEM_READONLY
+                          </div>
+                        </td>
                         <td>
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>List
@@ -2342,13 +2363,18 @@
                         <td>ROLE_LIST + do not expose STATE_EDITABLE</td>
                         <td>AXList<br>AXContentList<br>list</td>
                     </tr>
-                    <tr tabindex="-1" id="el-107">
+                    <tr tabindex="-1" id="el_optgroup">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-optgroup-element">optgroup</a></code></th>
                         <td>Yes</td>
                         <td>Yes</td>
                         <td><code>group</code> role</td>
                         <td>ROLE_SYSTEM_GROUPING<br><br>Use MSAA or UIA guidance</td>
-                        <td>ROLE_SYSTEM_GROUPING</td>
+                        <td class="ia2">
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            ROLE_SYSTEM_GROUPING
+                          </div>
+                        </td>
                         <td>
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>Group
@@ -2357,13 +2383,22 @@
                         <td><em>ROLE_PANEL</em></td>
                         <td>AXMenuItem<br>(null)<br>menu item</td>
                     </tr>
-                    <tr tabindex="-1" id="el-108">
+                    <tr tabindex="-1" id="el_option">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-option-element">option</a></code> <span class="el-context">(in a <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#concept-select-option-list">list of options</a> or represents a suggestion in a <code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-datalist-element">datalist</a></code>)</span></th>
                         <td>No</td>
                         <td>Yes</td>
                         <td><code>option</code> role, with the <code>aria-selected</code> state set to "true" if the element's <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#concept-option-selectedness">selectedness</a> is true, or "false" otherwise. </td>
                         <td>ROLE_SYSTEM_LISTITEM<br><br>Use MSAA or UIA guidance</td>
-                        <td>ROLE_SYSTEM_LISTITEM</td>
+                        <td class="ia2">
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            ROLE_SYSTEM_LISTITEM
+                          </div>
+                          <div class="states">
+                            <span class="type">States: </span>
+                            STATE_SYSTEM_FOCUSABLE; STATE_SYSTEM_FOCUSED if selected and HTML:select has DOM focus
+                          </div>
+                        </td>
                         <td>
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>List Item
@@ -2375,13 +2410,27 @@
                         <td>ROLE_LIST_ITEM</td>
                         <td>AXMenuItem<br>(null)<br>menu item</td>
                     </tr>
-                    <tr tabindex="-1" id="el-109">
+                    <tr tabindex="-1" id="el_output">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-output-element">output</a></code></th>
                         <td>No</td>
                         <td>Yes</td>
                         <td><code>status</code> role</td>
                         <td>ROLE_SYSTEM_STATUSBAR<br><br>??text read-only seems closer.&nbsp; this is a label that is calculated??<br><br>Use UIA guidance</td>
-                        <td>IA2_ROLE_SECTION<br><br><strong>note: </strong>object attribute aria-live=polite IA2 controlled_by relation defined by label element @for attribute.</td>
+                        <td class="ia2">
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            tag name BSTR and IA2_ROLE_SECTION
+                          </div>
+                          <div class="objattrs">
+                            <span class="type">Object attributes: </span>
+                            live:polite
+                          </div>
+                          <div role="relations">
+                            <span class="type">Relations: </span>
+                            IA2_RELATION_CONTROLLED_BY with an element pointed by @for attribute.
+                            Paired element exposes IA2_RELATION_CONTROLLER_FOR relation.
+                          </div>
+                        </td>
                         <td>
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>Text
@@ -2391,13 +2440,18 @@
                         <td>ROLE_SECTION<br><br><strong>note: </strong>object attribute aria-live=polite controlled_by relation defined by label element @for attribute.</td>
                         <td>AXGroup<br>(null)<br>group</td>
                     </tr>
-                    <tr tabindex="-1" id="el-110">
+                    <tr tabindex="-1" id="el_p">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-p-element">p</a></code></th>
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
                         <td>ROLE_SYSTEM_TEXT<br><br>Use MSAA or UIA guidance</td>
-                        <td>IA2_ROLE_PARAGRAPH</td>
+                        <td class="ia2">
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            tag name BSTR and IA2_ROLE_PARAGRAPH
+                          </div>
+                        </td>
                         <td>
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>Text
@@ -2406,26 +2460,36 @@
                         <td>ROLE_PARAGRAPH</td>
                         <td>AXGroup<br>(null)<br>group</td>
                     </tr>
-                    <tr tabindex="-1" id="el-111">
+                    <tr tabindex="-1" id="el_param">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-param-element">param</a></code></th>
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
                         <td>Not mapped</td>
-                        <td>Not mapped</td>
+                        <td class="ia2">
+                          <div class="general">Not mapped</div>
+                        </td>
                         <td>
                             <div class="general">Not mapped</div>
                         </td>
                         <td>Not mapped</td>
                         <td>Not mapped</td>
                     </tr>
-                    <tr tabindex="-1" id="el-112">
+                    <tr tabindex="-1" id="el_pre">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-pre-element">pre</a></code></th>
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
                         <td>ROLE_SYSTEM_TEXT<br><br>??group?<br><br>Use MSAA or UIA guidance</td>
-                        <td>ROLE_SYSTEM_TEXT</td>
+                        <td class="ia2">
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            tag name BSTR and IA2_ROLE_PARAGRAPH
+                          </div>
+                          <div class="general">
+                            Default styles are mapped into text attributes on the accessible
+                          </div>
+                        </td>
                         <td>
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>Text ??Group??
@@ -2434,13 +2498,22 @@
                         <td>ROLE_TEXT</td>
                         <td>AXGroup<br>(null)<br>group</td>
                     </tr>
-                    <tr tabindex="-1" id="el-113">
+                    <tr tabindex="-1" id="el_progress">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-progress-element">progress</a></code></th>
                         <td>No</td>
                         <td>Yes</td>
                         <td><code>progressbar</code> role, with, if the progress bar is determinate, the <code>aria-valuemax</code> property set to the maximum value of the progress bar, the <code>aria-valuemin</code> property set to zero, and the <code>aria-valuenow</code> property set to the current value of the progress bar </td>
                         <td>ROLE_SYSTEM_PROGRESSBAR + STATE_SYSTEM_READONLY<br><br>Use MSAA or UIA guidance</td>
-                        <td>ROLE_SYSTEM_PROGRESSBAR + STATE_SYSTEM_READONLY</td>
+                        <td class="ia2">
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            ROLE_SYSTEM_PROGRESSBAR
+                          </div>
+                          <div class="states">
+                            <span class="type">States: </span>
+                            STATE_SYSTEM_MIXED if progress is indeterminate
+                          </div>
+                        </td>
                         <td>
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>Progress Bar
@@ -2449,13 +2522,23 @@
                         <td>ROLE_PROGRESS_BAR + do not expose EXTENDED_STATE_EDITABLE</td>
                         <td>AXProgressIndicator<br>(null)<br>progress indicator<br><br>Use AXValue to expose current value.</td>
                     </tr>
-                    <tr tabindex="-1" id="el-114">
+                    <tr tabindex="-1" id="el_q">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-q-element">q</a></code></th>
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
                         <td>ROLE_SYSTEM_TEXT<br>??group??<br><br>Use MSAA or UIA guidance</td>
-                        <td>ROLE_SYSTEM_TEXT</td>
+                        <td></td>
+                        <td class="ia2">
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            tag name BSTR and IA2_ROLE_TEXT_FRAME
+                          </div>
+                          <div class="children">
+                            <span class="type">Children: </span>
+                            ROLE_SYSTEM_TEXT wrapped by ROLE_SYSTEM_STATICTEXT created for quote marks
+                          </div>
+                        </td>
                         <td>
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>Text ??Group??
@@ -2464,13 +2547,17 @@
                         <td>ROLE_TEXT</td>
                         <td>AXGroup<br>(null)<br>group</td>
                     </tr>
-                    <tr tabindex="-1" id="el-115">
+                    <tr tabindex="-1" id="el_rp">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-rp-element">rp</a></code></th>
                         <td>No</td>
                         <td>Yes</td>
                         <td>none</td>
                         <td>ROLE_SYSTEM_TEXT<br>??group??<br><br>Use MSAA or UIA guidance</td>
-                        <td>ROLE_SYSTEM_TEXT</td>
+                        <td class="ia2">
+                          <div class="general">
+                            Doesn't have an accessible. No child elements are exposed if HTML:ruby is supported by the browser.
+                          </div>
+                        </td>
                         <td>
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>Text ??Group??
@@ -2479,13 +2566,17 @@
                         <td>ROLE_TEXT</td>
                         <td>?</td>
                     </tr>
-                    <tr tabindex="-1" id="el-116">
+                    <tr tabindex="-1" id="el_rt">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-rt-element">rt</a></code></th>
                         <td>No</td>
                         <td>Yes</td>
                         <td>none</td>
                         <td>ROLE_SYSTEM_TEXT<br><br>Use MSAA or UIA guidance</td>
-                        <td>ROLE_SYSTEM_TEXT</td>
+                        <td class="ia2">
+                          <div class="general">
+                            Doesn't have an accessible.
+                          </div>
+                        </td>
                         <td>
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>Text
@@ -2494,13 +2585,18 @@
                         <td>ROLE_TEXT</td>
                         <td>?</td>
                     </tr>
-                    <tr tabindex="-1" id="el-117">
+                    <tr tabindex="-1" id="el_ruby">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-ruby-element">ruby</a></code></th>
                         <td>No</td>
                         <td>Yes</td>
                         <td>none</td>
                         <td>ROLE_SYSTEM_TEXT<br>??group??<br><br>Use MSAA or UIA guidance</td>
-                        <td>ROLE_SYSTEM_TEXT</td>
+                        <td class="ia2">
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            tag name BSTR and IA2_ROLE_TEXT_FRAME
+                          </div>
+                        </td>
                         <td>
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>Text ??Group??
