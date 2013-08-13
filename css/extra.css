@@ -54,8 +54,3 @@ summary:hover, summary:focus, details[open] summary:hover, details[open] summary
 .type {
   font-weight: bold;
 }
-
-td#tot {
-  background-color: red;
-  color: blue;
-}
