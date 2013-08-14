@@ -101,7 +101,19 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td><code>link</code> role </td>
-                        <td>ROLE_SYSTEM_LINK. Also, apply special rule to expose STATE_LINKED to link and all its descendants.<br><br>Use MSAA or UIA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_LINK
+                            </div>
+                            <div class="states">
+                                <span class="type">States: </span>
+                                STATE_SYSTEM_LINKED to link and all its descendants. If link is visited then STATE_SYSTEM_TRAVERSED.
+                            </div>
+                            <div class="actions">
+                                <span class="type">Actions: </span>"Jump" action on link and all its descendants.
+                            </div>
+                            <div class="general">Use MSAA or UIA guidance</div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>ROLE_SYSTEM_LINK
@@ -112,7 +124,7 @@
                           </div>
                           <div class="actions">
                             <span class="type">Actions: </span>
-                            "jump" action on link and all its descendants.
+                            "Jump" action on link and all its descendants.
                           </div>
                         </td>
                         <td>
@@ -128,7 +140,12 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_TEXT<br><br>Use MSAA or UIA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_TEXT
+                            </div>
+                            <div class="general">Use MSAA or UIA guidance</div>
+                          </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -148,7 +165,12 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_TEXT<br><br>Use MSAA or UIA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_TEXT
+                            </div>
+                            <div class="general">Use MSAA or UIA guidance</div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -174,7 +196,12 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_GROUPING<br><br>Use MSAA or UIA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_TEXT
+                            </div>
+                            <div class="general">Use MSAA or UIA guidance</div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -187,7 +214,7 @@
                         </td>
                         <td>
                             <div class="ctrltype">
-                                <span class="type">Control Type: </span>Group
+                                <span class="type">Control Type: </span>Text
                             </div>
                         </td>
                         <td><p>ROLE_PARAGRAPH</p>
@@ -199,7 +226,15 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td><code title="attr-aria-role-link">link</code> role </td>
-                        <td>ROLE_SYSTEM_LINK. Also, apply special rule to expose STATE_LINKED to link and all its descendants.<br><br>Use MSAA or UIA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_LINK
+                            </div>
+                            <div class="states">
+                                <span class="type">States: </span>STATE_SYSTEM_LINKED
+                          </div>
+                          <div class="general">Use MSAA or UIA guidance</div>
+                          </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -223,7 +258,12 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_TEXT<br><br>Use MSAA or UIA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_TEXT
+                            </div>
+                            <div class="general">Use MSAA or UIA guidance</div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -243,7 +283,12 @@
                         <td>No</td>
                         <td>Yes</td>
                         <td><code title="attr-aria-role-article">article</code> role </td>
-                        <td>ROLE_SYSTEM_DOCUMENT + STATE_SYSTEM_READONLY<br><br>??ROLE_SYSTEM_GROUPING?<br><br>Use MSAA or UIA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_GROUPING
+                            </div>
+                            <div class="general">Use MSAA or UIA guidance</div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -260,7 +305,7 @@
                         </td>
                         <td>
                             <div class="ctrltype">
-                                <span class="type">Control Type: </span>??Group or Text??
+                                <span class="type">Control Type: </span>Group
                             </div>
                         </td>
                         <td>ROLE_DOCUMENT_FRAME + do not expose STATE_EDITABLE</td>
@@ -271,7 +316,12 @@
                         <td>No</td>
                         <td>Yes</td>
                         <td><code title="attr-aria-role-note">complementary</code> role </td>
-                        <td>ROLE_SYSTEM_GROUPING<br><br>Use MSAA or UIA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_GROUPING
+                            </div>
+                          <div class="general">Use MSAA or UIA guidance</div>
+                          </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -295,7 +345,11 @@
                         <td>No</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_GROUPING<br><br>?</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_GROUPING
+                            </div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -315,7 +369,13 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_TEXT<br><br>Use MSAA or UIA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_TEXT
+                            </div>
+                            <br><br>
+                          <div class="general">Use MSAA or UIA guidance</div>
+                          </td>
                         <td class="ia2">
                           <div class="general">Doesn't have an accessible, exposed as
                             "font-weight" text attribute on the text container.
@@ -335,7 +395,9 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>Not mapped<br><br>Not mapped</td>
+                        <td>
+                            <div class="general">Not mapped</div>
+                        </td>
                         <td class="ia2">
                           <div class="general">Not mapped</div>
                         </td>
@@ -350,13 +412,13 @@
                         <td></td>
                         <td></td>
                         <td>none</td>
-                        <td></td>
+                        <td>?</td>
                         <td class="ia2">
                           <div class="general">Doesn't have an accessible. May affect on
                             "writing-mode" text attribute on the text container.
                           </div>
                         </td>
-                        <td></td>
+                        <td>?</td>
                         <td></td>
                         <td></td>
                     </tr>
@@ -365,7 +427,12 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_TEXT<br><br>Use MSAA or UIA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_TEXT
+                            </div>
+                          <div class="general">Use MSAA or UIA guidance</div>
+                        </td>
                         <td class="ia2">
                           <div class="general">Doesn't have an accessible.
                               Exposed as "writing-mode" text attribute on the text container.
@@ -384,7 +451,12 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_GROUPING<br><br>Use MSAA or UIA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_GROUPING
+                            </div>
+                            <div class="general">Use MSAA or UIA guidance</div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -404,7 +476,15 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td><code title="attr-aria-role-document">document</code> role </td>
-                        <td>ROLE_SYSTEM_DOCUMENT + STATE_SYSTEM_READONLY<br><br>Use MSAA or UIA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_DOCUMENT
+                            </div>
+                            <div class="states">
+                                <span class="type">States: </span>STATE_SYSTEM_READONLY
+                            </div>
+                          <div class="general">Use MSAA or UIA guidance</div>
+                        </td>
                         <td class="ia2">
                           <div class="general">
                             Doesn't have an accessible. All DOM attributes are
@@ -424,7 +504,11 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_ WHITESPACE<br><br>?</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_WHITESPACE
+                            </div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -440,7 +524,12 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td><code title="attr-aria-role-button">button</code> role </td>
-                        <td>ROLE_SYSTEM_PUSHBUTTON.<br><br>Use MSAA or UIA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_PUSHBUTTON
+                            </div>
+                            <div class="general">Use MSAA or UIA guidance</div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -470,7 +559,12 @@
                         <td>No</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>SYSTEM_ROLE_GRAPHIC<br><br>Use MSAA or UIA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>SYSTEM_ROLE_GRAPHIC
+                            </div>
+                            <div class="general">Use MSAA or UIA guidance</div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -493,7 +587,15 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_TEXT<br>+ STATE_SYSTEM_READONLY<br><br>Use MSAA or UIA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_TEXT
+                            </div>
+                            <div class="states">
+                                <span class="type">States: </span>STATE_SYSTEM_READONLY
+                            </div>
+                          <div class="general">Use MSAA or UIA guidance</div>
+                          </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -520,7 +622,11 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_TEXT<br><br>??GROUP??<br><br>text</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_TEXT ??GROUP??
+                            </div>
+                        </td>
                         <td class="ia2">
                           <div class="general">
                             Doesn't have an accessible. Default styles are
@@ -540,7 +646,11 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_TEXT<br><br>text</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_TEXT
+                            </div>
+                        </td>
                         <td class="ia2">
                           <div class="general">
                             Doesn't have an accessible. Default styles are
@@ -560,7 +670,9 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>?ROLE_SYSTEM_COLUMN</td>
+                        <td>
+                            <div class="general">Not mapped</div>
+                        </td>
                         <td class="ia2">
                           <div class="general">Not mapped</div>
                         </td>
@@ -575,7 +687,12 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>?ROLE_SYSTEM_GROUPING<br><br>?TODO:&nbsp; look in more detail at UIA table implemenation</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_GROUPING
+                            </div>
+                            <div class="general">TODO:&nbsp; look in more detail at UIA table implemenation</div>
+                        </td>
                         <td class="ia2">
                           <div class="general">Not mapped</div>
                         </td>
@@ -592,7 +709,12 @@
                         <td>No</td>
                         <td>Yes</td>
                         <td><code>menuitemcheckbox</code> role, with the <code>aria-checked</code> state set to "true" if the command's <a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#command-facet-checkedstate">Checked State</a> facet is true, and "false" otherwise </td>
-                        <td>ROLE_SYSTEM_CHECKBUTTON <br>or ROLE_SYSTEM_MENUITEM<br><br>Use UIA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_MENUITEM
+                            </div>
+                            <div class="general">Use UIA guidance</div>
+                        </td>
                         <td>IA2_ROLE_CHECK_MENU_ITEM + object attribute checkable="true"</td>
                         <td>
                             <div class="ctrltype">
@@ -610,7 +732,12 @@
                         <td>No</td>
                         <td>Yes</td>
                         <td><code>menuitem</code> role </td>
-                        <td>ROLE_SYSTEM_MENUITEM<br><br>Use either MSAA or UIA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_MENUITEM
+                            </div>
+                            <div class="general">Use UIA guidance</div>
+                        </td>
                         <td>ROLE_SYSTEM_MENUITEM</td>
                         <td>
                             <div class="ctrltype">
@@ -625,7 +752,12 @@
                         <td>No</td>
                         <td>Yes</td>
                         <td><code>menuitemradio</code> role, with the <code>aria-checked</code> state set to "true" if the command's <a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#command-facet-checkedstate">Checked State</a> facet is true, and "false" otherwise </td>
-                        <td>ROLE_SYSTEM_RADIOBUTTON or ROLE_SYSTEM_MENUITEM<br><br>Use UIA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_MENUITEM
+                            </div>
+                            <div class="general">Use UIA guidance</div>
+                        </td>
                         <td>IA2_ROLE_RADIO_MENU_ITEM + object attribute checkable="true"</td>
                         <td>
                             <div class="ctrltype">
@@ -656,7 +788,15 @@
                         <td>No</td>
                         <td>Yes</td>
                         <td><code>listbox</code> role, with the <code>aria-multiselectable</code> property set to "false" </td>
-                        <td>ROLE_SYSTEM_COMBOBOX + STATE_SYSTEM_HASPOPUP.<br><br>Use UIA guidance </td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_COMBOBOX
+                            </div>
+                            <div class="states">
+                                <span class="type">States: </span>STATE_SYSTEM_HASPOPUP.
+                            </div>
+                            <div class="general">Use UIA guidance</div>
+                        </td>
                         <td class="ia2">
                           <div class="general">
                             Used to constuct a list of options for autocompletes (in other words it might not accessible itself)
@@ -679,7 +819,11 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_TEXT<br><br>?</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_TEXT
+                            </div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -695,7 +839,11 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_TEXT<br><br>?</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_TEXT
+                            </div>
+                        </td>
                         <td class="ia2">
                           <div class="general">
                             Doesn't have an accessible. Default styles are mapped
@@ -715,7 +863,11 @@
                         <td>No</td>
                         <td>Yes</td>
                         <td>none<br>??dialog seems closer??</td>
-                        <td>ROLE_SYSTEM_GROUPING<br><br>&nbsp;</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_GROUPING
+                            </div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -735,7 +887,11 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_TEXT<br><br>&nbsp;</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_TEXT
+                            </div>
+                        </td>
                         <td class="ia2">
                           <div class="general">
                             Doesn't have an accessible. Default styles are
@@ -751,7 +907,11 @@
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td></td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_DIALOG
+                            </div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -767,7 +927,11 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_GROUPING<br><br>&nbsp;</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_GROUPING
+                            </div>
+                        </td>
                         <td class="ia2">
                           <div class="general">
                             May not have an accessible if has no semantic meaning. Otherwise
@@ -786,7 +950,15 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_LIST + STATE_SYSTEM_READONLY<br><br>Use MSAA or UIA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_LIST
+                            </div>
+                            <div class="states">
+                                <span class="type">States: </span>STATE_SYSTEM_READONLY
+                            </div>
+                            <div class="general">Use MSAA or UIA guidance</div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -810,7 +982,14 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_LISTITEM + STATE_SYSTEM_READONLY<br><br>&nbsp;</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_LISTITEM
+                            </div>
+                            <div class="states">
+                                <span class="type">States: </span>STATE_SYSTEM_READONLY
+                            </div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -835,7 +1014,11 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_TEXT<br><br>&nbsp;</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_TEXT
+                            </div>
+                        </td>
                         <td class="ia2">
                           <div class="general">Doesn't have an accessible.
                             Default styles are mapped into text attributes on the text container.
@@ -850,7 +1033,11 @@
                         <td>No</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_CLIENT<br><br>&nbsp;</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_CLIENT
+                            </div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -874,7 +1061,12 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_GROUPING<br><br>Use UIA or MSAA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_GROUPING
+                            </div>
+                            <div class="general">Use MSAA or UIA guidance</div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -898,7 +1090,12 @@
                         <td>No</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_TEXT<br><br>se UIA or MSAA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_TEXT
+                            </div>
+                            <div class="general">Use MSAA or UIA guidance</div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -923,7 +1120,12 @@
                         <td>No</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_GROUPING<br><br>se UIA or MSAA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_GROUPING
+                            </div>
+                            <div class="general">Use MSAA or UIA guidance</div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>ROLE_SYSTEM_GROUPING
@@ -956,7 +1158,12 @@
                         <td>No</td>
                         <td>Yes</td>
                         <td>none </td>
-                        <td>ROLE_SYSTEM_GROUPING<br><br>se UIA or MSAA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_GROUPING
+                            </div>
+                            <div class="general">Use MSAA or UIA guidance</div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -987,7 +1194,12 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td><code>form </code>role</td>
-                        <td>ROLE_SYSTEM_GROUPING<br><br>se UIA or MSAA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_GROUPING
+                            </div>
+                            <div class="general">Use MSAA or UIA guidance</div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -1007,7 +1219,15 @@
                         <td>Yes</td>
                         <td>No</td>
                         <td>&nbsp;</td>
-                        <td>ROLE_SYSTEM_DOCUMENT + STATE_SYSTEM_READONLY<br><br>??currently mapped as pane not document.&nbsp; the document inside is mapped as document??</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_DOCUMENT
+                            </div>
+                            <div class="states">
+                                <span class="type">States: </span>STATE_SYSTEM_READONLY
+                            </div>
+                            <div class="general">??currently mapped as pane not document.&nbsp; the document inside is mapped as document??</div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -1048,7 +1268,12 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td><code>heading</code> role, with the <code>aria-level</code> property set to the element's <a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#outline-depth">outline depth</a></td>
-                        <td>ROLE_SYSTEM_TEXT or use xml-roles</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_TEXT
+                            </div>
+                            <div class="general">??or use xml-roles??</div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -1072,7 +1297,9 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>Not mapped</td>
+                        <td>
+                            <div class="general">Not mapped</div>
+                        </td>
                         <td class="ia2">
                           <div class="general">Not mapped</div>
                         </td>
@@ -1087,7 +1314,11 @@
                         <td>No</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_GROUPING</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_GROUPING
+                            </div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -1103,7 +1334,7 @@
                                 <span class="type">Control Type: </span>Group
                             </div>
                             <div class="properties">
-                                <span class="type">Properties: </span>Don't put "header" in LocalizedControlType string because there is a header role for table headers
+                                <span class="type">Properties: </span>Do not put "header" in LocalizedControlType string because there is a header role for table headers
                             </div>
                         </td>
                         <td><p>ROLE_PANEL</p>
@@ -1117,7 +1348,11 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td><code>separator</code> role </td>
-                        <td>ROLE_SYSTEM_SEPARATOR</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_SEPARATOR
+                            </div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -1137,7 +1372,9 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>Not mapped</td>
+                        <td>
+                            <div class="general">Not mapped</div>
+                        </td>
                         <td class="ia2">
                           <div class="general">Not mapped</div>
                         </td>
@@ -1152,7 +1389,11 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_TEXT</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_TEXT
+                            </div>
+                            </td>
                         <td class="ia2">
                           <div class="general">Doesn't have an accessible, exposed as
                             "font-style:italic" text attribute on the text container.
@@ -1171,7 +1412,14 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_DOCUMENT + STATE_SYSTEM_READONLY<br><br>??pane??</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_DOCUMENT ??pane??
+                            </div>
+                            <div class="states">
+                                <span class="type">States: </span>STATE_SYSTEM_READONLY
+                            </div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -1195,7 +1443,11 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td><code>img</code> role</td>
-                        <td>ROLE_SYSTEM_GRAPHIC</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_GRAPHIC
+                            </div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -1225,7 +1477,9 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td><code>presentation</code> role </td>
-                        <td>ROLE_SYSTEM_GRAPHIC with AccName set to empty string</td>
+                        <td>
+                            <div class="general">Do not expose this object</div>
+                        </td>
                         <td><p>Do not expose this object</p></td>
                         <td>
                             <div class="ctrltype">
@@ -1243,7 +1497,11 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td><code title="attr-aria-role-button">button</code> role </td>
-                        <td>ROLE_SYSTEM_PUSHBUTTON</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_PUSHBUTTON
+                            </div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -1267,7 +1525,11 @@
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
-                        <td>ROLE_SYSTEM_MENUITEM</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_MENUITEM
+                            </div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -1287,7 +1549,12 @@
                         <td>No</td>
                         <td>Yes</td>
                         <td>&nbsp;</td>
-                        <td>If implemented as a textbox, ROLE_SYSTEM_TEXT<br><br>If implemented as a color picker, implement <a href="http://msdn.microsoft.com/en-us/library/dd388264%28v=vs.85%29.aspx">IUIAutomationSelectionPattern</a> for the container and <a href="http://msdn.microsoft.com/en-us/library/dd388270%28v=vs.85%29.aspx">IUIAutomationSelectionItemPattern</a> for each color choice<br><br><br>??</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>If implemented as a textbox, ROLE_SYSTEM_TEXT
+                            </div>
+                            <div class="general">Use UIA guidance</div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -1313,7 +1580,11 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td><code>checkbox</code> role, with the <code>aria-checked</code> state set to "mixed" if the element's <code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#dom-input-indeterminate">indeterminate</a></code> IDL attribute is true, or "true" if the element's <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#concept-fe-checked">checkedness</a> is true, or "false" otherwise </td>
-                        <td>ROLE_SYSTEM_CHECKBUTTON</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_CHECKBUTTON
+                            </div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -1341,7 +1612,12 @@
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
-                        <td>ROLE_SYSTEM_CHECKBUTTON<br><br>UIA MenuItem</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_CHECKBUTTON
+                            </div>
+                            UIA MenuItem
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -1368,7 +1644,12 @@
                         <td>No</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_DROPLIST<br><br>UIA Calendar</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_DROPLIST
+                            </div>
+                            UIA Calendar
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -1388,7 +1669,12 @@
                         <td>No</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_DROPLIST<br><br>UIA Calendar</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_DROPLIST
+                            </div>
+                            UIA Calendar
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -1408,7 +1694,12 @@
                         <td>No</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_DROPLIST<br><br>UIA Calendar</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_DROPLIST
+                            </div>
+                            UIA Calendar
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -1428,7 +1719,12 @@
                         <td>No</td>
                         <td>Yes</td>
                         <td><code>textbox</code> role</td>
-                        <td>ROLE_SYSTEM_TEXT<br><br>UIA Edit</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_TEXT
+                            </div>
+                            UIA Edit
+                        </td>
                         <td class="ia2">
                           <div class="states">
                             <span class="type">States: </span>
@@ -1448,7 +1744,11 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_PUSHBUTTON</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_PUSHBUTTON
+                            </div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -1472,7 +1772,9 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none </td>
-                        <td>Do not expose this object</td>
+                        <td>
+                            <div class="general">Do not expose this object</div>
+                            </td>
                         <td class="ia2">
                           <div class="general">Not mapped</div>
                         </td>
@@ -1487,7 +1789,11 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td><code title="attr-aria-role-button">button</code> role </td>
-                        <td>ROLE_SYSTEM_PUSHBUTTON</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_PUSHBUTTON
+                            </div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -1511,24 +1817,29 @@
                         <td>AXButton<br>(null)<br>button</td>
                     </tr>
                     <tr tabindex="-1" id="el_input_image_parentmenu">
-                        <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-input-element">input</a></code> <span class="el-context">(<code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#attr-input-type">type</a></code> attribute in the <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#image-button-state-(type=image)">Image Button</a> state and parent is a menu)</span></th>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
+                        <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-input-element">input</a></code> <span class="el-context">(<code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#attr-input-type">type</a></code> attribute in the <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#image-button-state-(type=image)">Image Button</a> state and parent is a <code>menu</code>)</span></th>
+                        <td>?</td>
+                        <td>?</td>
+                        <td>?</td>
+                        <td>?</td>
+                        <td>?</td>
                         <td>
                             <div class="general">?? does this define a command??</div>
                         </td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
+                        <td>?</td>
+                        <td>?</td>
                     </tr>
                     <tr tabindex="-1" id="el_input_month">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-input-element">input</a></code> <span class="el-context">(<code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#attr-input-type">type</a></code> attribute in the <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#month-state-(type=month)">Month</a> state)</span></th>
                         <td>No</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_DROPLIST<br><br>UIA Calendar</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_DROPLIST
+                            </div>
+                            UIA Calendar
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -1548,7 +1859,11 @@
                         <td>No</td>
                         <td>Yes</td>
                         <td><code>spinbutton</code> role</td>
-                        <td>ROLE_SYSTEM_SPINBUTTON</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_SPINBUTTON
+                            </div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -1572,7 +1887,15 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td><code>textbox</code> role</td>
-                        <td>ROLE_SYSTEM_TEXT with STATE_SYSTEM_PROTECTED<br><br>UIA Edit with UIA_IsPasswordPropertyId</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_TEXT
+                            </div>
+                            <div class="states">
+                                <span class="type">States: </span>STATE_SYSTEM_PROTECTED
+                            </div>
+                            UIA Edit with UIA_IsPasswordPropertyId
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -1603,7 +1926,11 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td><code>radio</code> role, with the <code>aria-checked</code> state set to "true" if the element's <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#concept-fe-checked">checkedness</a> is true, or "false" otherwise</td>
-                        <td>ROLE_SYSTEM_RADIOBUTTON</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_RADIOBUTTON
+                            </div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -1628,11 +1955,11 @@
                     </tr>
                     <tr tabindex="-1" id="el_input_radio_menuparent">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-input-element">input</a></code> <span class="el-context">(<code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#attr-input-type">type</a></code> attribute in the <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#radio-button-state-(type=radio)">Radio Button</a> state and parent is a menu)</span></th>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
+                        <td>?</td>
+                        <td>?</td>
+                        <td>?</td>
+                        <td>?</td>
+                        <td>?</td>
                         <td>
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>MenuItem
@@ -1641,15 +1968,19 @@
                                 <span class="type">Control Pattern: </span>Toggle
                             </div>
                         </td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
+                        <td>?</td>
+                        <td>?</td>
                     </tr>
                     <tr tabindex="-1" id="el_input_range">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-input-element">input</a></code> <span class="el-context">(<code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#attr-input-type">type</a></code> attribute in the <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#range-state-(type=range)">Range</a> state)</span></th>
                         <td>No</td>
                         <td>Yes</td>
                         <td><code>slider</code> role</td>
-                        <td>ROLE_SYSTEM_SLIDER</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_SLIDER
+                            </div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -1669,7 +2000,11 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td><code>button</code> role </td>
-                        <td>ROLE_SYSTEM_PUSHBUTTON</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_PUSHBUTTON
+                            </div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -1693,7 +2028,12 @@
                         <td>No</td>
                         <td>Yes</td>
                         <td><code>textbox</code> role</td>
-                        <td>ROLE_SYSTEM_TEXT<br><br>UIA Edit</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_TEXT
+                            </div>
+                            UIA Edit
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -1713,7 +2053,11 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td><code>button</code> role </td>
-                        <td>ROLE_SYSTEM_PUSHBUTTON</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_PUSHBUTTON
+                            </div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -1741,7 +2085,12 @@
                         <td>No</td>
                         <td>Yes</td>
                         <td><code>textbox</code> role</td>
-                        <td>ROLE_SYSTEM_TEXT<br><br>UIA Edit</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_TEXT
+                            </div>
+                            UIA Edit
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -1760,7 +2109,12 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td><code>textbox</code> role</td>
-                        <td>ROLE_SYSTEM_TEXT<br><br>UIA Edit</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_TEXT
+                            </div>
+                            UIA Edit
+                        </td>
                         <td>
                           <div class="role">
                             <span class="type">Role: </span>
@@ -1784,7 +2138,14 @@
                         <td>No</td>
                         <td>Yes</td>
                         <td><code>combobox</code> role, with the <code>aria-owns</code> property set to the same value as the <code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#attr-input-list">list</a></code> attribute</td>
-                        <td>ROLE_SYSTEM_COMBOBOX + STATE_SYSTEM_HASPOPUP</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_COMBOBOX
+                            </div>
+                            <div class="states">
+                                <span class="type">States: </span>STATE_SYSTEM_HASPOPUP
+                            </div>
+                        </td>
                         <td class="ia2">
                           <div class="general">Same as ordinal elements.</div>
                           <div class="states">
@@ -1805,7 +2166,11 @@
                         <td>No</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_SPINBUTTON</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_SPINBUTTON
+                            </div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -1825,7 +2190,12 @@
                         <td>No</td>
                         <td>Yes</td>
                         <td><code title="attr-aria-role-textbox">textbox</code> role</td>
-                        <td>ROLE_SYSTEM_TEXT<br><br>UIA Edit</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_TEXT
+                            </div>
+                            UIA Edit
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -1845,7 +2215,12 @@
                         <td>No</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_DROPLIST<br><br>UIA Calendar</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_DROPLIST
+                            </div>
+                            UIA Calendar
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -1865,7 +2240,11 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_TEXT</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_TEXT
+                            </div>
+                        </td>
                         <td class="ia2">
                           <div class="general">
                             Doesn't have an accessible. Default styles are mapped
@@ -1882,7 +2261,11 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_TEXT</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_TEXT
+                            </div>
+                        </td>
                         <td class="ia2">
                           <div class="general">
                             Doesn't have an accessible. Mapped into 
@@ -1899,7 +2282,15 @@
                         <td>No</td>
                         <td>Yes</td>
                         <td><code>listbox</code> role, with the <code>aria-multiselectable</code> property set to "false" </td>
-                        <td>ROLE_SYSTEM_COMBOBOX  + STATE_SYSTEM_HASPOPUP<br><br>Use MSAA or UIA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_COMBOBOX
+                            </div>
+                            <div class="states">
+                                <span class="type">States: </span>STATE_SYSTEM_HASPOPUP
+                            </div>
+                            <div class="general">Use MSAA or UIA guidance</div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -1924,7 +2315,12 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_TEXT<br><br>Use UIA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_TEXT
+                            </div>
+                            <div class="general">Use UIA guidance</div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -1952,7 +2348,12 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_TEXT<br><br>SHOULD use UIA_LabeledByPropertyId (see UIA column)</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_TEXT
+                            </div>
+                            SHOULD use UIA_LabeledByPropertyId (see UIA column)
+                        </td>
                         <td>
                           <div class="role">
                             <span class="type">Role :</span>
@@ -1979,7 +2380,14 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td><code>listitem</code> role </td>
-                        <td>ROLE_SYSTEM_LISTITEM + STATE_SYSTEM_READONLY</td>
+                        <td>
+                          <div class="role">
+                            <span class="type">Role: </span>ROLE_SYSTEM_LISTITEM
+                          </div>
+                          <div class="states">
+                            <span class="type">States: </span>STATE_SYSTEM_READONLY
+                          </div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -1999,11 +2407,18 @@
                         <td>AXGroup<br>(null)<br>group</td>
                     </tr>
                     <tr tabindex="-1" id="el_li_parentmenu">
-                        <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-li-element">li</a></code> <span class="el-context">(parent is a <code><a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#the-menu-element">menu</a>)</span></th>
+                        <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-li-element">li</a></code> <span class="el-context">(parent is a <code><a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#the-menu-element">menu</a></code>)</span></th>
                         <td>No</td>
                         <td>Yes</td>
                         <td><code>listitem</code> role </td>
-                        <td>ROLE_SYSTEM_MENUITEM + STATE_SYSTEM_HASPOPUP</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_LISTITEM
+                            </div>
+                            <div class="states">
+                                <span class="type">States: </span>STATE_SYSTEM_READONLY
+                            </div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -2027,7 +2442,7 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td><code>link</code> role</td>
-                        <td>ROLE_SYSTEM_LINK<br>Also, apply special rule to expose STATE_LINKED to link and all its descendants.<br><br>Use either MSAA or UIA guidance</td>
+                        <td>??ROLE_SYSTEM_LINK<br>Also, apply special rule to expose STATE_LINKED to link and all its descendants.<br><br>Use either MSAA or UIA guidance??</td>
                         <td class="ia2">
                           <div class="general">Not mapped</div>
                         </td>
@@ -2044,7 +2459,12 @@
                         <td>No</td>
                         <td>Yes</td>
                         <td><code>main</code> role</td>
-                        <td>ROLE_SYSTEM_GROUPING<br><br>Use MSAA or UIA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_GROUPING
+                            </div>
+                            <div class="general">Use MSAA or UIA guidance</div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -2068,7 +2488,9 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>Not mapped</td>
+                        <td>
+                            <div class="general">Not mapped</div>
+                        </td>
                         <td class="ia2">
                           <div class="general">
                             Not mapped if used as an image map, otherwise:
@@ -2089,7 +2511,11 @@
                         <td>No</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_TEXT</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_TEXT
+                            </div>
+                        </td>
                         <td class="ia2">
                           <div class="general">
                             Doesn't have an accessible. Styles used to highlight
@@ -2109,7 +2535,11 @@
                         <td>No</td>
                         <td>Yes</td>
                         <td><code>math</code> role</td>
-                        <td>ROLE_SYSTEM_EQUATION</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_EQUATION
+                            </div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -2125,7 +2555,12 @@
                         <td>No</td>
                         <td>Yes</td>
                         <td><code>menu</code> role </td>
-                        <td>ROLE_SYSTEM_MENUPOPUP<br><br>Use either MSAA or UIA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_MENUPOPUP
+                            </div>
+                            <div class="general">Use MSAA or UIA guidance</div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -2145,7 +2580,12 @@
                         <td>No</td>
                         <td>Yes</td>
                         <td><code>toolbar</code> role </td>
-                        <td>ROLE_SYSTEM_TOOLBAR<br><br>Use either MSAA or UIA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_TOOLBAR
+                            </div>
+                            <div class="general">Use MSAA or UIA guidance</div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -2165,7 +2605,12 @@
                         <td>No</td>
                         <td>Yes</td>
                         <td><code>menuitemcheckbox</code> role, with the <code>aria-checked</code> state set to "true" if the <code>checked</code> attribute is present, and "false" otherwise</td>
-                        <td>ROLE_SYSTEM_CHECKBUTTON or ROLE_SYSTEM_MENUITEM<br><br>Use UIA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_MENUITEM
+                            </div>
+                            <div class="general">Use UIA guidance</div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -2192,7 +2637,12 @@
                         <td>No</td>
                         <td>Yes</td>
                         <td><code>menuitem</code> role</td>
-                        <td>ROLE_SYSTEM_MENUITEM<br><br>Use UIA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_MENUITEM
+                            </div>
+                            <div class="general">Use UIA guidance</div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -2212,7 +2662,12 @@
                         <td>No</td>
                         <td>Yes</td>
                         <td><code>menuitemradio</code> role, with the <code>aria-checked</code> state set to "true" if the <code>checked</code> attribute is present, and "false" otherwise</td>
-                        <td>ROLE_SYSTEM_RADIOBUTTON or ROLE_SYSTEM_MENUITEM<br><br>Use UIA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_MENUITEM
+                            </div>
+                            <div class="general">Use UIA guidance</div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -2239,7 +2694,9 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>Not mapped</td>
+                        <td>
+                            <div class="general">Not mapped</div>
+                        </td>
                         <td class="ia2">
                           <div class="general">Not mapped</div>
                         </td>
@@ -2254,7 +2711,13 @@
                         <td>No</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_TEXT<br>?? not sure this is right.&nbsp; maybe a number or value or something?<br><br>Use UIA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_TEXT
+                            </div>
+                            ?? not sure this is right.&nbsp; maybe a number or value or something?
+                            <div class="general">Use UIA guidance</div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -2277,7 +2740,11 @@
                         <td>No</td>
                         <td>Yes</td>
                         <td><code>navigation</code> role </td>
-                        <td>ROLE_SYSTEM_GROUPING<br><br>??</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_GROUPING
+                            </div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -2304,7 +2771,9 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>Not mapped</td>
+                        <td>
+                            <div class="general">Not mapped</div>
+                        </td>
                         <td class="ia2">
                           <div class="general">Not mapped</div>
                         </td>
@@ -2319,7 +2788,9 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>no role</td>
-                        <td>?? would pane or window work??<br><br>depends on format of data file. examples include document, client, graphic and unknown (tested using <a href="http://www.student.oulu.fi/%7Esairwas/object-test/">object</a> test suite).<br><br>Use MSAA or UIA guidance</td>
+                        <td>?? would pane or window work??<br><br>depends on format of data file. examples include document, client, graphic and unknown (tested using <a href="http://www.student.oulu.fi/%7Esairwas/object-test/">object</a> test suite).<br><br>
+                          <div class="general">Use MSAA or UIA guidance</div>
+                        </td>
                         <td class="ia2">
                           <div class="general">
                             Depends on format of data file. If contains a plugin then
@@ -2344,7 +2815,17 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td><code>list</code> role </td>
-                        <td>ROLE_SYSTEM_LIST + STATE_SYSTEM_READONLY<br><br>Use MSAA or UIA guidance</td>
+                        <td>
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            ROLE_SYSTEM_LIST
+                          </div>
+                          <div class="states">
+                            <span class="type">States: </span>
+                            STATE_SYSTEM_READONLY
+                          </div>
+                          <div class="general">Use MSAA or UIA guidance</div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -2368,7 +2849,12 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td><code>group</code> role</td>
-                        <td>ROLE_SYSTEM_GROUPING<br><br>Use MSAA or UIA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_GROUPING
+                            </div>
+                            <div class="general">Use MSAA or UIA guidance</div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -2388,7 +2874,12 @@
                         <td>No</td>
                         <td>Yes</td>
                         <td><code>option</code> role, with the <code>aria-selected</code> state set to "true" if the element's <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#concept-option-selectedness">selectedness</a> is true, or "false" otherwise. </td>
-                        <td>ROLE_SYSTEM_LISTITEM<br><br>Use MSAA or UIA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_LISTITEM
+                            </div>
+                            <div class="general">Use MSAA or UIA guidance</div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -2415,7 +2906,13 @@
                         <td>No</td>
                         <td>Yes</td>
                         <td><code>status</code> role</td>
-                        <td>ROLE_SYSTEM_STATUSBAR<br><br>??text read-only seems closer.&nbsp; this is a label that is calculated??<br><br>Use UIA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_STATUSBAR
+                                ??text read-only seems closer.&nbsp; this is a label that is calculated??
+                            </div>
+                            <div class="general">Use UIA guidance</div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -2445,7 +2942,12 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_TEXT<br><br>Use MSAA or UIA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_TEXT
+                            </div>
+                            <div class="general">Use MSAA or UIA guidance</div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -2465,7 +2967,9 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>Not mapped</td>
+                        <td>
+                            <div class="general">Not mapped</div>
+                        </td>
                         <td class="ia2">
                           <div class="general">Not mapped</div>
                         </td>
@@ -2480,7 +2984,12 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_TEXT<br><br>??group?<br><br>Use MSAA or UIA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_TEXT ??group?
+                            </div>
+                            <div class="general">Use MSAA or UIA guidance</div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -2503,7 +3012,15 @@
                         <td>No</td>
                         <td>Yes</td>
                         <td><code>progressbar</code> role, with, if the progress bar is determinate, the <code>aria-valuemax</code> property set to the maximum value of the progress bar, the <code>aria-valuemin</code> property set to zero, and the <code>aria-valuenow</code> property set to the current value of the progress bar </td>
-                        <td>ROLE_SYSTEM_PROGRESSBAR + STATE_SYSTEM_READONLY<br><br>Use MSAA or UIA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_PROGRESSBAR
+                            </div>
+                            <div class="states">
+                                <span class="type">States: </span>STATE_SYSTEM_READONLY
+                            </div>
+                            <div class="general">Use MSAA or UIA guidance</div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -2527,7 +3044,12 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_TEXT<br>??group??<br><br>Use MSAA or UIA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_TEXT ??group??
+                            </div>
+                            <div class="general">Use MSAA or UIA guidance</div>
+                        </td>
                         <td></td>
                         <td class="ia2">
                           <div class="role">
@@ -2552,7 +3074,12 @@
                         <td>No</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_TEXT<br>??group??<br><br>Use MSAA or UIA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_TEXT ??group??
+                            </div>
+                            <div class="general">Use MSAA or UIA guidance</div>
+                        </td>
                         <td class="ia2">
                           <div class="general">
                             Doesn't have an accessible. No child elements are exposed if HTML:ruby is supported by the browser.
@@ -2571,7 +3098,12 @@
                         <td>No</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_TEXT<br><br>Use MSAA or UIA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_TEXT
+                            </div>
+                            <div class="general">Use MSAA or UIA guidance</div>
+                        </td>
                         <td class="ia2">
                           <div class="general">
                             Doesn't have an accessible.
@@ -2590,7 +3122,12 @@
                         <td>No</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_TEXT<br>??group??<br><br>Use MSAA or UIA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_TEXT ??group??
+                            </div>
+                            <div class="general">Use MSAA or UIA guidance</div>
+                        </td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -2610,7 +3147,12 @@
                         <td>?</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_TEXT<br><br>??group??<br><br>Use MSAA or UIA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_TEXT ??group??
+                            </div>
+                            <div class="general">Use MSAA or UIA guidance</div>
+                        </td>
                         <td>ROLE_SYSTEM_TEXT</td>
                         <td>
                             <div class="ctrltype">
@@ -2625,7 +3167,12 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_TEXT<br>??group?<br><br>Use MSAA or UIA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_TEXT ??group?
+                            </div>
+                            <div class="general">Use MSAA or UIA guidance</div>
+                        </td>
                         <td>ROLE_SYSTEM_TEXT</td>
                         <td>
                             <div class="ctrltype">
@@ -2641,7 +3188,9 @@
                         <td>Yes</td>
                         <td>none</td>
                         <td>Not mapped</td>
-                        <td>Not mapped</td>
+                        <td>
+                            <div class="general">Not mapped</div>
+                        </td>
                         <td>
                             <div class="general">Not mapped</div>
                         </td>
@@ -2653,7 +3202,11 @@
                         <td>No</td>
                         <td>Yes</td>
                         <td><code>region</code> role </td>
-                        <td>ROLE_SYSTEM_PANE<br>??really?&nbsp; that's what a frame is.&nbsp; I think grouping is closer??<br><br>??</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_GROUPING
+                            </div>
+                        </td>
                         <td>IA2_ROLE_SECTION</td>
                         <td>
                             <div class="ctrltype">
@@ -2670,7 +3223,15 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td><code>listbox</code> role, with the <code>aria-multiselectable</code> property set to "true" </td>
-                        <td>ROLE_SYSTEM_LIST + STATE_SYSTEM_MULTISELECTABLE + STATE_SYSTEM_READONLY<br><br>Use MSAA or UIA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_LIST
+                            </div>
+                            <div class="states">
+                                <span class="type">States: </span>STATE_SYSTEM_MULTISELECTABLE + STATE_SYSTEM_READONLY
+                            </div>
+                          <div class="general">Use MSAA or UIA guidance</div>
+                        </td>
                         <td>ROLE_SYSTEM_LIST + STATE_SYSTEM_MULTISELECTABLE + STATE_SYSTEM_READONLY</td>
                         <td>
                             <div class="ctrltype">
@@ -2688,7 +3249,15 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td><code>listbox</code> role, with the <code>aria-multiselectable</code> property set to "false" </td>
-                        <td>ROLE_SYSTEM_COMBOBOX + STATE_SYSTEM_HASPOPUP<br><br>Use MSAA or UIA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_COMBOBOX
+                            </div>
+                            <div class="states">
+                                <span class="type">States: </span>STATE_SYSTEM_HASPOPUP
+                            </div>
+                            <div class="general">Use MSAA or UIA guidance</div>
+                        </td>
                         <td>ROLE_SYSTEM_COMBOBOX + STATE_SYSTEM_HASPOPUP</td>
                         <td>
                             <div class="ctrltype">
@@ -2703,7 +3272,12 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_TEXT<br>??group??<br><br>Use MSAA or UIA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_TEXT ??group??
+                            </div>
+                            <div class="general">Use MSAA or UIA guidance</div>
+                        </td>
                         <td>ROLE_SYSTEM_TEXT</td>
                         <td>
                             <div class="ctrltype">
@@ -2718,10 +3292,12 @@
                         <td>No</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>Do not expose this object</td>
+                        <td>
+                            <div class="general">Do not expose this object</div>
+                        </td>
                         <td>Do not expose this object</td>
                         <td>
-                            <div class="general">Do not expose this object<br>??does it populate anything in the parent video or audio object ??</div>
+                            <div class="general">Do not expose this object</div>
                         </td>
                         <td>Do not expose this object</td>
                         <td>Do not expose this object</td>
@@ -2731,7 +3307,12 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_GROUPING<br><br>Use MSAA or UIA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_GROUPING
+                            </div>
+                            <div class="general">Use MSAA or UIA guidance</div>
+                          </td>
                         <td>ROLE_SYSTEM_TEXT</td>
                         <td>
                             <div class="ctrltype">
@@ -2746,7 +3327,12 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_TEXT<br>??group??<br><br>Use MSAA or UIA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_TEXT
+                            </div>
+                            <div class="general">Use MSAA or UIA guidance</div>
+                        </td>
                         <td>ROLE_SYSTEM_TEXT</td>
                         <td>
                             <div class="ctrltype">
@@ -2761,7 +3347,9 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>Do not expose this object</td>
+                        <td>
+                            <div class="general">Do not expose this object</div>
+                        </td>
                         <td>Do not expose this object</td>
                         <td>
                             <div class="general">Do not expose this object</div>
@@ -2774,7 +3362,12 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_TEXT<br>??group?<br><br>Use MSAA or UIA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_TEXT
+                            </div>
+                            <div class="general">Use MSAA or UIA guidance</div>
+                        </td>
                         <td>ROLE_SYSTEM_TEXT</td>
                         <td>
                             <div class="ctrltype">
@@ -2789,7 +3382,15 @@
                         <td>No</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_PUSHBUTTON<br>??has popup??<br><br>Use MSAA or UIA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_PUSHBUTTON
+                            </div>
+                            <div class="states">
+                                <span class="type">States: </span>??has popup??
+                            </div>
+                            <div class="general">Use MSAA or UIA guidance</div>
+                        </td>
                         <td>ROLE_SYSTEM_PUSHBUTTON</td>
                         <td>
                             <div class="ctrltype">
@@ -2807,7 +3408,12 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_TEXT<br>??group??<br><br>Use MSAA or UIA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_TEXT
+                            </div>
+                            <div class="general">Use MSAA or UIA guidance</div>
+                        </td>
                         <td>ROLE_SYSTEM_TEXT</td>
                         <td>
                             <div class="ctrltype">
@@ -2822,7 +3428,11 @@
                         <td>No</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_GRAPHIC</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_GRAPHIC
+                            </div>
+                        </td>
                         <td>DIAGRAM<br><br><strong>note:</strong> <a href="../../../Users/Steve/Documents/My%20Dropbox/Public/tests/https://bugzilla.mozilla.org/show_bug.cgi?id=764118">bug filed on role in Firefox</a></td>
                         <td>
                             <div class="ctrltype">
@@ -2839,7 +3449,12 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_TABLE<br><br>Use MSAA or UIA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_TABLE
+                            </div>
+                            <div class="general">Use MSAA or UIA guidance</div>
+                        </td>
                         <td>Use IAccessibleTable2 interface</td>
                         <td>
                             <div class="ctrltype">
@@ -2857,7 +3472,12 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_GROUPING<br><br>Use MSAA or UIA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_GROUPING
+                            </div>
+                            <div class="general">Use MSAA or UIA guidance</div>
+                        </td>
                         <td>ROLE_SYSTEM_GROUPING</td>
                         <td>
                             <div class="ctrltype">
@@ -2872,7 +3492,12 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_CELL<br><br>Use MSAA or UIA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_CELL
+                            </div>
+                            <div class="general">Use MSAA or UIA guidance</div>
+                        </td>
                         <td>ROLE_SYSTEM_CELL</td>
                         <td>
                             <div class="ctrltype">
@@ -2886,19 +3511,24 @@
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/templating.html#the-template-element">template</a></code></th>
                         <td>No</td>
                         <td>Yes</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>?</td>
+                        <td>?</td>
+                        <td>?</td>
+                        <td>?</td>
+                        <td>?</td>
+                        <td>?</td>
                     </tr>
                     <tr tabindex="-1" id="el-135">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-textarea-element">textarea</a></code></th>
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>textbox role, with the <code>aria-multiline</code> property set to "true"</td>
-                        <td>ROLE_SYSTEM_TEXT<br><br>Use MSAA or UIA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_TEXT
+                            </div>
+                            <div class="general">Use MSAA or UIA guidance</div>
+                        </td>
                         <td>state: <a href="http://accessibility.linuxfoundation.org/a11yspecs/ia2/docs/html/_accessible_states_8idl.html#afecbfb195aaf7050dc8f75a7833bd5f59f5a0d01f659f8888f0e15e179adf45">STATE_MULTI_LINE</a></td>
                         <td>
                             <div class="ctrltype">
@@ -2914,7 +3544,12 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_GROUPING<br><br>Use MSAA or UIA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_GROUPING
+                            </div>
+                            <div class="general">Use MSAA or UIA guidance</div>
+                        </td>
                         <td>ROLE_SYSTEM_GROUPING</td>
                         <td>
                             <div class="ctrltype">
@@ -2929,7 +3564,12 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_CELL<br><br>Use MSAA or UIA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_CELL
+                            </div>
+                            <div class="general">Use MSAA or UIA guidance</div>
+                        </td>
                         <td>ROLE_SYSTEM_CELL</td>
                         <td>
                             <div class="ctrltype">
@@ -2944,7 +3584,12 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_COLUMNHEADER<br><br>Use MSAA or UIA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_COLUMNHEADER
+                            </div>
+                            <div class="general">Use MSAA or UIA guidance</div>
+                        </td>
                         <td>&nbsp;</td>
                         <td>
                             <div class="ctrltype">
@@ -2963,7 +3608,12 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_ROWHEADER<br><br>Use MSAA or UIA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_ROWHEADER
+                            </div>
+                            <div class="general">Use MSAA or UIA guidance</div>
+                        </td>
                         <td>&nbsp;</td>
                         <td>
                             <div class="ctrltype">
@@ -2982,7 +3632,11 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_GROUPING</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_GROUPING
+                            </div>
+                        </td>
                         <td>ROLE_SYSTEM_GROUPING</td>
                         <td>
                             <div class="ctrltype">
@@ -2997,7 +3651,11 @@
                         <td>No</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_TEXT</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_TEXT
+                            </div>
+                        </td>
                         <td>ROLE_SYSTEM_TEXT</td>
                         <td>?</td>
                         <td>ROLE_TEXT</td>
@@ -3008,7 +3666,9 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>Not mapped</td>
+                        <td>
+                            <div class="general">Not mapped</div>
+                        </td>
                         <td>Not mapped</td>
                         <td>
                             <div class="general">Not mapped</div>
@@ -3021,7 +3681,12 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_ROW<br><br>Use MSAA or UIA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_ROW
+                            </div>
+                            <div class="general">Use MSAA or UIA guidance</div>
+                        </td>
                         <td>ROLE_SYSTEM_ROW</td>
                         <td>
                             <div class="ctrltype">
@@ -3036,30 +3701,38 @@
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-track-element">track</a></code></th>
                         <td>No</td>
                         <td>Yes</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>?</td>
+                        <td>?</td>
+                        <td>?</td>
+                        <td>?</td>
+                        <td>?</td>
+                        <td>?</td>
                     </tr>
                     <tr tabindex="-1" id="el-143a">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-u-element">u</a></code></th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>?</td>
+                        <td>?</td>
+                        <td>?</td>
+                        <td>?</td>
+                        <td>?</td>
+                        <td>?</td>
+                        <td>?</td>
+                        <td>?</td>
                     </tr>
                     <tr tabindex="-1" id="el-144">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-ul-element">ul</a></code></th>
                         <td>Yes</td>
                         <td>Yes</td>
                         <td><code>list</code> role </td>
-                        <td>ROLE_SYSTEM_LIST + STATE_SYSTEM_READONLY<br><br>Use MSAA or UIA guidance</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_LIST
+                            </div>
+                            <div class="states">
+                                <span class="type">States: </span>STATE_SYSTEM_READONLY
+                            </div>
+                            <div class="general">Use MSAA or UIA guidance</div>
+                        </td>
                         <td>ROLE_SYSTEM_LIST + STATE_SYSTEM_READONLY</td>
                         <td>
                             <div class="ctrltype">
@@ -3074,7 +3747,12 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>ROLE_SYSTEM_TEXT<br><br>Use MSAA or UIA guidance?</td>
+                        <td>
+                            <div class="role">
+                                <span class="type">Role: </span>ROLE_SYSTEM_TEXT
+                            </div>
+                            <div class="general">Use MSAA or UIA guidance</div>
+                        </td>
                         <td>ROLE_SYSTEM_TEXT</td>
                         <td>
                             <div class="ctrltype">
@@ -3100,7 +3778,9 @@
                         <td>No</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>none</td>
+                        <td>
+                            <div class="general">Not mapped</div>
+                        </td>
                         <td>none</td>
                         <td>none</td>
                         <td>none</td>
