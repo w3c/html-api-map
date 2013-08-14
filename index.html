@@ -2115,7 +2115,7 @@
                             </div>
                             UIA Edit
                         </td>
-                        <td>
+                        <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
                               ROLE_SYSTEM_TEXT
@@ -3142,7 +3142,7 @@
                         <td>ROLE_TEXT</td>
                         <td>?</td>
                     </tr>
-                    <tr tabindex="-1" id="el-118">
+                    <tr tabindex="-1" id="el-s">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-s-element">s</a></code></th>
                         <td>?</td>
                         <td>Yes</td>
@@ -3153,7 +3153,11 @@
                             </div>
                             <div class="general">Use MSAA or UIA guidance</div>
                         </td>
-                        <td>ROLE_SYSTEM_TEXT</td>
+                        <td class="ia2">
+                          <div class="general">Doesn't have an accessible, exposed as
+                            "text-line-through-style:solid" text attribute on the text container.
+                          </div>
+                        </td>
                         <td>
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>Text ??Group??
@@ -3162,7 +3166,7 @@
                         <td>ROLE_TEXT</td>
                         <td>AXGroup<br>(null)<br>group</td>
                     </tr>
-                    <tr tabindex="-1" id="el-119">
+                    <tr tabindex="-1" id="el-samp">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-samp-element">samp</a></code></th>
                         <td>Yes</td>
                         <td>Yes</td>
@@ -3173,7 +3177,12 @@
                             </div>
                             <div class="general">Use MSAA or UIA guidance</div>
                         </td>
-                        <td>ROLE_SYSTEM_TEXT</td>
+                        <td class="ia2">
+                          <div class="general">
+                            Doesn't have an accessible. Styles are mapped into
+                            text attributes on its text container.
+                          </div>
+                        </td>
                         <td>
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>Text ??Group??
@@ -3182,14 +3191,16 @@
                         <td>ROLE_TEXT</td>
                         <td>AXGroup<br>(null)<br>group</td>
                     </tr>
-                    <tr tabindex="-1" id="el-120">
+                    <tr tabindex="-1" id="el-script">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/scripting-1.html#the-script-element">script</a></code></th>
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>Not mapped</td>
                         <td>
                             <div class="general">Not mapped</div>
+                        </td>
+                        <td class="ia2">
+                          <div class="general">Not mapped</div>
                         </td>
                         <td>
                             <div class="general">Not mapped</div>
@@ -3197,7 +3208,7 @@
                         <td>Not mapped</td>
                         <td>Not mapped</td>
                     </tr>
-                    <tr tabindex="-1" id="el-121">
+                    <tr tabindex="-1" id="el-section">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-section-element">section</a></code></th>
                         <td>No</td>
                         <td>Yes</td>
@@ -3207,7 +3218,16 @@
                                 <span class="type">Role: </span>ROLE_SYSTEM_GROUPING
                             </div>
                         </td>
-                        <td>IA2_ROLE_SECTION</td>
+                        <td class="ia2">
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            tag name BSTR and IA2_ROLE_SECTION
+                          </div>
+                          <div class="objattrs">
+                            <span class="type">Object attributes: </span>
+                            xml-roles:region
+                          </div>
+                        </td>
                         <td>
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>Text ??Group??
@@ -3218,7 +3238,7 @@
                           AXDocumentRegion<br>
                       region</td>
                     </tr>
-                    <tr tabindex="-1" id="el-122">
+                    <tr tabindex="-1" id="el-select-listbox">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-select-element">select</a></code> <span class="el-context">(with a <code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#attr-select-multiple">multiple</a></code> attribute)</span></th>
                         <td>Yes</td>
                         <td>Yes</td>
@@ -3232,7 +3252,16 @@
                             </div>
                           <div class="general">Use MSAA or UIA guidance</div>
                         </td>
-                        <td>ROLE_SYSTEM_LIST + STATE_SYSTEM_MULTISELECTABLE + STATE_SYSTEM_READONLY</td>
+                        <td class="ia2">
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            ROLE_SYSTEM_LIST
+                          </div>
+                          <div class="states">
+                            <span class="type">States: </span>
+                            STATE_SYSTEM_FOCUSABLE; STATE_SYSTEM_MULTISELECTABLE
+                          </div>
+                        </td>
                         <td>
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>List
@@ -3244,7 +3273,7 @@
                         <td>ROLE_LIST + STATE_MULTISELECTABLE</td>
                         <td>AXList<br>(null)<br>list</td>
                     </tr>
-                    <tr tabindex="-1" id="el-123">
+                    <tr tabindex="-1" id="el-select-combobox">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-select-element">select</a></code> <span class="el-context">(with NO <code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#attr-select-multiple">multiple</a></code> attribute)</span></th>
                         <td>Yes</td>
                         <td>Yes</td>
@@ -3258,7 +3287,20 @@
                             </div>
                             <div class="general">Use MSAA or UIA guidance</div>
                         </td>
-                        <td>ROLE_SYSTEM_COMBOBOX + STATE_SYSTEM_HASPOPUP</td>
+                        <td class="ia2">
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            ROLE_SYSTEM_COMBOBOX
+                          </div>
+                          <div class="states">
+                            <span class="type">States: </span>
+                            STATE_SYSTEM_FOCUSABLE; STATE_SYSTEM_HASPOPUP
+                          </div>
+                          <div class="children">
+                            <span class="type">Children: </span>
+                            intermediate ROLE_SYSTEM_LIST containing all options
+                          </div>
+                        </td>
                         <td>
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>Combo Box
@@ -3267,7 +3309,7 @@
                         <td>ROLE_COMBO_BOX + STATE_EXPANDABLE + object attribute haspopup="true"</td>
                         <td>AXPopUpButton<br>(null)<br>pop up button</td>
                     </tr>
-                    <tr tabindex="-1" id="el-124">
+                    <tr tabindex="-1" id="el-small">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-small-element">small</a></code></th>
                         <td>Yes</td>
                         <td>Yes</td>
@@ -3278,7 +3320,12 @@
                             </div>
                             <div class="general">Use MSAA or UIA guidance</div>
                         </td>
-                        <td>ROLE_SYSTEM_TEXT</td>
+                        <td class="ia2">
+                          <div class="general">
+                            Doesn't have an accessible. Exposed as "font-size"
+                            text attribute on the text container.
+                          </div>
+                        </td>
                         <td>
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>Text ??Group??
@@ -3287,7 +3334,7 @@
                         <td>ROLE_TEXT</td>
                         <td>AXGroup<br>(null)<br>group</td>
                     </tr>
-                    <tr tabindex="-1" id="el-125">
+                    <tr tabindex="-1" id="el-source">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-source-element">source</a></code></th>
                         <td>No</td>
                         <td>Yes</td>
@@ -3295,14 +3342,16 @@
                         <td>
                             <div class="general">Do not expose this object</div>
                         </td>
-                        <td>Do not expose this object</td>
+                        <td class="ia2">
+                          <div class="general">Not mapped</div>
+                        </td>
                         <td>
                             <div class="general">Do not expose this object</div>
                         </td>
                         <td>Do not expose this object</td>
                         <td>Do not expose this object</td>
                     </tr>
-                    <tr tabindex="-1" id="el-126">
+                    <tr tabindex="-1" id="el-span">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-span-element">span</a></code></th>
                         <td>Yes</td>
                         <td>Yes</td>
@@ -3313,7 +3362,9 @@
                             </div>
                             <div class="general">Use MSAA or UIA guidance</div>
                           </td>
-                        <td>ROLE_SYSTEM_TEXT</td>
+                        <td class="ia2">
+                          <div class="general">Not mapped</div>
+                        </td>
                         <td>
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>Group
@@ -3322,7 +3373,7 @@
                         <td>ROLE_TEXT</td>
                         <td>AXGroup<br>(null)<br>group</td>
                     </tr>
-                    <tr tabindex="-1" id="el-127">
+                    <tr tabindex="-1" id="el-strong">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-strong-element">strong</a></code></th>
                         <td>Yes</td>
                         <td>Yes</td>
@@ -3333,7 +3384,12 @@
                             </div>
                             <div class="general">Use MSAA or UIA guidance</div>
                         </td>
-                        <td>ROLE_SYSTEM_TEXT</td>
+                        <td class="ia2">
+                          <div class="general">
+                            Doesn't have an accessible. Used styles are mapped
+                            into text attributes on its text container.
+                          </div>
+                        </td>
                         <td>
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>Text ??Group??
@@ -3342,7 +3398,7 @@
                         <td>ROLE_TEXT</td>
                         <td>AXGroup<br>(null)<br>group</td>
                     </tr>
-                    <tr tabindex="-1" id="el-128">
+                    <tr tabindex="-1" id="el-style">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/document-metadata.html#the-style-element">style</a></code></th>
                         <td>Yes</td>
                         <td>Yes</td>
@@ -3350,14 +3406,16 @@
                         <td>
                             <div class="general">Do not expose this object</div>
                         </td>
-                        <td>Do not expose this object</td>
+                        <td class="ia2">
+                          <div class="general">Not mapped</div>
+                        </td>
                         <td>
                             <div class="general">Do not expose this object</div>
                         </td>
                         <td>Do not expose this object</td>
                         <td>Do not expose this object</td>
                     </tr>
-                    <tr tabindex="-1" id="el-129">
+                    <tr tabindex="-1" id="el-sub">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-sub-and-sup-elements">sub</a></code></th>
                         <td>Yes</td>
                         <td>Yes</td>
@@ -3368,7 +3426,12 @@
                             </div>
                             <div class="general">Use MSAA or UIA guidance</div>
                         </td>
-                        <td>ROLE_SYSTEM_TEXT</td>
+                        <td class="ia2">
+                          <div class="general">
+                            Doesn't have an accessible. Exposed as "text-position:sub"
+                            text attribute on its text container.
+                          </div>
+                        </td>
                         <td>
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>Text ??Group??
@@ -3377,7 +3440,7 @@
                         <td>ROLE_TEXT</td>
                         <td>AXGroup<br>(null)<br>group</td>
                     </tr>
-                    <tr id="el-130" tabindex="-1">
+                    <tr tabindex="-1" id="el-summary">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#the-summary-element">summary</a></code></th>
                         <td>No</td>
                         <td>Yes</td>
@@ -3391,7 +3454,11 @@
                             </div>
                             <div class="general">Use MSAA or UIA guidance</div>
                         </td>
-                        <td>ROLE_SYSTEM_PUSHBUTTON</td>
+                        <td class="ia2">
+                          <div class="role">
+                            <span class="type">Role: </span>ROLE_SYSTEM_PUSHBUTTON
+                          </div>
+                        </td>
                         <td>
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>Button
@@ -3403,7 +3470,7 @@
                         <td><p>ROLE_PUSHBUTTON + <br>STATE_EXPANDABLE<br></p></td>
                         <td><p>AXDisclosureTriangle<br>(null)<br>disclosure triangle</p></td>
                     </tr>
-                    <tr tabindex="-1" id="el-131">
+                    <tr tabindex="-1" id="el-sup">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-sub-and-sup-elements">sup</a></code></th>
                         <td>Yes</td>
                         <td>Yes</td>
@@ -3414,7 +3481,12 @@
                             </div>
                             <div class="general">Use MSAA or UIA guidance</div>
                         </td>
-                        <td>ROLE_SYSTEM_TEXT</td>
+                        <td class="ia2">
+                          <div class="general">
+                            Doesn't have an accessible. Exposed as "text-position:super"
+                            text attribute on its text container.
+                          </div>
+                        </td>
                         <td>
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>Text ??Group??
@@ -3423,7 +3495,7 @@
                         <td>ROLE_TEXT</td>
                         <td>AXGroup<br>(null)<br>group</td>
                     </tr>
-                    <tr tabindex="-1" id="el-131-1">
+                    <tr tabindex="-1" id="el-svg">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#svg">svg</a></code></th>
                         <td>No</td>
                         <td>Yes</td>
@@ -3433,7 +3505,11 @@
                                 <span class="type">Role: </span>ROLE_SYSTEM_GRAPHIC
                             </div>
                         </td>
-                        <td>DIAGRAM<br><br><strong>note:</strong> <a href="../../../Users/Steve/Documents/My%20Dropbox/Public/tests/https://bugzilla.mozilla.org/show_bug.cgi?id=764118">bug filed on role in Firefox</a></td>
+                        <td class="ia2">
+                          <div class="role">
+                            <span class="type">Role: </span>ROLE_SYSTEM_GRAPHIC
+                          </div>
+                        </td>
                         <td>
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>Image
@@ -3444,7 +3520,7 @@
                           (null)<br>
                         group</td>
                     </tr>
-                    <tr tabindex="-1" id="el-132">
+                    <tr tabindex="-1" id="el-table">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-table-element">table</a></code></th>
                         <td>Yes</td>
                         <td>Yes</td>
@@ -3455,7 +3531,14 @@
                             </div>
                             <div class="general">Use MSAA or UIA guidance</div>
                         </td>
-                        <td>Use IAccessibleTable2 interface</td>
+                        <td class="ia2">
+                          <div class="role">
+                             <span class="type">Role: </span>ROLE_SYSTEM_TABLE
+                          </div>
+                          <div class="ifaces">
+                             <span class="type">Interface: </span>IAccessibleTable2
+                          </div>
+                        </td>
                         <td>
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>Data Grid
@@ -3467,7 +3550,7 @@
                         <td>ROLE_TABLE</td>
                         <td>AXTable<br>(null)<br>table</td>
                     </tr>
-                    <tr tabindex="-1" id="el-133">
+                    <tr tabindex="-1" id="el-tbody">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-tbody-element">tbody</a></code></th>
                         <td>Yes</td>
                         <td>Yes</td>
@@ -3478,7 +3561,9 @@
                             </div>
                             <div class="general">Use MSAA or UIA guidance</div>
                         </td>
-                        <td>ROLE_SYSTEM_GROUPING</td>
+                        <td class="ia2">
+                          <div class="general">Doesn't have an accessible</div>
+                        </td>
                         <td>
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>Group
@@ -3487,7 +3572,7 @@
                         <td>&nbsp;</td>
                         <td>Not mapped</td>
                     </tr>
-                    <tr tabindex="-1" id="el-134">
+                    <tr tabindex="-1" id="el-td">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-td-element">td</a></code></th>
                         <td>Yes</td>
                         <td>Yes</td>
@@ -3498,7 +3583,14 @@
                             </div>
                             <div class="general">Use MSAA or UIA guidance</div>
                         </td>
-                        <td>ROLE_SYSTEM_CELL</td>
+                        <td class="ia2">
+                          <div class="role">
+                             <span class="type">Role: </span>ROLE_SYSTEM_CELL
+                          </div>
+                          <div class="ifaces">
+                             <span class="type">Interfaces: </span>IAccessibleTableCell
+                          </div>
+                        </td>
                         <td>
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>Data Item
@@ -3507,18 +3599,20 @@
                         <td>ROLE_TABLE_CELL</td>
                         <td>AXCell<br>(null)<br>cell</td>
                     </tr>
-                    <tr tabindex="-1" id="el-134a">
+                    <tr tabindex="-1" id="el-template">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/templating.html#the-template-element">template</a></code></th>
                         <td>No</td>
                         <td>Yes</td>
                         <td>?</td>
                         <td>?</td>
-                        <td>?</td>
+                        <td class="ia2">
+                          <div class="general">Not mapped</div>
+                        </td>
                         <td>?</td>
                         <td>?</td>
                         <td>?</td>
                     </tr>
-                    <tr tabindex="-1" id="el-135">
+                    <tr tabindex="-1" id="el-textarea">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-textarea-element">textarea</a></code></th>
                         <td>Yes</td>
                         <td>Yes</td>
@@ -3529,7 +3623,16 @@
                             </div>
                             <div class="general">Use MSAA or UIA guidance</div>
                         </td>
-                        <td>state: <a href="http://accessibility.linuxfoundation.org/a11yspecs/ia2/docs/html/_accessible_states_8idl.html#afecbfb195aaf7050dc8f75a7833bd5f59f5a0d01f659f8888f0e15e179adf45">STATE_MULTI_LINE</a></td>
+                        <td class="ia2">
+                          <div class="role">
+                            <span class="type">Role: </span>
+                              ROLE_SYSTEM_TEXT
+                          </div>
+                          <div class="states">
+                            <span class="type">States: </span>
+                            IA2_STATE_MULTI_LINE; STATE_SYSTEM_READONLY if readonly, otherwise IA2_STATE_EDITABLE
+                          </div>
+                        </td>
                         <td>
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>Text ??Edit??
@@ -3539,7 +3642,7 @@
                         <td>AXTextArea<br>(null)<br>text entry area</td>
                     </tr>
                     
-                    <tr tabindex="-1" id="el-136">
+                    <tr tabindex="-1" id="el-tfoot">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-tfoot-element">tfoot</a></code></th>
                         <td>Yes</td>
                         <td>Yes</td>
@@ -3550,7 +3653,9 @@
                             </div>
                             <div class="general">Use MSAA or UIA guidance</div>
                         </td>
-                        <td>ROLE_SYSTEM_GROUPING</td>
+                        <td class="ia2">
+                          <div class="general">Doesn't have an accessible</div>
+                        </td>
                         <td>
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>Group
@@ -3559,7 +3664,7 @@
                         <td>ROLE_PANEL</td>
                         <td>Not mapped</td>
                     </tr>
-                    <tr tabindex="-1" id="el-137">
+                    <tr tabindex="-1" id="el-th">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-th-element">th</a></code> <span class="el-context">(is neither a column header nor a row header)</span></th>
                         <td>Yes</td>
                         <td>Yes</td>
@@ -3570,7 +3675,15 @@
                             </div>
                             <div class="general">Use MSAA or UIA guidance</div>
                         </td>
-                        <td>ROLE_SYSTEM_CELL</td>
+                        <td class="ia2">
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            ROLE_SYSTEM_CELL
+                          </div>
+                          <div class="ifaces">
+                             <span class="type">Interfaces: </span>IAccessibleTableCell
+                          </div>
+                        </td>
                         <td>
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>Data Item
@@ -3579,7 +3692,7 @@
                         <td>ROLE_TABLE_CELL</td>
                         <td>AXCell<br>(null)<br>cell</td>
                     </tr>
-                    <tr tabindex="-1" id="el-138">
+                    <tr tabindex="-1" id="el-th-columnheader">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-th-element">th</a></code> <span class="el-context">(is a column header)</span></th>
                         <td>Yes</td>
                         <td>Yes</td>
@@ -3590,7 +3703,15 @@
                             </div>
                             <div class="general">Use MSAA or UIA guidance</div>
                         </td>
-                        <td>&nbsp;</td>
+                        <td class="ia2">
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            ROLE_SYSTEM_COLUMNHEADER
+                          </div>
+                          <div class="ifaces">
+                             <span class="type">Interfaces: </span>IAccessibleTableCell
+                          </div>
+                        </td>
                         <td>
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>Header
@@ -3603,7 +3724,7 @@
                         <td>ROLE_COLUMN_HEADER</td>
                         <td>AXCell<br>(null)<br>cell<p>Parent table also implements AXColumnHeaderUIElements property that is a list of pointers to the column header cells.</p> <p>Parent table also implements AXHeader property that is a pointer to the row or group containing the columnheader cells.</p></td>
                     </tr>
-                    <tr tabindex="-1" id="el-139">
+                    <tr tabindex="-1" id="el-th-rowheader">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-th-element">th</a></code> <span class="el-context">(is a row header)</span></th>
                         <td>Yes</td>
                         <td>Yes</td>
@@ -3614,7 +3735,15 @@
                             </div>
                             <div class="general">Use MSAA or UIA guidance</div>
                         </td>
-                        <td>&nbsp;</td>
+                        <td class="ia2">
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            ROLE_SYSTEM_ROWHEADER
+                          </div>
+                          <div class="ifaces">
+                             <span class="type">Interfaces: </span>IAccessibleTableCell
+                          </div>
+                        </td>
                         <td>
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>Header
@@ -3627,7 +3756,7 @@
                         <td>ROLE_ROW_HEADER</td>
                         <td>AXCell<br>(null)<br>cell<p>Parent table also implements AXRowHeaderUIElements property that is a list of pointers to the row header cells</p></td>
                     </tr>
-                    <tr tabindex="-1" id="el-140">
+                    <tr tabindex="-1" id="el-thead">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-thead-element">thead</a></code></th>
                         <td>Yes</td>
                         <td>Yes</td>
@@ -3637,7 +3766,9 @@
                                 <span class="type">Role: </span>ROLE_SYSTEM_GROUPING
                             </div>
                         </td>
-                        <td>ROLE_SYSTEM_GROUPING</td>
+                        <td class="ia2">
+                          <div class="general">Doesn't have an accessible</div>
+                        </td>
                         <td>
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>Header
@@ -3646,7 +3777,7 @@
                         <td>ROLE_PANEL</td>
                         <td>Not mapped</td>
                     </tr>
-                    <tr tabindex="-1" id="el-141">
+                    <tr tabindex="-1" id="el-time">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-time-element">time</a></code></th>
                         <td>No</td>
                         <td>Yes</td>
@@ -3656,12 +3787,16 @@
                                 <span class="type">Role: </span>ROLE_SYSTEM_TEXT
                             </div>
                         </td>
-                        <td>ROLE_SYSTEM_TEXT</td>
+                        <td class="ia2">
+                          <div class="general">
+                            Doesn't have an accessible.
+                          </div>
+                        </td>
                         <td>?</td>
                         <td>ROLE_TEXT</td>
                         <td>AXGroup<br>(null)<br>group</td>
                     </tr>
-                    <tr tabindex="-1" id="el-142">
+                    <tr tabindex="-1" id="el-title">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/document-metadata.html#the-title-element">title</a></code></th>
                         <td>Yes</td>
                         <td>Yes</td>
@@ -3669,14 +3804,16 @@
                         <td>
                             <div class="general">Not mapped</div>
                         </td>
-                        <td>Not mapped</td>
+                        <td class="ia2">
+                          <div class="general">Not mapped</div>
+                        </td>
                         <td>
                             <div class="general">Not mapped</div>
                         </td>
                         <td>Not mapped</td>
                         <td>Not mapped</td>
                     </tr>
-                    <tr tabindex="-1" id="el-143">
+                    <tr tabindex="-1" id="el-tr">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-tr-element">tr</a></code></th>
                         <td>Yes</td>
                         <td>Yes</td>
@@ -3687,7 +3824,11 @@
                             </div>
                             <div class="general">Use MSAA or UIA guidance</div>
                         </td>
-                        <td>ROLE_SYSTEM_ROW</td>
+                        <td class="ia2">
+                          <div class="role">
+                            <span class="type">Role: </span>ROLE_SYSTEM_ROW
+                          </div>
+                        </td>
                         <td>
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>Data Item
@@ -3697,29 +3838,35 @@
                         <td>ROLE_LIST_ITEM</td>
                         <td>AXRow<br>AXTableRow<br>row</td>
                     </tr>
-                    <tr tabindex="-1" id="el-143a">
+                    <tr tabindex="-1" id="el-track">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-track-element">track</a></code></th>
                         <td>No</td>
                         <td>Yes</td>
                         <td>?</td>
                         <td>?</td>
-                        <td>?</td>
+                        <td class="ia2">
+                          <div class="general">Not mapped</div>
+                        </td>
                         <td>?</td>
                         <td>?</td>
                         <td>?</td>
                     </tr>
-                    <tr tabindex="-1" id="el-143a">
+                    <tr tabindex="-1" id="el-u">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-u-element">u</a></code></th>
                         <td>?</td>
                         <td>?</td>
                         <td>?</td>
                         <td>?</td>
-                        <td>?</td>
+                        <td class="ia2">
+                          <div class="general">
+                            Doesn't have an accessible, mapped as "text-underline-style:solid" text attribute on its text container.
+                          </div>
+                        </td>
                         <td>?</td>
                         <td>?</td>
                         <td>?</td>
                     </tr>
-                    <tr tabindex="-1" id="el-144">
+                    <tr tabindex="-1" id="el-ul">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-ul-element">ul</a></code></th>
                         <td>Yes</td>
                         <td>Yes</td>
@@ -3733,7 +3880,16 @@
                             </div>
                             <div class="general">Use MSAA or UIA guidance</div>
                         </td>
-                        <td>ROLE_SYSTEM_LIST + STATE_SYSTEM_READONLY</td>
+                        <td class="ia2">
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            ROLE_SYSTEM_LIST
+                          </div>
+                          <div class="states">
+                            <span class="type">States: </span>
+                            STATE_SYSTEM_READONLY
+                          </div>
+                        </td>
                         <td>
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>List
@@ -3742,7 +3898,7 @@
                         <td>ROLE_LIST + do not expose STATE_EDITABLE</td>
                         <td>AXList<br>AXContentList<br>list</td>
                     </tr>
-                    <tr tabindex="-1" id="el-145">
+                    <tr tabindex="-1" id="el-var">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-var-element">var</a></code></th>
                         <td>Yes</td>
                         <td>Yes</td>
@@ -3753,7 +3909,11 @@
                             </div>
                             <div class="general">Use MSAA or UIA guidance</div>
                         </td>
-                        <td>ROLE_SYSTEM_TEXT</td>
+                        <td class="ia2">
+                          <div class="general">
+                            Doesn't have an accessible, used styles are mapped to text attributes on its text container.
+                          </div>
+                        </td>
                         <td>
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>Text (Note: not Group, because it would usually only contain a word.)
@@ -3762,13 +3922,18 @@
                         <td>ROLE_TEXT</td>
                         <td>AXGroup<br>(null)<br>group</td>
                     </tr>
-                    <tr tabindex="-1" id="el-146">
+                    <tr tabindex="-1" id="el-video">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-video-element">video</a></code></th>
                         <td>No</td>
                         <td>Yes</td>
                         <td>none</td>
                         <td>?</td>
-                        <td>?</td>
+                        <td class="ia2">
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            ROLE_SYSTEM_GROUPING
+                          </div>
+                        </td>
                         <td>?</td>
                         <td>?</td>
                         <td><p>AXGroup<br>(null)<br>group</p><p><strong>Note: </strong>UI controls within the video element exposed as AXToolbar.</p></td>
@@ -3781,7 +3946,11 @@
                         <td>
                             <div class="general">Not mapped</div>
                         </td>
-                        <td>none</td>
+                        <td class="ia2">
+                          <div class="general">
+                            A line break if added is exposed via IAccessibleText on its text container
+                          </div>
+                        </td>
                         <td>none</td>
                         <td>none</td>
                         <td>AXGroup<br>(null)<br>group</td>
