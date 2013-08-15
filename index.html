@@ -2852,12 +2852,18 @@
                         <td class="ia2">
                           <div class="general">
                             Doesn't have an accessible. Mapped into 
-                            "font-family:monospace" text attribute on the text
+                            "font-family:monospace" text attribute on its text
                             container.
                           </div>
                         </td>
                         <td>?</td>
-                        <td>ROLE_TEXT</td>
+                        <td class="at-spi">
+                          <div class="general">
+                            Doesn't have an accessible. Mapped into 
+                            "font-family:monospace" text attribute on its text
+                            container.
+                          </div>
+                        </td>
                         <td>AXGroup<br>(null)<br>group</td>
                     </tr>
                     <tr tabindex="-1" id="el-keygen">
@@ -2879,7 +2885,8 @@
                             <span class="type">Role: </span>
                             ROLE_SYSTEM_COMBOBOX
                           </div>
-                          <span class="type">States: </span>
+                          <div class="states">
+                            <span class="type">States: </span>
                             STATE_SYSTEM_HASPOPUP; STATE_SYSTEM_EXPANDED or STATE_SYSTEM_COLLAPSED depending on the state
                           </div>
                         </td>
@@ -2888,7 +2895,20 @@
                                 <span class="type">Control Type: </span>Combo Box
                             </div>
                         </td>
-                        <td>ROLE_COMBO_BOX + STATE_EXPANDABLE + object attribute haspopup="true"</td>
+                        <td class="at-spi">
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            ROLE_COMBO_BOX
+                          </div>
+                          <div class="states">
+                            <span class="type">States: </span>
+                            STATE_EXPANDABLE; STATE_COLLAPSED if collapsed
+                          </div>
+                          <div class="objattrs">
+                            <span class="type">Object attributes: </span>
+                            haspopup:true
+                          </div>
+                        </td>
                         <td>AXList<br>
                           (null)<br>
                           list</td>
@@ -2911,8 +2931,8 @@
                           </div>
                           <div role="relations">
                             <span class="type">Relations: </span>
-                            RELATION_LABEL_FOR for child form element or form element referred by @for attribute. Note,
-                            related form element provides RELATION_LABELLED_BY pointing to the label.
+                            IA2_RELATION_LABEL_FOR for a child form element or form element referred by @for attribute. Note,
+                            related form element provides IA2_RELATION_LABELLED_BY pointing to the label.
                           </div>
                         </td>
                         <td>
@@ -2923,7 +2943,17 @@
                                 <span class="type">Properties: </span>??The parent <code>input</code> has a UIA_LabeledByPropertyId pointing to the UIA element for the <code>legend</code> element.?? When the <code>label</code> element has a <code>for</code> attribute pointing to a valid IDREF, the referenced element has a UIA_LabeledByPropertyId pointing to the UIA element for the <code>label</code> element.
                             </div>
                         </td>
-                        <td>ROLE_LABEL</td>
+                        <td class="at-spi">
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            ROLE_LABEL
+                          </div>
+                          <div role="relations">
+                            <span class="type">Relations: </span>
+                            RELATION_LABEL_FOR for a child form element or form element referred by @for attribute. Note,
+                            related form element provides RELATION_LABELLED_BY pointing to the label.
+                          </div>
+                        </td>
                         <td>AXGroup<br>(null)<br>group</td>
                     </tr>
                         <tr tabindex="-1" id="el-legend">
@@ -2937,14 +2967,14 @@
                             </div>
                             SHOULD use UIA_LabeledByPropertyId (see UIA column)
                         </td>
-                        <td>
+                        <td class="ia2">
                           <div class="role">
                             <span class="type">Role :</span>
                             ROLE_SYSTEM_STATICTEXT and IA2_ROLE_LABEL
                           </div>
                           <div class="relations">
                             <span class="type">Relations: </span>
-                            RELATION_LABEL_FOR with parent HTML:fieldset element
+                            IA2_RELATION_LABEL_FOR with parent HTML:fieldset element
                           </div>
                        </td>
                         <td>
@@ -2955,7 +2985,16 @@
                                 <span class="type">Properties: </span>The parent <code>fieldset</code> has a UIA_LabeledByPropertyId pointing to the UIA element for the <code>legend</code> element.
                             </div>
                         </td>
-                        <td>ROLE_LABEL</td>
+                        <td class="at-spi">
+                          <div class="role">
+                            <span class="type">Role :</span>
+                            ROLE_LABEL
+                          </div>
+                          <div class="relations">
+                            <span class="type">Relations: </span>
+                            RELATION_LABEL_FOR with parent HTML:fieldset element
+                          </div>
+                       </td>
                         <td>AXGroup<br>(null)<br>group</td>
                     </tr>
                     <tr tabindex="-1" id="el-li">
@@ -2985,8 +3024,13 @@
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>List Item
                             </div>
-                        </td>
-                        <td>ROLE_LISTITEM + do not expose STATE_EDITABLE</td>
+                        </td
+                        <td class="at-spi">
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            ROLE_LISTITEM
+                          </div>
+                        </td>>
                         <td>AXGroup<br>(null)<br>group</td>
                     </tr>
                     <tr tabindex="-1" id="el-li-parentmenu">
@@ -3017,7 +3061,12 @@
                                 <span class="type">Control Type: </span>Menu Item
                             </div>
                         </td>
-                        <td>ROLE_LISTITEM + do not expose STATE_EDITABLE</td>
+                        <td class="at-spi">
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            ROLE_LISTITEM
+                          </div>
+                        </td>
                         <td>AXGroup<br>(null)<br>group</td>
                     </tr>
                     <tr tabindex="-1" id="el-link">
@@ -3034,7 +3083,9 @@
                                 <span class="type">Control Type: </span>Hyperlink
                             </div>
                         </td>
-                        <td>ROLE_LINK</td>
+                        <td class="at-spi">
+                          <div class="general">Not mapped</div>
+                        </td>
                         <td>Not mapped</td>
                     </tr>
                     <tr tabindex="-1" id="el-main">
@@ -3063,7 +3114,17 @@
                                 <span class="type">Control Type: </span>Group
                             </div>
                         </td>
-                        <td>ROLE_SECTION<br><br>Object attribute role="complementary"</td>
+                        <td class="at-spi">
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            ROLE_SECTION
+                          </div>
+                          <div class="objattrs">
+                            <span class="type">Object attributes: </span>
+                            xml-roles:main
+                          </div>
+                        </td>
+                        <td>
                         <td>AXGroup<br>AXLandmarkMain<br>main</td>
                     </tr>
                     <tr tabindex="-1" id="el-map">
@@ -3086,7 +3147,15 @@
                         <td>
                             <div class="general">Not mapped</div>
                         </td>
-                        <td>Not mapped</td>
+                        <td class="at-spi">
+                          <div class="general">
+                            Not mapped if used as an image map, otherwise:
+                          </div>
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            ROLE_TEXT
+                          </div>
+                        </td>
                         <td>Not mapped</td>
                     </tr>
                     <tr tabindex="-1" id="el-mark">
@@ -3110,7 +3179,12 @@
                                 <span class="type">Control Type: </span>Text
                             </div>
                         </td>
-                        <td>ROLE_TEXT</td>
+                        <td class="at-spi">
+                          <div class="general">
+                            Doesn't have an accessible. Styles used to highlight
+                            the text are mapped into text attributes on the text container.
+                          </div>
+                        </td>
                         <td>AXGroup<br>(null)<br>group</td>
                     </tr>
                     <tr tabindex="-1" id="el-math">
@@ -3130,7 +3204,12 @@
                           </div>
                         </td>
                         <td>?</td>
-                        <td>ROLE_UNKNOWN</td>
+                        <td class="at-spi">
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            ROLE_UNKNOWN
+                          </div>
+                        </td>
                         <td>AXGroup<br>AXDocumentMath<br>math</td>
                     </tr>
                     <tr tabindex="-1" id="el-menu">
@@ -3155,7 +3234,16 @@
                                 <span class="type">Control Type: </span>Menu
                             </div>
                         </td>
-                        <td>ROLE_MENU. These objects <em class="rfc2119">should not</em> be exposed for a submenu if there is a parent menu item spawning the submenu</td>
+                        <td class="at-spi">
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            ROLE_MENU
+                          </div>
+                          <div class="general">
+                            These objects <em class="rfc2119">should not</em> be exposed
+                            for a submenu if there is a parent menu item spawning the submenu
+                          </div>
+                        </td>
                         <td>AXMenu<br>(null)<br>menu</td>
                     </tr>
                     <tr tabindex="-1" id="el-menu-toolbar">
@@ -3180,7 +3268,12 @@
                                 <span class="type">Control Type: </span>ToolBar
                             </div>
                         </td>
-                        <td>ROLE_TOOL_BAR</td>
+                        <td class="at-spi">
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            ROLE_TOOL_BAR
+                          </div>
+                        </td>
                         <td>AXMenu<br>(null)<br>menu</td>
                     </tr>
                     <tr tabindex="-1" id="el-menuitem-checkbox">
@@ -3212,7 +3305,20 @@
                                 <span class="type">Control Pattern: </span>Toggle
                             </div>
                         </td>
-                        <td>ROLE_CHECK_MENU_ITEM + object attribute checkable="true"</td>
+                        <td class="at-spi">
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            ROLE_CHECK_MENU_ITEM
+                          </div>
+                          <div class="states">
+                            <span class="type">States: </span>
+                            STATE_CHECKED if checked
+                          </div>
+                          <div class="objattrs">
+                            <span class="type">Object attributes: </span>
+                            checkable:true
+                          </div>
+                        </td>
                         <td>AXCheckbox<br>(null)<br>check box</td>
                     </tr>
                     <tr tabindex="-1" id="el-menuitem-command">
@@ -3237,7 +3343,12 @@
                                 <span class="type">Control Type: </span>MenuItem
                             </div>
                         </td>
-                        <td>ROLE_MENU_ITEM</td>
+                        <td class="at-spi">
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            ROLE_MENU_ITEM
+                          </div>
+                        </td>
                         <td>AXMenuItem<br>(null)<br>menu item</td>
                     </tr>
                     <tr tabindex="-1" id="el-menuitem-radio">
@@ -3269,7 +3380,20 @@
                                 <span class="type">Control Pattern: </span>Toggle
                             </div>
                         </td>
-                        <td>ROLE_RADIO_MENU_ITEM + object attribute checkable="true"</td>
+                        <td class="at-spi">
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            ROLE_RADIO_MENU_ITEM
+                          </div>
+                          <div class="states">
+                            <span class="type">States: </span>
+                            STATE_CHECKED if checked
+                          </div>
+                          <div class="objattrs">
+                            <span class="type">Object attributes: </span>
+                            checkable:true
+                          </div>
+                        </td>
                         <td>AXRadioButton<br>(null)<br>radio button</td>
                     </tr>
                     <tr tabindex="-1" id="el-meta">
@@ -3286,7 +3410,9 @@
                         <td>
                             <div class="general">Not mapped</div>
                         </td>
-                        <td>Not mapped</td>
+                        <td class="at-spi">
+                          <div class="general">Not mapped</div>
+                        </td>
                         <td>Not mapped</td>
                     </tr>
                     <tr tabindex="-1" id="el-meter">
@@ -3315,7 +3441,12 @@
                                 <span class="type">Properties: </span>Set the control pattern's IsReadOnly property to true. Set LocalizedControlType to "Meter".
                             </div>
                         </td>
-                        <td>ROLE_TEXT</td>
+                        <td class="at-spi">
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            ROLE_PROGRESS_BAR
+                          </div>
+                        </td>
                         <td>AXGroup<br>(null)<br>group</td>
                     </tr>
                     <tr tabindex="-1" id="el-nav">
@@ -3343,8 +3474,16 @@
                                 <span class="type">Control Type: </span>??Text
                             </div>
                         </td>
-                        <td>ROLE_PANEL<br>
-                        Object attribute role="navigation"</td>
+                        <td class="at-spi">
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            ROLE_PANEL
+                          </div>
+                          <div class="objattrs">
+                            <span class="type">Object attributes: </span>
+                            xml-roles:navigation
+                          </div>
+                        </td>
                         <td>AXGroup<br>               
                           AXLandmarkNavigation<br>
                       navigation</td>
@@ -3363,7 +3502,9 @@
                         <td>
                             <div class="general">Not mapped</div>
                         </td>
-                        <td>Not mapped</td>
+                        <td class="at-spi">
+                          <div class="general">Not mapped</div>
+                        </td>
                         <td>Not mapped</td>
                     </tr>
                     <tr tabindex="-1" id="el-object">
@@ -3390,7 +3531,15 @@
                         <td>
                             <div class="general">Depends on format of data file.</div>
                         </td>
-                        <td>ROLE_EMBEDDED</td>
+                        <td class="at-spi">
+                          <div class="general">
+                            Depends on format of data file. If contains a plugin then
+                          </div>
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            ROLE_EMBEDDED
+                          </div>
+                        </td>
                         <td>depends on format of data file.</td>
                     </tr>
                     <tr tabindex="-1" id="el-ol">
@@ -3398,7 +3547,7 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td><code>list</code> role </td>
-                        <td>
+                        <td class="uia-express">
                           <div class="role">
                             <span class="type">Role: </span>
                             ROLE_SYSTEM_LIST
@@ -3424,7 +3573,12 @@
                                 <span class="type">Control Type: </span>List
                             </div>
                         </td>
-                        <td>ROLE_LIST + do not expose STATE_EDITABLE</td>
+                        <td class="at-spi">
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            ROLE_LIST
+                          </div>
+                        </td>
                         <td>AXList<br>AXContentList<br>list</td>
                     </tr>
                     <tr tabindex="-1" id="el-optgroup">
@@ -3449,7 +3603,12 @@
                                 <span class="type">Control Type: </span>Group
                             </div>
                         </td>
-                        <td><em>ROLE_PANEL</em></td>
+                        <td class="at-spi">
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            <em>ROLE_PANEL</em>
+                          </div>
+                        </td>
                         <td>AXMenuItem<br>(null)<br>menu item</td>
                     </tr>
                     <tr tabindex="-1" id="el-option">
@@ -3457,7 +3616,7 @@
                         <td>No</td>
                         <td>Yes</td>
                         <td><code>option</code> role, with the <code>aria-selected</code> state set to "true" if the element's <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#concept-option-selectedness">selectedness</a> is true, or "false" otherwise. </td>
-                        <td>
+                        <td class="uia-express">
                             <div class="role">
                                 <span class="type">Role: </span>ROLE_SYSTEM_LISTITEM
                             </div>
@@ -3470,10 +3629,10 @@
                           </div>
                           <div class="states">
                             <span class="type">States: </span>
-                            STATE_SYSTEM_FOCUSABLE; STATE_SYSTEM_FOCUSED if selected and HTML:select has DOM focus
+                            STATE_SYSTEM_FOCUSABLE; STATE_SYSTEM_FOCUSED if selected and the user focus is at the list
                           </div>
                         </td>
-                        <td>
+                        <td class="uia">
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>List Item
                             </div>
@@ -3481,7 +3640,16 @@
                                 <span class="type">Control Pattern: </span>SelectionItem (required for List Item control type)
                             </div>
                         </td>
-                        <td>ROLE_LIST_ITEM</td>
+                        <td class="at-spi">
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            ROLE_LIST_ITEM
+                          </div>
+                          <div class="states">
+                            <span class="type">States: </span>
+                            STATE_FOCUSABLE; STATE_FOCUSED if selected and the user focus is at the list
+                          </div>
+                        </td>
                         <td>AXMenuItem<br>(null)<br>menu item</td>
                     </tr>
                     <tr tabindex="-1" id="el-output">
@@ -3511,13 +3679,28 @@
                             Paired element exposes IA2_RELATION_CONTROLLER_FOR relation.
                           </div>
                         </td>
-                        <td>
+                        <td class="uia">
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>Text
                             </div>
                             <div class="properties">
-                                <span class="type">Properties: </span>When the <code>output</code> element has a <code>for</code> attribute pointing to a valid IDREF, the referenced element has a UIA_LabeledByPropertyId pointing to the UIA element for the <code>output</code> element.</td>
-                        <td>ROLE_SECTION<br><br><strong>note: </strong>object attribute aria-live=polite controlled_by relation defined by label element @for attribute.</td>
+                                <span class="type">Properties: </span>When the <code>output</code> element has a <code>for</code> attribute pointing to a valid IDREF, the referenced element has a UIA_LabeledByPropertyId pointing to the UIA element for the <code>output</code> element.
+                        </td>
+                        <td class="at-spi">
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            ROLE_SECTION
+                          </div>
+                          <div class="objattrs">
+                            <span class="type">Object attributes: </span>
+                            live:polite
+                          </div>
+                          <div role="relations">
+                            <span class="type">Relations: </span>
+                            RELATION_CONTROLLED_BY with an element pointed by @for attribute.
+                            Paired element exposes RELATION_CONTROLLER_FOR relation.
+                          </div>
+                        </td>
                         <td>AXGroup<br>(null)<br>group</td>
                     </tr>
                     <tr tabindex="-1" id="el-p">
@@ -3542,7 +3725,12 @@
                                 <span class="type">Control Type: </span>Text
                             </div>
                         </td>
-                        <td>ROLE_PARAGRAPH</td>
+                        <td class="at-spi">
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            ROLE_PARAGRAPH
+                          </div>
+                        </td>
                         <td>AXGroup<br>(null)<br>group</td>
                     </tr>
                     <tr tabindex="-1" id="el-param">
@@ -3559,7 +3747,9 @@
                         <td>
                             <div class="general">Not mapped</div>
                         </td>
-                        <td>Not mapped</td>
+                        <td class="at-spi">
+                          <div class="general">Not mapped</div>
+                        </td>
                         <td>Not mapped</td>
                     </tr>
                     <tr tabindex="-1" id="el-pre">
@@ -3579,7 +3769,7 @@
                             tag name BSTR and IA2_ROLE_PARAGRAPH
                           </div>
                           <div class="general">
-                            Default styles are mapped into text attributes on the accessible
+                            Used styles are mapped into text attributes on the accessible
                           </div>
                         </td>
                         <td>
@@ -3587,7 +3777,15 @@
                                 <span class="type">Control Type: </span>Text ??Group??
                             </div>
                         </td>
-                        <td>ROLE_TEXT</td>
+                        <td class="at-spi">
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            ROLE_PARAGRAPH
+                          </div>
+                          <div class="general">
+                            Used styles are mapped into text attributes on the accessible
+                          </div>
+                        </td>
                         <td>AXGroup<br>(null)<br>group</td>
                     </tr>
                     <tr tabindex="-1" id="el-progress">
@@ -3595,7 +3793,7 @@
                         <td>No</td>
                         <td>Yes</td>
                         <td><code>progressbar</code> role, with, if the progress bar is determinate, the <code>aria-valuemax</code> property set to the maximum value of the progress bar, the <code>aria-valuemin</code> property set to zero, and the <code>aria-valuenow</code> property set to the current value of the progress bar </td>
-                        <td>
+                        <td class="uia-express">
                             <div class="role">
                                 <span class="type">Role: </span>ROLE_SYSTEM_PROGRESSBAR
                             </div>
@@ -3611,7 +3809,7 @@
                           </div>
                           <div class="states">
                             <span class="type">States: </span>
-                            STATE_SYSTEM_MIXED if progress is indeterminate
+                            STATE_SYSTEM_MIXED if the progress is indeterminate
                           </div>
                         </td>
                         <td>
@@ -3619,7 +3817,16 @@
                                 <span class="type">Control Type: </span>Progress Bar
                             </div>
                         </td>
-                        <td>ROLE_PROGRESS_BAR + do not expose EXTENDED_STATE_EDITABLE</td>
+                        <td class="at-spi">
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            ROLE_PROGRESS_BAR
+                          </div>
+                          <div class="states">
+                            <span class="type">States: </span>
+                            STATE_INDETERMINATE if the progress is indeterminate
+                          </div>
+                        </td>
                         <td>AXProgressIndicator<br>(null)<br>progress indicator<br><br>Use AXValue to expose current value.</td>
                     </tr>
                     <tr tabindex="-1" id="el-q">
@@ -3627,13 +3834,12 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>
+                        <td class="uia-express">
                             <div class="role">
                                 <span class="type">Role: </span>ROLE_SYSTEM_TEXT ??group??
                             </div>
                             <div class="general">Use MSAA or UIA guidance</div>
                         </td>
-                        <td></td>
                         <td class="ia2">
                           <div class="role">
                             <span class="type">Role: </span>
@@ -3644,12 +3850,17 @@
                             ROLE_SYSTEM_TEXT wrapped by ROLE_SYSTEM_STATICTEXT created for quote marks
                           </div>
                         </td>
-                        <td>
+                        <td class="uia">
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>Text ??Group??
                             </div>
                         </td>
-                        <td>ROLE_TEXT</td>
+                        <td class="at-spi">
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            ROLE_TEXT
+                          </div>
+                        </td>
                         <td>AXGroup<br>(null)<br>group</td>
                     </tr>
                     <tr tabindex="-1" id="el-rp">
@@ -3665,7 +3876,8 @@
                         </td>
                         <td class="ia2">
                           <div class="general">
-                            Doesn't have an accessible. No child elements are exposed if HTML:ruby is supported by the browser.
+                            Doesn't have an accessible. No child elements are
+                            exposed if HTML:ruby is supported by the browser.
                           </div>
                         </td>
                         <td>
@@ -3673,7 +3885,12 @@
                                 <span class="type">Control Type: </span>Text ??Group??
                             </div>
                         </td>
-                        <td>ROLE_TEXT</td>
+                        <td class="at-spi">
+                          <div class="general">
+                            Doesn't have an accessible. No child elements are
+                            exposed if HTML:ruby is supported by the browser.
+                          </div>
+                        </td>
                         <td>?</td>
                     </tr>
                     <tr tabindex="-1" id="el-rt">
@@ -3697,7 +3914,11 @@
                                 <span class="type">Control Type: </span>Text
                             </div>
                         </td>
-                        <td>ROLE_TEXT</td>
+                        <td class="at-spi">
+                          <div class="general">
+                            Doesn't have an accessible.
+                          </div>
+                        </td>
                         <td>?</td>
                     </tr>
                     <tr tabindex="-1" id="el-ruby">
@@ -3722,7 +3943,12 @@
                                 <span class="type">Control Type: </span>Text ??Group??
                             </div>
                         </td>
-                        <td>ROLE_TEXT</td>
+                        <td class="at-spi">
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            ROLE_TEXT
+                          </div>
+                        </td>
                         <td>?</td>
                     </tr>
                     <tr tabindex="-1" id="el-s">
@@ -3737,7 +3963,8 @@
                             <div class="general">Use MSAA or UIA guidance</div>
                         </td>
                         <td class="ia2">
-                          <div class="general">Doesn't have an accessible, exposed as
+                          <div class="general">
+                            Doesn't have an accessible, exposed as
                             "text-line-through-style:solid" text attribute on the text container.
                           </div>
                         </td>
@@ -3746,7 +3973,12 @@
                                 <span class="type">Control Type: </span>Text ??Group??
                             </div>
                         </td>
-                        <td>ROLE_TEXT</td>
+                        <td class="at-spi">
+                          <div class="general">
+                            Doesn't have an accessible, exposed as
+                            "text-line-through-style:solid" text attribute on the text container.
+                          </div>
+                        </td>
                         <td>AXGroup<br>(null)<br>group</td>
                     </tr>
                     <tr tabindex="-1" id="el-samp">
@@ -3771,7 +4003,12 @@
                                 <span class="type">Control Type: </span>Text ??Group??
                             </div>
                         </td>
-                        <td>ROLE_TEXT</td>
+                        <td class="at-spi">
+                          <div class="general">
+                            Doesn't have an accessible. Styles are mapped into
+                            text attributes on its text container.
+                          </div>
+                        </td>
                         <td>AXGroup<br>(null)<br>group</td>
                     </tr>
                     <tr tabindex="-1" id="el-script">
@@ -3788,7 +4025,9 @@
                         <td>
                             <div class="general">Not mapped</div>
                         </td>
-                        <td>Not mapped</td>
+                        <td class="at-spi">
+                          <div class="general">Not mapped</div>
+                        </td>
                         <td>Not mapped</td>
                     </tr>
                     <tr tabindex="-1" id="el-section">
@@ -3816,7 +4055,16 @@
                                 <span class="type">Control Type: </span>Text ??Group??
                             </div>
                         </td>
-                        <td>ROLE_PANEL</td>
+                        <td class="at-spi">
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            ROLE_SECTION
+                          </div>
+                          <div class="objattrs">
+                            <span class="type">Object attributes: </span>
+                            xml-roles:region
+                          </div>
+                        </td>
                         <td>AXGroup<br>
                           AXDocumentRegion<br>
                       region</td>
@@ -3826,7 +4074,7 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td><code>listbox</code> role, with the <code>aria-multiselectable</code> property set to "true" </td>
-                        <td>
+                        <td class="uia-express">
                             <div class="role">
                                 <span class="type">Role: </span>ROLE_SYSTEM_LIST
                             </div>
@@ -3845,7 +4093,7 @@
                             STATE_SYSTEM_FOCUSABLE; STATE_SYSTEM_MULTISELECTABLE
                           </div>
                         </td>
-                        <td>
+                        <td class="uia">
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>List
                             </div>
@@ -3853,7 +4101,16 @@
                                 <span class="type">Control Pattern: </span>ISelectionProvider::CanSelectMultiple set to true
                             </div>
                         </td>
-                        <td>ROLE_LIST + STATE_MULTISELECTABLE</td>
+                        <td class="at-spi">
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            ROLE_LIST
+                          </div>
+                          <div class="states">
+                            <span class="type">States: </span>
+                            STATE_FOCUSABLE; STATE_MULTISELECTABLE
+                          </div>
+                        </td>
                         <td>AXList<br>(null)<br>list</td>
                     </tr>
                     <tr tabindex="-1" id="el-select-combobox">
@@ -3889,7 +4146,24 @@
                                 <span class="type">Control Type: </span>Combo Box
                             </div>
                         </td>
-                        <td>ROLE_COMBO_BOX + STATE_EXPANDABLE + object attribute haspopup="true"</td>
+                        <td class="at-spi">
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            ROLE_COMBO_BOX
+                          </div>
+                          <div class="states">
+                            <span class="type">States: </span>
+                            STATE_FOCUSABLE; STATE_EXPANDABLE and STATE_COLLAPSED if collapsed
+                          </div>
+                          <div class="objattrs">
+                            <span class="type">Object attributes: </span>
+                            haspopup:true
+                          </div>
+                          <div class="children">
+                            <span class="type">Children: </span>
+                            intermediate ROLE_SYSTEM_LIST containing all options
+                          </div>
+                        </td>
                         <td>AXPopUpButton<br>(null)<br>pop up button</td>
                     </tr>
                     <tr tabindex="-1" id="el-small">
@@ -3914,7 +4188,12 @@
                                 <span class="type">Control Type: </span>Text ??Group??
                             </div>
                         </td>
-                        <td>ROLE_TEXT</td>
+                        <td class="at-spi">
+                          <div class="general">
+                            Doesn't have an accessible. Exposed as "font-size"
+                            text attribute on the text container.
+                          </div>
+                        </td>
                         <td>AXGroup<br>(null)<br>group</td>
                     </tr>
                     <tr tabindex="-1" id="el-source">
@@ -3931,7 +4210,9 @@
                         <td>
                             <div class="general">Do not expose this object</div>
                         </td>
-                        <td>Do not expose this object</td>
+                        <td class="at-spi">
+                          <div class="general">Not mapped</div>
+                        </td>
                         <td>Do not expose this object</td>
                     </tr>
                     <tr tabindex="-1" id="el-span">
@@ -3953,7 +4234,9 @@
                                 <span class="type">Control Type: </span>Group
                             </div>
                         </td>
-                        <td>ROLE_TEXT</td>
+                        <td class="at-spi">
+                          <div class="general">Not mapped</div>
+                        </td>
                         <td>AXGroup<br>(null)<br>group</td>
                     </tr>
                     <tr tabindex="-1" id="el-strong">
@@ -3978,7 +4261,12 @@
                                 <span class="type">Control Type: </span>Text ??Group??
                             </div>
                         </td>
-                        <td>ROLE_TEXT</td>
+                        <td class="at-spi">
+                          <div class="general">
+                            Doesn't have an accessible. Used styles are mapped
+                            into text attributes on its text container.
+                          </div>
+                        </td>
                         <td>AXGroup<br>(null)<br>group</td>
                     </tr>
                     <tr tabindex="-1" id="el-style">
@@ -3995,7 +4283,9 @@
                         <td>
                             <div class="general">Do not expose this object</div>
                         </td>
-                        <td>Do not expose this object</td>
+                        <td class="at-spi">
+                          <div class="general">Not mapped</div>
+                        </td>
                         <td>Do not expose this object</td>
                     </tr>
                     <tr tabindex="-1" id="el-sub">
@@ -4020,7 +4310,12 @@
                                 <span class="type">Control Type: </span>Text ??Group??
                             </div>
                         </td>
-                        <td>ROLE_TEXT</td>
+                        <td class="at-spi">
+                          <div class="general">
+                            Doesn't have an accessible. Exposed as "text-position:sub"
+                            text attribute on its text container.
+                          </div>
+                        </td>
                         <td>AXGroup<br>(null)<br>group</td>
                     </tr>
                     <tr tabindex="-1" id="el-summary">
@@ -4050,7 +4345,11 @@
                                 <span class="type">Control Pattern: </span>ExpandCollapse
                             </div>
                         </td>
-                        <td><p>ROLE_PUSHBUTTON + <br>STATE_EXPANDABLE<br></p></td>
+                        <td class="at-spi">
+                          <div class="role">
+                            <span class="type">Role: </span>ROLE_PUSHBUTTON
+                          </div>
+                        </td>
                         <td><p>AXDisclosureTriangle<br>(null)<br>disclosure triangle</p></td>
                     </tr>
                     <tr tabindex="-1" id="el-sup">
@@ -4075,7 +4374,12 @@
                                 <span class="type">Control Type: </span>Text ??Group??
                             </div>
                         </td>
-                        <td>ROLE_TEXT</td>
+                        <td class="at-spi">
+                          <div class="general">
+                            Doesn't have an accessible. Exposed as "text-position:super"
+                            text attribute on its text container.
+                          </div>
+                        </td>
                         <td>AXGroup<br>(null)<br>group</td>
                     </tr>
                     <tr tabindex="-1" id="el-svg">
@@ -4098,7 +4402,11 @@
                                 <span class="type">Control Type: </span>Image
                             </div>
                         </td>
-                        <td>DIAGRAM<br><br><strong>note:</strong> <a href="../../../Users/Steve/Documents/My%20Dropbox/Public/tests/https://bugzilla.mozilla.org/show_bug.cgi?id=764118">bug filed on role in Firefox</a></td>
+                        <td class="at-spi">
+                          <div class="role">
+                            <span class="type">Role: </span>ROLE_IMAGE
+                          </div>
+                        </td>
                         <td>AXGroup<br>
                           (null)<br>
                         group</td>
@@ -4120,7 +4428,7 @@
                           </div>
                           <div class="relations">
                             <span class="type">Relations: </span>
-                            RELATION_LABELLED_BY by child HTML:caption if any
+                            IA2_RELATION_LABELLED_BY by child HTML:caption if any
                           </div>
                           <div class="ifaces">
                              <span class="type">Interface: </span>IAccessibleTable2
@@ -4134,7 +4442,18 @@
                                 <span class="type">Control Pattern: </span>Table
                             </div>
                         </td>
-                        <td>ROLE_TABLE</td>
+                        <td class="at-spi">
+                          <div class="role">
+                             <span class="type">Role: </span>ROLE_TABLE
+                          </div>
+                          <div class="relations">
+                            <span class="type">Relations: </span>
+                            RELATION_LABELLED_BY by child HTML:caption if any
+                          </div>
+                          <div class="ifaces">
+                             <span class="type">Interface: </span>Table
+                          </div>
+                        </td>
                         <td>AXTable<br>(null)<br>table</td>
                     </tr>
                     <tr tabindex="-1" id="el-tbody">
@@ -4156,7 +4475,9 @@
                                 <span class="type">Control Type: </span>Group
                             </div>
                         </td>
-                        <td>&nbsp;</td>
+                        <td class="at-spi">
+                          <div class="general">Doesn't have an accessible</div>
+                        </td>
                         <td>Not mapped</td>
                     </tr>
                     <tr tabindex="-1" id="el-td">
@@ -4183,7 +4504,11 @@
                                 <span class="type">Control Type: </span>Data Item
                             </div>
                         </td>
-                        <td>ROLE_TABLE_CELL</td>
+                        <td class="ia2">
+                          <div class="role">
+                             <span class="type">Role: </span>ROLE_TABLE_CELL
+                          </div>
+                        </td>
                         <td>AXCell<br>(null)<br>cell</td>
                     </tr>
                     <tr tabindex="-1" id="el-template">
@@ -4196,7 +4521,9 @@
                           <div class="general">Not mapped</div>
                         </td>
                         <td>?</td>
-                        <td>?</td>
+                        <td class="at-spi">
+                          <div class="general">Not mapped</div>
+                        </td>
                         <td>?</td>
                     </tr>
                     <tr tabindex="-1" id="el-textarea">
@@ -4225,7 +4552,17 @@
                                 <span class="type">Control Type: </span>Text ??Edit??
                             </div>
                         </td>
-                        <td>ROLE_ENTRY</td>
+                        <td class="at-spi">
+                          <div class="role">
+                            <span class="type">Role: </span>
+                              ROLE_ENTRY
+                          </div>
+                          <div class="states">
+                            <span class="type">States: </span>
+                            STATE_MULTI_LINE; STATE_EDITABLE if not readonly
+                          </div>
+                        </td>
+                        <td>
                         <td>AXTextArea<br>(null)<br>text entry area</td>
                     </tr>
                     
@@ -4234,7 +4571,7 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>
+                        <td class="uia-express">
                             <div class="role">
                                 <span class="type">Role: </span>ROLE_SYSTEM_GROUPING
                             </div>
@@ -4248,7 +4585,9 @@
                                 <span class="type">Control Type: </span>Group
                             </div>
                         </td>
-                        <td>ROLE_PANEL</td>
+                        <td class="at-spi">
+                          <div class="general">Doesn't have an accessible</div>
+                        </td>
                         <td>Not mapped</td>
                     </tr>
                     <tr tabindex="-1" id="el-th">
@@ -4276,7 +4615,12 @@
                                 <span class="type">Control Type: </span>Data Item
                             </div>
                         </td>
-                        <td>ROLE_TABLE_CELL</td>
+                        <td class="at-spi">
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            ROLE_TABLE_CELL
+                          </div>
+                        </td>
                         <td>AXCell<br>(null)<br>cell</td>
                     </tr>
                     <tr tabindex="-1" id="el-th-columnheader">
@@ -4299,7 +4643,7 @@
                              <span class="type">Interfaces: </span>IAccessibleTableCell
                           </div>
                         </td>
-                        <td>
+                        <td class="uia">
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>Header
                             </div>
@@ -4308,7 +4652,12 @@
                             </div>
                             <div class="general">??seems like it should be HeaderItem.&nbsp; ARIA UAIG has DataItem??</div>
                         </td>
-                        <td>ROLE_COLUMN_HEADER</td>
+                        <td class="at-spi">
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            ROLE_COLUMN_HEADER
+                          </div>
+                        </td>
                         <td>AXCell<br>(null)<br>cell<p>Parent table also implements AXColumnHeaderUIElements property that is a list of pointers to the column header cells.</p> <p>Parent table also implements AXHeader property that is a pointer to the row or group containing the columnheader cells.</p></td>
                     </tr>
                     <tr tabindex="-1" id="el-th-rowheader">
@@ -4340,7 +4689,12 @@
                             </div>
                             <div class="general">??seems like it should be HeaderItem.&nbsp; ARIA UAIG has DataItem??</div>
                         </td>
-                        <td>ROLE_ROW_HEADER</td>
+                        <td class="at-spi">
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            ROLE_ROW_HEADER
+                          </div>
+                        </td>
                         <td>AXCell<br>(null)<br>cell<p>Parent table also implements AXRowHeaderUIElements property that is a list of pointers to the row header cells</p></td>
                     </tr>
                     <tr tabindex="-1" id="el-thead">
@@ -4361,7 +4715,9 @@
                                 <span class="type">Control Type: </span>Header
                             </div>
                         </td>
-                        <td>ROLE_PANEL</td>
+                        <td class="at-spi">
+                          <div class="general">Doesn't have an accessible</div>
+                        </td>
                         <td>Not mapped</td>
                     </tr>
                     <tr tabindex="-1" id="el-time">
@@ -4376,11 +4732,15 @@
                         </td>
                         <td class="ia2">
                           <div class="general">
-                            Doesn't have an accessible.
+                            Not mapped
                           </div>
                         </td>
                         <td>?</td>
-                        <td>ROLE_TEXT</td>
+                        <td class="at-spi">
+                          <div class="general">
+                            Not mapped
+                          </div>
+                        </td>
                         <td>AXGroup<br>(null)<br>group</td>
                     </tr>
                     <tr tabindex="-1" id="el-title">
@@ -4397,7 +4757,9 @@
                         <td>
                             <div class="general">Not mapped</div>
                         </td>
-                        <td>Not mapped</td>
+                        <td class="at-spi">
+                          <div class="general">Not mapped</div>
+                        </td>
                         <td>Not mapped</td>
                     </tr>
                     <tr tabindex="-1" id="el-tr">
@@ -4416,13 +4778,17 @@
                             <span class="type">Role: </span>ROLE_SYSTEM_ROW
                           </div>
                         </td>
-                        <td>
+                        <td class="uia">
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>Data Item
                             </div>
                             <div class="ctrlpattern">
                                 <span class="type">Control Pattern: </span>SelectionItem</td>
-                        <td>ROLE_LIST_ITEM</td>
+                        <td class="at-spi">
+                          <div class="role">
+                            <span class="type">Role: </span>ROLE_LIST_ITEM
+                          </div>
+                        </td>
                         <td>AXRow<br>AXTableRow<br>row</td>
                     </tr>
                     <tr tabindex="-1" id="el-track">
@@ -4435,7 +4801,9 @@
                           <div class="general">Not mapped</div>
                         </td>
                         <td>?</td>
-                        <td>?</td>
+                        <td class="at-spi">
+                          <div class="general">Not mapped</div>
+                        </td>
                         <td>?</td>
                     </tr>
                     <tr tabindex="-1" id="el-u">
@@ -4450,7 +4818,12 @@
                           </div>
                         </td>
                         <td>?</td>
-                        <td>?</td>
+                        <td class="at-spi">
+                          <div class="general">
+                            Doesn't have an accessible, mapped as
+                            "text-underline-style:solid" text attribute on its text container.
+                          </div>
+                        </td>
                         <td>?</td>
                     </tr>
                     <tr tabindex="-1" id="el-ul">
@@ -4477,12 +4850,17 @@
                             STATE_SYSTEM_READONLY
                           </div>
                         </td>
-                        <td>
+                        <td class="uia">
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>List
                             </div>
                         </td>
-                        <td>ROLE_LIST + do not expose STATE_EDITABLE</td>
+                        <td class="at-spi">
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            ROLE_LIST
+                          </div>
+                        </td>
                         <td>AXList<br>AXContentList<br>list</td>
                     </tr>
                     <tr tabindex="-1" id="el-var">
@@ -4506,6 +4884,12 @@
                                 <span class="type">Control Type: </span>Text (Note: not Group, because it would usually only contain a word.)
                             </div>
                         </td>
+                        <td class="at-spi">
+                          <div class="general">
+                            Doesn't have an accessible, used styles are mapped
+                            to text attributes on its text container.
+                          </div>
+                        </td>
                         <td>ROLE_TEXT</td>
                         <td>AXGroup<br>(null)<br>group</td>
                     </tr>
@@ -4522,7 +4906,12 @@
                           </div>
                         </td>
                         <td>?</td>
-                        <td>?</td>
+                        <td class="at-spi">
+                          <div class="role">
+                            <span class="type">Role: </span>
+                            ROLE_PANEL
+                          </div>
+                        </td>
                         <td><p>AXGroup<br>(null)<br>group</p><p><strong>Note: </strong>UI controls within the video element exposed as AXToolbar.</p></td>
                     </tr>
                     <tr tabindex="-1" id="el-147">
@@ -4539,7 +4928,11 @@
                           </div>
                         </td>
                         <td>none</td>
-                        <td>none</td>
+                        <td class="at-spi">
+                          <div class="general">
+                            A line break if added is exposed via Text interface on its text container
+                          </div>
+                        </td>
                         <td>AXGroup<br>(null)<br>group</td>
                     </tr>
                 </tbody>
