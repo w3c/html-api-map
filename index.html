@@ -78,6 +78,9 @@
     		<li>A ? in a cell indicates the data has yet to be provided.</li>
     		<li>"Not mapped" (Not Applicable) means the element does not need to be exposed via an accessibility API. This is usually because the element is not displayed as part of the user interface.</li>
     		<li>User agents should return a user-presentable, localized string value for the Mac Accessibility AXRoleDescription.</li>
+        <li>All elements having an accessible object in IAccessible2 mapping are
+          supposed to implement IAccessible, IAccessible2 and IAccessible2_2 interfaces
+        </li>
     	</ul>
     	<div class="table-container">
         	<table class="map-table" id="elements">
@@ -101,7 +104,7 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td><code>link</code> role </td>
-                        <td>
+                        <td class="uia-express">
                             <div class="role">
                                 <span class="type">Role: </span>ROLE_SYSTEM_LINK
                             </div>
@@ -126,6 +129,10 @@
                             <span class="type">Actions: </span>
                             "jump" action on link and all its descendants.
                           </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            IAccessibleHyperlink; IAccessibleText2; IAccessibleHypertext2;
+                          </div>
                         </td>
                         <td>
                             <div class="ctrltype">
@@ -143,6 +150,10 @@
                           <div class="actions">
                             <span class="type">Actions: </span>
                             "jump" action on link and all its descendants.
+                          </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            Hyperlink; Text; Hypertext
                           </div>
                         </td>
                         <td>AXLink<br>(null)<br>link</td>
@@ -163,8 +174,12 @@
                             <span class="type">Role: </span>
                             tag name BSTR (MSAA) and IA2_ROLE_TEXT_FRAME
                           </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            IAccessibleHyperlink; IAccessibleText2; IAccessibleHypertext2;
+                          </div>
                         </td>
-                        <td>
+                        <td class="uia">
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>Text
                             </div>
@@ -173,6 +188,10 @@
                           <div class="role">
                             <span class="type">Role: </span>
                             ROLE_TEXT
+                          </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            Text; Hypertext
                           </div>
                         </td>
                         <td>AXGroup<br>(null)<br>group</td>
@@ -198,6 +217,10 @@
                             "abbr" attribute on the containing HTML td if a single child,
                             text content used as a value
                           </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            IAccessibleText2; IAccessibleHypertext2;
+                          </div>
                         </td>
                         <td>
                             <div class="ctrltype">
@@ -213,6 +236,10 @@
                             <span class="type">Object attributes: </span>
                             "abbr" attribute on the containing HTML td if a single child,
                             text content used as a value
+                          </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            Text; Hypertext
                           </div>
                         </td>
                         <td>AXGroup<br>(null)<br>group</td>
@@ -233,6 +260,10 @@
                             <span class="type">Role: </span>
                             tag name BSTR (MSAA) and IA2_ROLE_PARAGRAPH
                           </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            IAccessibleText2; IAccessibleHypertext2;
+                          </div>
                         </td>
                         <td>
                             <div class="ctrltype">
@@ -243,6 +274,10 @@
                           <div class="role">
                             <span class="type">Role: </span>
                             ROLE_PARAGRAPH
+                          </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            Text; Hypertext
                           </div>
                         </td>
                         <td>AXGroup<br>AXLandmarkContentInfo<br>content information<br><br>Note: recommend AXRoleDescription of "address" to disambiguate from "contentinfo" landmark role.<br><br>Refer to <a href="https://bugs.webkit.org/show_bug.cgi?id=83989">WebKit bug 83989</a></td>
@@ -270,6 +305,10 @@
                             <span class="type">States: </span>
                             STATE_LINKED
                           </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            IAccessibleHyperlink
+                          </div>
                         </td>
                         <td>
                             <div class="ctrltype">
@@ -279,6 +318,10 @@
                         <td class="at-spi">
                           <div class="role">
                              <span class="type">Role: </span>ROLE_LINK
+                          </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            Hyperlink
                           </div>
                         </td>
                         <td>AXLink<br>(null)<br>link</td>
@@ -337,6 +380,10 @@
                             <span class="type">Object attributes: </span>
                             xml-roles:article
                           </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            IAccessibleText2; IAccessibleHypertext2;
+                          </div>
                         </td>
                         <td>
                             <div class="ctrltype">
@@ -351,6 +398,10 @@
                           <div class="objattrs">
                             <span class="type">Object attributes: </span>
                             xml-roles:article
+                          </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            Text; Hypertext
                           </div>
                         </td>
                         <td>AXGroup<br>AXDocumentArticle<br>article</td>
@@ -375,6 +426,10 @@
                             <span class="type">Object attributes: </span>
                             xml-roles:complementary
                           </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            IAccessibleText2; IAccessibleHypertext2;
+                          </div>
                         </td>
                         <td>
                             <div class="ctrltype">
@@ -389,6 +444,10 @@
                           <div class="objattrs">
                             <span class="type">Object attributes: </span>
                             xml-roles:complementary
+                          </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            Text; Hypertext
                           </div>
                         </td>
                         <td>AXGroup<br>AXLandmarkComplementary<br>complementary</td>
@@ -529,7 +588,7 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>
+                        <td class="uia-express">
                             <div class="role">
                                 <span class="type">Role: </span>ROLE_SYSTEM_GROUPING
                             </div>
@@ -539,6 +598,10 @@
                           <div class="role">
                             <span class="type">Role: </span>
                             tag name BSTR (MSAA) and IA2_ROLE_SECTION
+                          </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            IAccessibleText2; IAccessibleHypertext2;
                           </div>
                         </td>
                         <td>
@@ -550,6 +613,10 @@
                           <div class="role">
                             <span class="type">Role: </span>
                             ROLE_SECTION
+                          </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            Text; Hypertext
                           </div>
                         </td>
                         <td>AXGroup<br>(null)<br>group</td>
@@ -609,7 +676,7 @@
                           <div class="general">
                             Doesn't have an accesible. Exposed as '\n' character
                             via Text interface on the text container.
-                          </div>>
+                          </div>
                         </td>
                         <td>Not mapped</td>
                     </tr>
@@ -636,8 +703,12 @@
                           <div class="actions">
                             <span class="type">Actions: </span>press
                           </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            IAccessibleText2; IAccessibleHypertext2;
+                          </div>
                         </td>
-                        <td>
+                        <td class="uia">
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>Button
                             </div>
@@ -656,6 +727,10 @@
                           </div>
                           <div class="actions">
                             <span class="type">Actions: </span>press
+                          </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            Text; Hypertext
                           </div>
                         </td>
                         <td>AXButton<br>(null)<br>button</td>
@@ -698,7 +773,7 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>
+                        <td class="uia-express">
                             <div class="role">
                                 <span class="type">Role: </span>ROLE_SYSTEM_TEXT
                             </div>
@@ -715,6 +790,10 @@
                           <div class="relations">
                             <span class="type">Relations: </span>
                             IA2_RELATION_LABEL_FOR with containing HTML table accessible
+                          </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            IAccessibleText2; IAccessibleHypertext2;
                           </div>
                         </td>
                         <td>
@@ -733,6 +812,10 @@
                           <div class="relations">
                             <span class="type">Relations: </span>
                             RELATION_LABEL_FOR with containing HTML table accessible
+                          </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            Text; Hypertext
                           </div>
                         </td>
                         <td>AXGroup<br>(null)<br>group</td>
@@ -935,7 +1018,8 @@
                         </td>
                         <td class="ia2">
                           <div class="general">
-                            Used to constuct a list of options for autocompletes (in other words it can have no accessible itself)
+                            Used to constuct a list of options for autocompletes
+                            (in other words it can have no accessible itself)
                           </div>
                           <div class="role">
                             <span class="type">Role: </span>
@@ -949,7 +1033,12 @@
                         </td>
                         <td class="at-spi">
                           <div class="general">
-                            Used to constuct a list of options for autocompletes (in other words it can have no accessible itself)
+                            Used to constuct a list of options for autocompletes
+                            (in other words it can have no accessible itself)
+                          </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            Selection
                           </div>
                         </td>
                         <td>AXComboBox<br>(null)<br>combo box</td>
@@ -969,12 +1058,20 @@
                             <span class="type">Role: </span>
                             tag name BSTR (MSAA) and IA2_ROLE_PARAGRAPH
                           </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            IAccessibleText2; IAccessibleHypertext2;
+                          </div>
                         </td>
                         <td>?</td>
                         <td class="at-spi">
                           <div class="role">
                             <span class="type">Role: </span>
                             ROLE_PARAGRAPH
+                          </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            Text; Hypertext
                           </div>
                         </td>
                         <td>AXGroup<br>AXDefinition<br>definition</td>
@@ -1105,6 +1202,10 @@
                             <span class="type">Role: </span>
                             tag name BSTR (MSAA) and IA2_ROLE_SECTION
                            </div>
+                           <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            IAccessibleText2; IAccessibleHypertext2;
+                          </div>
                         </td>
                         <td>?</td>
                         <td class="at-spi">
@@ -1115,6 +1216,10 @@
                             <span class="type">Role: </span>
                             ROLE_SECTION
                            </div>
+                           <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            Text; Hypertext
+                          </div>
                         </td>
                         <td>AXGroup<br>(null)<br>group</td>
                     </tr> 
@@ -1177,6 +1282,10 @@
                             <span class="type">States: </span>
                             STATE_SYSTEM_READONLY
                           </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            IAccessibleText2; IAccessibleHypertext2;
+                          </div>
                         </td>
                         <td>
                             <div class="ctrltype">
@@ -1187,6 +1296,10 @@
                           <div class="role">
                             <span class="type">Role: </span>
                             ROLE_LISTITEM
+                          </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            Text; Hypertext
                           </div>
                         </td>
                         <td>AXGroup<br>AXTerm<br>term</td>
@@ -1307,6 +1420,10 @@
                             <span class="type">Relations: </span>
                             IA2_RELATION_LABEL_FOR with parent HTML:figure element
                           </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            IAccessibleText2; IAccessibleHypertext2;
+                          </div>
                         </td>
                         <td>
                             <div class="ctrltype">
@@ -1321,6 +1438,10 @@
                           <div class="relations">
                             <span class="type">Relations: </span>
                             RELATION_LABEL_FOR with parent HTML:figure element
+                          </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            Text; Hypertext
                           </div>
                         </td>
                         <td>AXGroup<br>(null)<br>group</td>
@@ -1353,7 +1474,7 @@
                             IA2_RELATION_LABELLED_BY with child HTML:figcaption element
                           </div>
                         </td>
-                        <td>
+                        <td class="uia">
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>Group
                             </div>
@@ -1398,6 +1519,10 @@
                             <span class="type">Object attributes: </span>
                             xml-roles:contentinfo if not contained by HTML article or HTML section elements
                           </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            IAccessibleText2; IAccessibleHypertext2;
+                          </div>
                         </td>
                         <td>
                             <div class="general">Expose as text string "footer" in UIAutomationType_String<br>??discuss exposing localized type for all unmapped elements, or is it better to expose as Group??</div>
@@ -1410,6 +1535,10 @@
                           <div class="objattrs">
                             <span class="type">Object attributes: </span>
                             xml-roles:contentinfo if not contained by HTML article or HTML section elements
+                          </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            Text; Hypertext
                           </div>
                         </td>
                         <td><p>If contained in <code>article</code> or <code>section</code> element:<br>
@@ -1536,8 +1665,12 @@
                             <span class="type">Object attributes: </span>
                             level:&lt;heading_level&gt;
                           </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            IAccessibleText2; IAccessibleHypertext2;
+                          </div>
                         </td>
-                        <td>
+                        <td class="uia">
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>Text
                             </div>
@@ -1550,6 +1683,10 @@
                           <div class="objattrs">
                             <span class="type">Object attributes: </span>
                             level:&lt;heading_level&gt;
+                          </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            Text; Hypertext
                           </div>
                         </td>
                         <td>AXHeading<br>(null)<br>heading<br><br>Use AXLevel attribute to expose the heading level.</td>
@@ -1592,6 +1729,10 @@
                             <span class="type">Object attributes: </span>
                             xml-roles:banner if not contained by HTML article or HTML section elements
                           </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            IAccessibleText2; IAccessibleHypertext2;
+                          </div>
                         </td>
                         <td>
                             <div class="ctrltype">
@@ -1609,6 +1750,10 @@
                           <div class="objattrs">
                             <span class="type">Object attributes: </span>
                             xml-roles:banner if not contained by HTML article or HTML section elements
+                          </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            Text; Hypertext
                           </div>
                         </td>
                         <td><p>If contained in <code>article</code> or <code>section</code> element:<br>AXGroup<br>(null)<br>group</p>
@@ -1752,6 +1897,10 @@
                             1) "jump" or "click" inherited from the container if any
                             2) "showlongdesc" if the image has a longdesc attribute
                           </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            IAccessibleImage
+                          </div>
                           <div class="children">
                             <span class="type">Children: </span>
                              ROLE_SYSTEM_LINK generated from HTML:area elements
@@ -1772,6 +1921,10 @@
                             <span class="type">Actions: </span>
                             1) "jump" or "click" inherited from the container if any
                             2) "showlongdesc" if the image has a longdesc attribute
+                          </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            Image
                           </div>
                           <div class="children">
                             <span class="type">Children: </span>
@@ -2111,6 +2264,10 @@
                             <span class="type">Actions: </span>
                             activate
                           </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            IAccessibleText2; IAccessibleEditableText
+                          </div>
                         </td>
                         <td>
                             <div class="ctrltype">
@@ -2129,7 +2286,11 @@
                           <div class="actions">
                             <span class="type">Actions: </span>
                             activate
-                          </div> 
+                          </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            Text; EditableText
+                          </div>
                         </td>
                         <td>AXTextField<br>(null)<br>text field</td>
                     </tr>
@@ -2444,6 +2605,10 @@
                             <span class="type">Role: </span>
                             ROLE_SYSTEM_SLIDER
                           </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            IAccessibleValue
+                          </div>
                         </td>
                         <td>
                             <div class="ctrltype">
@@ -2454,6 +2619,10 @@
                           <div class="role">
                             <span class="type">Role: </span>
                             ROLE_SLIDER
+                          </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            Value
                           </div>
                         </td>
                         <td><p>Slider:<br>AXSlider<br>(null)<br>slider</p><p>AXOrientation: AXHorizontalOrientation</p><p>Thumb: <br>AXValueIndicator<br>(null)<br>value indicator<br><br>Actions:<br>AXIncrement - increment<br>AXDecrement - decrement</p></td>
@@ -2511,6 +2680,10 @@
                             <span class="type">Role: </span>
                             ROLE_SYSTEM_TEXT
                           </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            IAccessibleText2; IAccessibleEditableText
+                          </div>
                         </td>
                         <td>
                             <div class="ctrltype">
@@ -2530,6 +2703,10 @@
                             <span class="type">Actions: </span>
                             activate
                           </div> 
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            Text;  EditableText
+                          </div>
                         </td>
                         <td>AXTextField<br>AXSearchField<br>search field</td>
                     </tr>
@@ -2602,6 +2779,10 @@
                             <span class="type">Actions: </span>
                             activate
                           </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            IAccessibleText2; IAccessibleEditableText
+                          </div>
                         </td>
                         <td>
                             <div class="ctrltype">
@@ -2620,6 +2801,10 @@
                           <div class="actions">
                             <span class="type">Actions: </span>
                             activate
+                          </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            Text;  EditableText
                           </div>
                         </td>
                         <td>AXTextField<br>(null)<br>text field</td>
@@ -2648,6 +2833,10 @@
                             <span class="type">Actions: </span>
                             activate
                           </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            IAccessibleText2; IAccessibleEditableText
+                          </div>
                         </td>
                         <td>
                             <div class="ctrltype">
@@ -2666,7 +2855,11 @@
                           <div class="actions">
                             <span class="type">Actions: </span>
                             activate
-                          </div> 
+                          </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            Text; EditableText
+                          </div>
                         </td>
                         <td>AXTextField<br>(null)<br>text field</td>
                     </tr>
@@ -2689,6 +2882,10 @@
                             <span class="type">States: </span>
                             STATE_SYSTEM_HASPOPUP and IA2_STATE_SUPPORTS_AUTOCOMPLETION
                           </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            IAccessibleText2; IAccessibleEditableText
+                          </div>
                         </td>
                         <td>
                             <div class="ctrltype">
@@ -2704,6 +2901,10 @@
                           <div class="objattrs">
                             <span class="type">Object attributes: </span>
                             haspopup:true
+                          </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            Text; EditableText
                           </div>
                         </td>
                         <td>AXTextField<br>(null)<br>text field</td>
@@ -2761,6 +2962,10 @@
                             <span class="type">Actions: </span>
                             activate
                           </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            IAccessibleText2; IAccessibleEditableText
+                          </div>
                         </td>
                         <td>
                             <div class="ctrltype">
@@ -2779,6 +2984,10 @@
                           <div class="actions">
                             <span class="type">Actions: </span>
                             activate
+                          </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            Text; EditableText
                           </div>
                         </td>
                         <td>AXTextField<br>(null)<br>text field</td>
@@ -2929,10 +3138,14 @@
                             <span class="type">Role: </span>
                             ROLE_SYSTEM_STATICTEXT and IA2_ROLE_LABEL
                           </div>
-                          <div role="relations">
+                          <div class="relations">
                             <span class="type">Relations: </span>
                             IA2_RELATION_LABEL_FOR for a child form element or form element referred by @for attribute. Note,
                             related form element provides IA2_RELATION_LABELLED_BY pointing to the label.
+                          </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            IAccessibleText2; IAccessibleHypertext2
                           </div>
                         </td>
                         <td>
@@ -2948,10 +3161,14 @@
                             <span class="type">Role: </span>
                             ROLE_LABEL
                           </div>
-                          <div role="relations">
+                          <div class="relations">
                             <span class="type">Relations: </span>
                             RELATION_LABEL_FOR for a child form element or form element referred by @for attribute. Note,
                             related form element provides RELATION_LABELLED_BY pointing to the label.
+                          </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            Text; Hypertext
                           </div>
                         </td>
                         <td>AXGroup<br>(null)<br>group</td>
@@ -2976,6 +3193,10 @@
                             <span class="type">Relations: </span>
                             IA2_RELATION_LABEL_FOR with parent HTML:fieldset element
                           </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            IAccessibleText2; IAccessibleHypertext2
+                          </div>
                        </td>
                         <td>
                             <div class="ctrltype">
@@ -2994,6 +3215,10 @@
                             <span class="type">Relations: </span>
                             RELATION_LABEL_FOR with parent HTML:fieldset element
                           </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            Text; Hypertext
+                          </div>
                        </td>
                         <td>AXGroup<br>(null)<br>group</td>
                     </tr>
@@ -3002,7 +3227,7 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td><code>listitem</code> role </td>
-                        <td>
+                        <td class="uia-express">
                           <div class="role">
                             <span class="type">Role: </span>ROLE_SYSTEM_LISTITEM
                           </div>
@@ -3019,18 +3244,26 @@
                             <span class="type">States: </span>
                             STATE_SYSTEM_READONLY
                           </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            IAccessibleText2; IAccessibleHypertext2
+                          </div>
                         </td>
-                        <td>
+                        <td class="uia">
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>List Item
                             </div>
-                        </td
+                        </td>
                         <td class="at-spi">
                           <div class="role">
                             <span class="type">Role: </span>
                             ROLE_LISTITEM
                           </div>
-                        </td>>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            Text; Hypertext
+                          </div>
+                        </td>
                         <td>AXGroup<br>(null)<br>group</td>
                     </tr>
                     <tr tabindex="-1" id="el-li-parentmenu">
@@ -3055,6 +3288,10 @@
                             <span class="type">States: </span>
                             STATE_SYSTEM_READONLY
                           </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            IAccessibleText2; IAccessibleHypertext2
+                          </div>
                         </td>
                         <td>
                             <div class="ctrltype">
@@ -3065,6 +3302,10 @@
                           <div class="role">
                             <span class="type">Role: </span>
                             ROLE_LISTITEM
+                          </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            Text; Hypertext
                           </div>
                         </td>
                         <td>AXGroup<br>(null)<br>group</td>
@@ -3108,6 +3349,10 @@
                             <span class="type">Object attributes: </span>
                             xml-roles:main
                           </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            IAccessibleText2; IAccessibleHypertext2
+                          </div>
                         </td>
                         <td>
                             <div class="ctrltype">
@@ -3122,6 +3367,10 @@
                           <div class="objattrs">
                             <span class="type">Object attributes: </span>
                             xml-roles:main
+                          </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            Text; Hypertext
                           </div>
                         </td>
                         <td>
@@ -3420,7 +3669,7 @@
                         <td>No</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>
+                        <td class="uia-express">
                             <div class="role">
                                 <span class="type">Role: </span>ROLE_SYSTEM_TEXT
                             </div>
@@ -3431,6 +3680,10 @@
                           <div class="role">
                             <span class="type">Role: </span>
                             ROLE_SYSTEM_PROGRESSBAR
+                          </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            IAccessibleValue
                           </div>
                         </td>
                         <td>
@@ -3445,6 +3698,10 @@
                           <div class="role">
                             <span class="type">Role: </span>
                             ROLE_PROGRESS_BAR
+                          </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            Value
                           </div>
                         </td>
                         <td>AXGroup<br>(null)<br>group</td>
@@ -3468,6 +3725,10 @@
                             <span class="type">Object attributes: </span>
                             xml-roles:navigation
                           </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            IAccessibleText2; IAccessibleHypertext2
+                          </div>
                         </td>
                         <td>
                             <div class="ctrltype">
@@ -3483,8 +3744,12 @@
                             <span class="type">Object attributes: </span>
                             xml-roles:navigation
                           </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            Text; Hypertext
+                          </div>
                         </td>
-                        <td>AXGroup<br>               
+                        <td>AXGroup<br>
                           AXLandmarkNavigation<br>
                       navigation</td>
                     </tr>
@@ -3631,6 +3896,10 @@
                             <span class="type">States: </span>
                             STATE_SYSTEM_FOCUSABLE; STATE_SYSTEM_FOCUSED if selected and the user focus is at the list
                           </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            IAccessibleText2; IAccessibleHypertext2
+                          </div>
                         </td>
                         <td class="uia">
                             <div class="ctrltype">
@@ -3648,6 +3917,10 @@
                           <div class="states">
                             <span class="type">States: </span>
                             STATE_FOCUSABLE; STATE_FOCUSED if selected and the user focus is at the list
+                          </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            Text; Hypertext
                           </div>
                         </td>
                         <td>AXMenuItem<br>(null)<br>menu item</td>
@@ -3673,10 +3946,14 @@
                             <span class="type">Object attributes: </span>
                             live:polite
                           </div>
-                          <div role="relations">
+                          <div class="relations">
                             <span class="type">Relations: </span>
                             IA2_RELATION_CONTROLLED_BY with an element pointed by @for attribute.
                             Paired element exposes IA2_RELATION_CONTROLLER_FOR relation.
+                          </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            IAccessibleText2; IAccessibleHypertext2
                           </div>
                         </td>
                         <td class="uia">
@@ -3695,10 +3972,14 @@
                             <span class="type">Object attributes: </span>
                             live:polite
                           </div>
-                          <div role="relations">
+                          <div class="relations">
                             <span class="type">Relations: </span>
                             RELATION_CONTROLLED_BY with an element pointed by @for attribute.
                             Paired element exposes RELATION_CONTROLLER_FOR relation.
+                          </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            Text; Hypertext
                           </div>
                         </td>
                         <td>AXGroup<br>(null)<br>group</td>
@@ -3719,8 +4000,12 @@
                             <span class="type">Role: </span>
                             tag name BSTR and IA2_ROLE_PARAGRAPH
                           </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            IAccessibleText2; IAccessibleHypertext2
+                          </div>
                         </td>
-                        <td>
+                        <td class="uia">
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>Text
                             </div>
@@ -3729,6 +4014,10 @@
                           <div class="role">
                             <span class="type">Role: </span>
                             ROLE_PARAGRAPH
+                          </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            Text; Hypertext
                           </div>
                         </td>
                         <td>AXGroup<br>(null)<br>group</td>
@@ -3771,6 +4060,10 @@
                           <div class="general">
                             Used styles are mapped into text attributes on the accessible
                           </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            IAccessibleText2; IAccessibleHypertext2
+                          </div>
                         </td>
                         <td>
                             <div class="ctrltype">
@@ -3784,6 +4077,10 @@
                           </div>
                           <div class="general">
                             Used styles are mapped into text attributes on the accessible
+                          </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            Text; Hypertext
                           </div>
                         </td>
                         <td>AXGroup<br>(null)<br>group</td>
@@ -3811,6 +4108,10 @@
                             <span class="type">States: </span>
                             STATE_SYSTEM_MIXED if the progress is indeterminate
                           </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            IAccessibleValue
+                          </div>
                         </td>
                         <td>
                             <div class="ctrltype">
@@ -3825,6 +4126,10 @@
                           <div class="states">
                             <span class="type">States: </span>
                             STATE_INDETERMINATE if the progress is indeterminate
+                          </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            Value
                           </div>
                         </td>
                         <td>AXProgressIndicator<br>(null)<br>progress indicator<br><br>Use AXValue to expose current value.</td>
@@ -3849,6 +4154,10 @@
                             <span class="type">Children: </span>
                             ROLE_SYSTEM_TEXT wrapped by ROLE_SYSTEM_STATICTEXT created for quote marks
                           </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            IAccessibleText2; IAccessibleHypertext2
+                          </div>
                         </td>
                         <td class="uia">
                             <div class="ctrltype">
@@ -3859,6 +4168,10 @@
                           <div class="role">
                             <span class="type">Role: </span>
                             ROLE_TEXT
+                          </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            Text; Hypertext
                           </div>
                         </td>
                         <td>AXGroup<br>(null)<br>group</td>
@@ -4049,6 +4362,10 @@
                             <span class="type">Object attributes: </span>
                             xml-roles:region
                           </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            IAccessibleText2; IAccessibleHypertext2
+                          </div>
                         </td>
                         <td>
                             <div class="ctrltype">
@@ -4063,6 +4380,10 @@
                           <div class="objattrs">
                             <span class="type">Object attributes: </span>
                             xml-roles:region
+                          </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            Text; Hypertext
                           </div>
                         </td>
                         <td>AXGroup<br>
@@ -4109,6 +4430,10 @@
                           <div class="states">
                             <span class="type">States: </span>
                             STATE_FOCUSABLE; STATE_MULTISELECTABLE
+                          </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            Selection
                           </div>
                         </td>
                         <td>AXList<br>(null)<br>list</td>
@@ -4416,7 +4741,7 @@
                         <td>Yes</td>
                         <td>Yes</td>
                         <td>none</td>
-                        <td>
+                        <td class="uia-express">
                             <div class="role">
                                 <span class="type">Role: </span>ROLE_SYSTEM_TABLE
                             </div>
@@ -4496,7 +4821,8 @@
                              <span class="type">Role: </span>ROLE_SYSTEM_CELL
                           </div>
                           <div class="ifaces">
-                             <span class="type">Interfaces: </span>IAccessibleTableCell
+                             <span class="type">Interfaces: </span>
+                             IAccessibleTableCell; IAccessibleText2; IAccessibleHypertext2
                           </div>
                         </td>
                         <td>
@@ -4504,9 +4830,13 @@
                                 <span class="type">Control Type: </span>Data Item
                             </div>
                         </td>
-                        <td class="ia2">
+                        <td class="at-spi">
                           <div class="role">
                              <span class="type">Role: </span>ROLE_TABLE_CELL
+                          </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            Text; Hypertext
                           </div>
                         </td>
                         <td>AXCell<br>(null)<br>cell</td>
@@ -4546,6 +4876,10 @@
                             <span class="type">States: </span>
                             IA2_STATE_MULTI_LINE; STATE_SYSTEM_READONLY if readonly, otherwise IA2_STATE_EDITABLE
                           </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            IAccessibleText2; IAccessibleEditableText
+                          </div>
                         </td>
                         <td>
                             <div class="ctrltype">
@@ -4561,11 +4895,14 @@
                             <span class="type">States: </span>
                             STATE_MULTI_LINE; STATE_EDITABLE if not readonly
                           </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            Text; EditableText
+                          </div>
                         </td>
                         <td>
                         <td>AXTextArea<br>(null)<br>text entry area</td>
                     </tr>
-                    
                     <tr tabindex="-1" id="el-tfoot">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-tfoot-element">tfoot</a></code></th>
                         <td>Yes</td>
@@ -4607,7 +4944,8 @@
                             ROLE_SYSTEM_CELL
                           </div>
                           <div class="ifaces">
-                             <span class="type">Interfaces: </span>IAccessibleTableCell
+                             <span class="type">Interfaces: </span>
+                             IAccessibleTableCell; IAccessibleText2; IAccessibleHypertext2
                           </div>
                         </td>
                         <td>
@@ -4619,6 +4957,10 @@
                           <div class="role">
                             <span class="type">Role: </span>
                             ROLE_TABLE_CELL
+                          </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            Text; Hypertext
                           </div>
                         </td>
                         <td>AXCell<br>(null)<br>cell</td>
@@ -4640,7 +4982,8 @@
                             ROLE_SYSTEM_COLUMNHEADER
                           </div>
                           <div class="ifaces">
-                             <span class="type">Interfaces: </span>IAccessibleTableCell
+                             <span class="type">Interfaces: </span>
+                             IAccessibleTableCell; IAccessibleText2; IAccessibleHypertext2
                           </div>
                         </td>
                         <td class="uia">
@@ -4656,6 +4999,10 @@
                           <div class="role">
                             <span class="type">Role: </span>
                             ROLE_COLUMN_HEADER
+                          </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            Text; Hypertext
                           </div>
                         </td>
                         <td>AXCell<br>(null)<br>cell<p>Parent table also implements AXColumnHeaderUIElements property that is a list of pointers to the column header cells.</p> <p>Parent table also implements AXHeader property that is a pointer to the row or group containing the columnheader cells.</p></td>
@@ -4677,7 +5024,8 @@
                             ROLE_SYSTEM_ROWHEADER
                           </div>
                           <div class="ifaces">
-                             <span class="type">Interfaces: </span>IAccessibleTableCell
+                             <span class="type">Interfaces: </span>
+                             IAccessibleTableCell; IAccessibleText2; IAccessibleHypertext2
                           </div>
                         </td>
                         <td>
@@ -4693,6 +5041,10 @@
                           <div class="role">
                             <span class="type">Role: </span>
                             ROLE_ROW_HEADER
+                          </div>
+                          <div class="ifaces">
+                            <span class="type">Interfaces: </span>
+                            Text; Hypertext
                           </div>
                         </td>
                         <td>AXCell<br>(null)<br>cell<p>Parent table also implements AXRowHeaderUIElements property that is a list of pointers to the row header cells</p></td>
@@ -4876,10 +5228,11 @@
                         </td>
                         <td class="ia2">
                           <div class="general">
-                            Doesn't have an accessible, used styles are mapped to text attributes on its text container.
+                            Doesn't have an accessible, used styles are mapped
+                            to text attributes on its text container.
                           </div>
                         </td>
-                        <td>
+                        <td class="uia">
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>Text (Note: not Group, because it would usually only contain a word.)
                             </div>
@@ -4914,7 +5267,7 @@
                         </td>
                         <td><p>AXGroup<br>(null)<br>group</p><p><strong>Note: </strong>UI controls within the video element exposed as AXToolbar.</p></td>
                     </tr>
-                    <tr tabindex="-1" id="el-147">
+                    <tr tabindex="-1" id="el-wbr">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-wbr-element">wbr</a></code></th>
                         <td>No</td>
                         <td>Yes</td>
