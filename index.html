@@ -7210,10 +7210,10 @@
                     <li> Use <code>aria-labelledby</code></li>
                     <li>Otherwise use <code>aria-label</code></li>
                     <li>Otherwise use the <code>value</code> attribute</li>
+                    <li>For <code>input type=submit</code>: If steps 1 to 3 do not yield a usable text string, the accessible name is a localized string of the word &quot;submit&quot;</li>
+                    <li>For <code>input type=reset</code>: If steps 1 to 3 do not yield a usable text string, the accessible name is a localized string of the word &quot;reset&quot;</li>
                     <li>Otherwise use <code>title</code> attribute</li>
-                    <li>For <code>input type=button</code>: If none of the above yield a usable text string there is no accessible name</li>
-                    <li>For <code>input type=submit</code>: If steps 1 to 4 do not yield a usable text string, the accessible name is a localized string of the word &quot;submit&quot;</li>
-                    <li>For <code>input type=reset</code>: If steps 1 to 4 do not yield a usable text string, the accessible name is a localized string of the word &quot;reset&quot;</li>
+                    <li> If none of the above yield a usable text string there is no accessible name</li>
                 </ol>
                 <h4><code>input type="button"</code> ,<code> input type="submit"</code> and <code>input type="reset"</code> accessible description calculation</h4>
                 <ol>
@@ -7232,6 +7232,8 @@
                     <li> Use <code>aria-labelledby</code></li>
                     <li>Otherwise use <code>aria-label</code></li>
                     <li>Otherwise use <code>alt</code> attribute</li>
+                    <li>Otherwise use <code>value</code> attribute </li>
+                    <li>Otherwise the user agent may provide an accessible name via a localized string of the phrase &quot;Submit Query&quot;</li>
                     <li>Otherwise use <code>title</code> attribute</li>
                     <li>If none of the above yield a usable text string there is no accessible name</li>
                 </ol>
