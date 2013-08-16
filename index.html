@@ -323,7 +323,7 @@
                             <div class="general"><b>Note:</b> recommend AXRoleDescription of "address" to disambiguate from "contentinfo" landmark role. Refer to <a href="https://bugs.webkit.org/show_bug.cgi?id=83989">WebKit bug 83989</a></div>
                         </td>
                     </tr>
-                    <tr tabindex="-1" id="el-aria">
+                    <tr tabindex="-1" id="el-area">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-area-element">area</a></code> <span class="el-context">(represents a <a href="http://www.w3.org/html/wg/drafts/html/master/links.html#hyperlink">hyperlink</a>)</span></th>
                         <td class="html4">Yes</td>
                         <td class="html5">Yes</td>
@@ -346,6 +346,10 @@
                             <span class="type">States: </span>
                             STATE_LINKED
                           </div>
+                          <div class="actions">
+                            <span class="type">Actions: </span>
+                            jump
+                          </div>
                           <div class="ifaces">
                             <span class="type">Interfaces: </span>
                             IAccessibleHyperlink
@@ -359,6 +363,10 @@
                         <td class="at-spi">
                           <div class="role">
                              <span class="type">Role: </span>ROLE_LINK
+                          </div>
+                          <div class="actions">
+                            <span class="type">Actions: </span>
+                            jump
                           </div>
                           <div class="ifaces">
                             <span class="type">Interfaces: </span>
@@ -3273,6 +3281,10 @@
                             <span class="type">Role: </span>
                             ROLE_SYSTEM_TEXT
                           </div>
+                          <div class="actions">
+                            <span class="type">Actions: </span>
+                            activate
+                          </div>
                           <div class="ifaces">
                             <span class="type">Interfaces: </span>
                             IAccessibleText2; IAccessibleEditableText
@@ -3515,6 +3527,10 @@
                             <span class="type">States: </span>
                             STATE_SYSTEM_HASPOPUP and IA2_STATE_SUPPORTS_AUTOCOMPLETION
                           </div>
+                          <div class="actions">
+                            <span class="type">Actions: </span>
+                            activate
+                          </div>
                           <div class="ifaces">
                             <span class="type">Interfaces: </span>
                             IAccessibleText2; IAccessibleEditableText
@@ -3534,6 +3550,10 @@
                           <div class="objattrs">
                             <span class="type">Object attributes: </span>
                             haspopup:true
+                          </div>
+                          <div class="actions">
+                            <span class="type">Actions: </span>
+                            activate
                           </div>
                           <div class="ifaces">
                             <span class="type">Interfaces: </span>
@@ -3790,6 +3810,10 @@
                             <span class="type">States: </span>
                             STATE_SYSTEM_HASPOPUP; STATE_SYSTEM_EXPANDED or STATE_SYSTEM_COLLAPSED depending on the state
                           </div>
+                          <div class="actions">
+                            <span class="type">Actions: </span>
+                            "open" or "close" depending on the state
+                          </div>
                         </td>
                         <td class="uia">
                             <div class="ctrltype">
@@ -3808,6 +3832,10 @@
                           <div class="objattrs">
                             <span class="type">Object attributes: </span>
                             haspopup:true
+                          </div>
+                          <div class="actions">
+                            <span class="type">Actions: </span>
+                            "open" or "close" depending on the state
                           </div>
                         </td>
                         <td class="ax">
@@ -4761,6 +4789,10 @@
                             <span class="type">States: </span>
                             STATE_SYSTEM_FOCUSABLE; STATE_SYSTEM_FOCUSED if selected and the user focus is at the list
                           </div>
+                          <div class="actions">
+                            <span class="type">Actions: </span>
+                            select
+                          </div>
                           <div class="ifaces">
                             <span class="type">Interfaces: </span>
                             IAccessibleText2; IAccessibleHypertext2
@@ -4782,6 +4814,10 @@
                           <div class="states">
                             <span class="type">States: </span>
                             STATE_FOCUSABLE; STATE_FOCUSED if selected and the user focus is at the list
+                          </div>
+                          <div class="actions">
+                            <span class="type">Actions: </span>
+                            select
                           </div>
                           <div class="ifaces">
                             <span class="type">Interfaces: </span>
@@ -5431,6 +5467,10 @@
                             <span class="type">States: </span>
                             STATE_SYSTEM_FOCUSABLE; STATE_SYSTEM_HASPOPUP
                           </div>
+                          <div class="actions">
+                            <span class="type">Actions: </span>
+                            "open" or "close" depending on the state
+                          </div>
                           <div class="children">
                             <span class="type">Children: </span>
                             intermediate ROLE_SYSTEM_LIST containing all options
@@ -5453,6 +5493,10 @@
                           <div class="objattrs">
                             <span class="type">Object attributes: </span>
                             haspopup:true
+                          </div>
+                          <div class="actions">
+                            <span class="type">Actions: </span>
+                            "open" or "close" depending on the state
                           </div>
                           <div class="children">
                             <span class="type">Children: </span>
@@ -5950,6 +5994,10 @@
                             <span class="type">States: </span>
                             IA2_STATE_MULTI_LINE; STATE_SYSTEM_READONLY if readonly, otherwise IA2_STATE_EDITABLE
                           </div>
+                          <div class="actions">
+                            <span class="type">Actions: </span>
+                            activate
+                          </div>
                           <div class="ifaces">
                             <span class="type">Interfaces: </span>
                             IAccessibleText2; IAccessibleEditableText
@@ -5968,6 +6016,10 @@
                           <div class="states">
                             <span class="type">States: </span>
                             STATE_MULTI_LINE; STATE_EDITABLE if not readonly
+                          </div>
+                          <div class="actions">
+                            <span class="type">Actions: </span>
+                            activate
                           </div>
                           <div class="ifaces">
                             <span class="type">Interfaces: </span>
