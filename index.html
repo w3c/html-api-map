@@ -95,7 +95,7 @@
         				<th><a href="http://msdn.microsoft.com/en-us/library/dd373608%28v=VS.85%29.aspx">MSAA</a> + <a href="http://accessibility.linuxfoundation.org/a11yspecs/ia2/docs/html/">IAccessible2</a></th>
                         <th><a href="http://msdn.microsoft.com/en-us/library/ms726297%28v=VS.85%29.aspx">UIA Control Type and Other Features</a></th>
         				<th><a href="http://people.gnome.org/%7Ebillh/at-spi-idl/html/index.html">AT-SPI</a></th>
-        				<th><a href="http://developer.apple.com/library/mac/#documentation/Accessibility/Conceptual/AccessibilityMacOSX/OSXAXIntro/OSXAXintro.html">AX</a><span><br>AXRole<br>AXSubrole<br>AXRoleDescription</span></th>
+        				<th><a href="http://developer.apple.com/library/mac/#documentation/Accessibility/Conceptual/AccessibilityMacOSX/OSXAXIntro/OSXAXintro.html">AX</a></th>
         			</tr>
         		</thead>
                  <tbody>
@@ -156,7 +156,17 @@
                             Hyperlink; Text; Hypertext
                           </div>
                         </td>
-                        <td>AXLink<br>(null)<br>link</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span class="type">AXRole: </span>AXLink
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>link
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-a-nohref">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-a-element">a</a></code> <span class="el-context">(no <code>href</code> attribrute)</span></th>
@@ -194,7 +204,17 @@
                             Text; Hypertext
                           </div>
                         </td>
-                        <td>AXGroup<br>(null)<br>group</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span class="type">AXRole: </span>AXGroup
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>group
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-abbr">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-abbr-element">abbr</a></code></th>
@@ -242,7 +262,17 @@
                             Text; Hypertext
                           </div>
                         </td>
-                        <td>AXGroup<br>(null)<br>group</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span class="type">AXRole: </span>AXGroup
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>group
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-address">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-address-element">address</a></code></th>
@@ -280,7 +310,18 @@
                             Text; Hypertext
                           </div>
                         </td>
-                        <td>AXGroup<br>AXLandmarkContentInfo<br>content information<br><br>Note: recommend AXRoleDescription of "address" to disambiguate from "contentinfo" landmark role.<br><br>Refer to <a href="https://bugs.webkit.org/show_bug.cgi?id=83989">WebKit bug 83989</a></td>
+                        <td class="ax">
+                            <div class="role">
+                                <span class="type">AXRole: </span>AXGroup
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>AXLandmarkContentInfo
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>content information
+                            </div>
+                            <div class="general"><b>Note:</b> recommend AXRoleDescription of "address" to disambiguate from "contentinfo" landmark role. Refer to <a href="https://bugs.webkit.org/show_bug.cgi?id=83989">WebKit bug 83989</a></div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-aria">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-area-element">area</a></code> <span class="el-context">(represents a <a href="http://www.w3.org/html/wg/drafts/html/master/links.html#hyperlink">hyperlink</a>)</span></th>
@@ -324,7 +365,17 @@
                             Hyperlink
                           </div>
                         </td>
-                        <td>AXLink<br>(null)<br>link</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span class="type">AXRole: </span>AXLink
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>link
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-area-nohref">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-area-element">area</a></code> <span class="el-context">(no <code>href</code> attribute)</span></th>
@@ -354,7 +405,9 @@
                             ROLE_TEXT
                           </div>
                         </td>
-                        <td>Not mapped</td>
+                        <td class="ax">
+                            <div class="general">Not mapped</div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-article">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-article-element">article</a></code></th>
@@ -404,7 +457,17 @@
                             Text; Hypertext
                           </div>
                         </td>
-                        <td>AXGroup<br>AXDocumentArticle<br>article</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span class="type">AXRole: </span>AXGroup
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>AXDocumentArticle
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>article
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-aside">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-aside-element">aside</a></code></th>
@@ -450,7 +513,17 @@
                             Text; Hypertext
                           </div>
                         </td>
-                        <td>AXGroup<br>AXLandmarkComplementary<br>complementary</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span class="type">AXRole: </span>AXGroup
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>AXLandmarkComplementary
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>complementary
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-audio">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-audio-element">audio</a></code></th>
@@ -479,7 +552,18 @@
                             ROLE_PANEL
                           </div>
                         </td>
-                        <td><p>AXGroup<br>(null)<br>group</p><p><strong>Note: </strong>UI controls within the audio element exposed as AXToolbar.</p></td>
+                        <td class="ax">
+                            <div class="role">
+                                <span class="type">AXRole: </span>AXGroup
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>group
+                            </div>
+                            <div class="general"><b>Note:</b> UI controls within the audio element exposed as AXToolbar.</div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-b">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-b-element">b</a></code></th>
@@ -511,7 +595,17 @@
                             The value depends on the platform.
                           </div>
                         </td>
-                        <td>AXGroup<br>(null)<br>group</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span class="type">AXRole: </span>AXGroup
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>group
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-base">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/document-metadata.html#the-base-element">base</a></code></th>
@@ -530,7 +624,9 @@
                         <td class="at-spi">
                           <div class="general">Not mapped</div>
                         </td>
-                        <td>Not mapped</td>
+                        <td class="ax">
+                            <div class="general">Not mapped</div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-bdi">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-bdi-element">bdi</a></code></th>
@@ -551,7 +647,7 @@
                           "writing-mode" text attribute on its text container.
                           </div>
                         </td>
-                        <td></td>
+                        <td class="ax"></td>
                     </tr>
                     <tr tabindex="-1" id="el-bdo">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-bdo-element">bdo</a></code></th>
@@ -581,7 +677,17 @@
                             Exposed as "writing-mode" text attribute on its text container.
                           </div>
                         </td>
-                        <td>AXGroup<br>(null)<br>group</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span class="type">AXRole: </span>AXGroup
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>group
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-blockquote">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-blockquote-element">blockquote</a></code></th>
@@ -619,7 +725,17 @@
                             Text; Hypertext
                           </div>
                         </td>
-                        <td>AXGroup<br>(null)<br>group</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span class="type">AXRole: </span>AXGroup
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>group
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-body">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-body-element">body</a></code></th>
@@ -653,7 +769,17 @@
                             The document accessible has ROLE_DOCUMENT_FRAME.
                           </div>
                         </td>
-                        <td>AXGroup<br>(null)<br>group</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span class="type">AXRole: </span>AXGroup
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>group
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-br">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-br-element">br</a></code></th>
@@ -678,7 +804,9 @@
                             via Text interface on the text container.
                           </div>
                         </td>
-                        <td>Not mapped</td>
+                        <td class="ax">
+                            <div class="general">Not mapped</div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-button">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-button-element">button</a></code></th>
@@ -733,7 +861,17 @@
                             Text; Hypertext
                           </div>
                         </td>
-                        <td>AXButton<br>(null)<br>button</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span class="type">AXRole: </span>AXButton
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>button
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-canvas">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-canvas-element">canvas</a></code></th>
@@ -766,7 +904,17 @@
                             ROLE_CANVAS
                           </div>
                         </td>
-                        <td>AXImage<br>(null)<br>image</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span class="type">AXRole: </span>AXImage
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>image
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-caption">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-caption-element">caption</a></code></th>
@@ -818,7 +966,17 @@
                             Text; Hypertext
                           </div>
                         </td>
-                        <td>AXGroup<br>(null)<br>group</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span class="type">AXRole: </span>AXGroup
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>group
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-cite">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-cite-element">cite</a></code></th>
@@ -847,7 +1005,17 @@
                             mapped into text attributes on its text container.
                           </div>
                         </td>
-                        <td>AXGroup<br>(null)<br>group</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span class="type">AXRole: </span>AXGroup
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>group
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-code">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-code-element">code</a></code></th>
@@ -876,7 +1044,17 @@
                             mapped into text attributes on its text container.
                           </div>
                         </td>
-                        <td>AXGroup<br>(null)<br>group</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span class="type">AXRole: </span>AXGroup
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>group
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-col">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-col-element">col</a></code></th>
@@ -895,7 +1073,9 @@
                         <td class="at-spi">
                           <div class="general">Not mapped</div>
                         </td>
-                        <td>Not mapped</td>
+                        <td class="ax">
+                            <div class="general">Not mapped</div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-colgroup">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-colgroup-element">colgroup</a></code></th>
@@ -919,7 +1099,9 @@
                         <td class="at-spi">
                           <div class="general">Not mapped</div>
                         </td>
-                        <td>Not mapped</td>
+                        <td class="ax">
+                            <div class="general">Not mapped</div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-command-checkbox">
                         <th>Command: <span class="el-context">an element that <a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#commands">defines a command</a>, whose <a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#command-facet-type">Type</a> facet is "checkbox", and that is a descendant of a <code><a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#the-menu-element">menu</a></code> element whose <code><a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#attr-menu-type">type</a></code> attribute is in the <a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#toolbar-state">toolbar</a> state</span></th>
@@ -942,7 +1124,17 @@
                             </div>
                         </td>
                         <td>ROLE_CHECK_MENU_ITEM + object attribute checkable="true"</td>
-                        <td>AXCheckbox<br>(null)<br>check box</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span class="type">AXRole: </span>AXCheckbox
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>check box
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-command-command">
                         <th>Command: <span class="el-context">an element that <a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#commands">defines a command</a>, whose <a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#command-facet-type">Type</a> facet is "command", and that is a descendant of a <code><a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#the-menu-element">menu</a></code> element whose <code><a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#attr-menu-type">type</a></code> attribute is in the <a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#toolbar-state">toolbar</a> state</span></th>
@@ -962,7 +1154,7 @@
                             </div>
                         </td>
                         <td>ROLE_MENU_ITEM</td>
-                        <td>depends on element used to define command</td>
+                        <td class="ax">Depends on element used to define command</td>
                     </tr>
                     <tr tabindex="-1" id="el-command-radio">
                         <th>Command: <span class="el-context">an element that <a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#commands">defines a command</a>, whose <a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#command-facet-type">Type</a> facet is "radio", and that is a descendant of a <code><a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#the-menu-element">menu</a></code> element whose <code><a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#attr-menu-type">type</a></code> attribute is in the <a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#toolbar-state">toolbar</a> state</span></th>
@@ -985,7 +1177,17 @@
                             </div>
                         </td>
                         <td>ROLE_RADIO_MENU_ITEM + object attribute checkable="true"</td>
-                        <td>AXRadioButton<br>(null)<br>radio button</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span class="type">AXRole: </span>AXRadioButton
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>radio button
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-data">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-data-element">data</a></code></th>
@@ -1000,7 +1202,9 @@
                         <td class="at-spi">
                           <div class="general">Not mapped</div>
                         </td>
-                        <td></td>
+                        <td class="ax">
+                          <div class="general">Not mapped</div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-datalist">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-datalist-element">datalist</a></code></th>
@@ -1041,7 +1245,17 @@
                             Selection
                           </div>
                         </td>
-                        <td>AXComboBox<br>(null)<br>combo box</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span class="type">AXRole: </span>AXComboBox
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>combo box
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-dd">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-dd-element">dd</a></code></th>
@@ -1074,7 +1288,17 @@
                             Text; Hypertext
                           </div>
                         </td>
-                        <td>AXGroup<br>AXDefinition<br>definition</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span class="type">AXRole: </span>AXGroup
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>AXDefinition
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>definition
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-del">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/edits.html#the-del-element">del</a></code></th>
@@ -1103,7 +1327,17 @@
                             into text attributes on its text container.
                           </div>
                         </td>
-                        <td>AXGroup<br>(null)<br>group</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span class="type">AXRole: </span>AXGroup
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>group
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-details">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#the-details-element">details</a></code></th>
@@ -1132,7 +1366,7 @@
                             ROLE_PANEL
                           </div>
                         </td>
-                        <td>?</td>
+                        <td class="ax">?</td>
                     </tr>
                     <tr tabindex="-1" id="el-dfn">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-dfn-element">dfn</a></code></th>
@@ -1157,7 +1391,17 @@
                             exposed by text attributes on its text container.
                           </div>
                         </td>
-                        <td>AXGroup<br>(null)<br>group</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span class="type">AXRole: </span>AXGroup
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>group
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-dialog">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#the-dialog-element">dialog</a></code></th>
@@ -1182,7 +1426,7 @@
                             ROLE_DIALOG
                           </div>
                         </td>
-                        <td></td>
+                        <td class="ax"></td>
                     </tr>
                    <tr tabindex="-1" id="el-div">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-div-element">div</a></code></th>
@@ -1221,7 +1465,17 @@
                             Text; Hypertext
                           </div>
                         </td>
-                        <td>AXGroup<br>(null)<br>group</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span class="type">AXRole: </span>AXGroup
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>group
+                            </div>
+                        </td>
                     </tr> 
                     <tr tabindex="-1" id="el-dl">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-dl-element">dl</a></code></th>
@@ -1258,7 +1512,17 @@
                             ROLE_LIST
                           </div>
                         </td>
-                        <td>AXList<br>AXDefinitionList<br>definition list</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span class="type">AXRole: </span>AXList
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>AXDefinitionList
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>definition list
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-dt">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-dt-element">dt</a></code></th>
@@ -1302,7 +1566,17 @@
                             Text; Hypertext
                           </div>
                         </td>
-                        <td>AXGroup<br>AXTerm<br>term</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span class="type">AXRole: </span>AXGroup
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>AXTerm
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>term
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-em">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-em-element">em</a></code></th>
@@ -1327,7 +1601,17 @@
                             into text attributes on its text container
                           </div>
                         </td>
-                        <td>AXGroup<br>(null)<br>group</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span class="type">AXRole: </span>AXGroup
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>group
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-embed">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-embed-element">embed</a></code></th>
@@ -1360,7 +1644,7 @@
                             ROLE_EMBEDDED
                           </div>
                         </td>
-                        <td>depends on format of data file</td>
+                        <td class="ax">Depends on format of data file</td>
                     </tr>
                     <tr tabindex="-1" id="el-fieldset">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-fieldset-element">fieldset</a></code></th>
@@ -1398,7 +1682,17 @@
                             RELATION_LABELLED_BY with child HTML:legend element
                           </div>
                         </td>
-                        <td>AXGroup<br>(null)<br>group</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span class="type">AXRole: </span>AXGroup
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>group
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-figcaption">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-figcaption-element">figcaption</a></code></th>
@@ -1444,7 +1738,17 @@
                             Text; Hypertext
                           </div>
                         </td>
-                        <td>AXGroup<br>(null)<br>group</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span class="type">AXRole: </span>AXGroup
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>group
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-figure">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-figure-element">figure</a></code></th>
@@ -1497,7 +1801,7 @@
                             RELATION_LABELLED_BY with child HTML:figcaption element
                           </div>
                         </td>
-                        <td>?</td>
+                        <td class="ax">?</td>
                     </tr>
                     <tr tabindex="-1" id="el-footer">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-footer-element">footer</a></code></th>
@@ -1541,15 +1845,29 @@
                             Text; Hypertext
                           </div>
                         </td>
-                        <td><p>If contained in <code>article</code> or <code>section</code> element:<br>
-                          AXGroup<br>
-                          (null)<br>
-                          group</p>
-                          <p>Otherwise:<br>
-                            AXGroup<br>
-                            AXLandmarkContentInfo<br>
-                            footer</p>
-                      <p>Refer to <a href="https://bugs.webkit.org/show_bug.cgi?id=78967">Webkit bug 78967</a></p></td>
+                        <td class="ax">
+                            <div class="general">If contained in <code>article</code> or <code>section</code> element:</div>
+                            <div class="role">
+                                <span class="type">AXRole: </span>AXGroup
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>group
+                            </div>
+                            <div class="general">Otherwise:</div>
+                            <div class="role">
+                                <span class="type">AXRole: </span>AXGroup
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>AXLandmarkContentInfo
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>footer
+                            </div>
+                            <div class="general">Refer to <a href="https://bugs.webkit.org/show_bug.cgi?id=78967">Webkit bug 78967</a></div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-form">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-form-element">form</a></code></th>
@@ -1579,7 +1897,17 @@
                             ROLE_FORM
                           </div>
                         </td>
-                        <td>AXGroup<br>AXLandmarkForm<br>form</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXGroup
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>AXLandmarkForm
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>form
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-frame">
                         <th><code><a href="http://www.w3.org/TR/html401/present/frames.html#h-16.2.2">frame</a></code></th>
@@ -1620,7 +1948,17 @@
                             ROLE_DOCUMENT_FRAME
                           </div>
                         </td>
-                        <td>AXWebArea<br>(null)<br>HTML content</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXWebArea
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>HTML content
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-frameset">
                         <th><code><a href="http://www.w3.org/TR/html401/present/frames.html#h-16.2.1">frameset</a></code></th>
@@ -1643,9 +1981,11 @@
                             Similar to HTML:body element.
                           </div>
                         </td>
-                        <td>Not mapped</td>
+                        <td>
+                            <div class="general">Not mapped</div>
+                        </td>
                     </tr>
-                    <tr tabindex="-1" id="el-h1etc">
+                    <tr tabindex="-1" id="el-h1-h6">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements">h1</a></code>, <code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements">h2</a></code>, <code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements">h3</a></code>, <code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements">h4</a></code>, <code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements">h5</a></code>, <code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements">h6</a></code></th>
                         <td>Yes</td>
                         <td>Yes</td>
@@ -1689,7 +2029,20 @@
                             Text; Hypertext
                           </div>
                         </td>
-                        <td>AXHeading<br>(null)<br>heading<br><br>Use AXLevel attribute to expose the heading level.</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXHeading
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>heading
+                            </div>
+                            <div class="properties">
+                                <span class="type">Properties: </span>Use AXLevel to expose the heading level
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-head">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/document-metadata.html#the-head-element">head</a></code></th>
@@ -1708,7 +2061,9 @@
                         <td class="ia2">
                           <div class="general">Not mapped</div>
                         </td>
-                        <td>Not mapped</td>
+                        <td class="ax">
+                            <div class="general">Not mapped</div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-header">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-header-element">header</a></code></th>
@@ -1756,9 +2111,29 @@
                             Text; Hypertext
                           </div>
                         </td>
-                        <td><p>If contained in <code>article</code> or <code>section</code> element:<br>AXGroup<br>(null)<br>group</p>
-                          <p>Otherwise:<br>AXGroup<br>AXLandmarkBanner<br>banner</p>
-                        <p>Refer to <a href="https://bugs.webkit.org/show_bug.cgi?id=78967">Webkit bug 78967</a></p></td>
+                        <td class="ax">
+                            <div class="general">If contained in <code>article</code> or <code>section</code> element:</div>
+                            <div class="role">
+                                <span class="type">AXRole: </span>AXGroup
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>group
+                            </div>
+                            <div class="general">Otherwise:</div>
+                            <div class="role">
+                                <span class="type">AXRole: </span>AXGroup
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>AXLandmarkBanner
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>banner
+                            </div>
+                            <div class="general">Refer to <a href="https://bugs.webkit.org/show_bug.cgi?id=78967">Webkit bug 78967</a></div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-hr">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-hr-element">hr</a></code></th>
@@ -1787,7 +2162,7 @@
                             ROLE_SEPARATOR
                           </div>
                         </td>
-                        <td>?</td>
+                        <td class="ax">?</td>
                     </tr>
                     <tr tabindex="-1" id="el-html">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/the-root-element.html#the-html-element">html</a></code></th>
@@ -1806,7 +2181,9 @@
                         <td class="at-spi">
                           <div class="general">Not mapped</div>
                         </td>
-                        <td>Not mapped</td>
+                        <td class="ax">
+                            <div class="general">Not mapped</div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-i">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-i-element">i</a></code></th>
@@ -1835,7 +2212,17 @@
                             "font-style:italic" text attribute on its text container.
                           </div>
                         </td>
-                        <td>AXGroup<br>(null)<br>group</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXGroup
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>group
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-iframe">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-iframe-element">iframe</a></code></th>
@@ -1875,7 +2262,17 @@
                             ROLE_DOCUMENT_FRAME
                           </div>
                         </td>
-                        <td>AXWebArea<br>(null)<br>html content</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXWebArea
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>html content
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-img">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-img-element">img</a></code></th>
@@ -1932,7 +2329,17 @@
                              in case of image map
                           </div>
                         </td>
-                        <td>AXImage<br>(null)<br>image</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXImage
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>image
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-img-emptyalt">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-img-element">img</a></code> <span class="el-context">(<code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#attr-img-alt">alt</a></code> attribute is empty)</span></th>
@@ -1942,8 +2349,10 @@
                         <td>
                             <div class="general">Do not expose this object</div>
                         </td>
-                        <td><p>Do not expose this object</p></td>
                         <td>
+                            <div class="general">Do not expose this object</div>
+                        </td>
+                        <td class="ia2">
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>Image
                             </div>
@@ -1951,8 +2360,12 @@
                                 <span class="type">Properties: </span>NameProperty set to the empty string
                             </div>
                         </td>
-                        <td>Do note expose this object</td>
-                        <td>Not mapped</td>
+                        <td class="at-spi">
+                            <div class="general">Do not expose this object</div>
+                        </td>
+                        <td class="ax">
+                            <div class="general">Do not expose this object</div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-input-button">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-input-element">input</a></code> <span class="el-context">(<code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#attr-input-type">type</a></code> attribute in the <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#button-state-(type=button)">Button</a> state)</span></th>
@@ -1989,13 +2402,23 @@
                             press
                           </div>
                         </td>
-                        <td>AXButton<br>(null)<br>button</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXButton
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>button
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-input-button-parentmenu">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-input-element">input</a></code> <span class="el-context">(<code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#attr-input-type">type</a></code> attribute in the <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#button-state-(type=button)">Button</a> state and parent is a menu)</span></th>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
+                        <td>?</td>
+                        <td>?</td>
+                        <td>?</td>
                         <td>
                             <div class="role">
                                 <span class="type">Role: </span>ROLE_SYSTEM_MENUITEM
@@ -2018,13 +2441,13 @@
                             ROLE_MENU_ITEM
                           </div>
                         </td>
-                        <td>&nbsp;</td>
+                        <td class="ax">?</td>
                     </tr>
                     <tr tabindex="-1" id="el-input-color">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-input-element">input</a></code> <span class="el-context">(<code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#attr-input-type">type</a></code> attribute in the <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#color-state-(type=color)">Color</a> state)</span></th>
                         <td>No</td>
                         <td>Yes</td>
-                        <td>&nbsp;</td>
+                        <td>?</td>
                         <td>
                             <div class="role">
                                 <span class="type">Role: </span>If implemented as a textbox, ROLE_SYSTEM_TEXT
@@ -2054,7 +2477,28 @@
                             ROLE_COLOR_CHOOSER
                           </div>
                         </td>
-                        <td>If implemented as a textbox,<br>AXTextField<br>(null)<br>text field<br><br>If implemented as a color picker,<br>AXColorWell<br>(null)<br>color chooser</td>
+                        <td class="ax">
+                            <div class="general">If implemented as a textbox:</div>
+                            <div class="role">
+                                <span class="type">AXRole: </span>AXTextField
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>textfield
+                            </div>
+                            <div class="general">If implemented as a color picker:</div>
+                            <div class="role">
+                                <span class="type">AXRole: </span>AXColorWell
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>color chooser
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-input-checkbox">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-input-element">input</a></code> <span class="el-context">(<code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#attr-input-type">type</a></code> attribute in the <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#checkbox-state-(type=checkbox)">Checkbox</a> state)</span></th>
@@ -2103,7 +2547,17 @@
                             "check" or "uncheck" depending on the state
                           </div>
                         </td>
-                        <td>AXCheckBox<br>(null)<br>check box</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXCheckBox
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>check box
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-input-checkbox-parentmenu">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-input-element">input</a></code> <span class="el-context">(<code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#attr-input-type">type</a></code> attribute in the <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#checkbox-state-(type=checkbox)">Checkbox</a> state and parent is a menu)</span></th>
@@ -2148,7 +2602,7 @@
                             checkable:true
                           </div>
                         </td>
-                        <td>&nbsp;</td>
+                        <td class="ax">?</td>
                     </tr>
                     <tr tabindex="-1" id="el-input-date">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-input-element">input</a></code> <span class="el-context">(<code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#attr-input-type">type</a></code> attribute in the <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#date-state-(type=date)">Date</a> state)</span></th>
@@ -2178,7 +2632,17 @@
                             ROLE_CALENDAR
                           </div>
                         </td>
-                        <td>AXDateField<br>(null)<br>date field</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXDateField
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>date field
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-input-dateandtime">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-input-element">input</a></code> <span class="el-context">(<code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#attr-input-type">type</a></code> attribute in the <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#date-and-time-state-(type=datetime)">Date and Time</a> state)</span></th>
@@ -2208,7 +2672,17 @@
                             ROLE_CALENDAR
                           </div>
                         </td>
-                        <td>AXTextField<br>(null)<br>text field</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXTextField
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>text field
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-input-localdateandtime">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-input-element">input</a></code> <span class="el-context">(<code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#attr-input-type">type</a></code> attribute in the <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#local-date-and-time-state-(type=datetime-local)">Local Date and Time</a> state)</span></th>
@@ -2238,7 +2712,17 @@
                             ROLE_CALENDAR
                           </div>
                         </td>
-                        <td>AXTextField<br>(null)<br>text field</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXTextField
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>text field
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-input-email">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-input-element">input</a></code> <span class="el-context">(<code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#attr-input-type">type</a></code> attribute in the <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#e-mail-state-(type=email)">E-mail</a> state with no <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#concept-input-list">suggestions source element</a>)</span></th>
@@ -2292,7 +2776,17 @@
                             Text; EditableText
                           </div>
                         </td>
-                        <td>AXTextField<br>(null)<br>text field</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXTextField
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>text field
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-input-file">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-input-element">input</a></code> <span class="el-context">(<code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#attr-input-type">type</a></code> attribute in the <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#file-upload-state-(type=file)">File Upload</a> state)</span></th>
@@ -2329,7 +2823,17 @@
                             ROLE_PUSH_BUTTON when pressed ROLE_FILE_CHOOSER dialog shown
                           </div>
                         </td>
-                        <td>AXButton<br>(null)<br>button</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXButton
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>button
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-input-hidden">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-input-element">input</a></code> <span class="el-context">(<code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#attr-input-type">type</a></code> attribute in the <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#hidden-state-(type=hidden)">Hidden</a> state)</span></th>
@@ -2393,7 +2897,17 @@
                             press
                           </div>
                         </td>
-                        <td>AXButton<br>(null)<br>button</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXButton
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>button
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-input-image-parentmenu">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-input-element">input</a></code> <span class="el-context">(<code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#attr-input-type">type</a></code> attribute in the <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#image-button-state-(type=image)">Image Button</a> state and parent is a <code>menu</code>)</span></th>
@@ -2436,7 +2950,17 @@
                             ROLE_DATE_EDITOR
                           </div>
                         </td>
-                        <td>AXTextField<br>(null)<br>text field</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXTextField
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>text field
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-input-number">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-input-element">input</a></code> <span class="el-context">(<code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#attr-input-type">type</a></code> attribute in the <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#number-state-(type=number)">Number</a> state)</span></th>
@@ -2465,11 +2989,19 @@
                             ROLE_SPIN_BUTTON or ROLE_ENTRY (implementation dependent)
                           </div>
                         </td>
-                        <td><p>AXTextField<br>
-                          (null)<br>
-                          text field</p>
-                        <p><strong>Note:</strong> stepper controls are assigned roles seperately from the AXTextField in Webkit. The stepper is not currently recognized by VoiceOver. <br>
-        Refer to <a href="https://bugs.webkit.org/show_bug.cgi?id=79095">Webkit bug 79095 </a></p></td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXTextField
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>text field
+                            </div>
+                            <div class="general"><b>Note:</b> Stepper controls are assigned roles seperately from the AXTextField in Webkit. The stepper is not currently recognized by VoiceOver. Refer to <a href="https://bugs.webkit.org/show_bug.cgi?id=79095">Webkit bug 79095</a>
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-input-password">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-input-element">input</a></code> <span class="el-context">(<code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#attr-input-type">type</a></code> attribute in the <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#password-state-(type=password)">Password</a> state)</span></th>
@@ -2521,7 +3053,17 @@
                             activate
                           </div>
                         </td>
-                        <td>AXTextField<br>AXSecureTextField<br>secure text field</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXTextField
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>AXSecureTextField
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>secure text field
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-input-radio">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-input-element">input</a></code> <span class="el-context">(<code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#attr-input-type">type</a></code> attribute in the <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#radio-button-state-(type=radio)">Radio Button</a> state)</span></th>
@@ -2570,7 +3112,17 @@
                             select
                           </div>
                         </td>
-                        <td>AXRadioButton<br>(null)<br>radio button</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXRadioButton
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>radio button
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-input-radio-menuparent">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-input-element">input</a></code> <span class="el-context">(<code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#attr-input-type">type</a></code> attribute in the <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#radio-button-state-(type=radio)">Radio Button</a> state and parent is a menu)</span></th>
@@ -2578,8 +3130,8 @@
                         <td>?</td>
                         <td>?</td>
                         <td>?</td>
-                        <td>?</td>
-                        <td>
+                        <td class="ia2">?</td>
+                        <td class="uia">
                             <div class="ctrltype">
                                 <span class="type">Control Type: </span>MenuItem
                             </div>
@@ -2587,8 +3139,8 @@
                                 <span class="type">Control Pattern: </span>Toggle
                             </div>
                         </td>
-                        <td>?</td>
-                        <td>?</td>
+                        <td class="at-spi">?</td>
+                        <td class="ax">?</td>
                     </tr>
                     <tr tabindex="-1" id="el-input-range">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-input-element">input</a></code> <span class="el-context">(<code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#attr-input-type">type</a></code> attribute in the <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#range-state-(type=range)">Range</a> state)</span></th>
@@ -2625,7 +3177,34 @@
                             Value
                           </div>
                         </td>
-                        <td><p>Slider:<br>AXSlider<br>(null)<br>slider</p><p>AXOrientation: AXHorizontalOrientation</p><p>Thumb: <br>AXValueIndicator<br>(null)<br>value indicator<br><br>Actions:<br>AXIncrement - increment<br>AXDecrement - decrement</p></td>
+                        <td class="ax">
+                            <div class="general">Slider:</div>
+                            <div class="role">
+                                <span class="type">AXRole: </span>AXSlider
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>slider
+                            </div>
+                            <div class="properties">
+                                <span class="type">Properties: </span>AXOrientation: AXHorizontalOrientation
+                            </div>
+                            <div class="general">Thumb:</div>
+                            <div class="role">
+                                <span class="type">AXRole: </span>AXValueIndicator
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>value indicator
+                            </div>
+                            <div class="actions">
+                                <span class="type">Actions: </span>          AXIncrement - increment; AXDecrement - decrement
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-input-reset">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-input-element">input</a></code> <span class="el-context">(<code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#attr-input-type">type</a></code> attribute in the <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#reset-button-state-(type=reset)">Reset Button</a> state)</span></th>
@@ -2662,7 +3241,17 @@
                             press
                           </div>
                         </td>
-                        <td>AXButton<br>(null)<br>button</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXButton
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>button
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-input-search">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-input-element">input</a></code> <span class="el-context">(<code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#attr-input-type">type</a></code> attribute in the <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#text-(type=text)-state-and-search-state-(type=search)">Search</a> state with no <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#concept-input-list" title="concept-input-list">suggestions source element</a>)</span></th>
@@ -2708,7 +3297,17 @@
                             Text;  EditableText
                           </div>
                         </td>
-                        <td>AXTextField<br>AXSearchField<br>search field</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXTextField
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>AXSearchField
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>search field
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-input_submit">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-input-element">input</a></code> <span class="el-context">(<code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#attr-input-type">type</a></code> attribute in the <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#submit-button-state-(type=submit)">Submit Button</a> state)</span></th>
@@ -2753,7 +3352,17 @@
                             press
                           </div>
                         </td>
-                        <td>AXButton<br>(null)<br>button</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXButton
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>button
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-input-tel">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-input-element">input</a></code> <span class="el-context">(<code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#attr-input-type">type</a></code> attribute in the <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#telephone-state-(type=tel)">Telephone</a> state with no <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#concept-input-list">suggestions source element</a>)</span></th>
@@ -2807,7 +3416,17 @@
                             Text;  EditableText
                           </div>
                         </td>
-                        <td>AXTextField<br>(null)<br>text field</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXTextField
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>text field
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-input-text">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-input-element">input</a></code> <span class="el-context">(<code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#attr-input-type">type</a></code> attribute in the <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#text-(type=text)-state-and-search-state-(type=search)">Text</a> state with no <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#concept-input-list">suggestions source element</a>)</span></th>
@@ -2861,7 +3480,17 @@
                             Text; EditableText
                           </div>
                         </td>
-                        <td>AXTextField<br>(null)<br>text field</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXTextField
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>text field
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-input-textetc-autocomplete">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-input-element">input</a></code> <span class="el-context">(<code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#attr-input-type">type</a></code> attribute in the <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#text-(type=text)-state-and-search-state-(type=search)">Text</a>, <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#text-(type=text)-state-and-search-state-(type=search)">Search</a>, <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#telephone-state-(type=tel)">Telephone</a>, <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#url-state-(type=url)">URL</a>, or <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#e-mail-state-(type=email)">E-mail</a> states with a <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#concept-input-list">suggestions source element</a>)</span></th>
@@ -2907,7 +3536,17 @@
                             Text; EditableText
                           </div>
                         </td>
-                        <td>AXTextField<br>(null)<br>text field</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXTextField
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>text field
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-input-time">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-input-element">input</a></code> <span class="el-context">(<code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#attr-input-type">type</a></code> attribute in the <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#time-state-(type=time)">Time</a> state)</span></th>
@@ -2936,7 +3575,17 @@
                             ROLE_SPIN_BUTTON
                           </div>
                         </td>
-                        <td>AXTimeField<br>(null)<br>time field</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXTimeField
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>time field
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-input-url">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-input-element">input</a></code> <span class="el-context">(<code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#attr-input-type">type</a></code> attribute in the <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#url-state-(type=url)">URL</a> state with no <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#concept-input-list" title="concept-input-list">suggestions source element</a>)</span></th>
@@ -2990,7 +3639,17 @@
                             Text; EditableText
                           </div>
                         </td>
-                        <td>AXTextField<br>(null)<br>text field</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXTextField
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>text field
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-input-week">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-input-element">input</a></code> <span class="el-context">(<code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#attr-input-type">type</a></code> attribute in the <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#week-state-(type=week)">Week</a> state)</span></th>
@@ -3020,7 +3679,17 @@
                             ROLE_CALENDAR
                           </div>
                         </td>
-                        <td>AXTextField<br>(null)<br>text field</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXTextField
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>text field
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-ins">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/edits.html#the-ins-element">ins</a></code></th>
@@ -3038,7 +3707,6 @@
                             into text attributes on its text container.
                           </div>
                         </td>
-                        <td>
                         <td>?</td>
                         <td class="at-spi">
                           <div class="general">
@@ -3046,7 +3714,17 @@
                             into text attributes on its text container.
                           </div>
                         </td>
-                        <td>AXGroup<br>(null)<br>group</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXGroup
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>group
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-kbd">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-kbd-element">kbd</a></code></th>
@@ -3073,7 +3751,17 @@
                             container.
                           </div>
                         </td>
-                        <td>AXGroup<br>(null)<br>group</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXGroup
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>group
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-keygen">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-keygen-element">keygen</a></code></th>
@@ -3118,9 +3806,17 @@
                             haspopup:true
                           </div>
                         </td>
-                        <td>AXList<br>
-                          (null)<br>
-                          list</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXList
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>list
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-label">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-label-element">label</a></code></th>
@@ -3171,7 +3867,17 @@
                             Text; Hypertext
                           </div>
                         </td>
-                        <td>AXGroup<br>(null)<br>group</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXGroup
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>group
+                            </div>
+                        </td>
                     </tr>
                         <tr tabindex="-1" id="el-legend">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-legend-element">legend</a></code></th>
@@ -3220,7 +3926,17 @@
                             Text; Hypertext
                           </div>
                        </td>
-                        <td>AXGroup<br>(null)<br>group</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXGroup
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>group
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-li">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-li-element">li</a></code> <span class="el-context">(parent is an <code><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-ol-element">ol</a></code> or <code><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-ul-element">ul</a></code>)</span></th>
@@ -3264,7 +3980,17 @@
                             Text; Hypertext
                           </div>
                         </td>
-                        <td>AXGroup<br>(null)<br>group</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXGroup
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>group
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-li-parentmenu">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-li-element">li</a></code> <span class="el-context">(parent is a <code><a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#the-menu-element">menu</a></code>)</span></th>
@@ -3308,7 +4034,17 @@
                             Text; Hypertext
                           </div>
                         </td>
-                        <td>AXGroup<br>(null)<br>group</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXGroup
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>group
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-link">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/document-metadata.html#the-link-element">link</a></code></th>
@@ -3327,7 +4063,9 @@
                         <td class="at-spi">
                           <div class="general">Not mapped</div>
                         </td>
-                        <td>Not mapped</td>
+                        <td class="ax">
+                            <div class="general">Not mapped</div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-main">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-main-element">main</a></code></th>
@@ -3373,8 +4111,17 @@
                             Text; Hypertext
                           </div>
                         </td>
-                        <td>
-                        <td>AXGroup<br>AXLandmarkMain<br>main</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXGroup
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>AXLandmarkMain
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>main
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-map">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-map-element">map</a></code></th>
@@ -3405,7 +4152,9 @@
                             ROLE_TEXT
                           </div>
                         </td>
-                        <td>Not mapped</td>
+                        <td class="ax">
+                            <div class="general">Not mapped</div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-mark">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-mark-element">mark</a></code></th>
@@ -3434,7 +4183,17 @@
                             the text are mapped into text attributes on the text container.
                           </div>
                         </td>
-                        <td>AXGroup<br>(null)<br>group</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXGroup
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>group
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-math">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#mathml">math</a></code></th>
@@ -3459,7 +4218,17 @@
                             ROLE_UNKNOWN
                           </div>
                         </td>
-                        <td>AXGroup<br>AXDocumentMath<br>math</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXGroup
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>AXDocumentMath
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>math
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-menu">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#the-menu-element">menu</a></code> <span class="el-context">(<code><a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#attr-menu-type">type</a></code> attribute in the <a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#popup-menu-state">popup menu</a> state)</span></th>
@@ -3493,7 +4262,17 @@
                             for a submenu if there is a parent menu item spawning the submenu
                           </div>
                         </td>
-                        <td>AXMenu<br>(null)<br>menu</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXMenu
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>menu
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-menu-toolbar">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#the-menu-element">menu</a></code> <span class="el-context">(<code><a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#attr-menu-type">type</a></code> attribute in the <a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#toolbar-state">toolbar</a> state)</span></th>
@@ -3523,7 +4302,17 @@
                             ROLE_TOOL_BAR
                           </div>
                         </td>
-                        <td>AXMenu<br>(null)<br>menu</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXMenu
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>menu
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-menuitem-checkbox">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#the-menuitem-element">menuitem</a></code> <span class="el-context">(<code>type</code> attribute in the Checkbox state)</span></th>
@@ -3568,7 +4357,17 @@
                             checkable:true
                           </div>
                         </td>
-                        <td>AXCheckbox<br>(null)<br>check box</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXCheckbox
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>check box
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-menuitem-command">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#the-menuitem-element">menuitem</a></code> <span class="el-context">(<code>type</code> attribute in the Command state)</span></th>
@@ -3598,7 +4397,17 @@
                             ROLE_MENU_ITEM
                           </div>
                         </td>
-                        <td>AXMenuItem<br>(null)<br>menu item</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXMenuItem
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>menu item
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-menuitem-radio">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#the-menuitem-element">menuitem</a></code> <span class="el-context">(<code>type</code> attribute in the Radio state)</span></th>
@@ -3643,7 +4452,17 @@
                             checkable:true
                           </div>
                         </td>
-                        <td>AXRadioButton<br>(null)<br>radio button</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXRadioButton
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>radio button
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-meta">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/document-metadata.html#the-meta-element">meta</a></code></th>
@@ -3662,7 +4481,9 @@
                         <td class="at-spi">
                           <div class="general">Not mapped</div>
                         </td>
-                        <td>Not mapped</td>
+                        <td class="ax">
+                            <div class="general">Not mapped</div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-meter">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-meter-element">meter</a></code></th>
@@ -3704,7 +4525,17 @@
                             Value
                           </div>
                         </td>
-                        <td>AXGroup<br>(null)<br>group</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXGroup
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>group
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-nav">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-nav-element">nav</a></code></th>
@@ -3749,9 +4580,17 @@
                             Text; Hypertext
                           </div>
                         </td>
-                        <td>AXGroup<br>
-                          AXLandmarkNavigation<br>
-                      navigation</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXGroup
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>AXLandmarkNavigation
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>navigation
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-noscript">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/scripting-1.html#the-noscript-element">noscript</a></code></th>
@@ -3770,7 +4609,9 @@
                         <td class="at-spi">
                           <div class="general">Not mapped</div>
                         </td>
-                        <td>Not mapped</td>
+                        <td class="ax">
+                            <div class="general">Not mapped</div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-object">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-object-element">object</a></code></th>
@@ -3805,7 +4646,7 @@
                             ROLE_EMBEDDED
                           </div>
                         </td>
-                        <td>depends on format of data file.</td>
+                        <td class="ax">Depends on format of data file.</td>
                     </tr>
                     <tr tabindex="-1" id="el-ol">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-ol-element">ol</a></code></th>
@@ -3844,7 +4685,17 @@
                             ROLE_LIST
                           </div>
                         </td>
-                        <td>AXList<br>AXContentList<br>list</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXList
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>AXContentList
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>list
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-optgroup">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-optgroup-element">optgroup</a></code></th>
@@ -3874,7 +4725,17 @@
                             <em>ROLE_PANEL</em>
                           </div>
                         </td>
-                        <td>AXMenuItem<br>(null)<br>menu item</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXMenuItem
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>menu item
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-option">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-option-element">option</a></code> <span class="el-context">(in a <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#concept-select-option-list">list of options</a> or represents a suggestion in a <code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-datalist-element">datalist</a></code>)</span></th>
@@ -3923,7 +4784,17 @@
                             Text; Hypertext
                           </div>
                         </td>
-                        <td>AXMenuItem<br>(null)<br>menu item</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXMenuItem
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>menu item
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-output">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-output-element">output</a></code></th>
@@ -3982,7 +4853,17 @@
                             Text; Hypertext
                           </div>
                         </td>
-                        <td>AXGroup<br>(null)<br>group</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXGroup
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>group
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-p">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-p-element">p</a></code></th>
@@ -4020,7 +4901,17 @@
                             Text; Hypertext
                           </div>
                         </td>
-                        <td>AXGroup<br>(null)<br>group</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXGroup
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>group
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-param">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-param-element">param</a></code></th>
@@ -4039,7 +4930,9 @@
                         <td class="at-spi">
                           <div class="general">Not mapped</div>
                         </td>
-                        <td>Not mapped</td>
+                        <td class="ax">
+                            <div class="general">Not mapped</div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-pre">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-pre-element">pre</a></code></th>
@@ -4083,7 +4976,17 @@
                             Text; Hypertext
                           </div>
                         </td>
-                        <td>AXGroup<br>(null)<br>group</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXGroup
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>group
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-progress">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-progress-element">progress</a></code></th>
@@ -4132,7 +5035,20 @@
                             Value
                           </div>
                         </td>
-                        <td>AXProgressIndicator<br>(null)<br>progress indicator<br><br>Use AXValue to expose current value.</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXProgressIndicator
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>progress indicator
+                            </div>
+                            <div class="properties">
+                                <span class="type">Properties: </span>Use AXValue to expose current value.
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-q">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-q-element">q</a></code></th>
@@ -4174,7 +5090,17 @@
                             Text; Hypertext
                           </div>
                         </td>
-                        <td>AXGroup<br>(null)<br>group</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXGroup
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>group
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-rp">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-rp-element">rp</a></code></th>
@@ -4204,7 +5130,7 @@
                             exposed if HTML:ruby is supported by the browser.
                           </div>
                         </td>
-                        <td>?</td>
+                        <td class="ax">?</td>
                     </tr>
                     <tr tabindex="-1" id="el-rt">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-rt-element">rt</a></code></th>
@@ -4232,7 +5158,7 @@
                             Doesn't have an accessible.
                           </div>
                         </td>
-                        <td>?</td>
+                        <td class="ax">?</td>
                     </tr>
                     <tr tabindex="-1" id="el-ruby">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-ruby-element">ruby</a></code></th>
@@ -4262,7 +5188,7 @@
                             ROLE_TEXT
                           </div>
                         </td>
-                        <td>?</td>
+                        <td class="ax">?</td>
                     </tr>
                     <tr tabindex="-1" id="el-s">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-s-element">s</a></code></th>
@@ -4292,7 +5218,17 @@
                             "text-line-through-style:solid" text attribute on the text container.
                           </div>
                         </td>
-                        <td>AXGroup<br>(null)<br>group</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXGroup
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>group
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-samp">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-samp-element">samp</a></code></th>
@@ -4322,7 +5258,17 @@
                             text attributes on its text container.
                           </div>
                         </td>
-                        <td>AXGroup<br>(null)<br>group</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXGroup
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>group
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-script">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/scripting-1.html#the-script-element">script</a></code></th>
@@ -4341,7 +5287,9 @@
                         <td class="at-spi">
                           <div class="general">Not mapped</div>
                         </td>
-                        <td>Not mapped</td>
+                        <td class="ax">
+                            <div class="general">Not mapped</div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-section">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-section-element">section</a></code></th>
@@ -4386,9 +5334,17 @@
                             Text; Hypertext
                           </div>
                         </td>
-                        <td>AXGroup<br>
-                          AXDocumentRegion<br>
-                      region</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXGroup
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>AXDocumentRegion
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>region
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-select-listbox">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-select-element">select</a></code> <span class="el-context">(with a <code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#attr-select-multiple">multiple</a></code> attribute)</span></th>
@@ -4436,7 +5392,17 @@
                             Selection
                           </div>
                         </td>
-                        <td>AXList<br>(null)<br>list</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXList
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>list
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-select-combobox">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-select-element">select</a></code> <span class="el-context">(with NO <code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#attr-select-multiple">multiple</a></code> attribute)</span></th>
@@ -4489,7 +5455,17 @@
                             intermediate ROLE_SYSTEM_LIST containing all options
                           </div>
                         </td>
-                        <td>AXPopUpButton<br>(null)<br>pop up button</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXPopUpButton
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>pop up button
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-small">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-small-element">small</a></code></th>
@@ -4519,7 +5495,17 @@
                             text attribute on the text container.
                           </div>
                         </td>
-                        <td>AXGroup<br>(null)<br>group</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXGroup
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>group
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-source">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-source-element">source</a></code></th>
@@ -4538,7 +5524,9 @@
                         <td class="at-spi">
                           <div class="general">Not mapped</div>
                         </td>
-                        <td>Do not expose this object</td>
+                        <td class="ax">
+                            <div class="general">Do not expose this object</div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-span">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-span-element">span</a></code></th>
@@ -4562,7 +5550,17 @@
                         <td class="at-spi">
                           <div class="general">Not mapped</div>
                         </td>
-                        <td>AXGroup<br>(null)<br>group</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXGroup
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>group
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-strong">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-strong-element">strong</a></code></th>
@@ -4592,7 +5590,17 @@
                             into text attributes on its text container.
                           </div>
                         </td>
-                        <td>AXGroup<br>(null)<br>group</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXGroup
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>group
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-style">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/document-metadata.html#the-style-element">style</a></code></th>
@@ -4611,7 +5619,9 @@
                         <td class="at-spi">
                           <div class="general">Not mapped</div>
                         </td>
-                        <td>Do not expose this object</td>
+                        <td clas="ax">
+                            <div class="general">Do not expose this object</div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-sub">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-sub-and-sup-elements">sub</a></code></th>
@@ -4641,7 +5651,17 @@
                             text attribute on its text container.
                           </div>
                         </td>
-                        <td>AXGroup<br>(null)<br>group</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXGroup
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>group
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-summary">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#the-summary-element">summary</a></code></th>
@@ -4675,7 +5695,17 @@
                             <span class="type">Role: </span>ROLE_PUSHBUTTON
                           </div>
                         </td>
-                        <td><p>AXDisclosureTriangle<br>(null)<br>disclosure triangle</p></td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXDisclosureTriangle
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>disclosure triangle
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-sup">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-sub-and-sup-elements">sup</a></code></th>
@@ -4705,7 +5735,17 @@
                             text attribute on its text container.
                           </div>
                         </td>
-                        <td>AXGroup<br>(null)<br>group</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXGroup
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>group
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-svg">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#svg">svg</a></code></th>
@@ -4732,9 +5772,17 @@
                             <span class="type">Role: </span>ROLE_IMAGE
                           </div>
                         </td>
-                        <td>AXGroup<br>
-                          (null)<br>
-                        group</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXGroup
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>group
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-table">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-table-element">table</a></code></th>
@@ -4779,7 +5827,17 @@
                              <span class="type">Interface: </span>Table
                           </div>
                         </td>
-                        <td>AXTable<br>(null)<br>table</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXTable
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>table
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-tbody">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-tbody-element">tbody</a></code></th>
@@ -4803,7 +5861,9 @@
                         <td class="at-spi">
                           <div class="general">Doesn't have an accessible</div>
                         </td>
-                        <td>Not mapped</td>
+                        <td class="ax">
+                            <div class="general">Not mapped</div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-td">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-td-element">td</a></code></th>
@@ -4839,7 +5899,17 @@
                             Text; Hypertext
                           </div>
                         </td>
-                        <td>AXCell<br>(null)<br>cell</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXCell
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>cell
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-template">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/templating.html#the-template-element">template</a></code></th>
@@ -4854,7 +5924,7 @@
                         <td class="at-spi">
                           <div class="general">Not mapped</div>
                         </td>
-                        <td>?</td>
+                        <td class="ax">?</td>
                     </tr>
                     <tr tabindex="-1" id="el-textarea">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-textarea-element">textarea</a></code></th>
@@ -4900,7 +5970,17 @@
                             Text; EditableText
                           </div>
                         </td>
-                        <td>AXTextArea<br>(null)<br>text entry area</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXTextArea
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>text entry area
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-tfoot">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-tfoot-element">tfoot</a></code></th>
@@ -4924,7 +6004,9 @@
                         <td class="at-spi">
                           <div class="general">Doesn't have an accessible</div>
                         </td>
-                        <td>Not mapped</td>
+                        <td class="ax">
+                            <div class="general">Not mapped</div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-th">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-th-element">th</a></code> <span class="el-context">(is neither a column header nor a row header)</span></th>
@@ -4962,7 +6044,17 @@
                             Text; Hypertext
                           </div>
                         </td>
-                        <td>AXCell<br>(null)<br>cell</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXCell
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>cell
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-th-columnheader">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-th-element">th</a></code> <span class="el-context">(is a column header)</span></th>
@@ -5004,7 +6096,20 @@
                             Text; Hypertext
                           </div>
                         </td>
-                        <td>AXCell<br>(null)<br>cell<p>Parent table also implements AXColumnHeaderUIElements property that is a list of pointers to the column header cells.</p> <p>Parent table also implements AXHeader property that is a pointer to the row or group containing the columnheader cells.</p></td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXCell
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>cell
+                            </div>
+                            <div class="properties">
+                                <span class="type">Properties: </span>Parent table implements AXColumnHeaderUIElements as a list of pointers to the column header cells, and AXHeader property as a pointer to the row or group containing the column header cells.
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-th-rowheader">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-th-element">th</a></code> <span class="el-context">(is a row header)</span></th>
@@ -5046,7 +6151,20 @@
                             Text; Hypertext
                           </div>
                         </td>
-                        <td>AXCell<br>(null)<br>cell<p>Parent table also implements AXRowHeaderUIElements property that is a list of pointers to the row header cells</p></td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXCell
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>cell
+                            </div>
+                            <div class="properties">
+                                <span class="type">Properties: </span>Parent table  implements AXRowHeaderUIElements property as a list of pointers to the row header cells.
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-thead">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-thead-element">thead</a></code></th>
@@ -5069,7 +6187,9 @@
                         <td class="at-spi">
                           <div class="general">Doesn't have an accessible</div>
                         </td>
-                        <td>Not mapped</td>
+                        <td class="ax">
+                            <div class="general">Not mapped</div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-time">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-time-element">time</a></code></th>
@@ -5092,7 +6212,17 @@
                             Not mapped
                           </div>
                         </td>
-                        <td>AXGroup<br>(null)<br>group</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXGroup
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>group
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-title">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/document-metadata.html#the-title-element">title</a></code></th>
@@ -5111,7 +6241,9 @@
                         <td class="at-spi">
                           <div class="general">Not mapped</div>
                         </td>
-                        <td>Not mapped</td>
+                        <td class="ax">
+                            <div class="general">Not mapped</div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-tr">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-tr-element">tr</a></code></th>
@@ -5140,7 +6272,17 @@
                             <span class="type">Role: </span>ROLE_LIST_ITEM
                           </div>
                         </td>
-                        <td>AXRow<br>AXTableRow<br>row</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXRow
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>AXTableRow
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>row
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-track">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-track-element">track</a></code></th>
@@ -5155,7 +6297,7 @@
                         <td class="at-spi">
                           <div class="general">Not mapped</div>
                         </td>
-                        <td>?</td>
+                        <td class="ax">?</td>
                     </tr>
                     <tr tabindex="-1" id="el-u">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-u-element">u</a></code></th>
@@ -5175,7 +6317,7 @@
                             "text-underline-style:solid" text attribute on its text container.
                           </div>
                         </td>
-                        <td>?</td>
+                        <td class="ax">?</td>
                     </tr>
                     <tr tabindex="-1" id="el-ul">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-ul-element">ul</a></code></th>
@@ -5212,7 +6354,17 @@
                             ROLE_LIST
                           </div>
                         </td>
-                        <td>AXList<br>AXContentList<br>list</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXList
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>AXContentList
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>list
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-var">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-var-element">var</a></code></th>
@@ -5242,8 +6394,17 @@
                             to text attributes on its text container.
                           </div>
                         </td>
-                        <td>ROLE_TEXT</td>
-                        <td>AXGroup<br>(null)<br>group</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXGroup
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>group
+                            </div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-video">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-video-element">video</a></code></th>
@@ -5264,7 +6425,18 @@
                             ROLE_PANEL
                           </div>
                         </td>
-                        <td><p>AXGroup<br>(null)<br>group</p><p><strong>Note: </strong>UI controls within the video element exposed as AXToolbar.</p></td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXGroup
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>group
+                            </div>
+                            <div class="general"><b>Note:</b> UI controls within the video element exposed as AXToolbar.</div>
+                        </td>
                     </tr>
                     <tr tabindex="-1" id="el-wbr">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-wbr-element">wbr</a></code></th>
@@ -5285,7 +6457,17 @@
                             A line break if added is exposed via Text interface on its text container
                           </div>
                         </td>
-                        <td>AXGroup<br>(null)<br>group</td>
+                        <td class="ax">
+                            <div class="role">
+                                <span clASS="type">AXRole: </span>AXGroup
+                            </div>
+                            <div class="subrole">
+                                <span class="type">AXSubrole: </span>(nil)
+                            </div>
+                            <div class="roledesc">
+                                <span class="type">AXRoleDescription: </span>group
+                            </div>
+                        </td>
                     </tr>
                 </tbody>
             </table>
@@ -6166,10 +7348,18 @@
                         <td>No</td>
                         <td>No</td>
                         <td>accdescription (Internet Explorer only)</td>
-                        <td>Not mapped</td>
-                        <td>Not mapped</td>
-                      <td>Not mapped</td>
-                      <td>Not mapped</td>
+                        <td>
+                            <div class="general">Not mapped</div>
+                        </td>
+                        <td>
+                            <div class="general">Not mapped</div>
+                        </td>
+                      <td>
+                            <div class="general">Not mapped</div>
+                        </td>
+                      <td>
+                            <div class="general">Not mapped</div>
+                        </td>
                       <td>IE 8+ populates the accdescription with the value of the longdesc attribute. This is brittle as it is overwritten when aria-describedby is used. </td>
                     </tr>
                     <tr tabindex="-1" id="att-30a">
@@ -6938,7 +8128,9 @@
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
-                        <td>Not mapped</td>
+                        <td>
+                            <div class="general">Not mapped</div>
+                        </td>
                         <td>&nbsp;</td>
                     </tr>
                     <tr tabindex="-1" id="att-60">
@@ -6951,7 +8143,9 @@
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
-                        <td>Not mapped</td>
+                        <td>
+                            <div class="general">Not mapped</div>
+                        </td>
                         <td>&nbsp;</td>
                     </tr>
                     <tr tabindex="-1" id="att-60a">

@@ -47,7 +47,7 @@ summary:hover, summary:focus, details[open] summary:hover, details[open] summary
 .hide-col {background: url(../img/tick.png) no-repeat right center;}
 
 .general, .role, .states, .name, .actions, .objattrs, .textattrs, .relations,
-.ifaces, .children, .ctrltype, .ctrlpattern, .properties {
+.ifaces, .children, .ctrltype, .ctrlpattern, .properties, .subrole, .roledesc {
     margin: 0 0 6px;
 }
 
