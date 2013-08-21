@@ -5387,17 +5387,24 @@
                         </td>
                     </tr>
                     <tr tabindex="-1" id="el-select-listbox">
-                        <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-select-element">select</a></code> <span class="el-context">(with a <code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#attr-select-multiple">multiple</a></code> attribute)</span></th>
+                        <th>
+                          <code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-select-element">select</a></code>
+                          <span class="el-context">
+                            (with a <code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#attr-select-multiple">multiple</a></code> attribute or
+                            <code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#attr-select-size">size</a></code> attribute having value greater than <code>1</code>)
+                          </span>
+                        </th>
                         <td class="html4">Yes</td>
                         <td class="html5">Yes</td>
-                        <td class="aria"><code>listbox</code> role, with the <code>aria-multiselectable</code> property set to "true" </td>
+                        <td class="aria"><code>listbox</code> role</td>
                         <td class="uia-express">
                             <div class="role">
                                 <span class="type">Role: </span>ROLE_SYSTEM_LIST
                             </div>
-                            <div class="states">
-                                <span class="type">States: </span>STATE_SYSTEM_MULTISELECTABLE + STATE_SYSTEM_READONLY
-                            </div>
+                          <div class="states">
+                            <span class="type">States: </span>
+                            STATE_SYSTEM_READONLY; STATE_SYSTEM_MULTISELECTABLE if <code><a href="#att-multiple-select">multiple</a></code> presented
+                          </div>
                           <div class="general">Use MSAA or UIA guidance</div>
                         </td>
                         <td class="ia2">
@@ -5407,7 +5414,7 @@
                           </div>
                           <div class="states">
                             <span class="type">States: </span>
-                            STATE_SYSTEM_FOCUSABLE; STATE_SYSTEM_MULTISELECTABLE
+                            STATE_SYSTEM_FOCUSABLE; STATE_SYSTEM_MULTISELECTABLE if <code><a href="#att-multiple-select">multiple</a></code> presented
                           </div>
                         </td>
                         <td class="uia">
@@ -5425,7 +5432,7 @@
                           </div>
                           <div class="states">
                             <span class="type">States: </span>
-                            STATE_FOCUSABLE; STATE_MULTISELECTABLE
+                            STATE_FOCUSABLE; STATE_MULTISELECTABLE if <code><a href="#att-multiple-select">multiple</a></code> presented
                           </div>
                           <div class="ifaces">
                             <span class="type">Interfaces: </span>
@@ -5445,10 +5452,16 @@
                         </td>
                     </tr>
                     <tr tabindex="-1" id="el-select-combobox">
-                        <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-select-element">select</a></code> <span class="el-context">(with NO <code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#attr-select-multiple">multiple</a></code> attribute)</span></th>
+                        <th>
+                          <code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-select-element">select</a></code>
+                          <span class="el-context">
+                            (with NO <code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#attr-select-multiple">multiple</a></code> attribute
+                            and NO <code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#attr-select-size">size</a></code> attribute having value greater than <code>1</code>)
+                          </span>
+                        </th>
                         <td class="html4">Yes</td>
                         <td class="html5">Yes</td>
-                        <td class="aria"><code>listbox</code> role, with the <code>aria-multiselectable</code> property set to "false" </td>
+                        <td class="aria"><code>combobox</code> role</td>
                         <td class="uia-express">
                             <div class="role">
                                 <span class="type">Role: </span>ROLE_SYSTEM_COMBOBOX
@@ -8196,26 +8209,57 @@
                         <td class="ax">AXMinValue</td>
                         <td class="comments">&nbsp;</td>
                     </tr>
-                    <tr tabindex="-1" id="att-multiple">
+                    <tr tabindex="-1" id="att-multiple-input">
                         <th><code>multiple</code></th>
-                        <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#attr-input-multiple">input</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#attr-select-multiple">select</a></code></td>
+                        <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#attr-input-multiple">input</a></code></td>
                         <td class="html4">Yes</td>
                         <td class="html5">Yes</td>
-                        <td class="aria">&nbsp;</td>
+                        <td class="aria">the <code>aria-multiselectable</code> property set to "true"</td>
                         <td class="uia-express">&nbsp;</td>
                         <td class="ia2">
                           <div class="general">
-                            Creates a listbox accessible, refer to <a href="#el-select-listbox">HTML:select</a> element for details
+                            Not mapped
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
                         <td class="at-spi">
                           <div class="general">
-                            Creates a listbox accessible, refer to <a href="#el-select-listbox">HTML:select</a> element for details
+                            Not mapped
                           </div>
                         </td>
                         <td class="ax">&nbsp;</td>
                         <td class="comments">&nbsp;</td>
+                    </tr>
+                    <tr tabindex="-1" id="att-multiple-select">
+                      <th><code>multiple</code></th>
+                      <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#attr-select-multiple">select</a></code></td>
+                      <td class="html4">Yes</td>
+                      <td class="html5">Yes</td>
+                      <td class="aria">&nbsp;</td>
+                      <td class="uia-express">&nbsp;</td>
+                      <td class="ia2">
+                        <div class="states">
+                          <span class="type">States: </span>
+                          STATE_SYSTEM_MULTISELECTABLE
+                        </div>
+                        <div class="general">
+                          A multi selectable listbox accessible, refer to
+                          <a href="#el-select-listbox">HTML:select</a> element
+                        </div>
+                      </td>
+                      <td class="uia">&nbsp;</td>
+                      <td class="at-spi">
+                        <div class="states">
+                          <span class="type">States: </span>
+                          STATE_SYSTEM_MULTISELECTABLE
+                        </div>
+                        <div class="general">
+                          A multi selectable listbox accessible, refer to
+                          <a href="#el-select-listbox">HTML:select</a> element
+                        </div>
+                      </td>
+                      <td class="ax">&nbsp;</td>
+                      <td class="comments">&nbsp;</td>
                     </tr>
                     <tr tabindex="-1" id="att-muted">
                         <th><code>muted</code></th>
