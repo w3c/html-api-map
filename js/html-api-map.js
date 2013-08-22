@@ -188,4 +188,20 @@ $(document).ready(function() {
 		if(window.location.hash) {
 			window.location = window.location.hash;
 		}
-	});
+
+  // Add a hook to expand referred items when clicked.
+  $('a[href|="#el"],a[href|="#att"]').each(
+    function()
+    {
+      $(this).on('click', expandReferredItem);
+    });
+});
+
+function expandReferredItem()
+{
+  var href = $(this).attr("href");
+  var header = $(document).find(href);
+  var details = header.parent();
+  if (!details.prop('open'))
+    details.find('summary').first().click();
+}

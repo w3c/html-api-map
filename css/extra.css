@@ -19,9 +19,16 @@ th, td {
     border: 1px solid #630;
 }
 th code, td code {font-size: 123%;}
-code {color: #D93B00;}
+code {
+  color: #D93B00;
+}
 code *:link, code *:visited {
   color: inherit;
+}
+a[href|="#el"], a[href|="#att"] {
+  color: #D93B00;
+  font-family: monospace;
+  font-size: larger;
 }
 .warning {color: #990000; font-size: x-large; font-weight: normal;}
 .map-table, .details {clear: left; margin-bottom: 2em;}
