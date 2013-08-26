@@ -1,31 +1,31 @@
 /*
 
 Simple Bug File Assistant.
-Find bugs? File a bug, blocking https://www.w3.org/Bugs/Public/show_bug.cgi?id=15013.
-To configure, use meta tags as follows:
+Find bugs? File a bug.
+To configure, use data-* attributes on <html> as follows:
 
-* The content of each meta tag whose name starts with "bug." becomes a form parameter for Bugzilla new bug submission.
-* The name "bug.blocked" is special. If present, the assistant add a link to the dependency tree of this bug.
-* The name "bug.comment" is overriden if the user selects text.
+* Are taken into account all attributes starting with data-bug-*, what follows that is the name
+  of the Bugzilla form parameter.
+* The name "data-bug-blocked" is special. If present, the assistant adds a link to the dependency
+  tree of this bug.
+* The name "data-bug-comment" is overriden if the user selects text.
 
 Sample use and configuration:
 
-<script src="http://dvcs.w3.org/hg/webcomponents/raw-file/tip/assets/scripts/bug-assist.js"></script>
-<meta name="bug.blocked" content="14949">
-<meta name="bug.short_desc" content="[Explainer]: ">
-<meta name="bug.product" content="WebAppsWG">
-<meta name="bug.component" content="Component Model">
-
+<html data-bug-blocked='14949' data-bug-short_desc='[Explainer]: ' data-bug-product='WebAppsWG'
+      data-bug-component='Component Model'>
+  <script src="bug-assist.js"></script>
+  ...
 */
 
 document.addEventListener('DOMContentLoaded', function() {
-    var BUGS_PREFIX = 'bug.';
+    var BUGS_PREFIX = "data-bug-";
 
-    var inputs = {  comment: '' };
+    var inputs = {  comment: "" };
 
-    [].forEach.call(document.querySelectorAll('meta'), function(meta) {
-        if (meta.name.indexOf(BUGS_PREFIX) == 0)
-            inputs[meta.name.substr(BUGS_PREFIX.length)] = meta.content;
+    [].forEach.call(document.documentElement.attributes, function (attr) {
+        if (attr.name.indexOf(BUGS_PREFIX) === 0)
+            inputs[attr.name.substr(BUGS_PREFIX.length)] = attr.value;
     });
 
     var blocked = inputs.blocked;

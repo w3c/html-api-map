@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html
+  data-bug-component="HTML5 spec"
+  data-bug-product="HTML a11y APIs (editor: Steve Faulkner, Cynthia Shelly, Jason Kiss, Alexander Surkov)"
+  data-bug-short_desc="[AAPI]: ">
 <head>
 	<title>HTML to Platform Accessibility APIs Implementation Guide</title>
-    <meta charset="charset=utf-8">
+    <meta charset="utf-8">
     <link href="css/extra.css" rel="stylesheet">
     <!--
     <script src="js/jquery-1.9.0.min.js"></script>
@@ -39,9 +42,6 @@
         };
     </script>
     <script src="js/bug-assist.js"></script>
-	<meta name="bug.short_desc" content="[AAPI]: ">
-	<meta name="bug.product" content="HTML WG">
-	<meta name="bug.component" content="HTML a11y APIs (editor: Steve Faulkner, Cynthia Shelly, Jason Kiss, Alexander Surkov)">
 </head>
 <body>
     <section id='abstract'>
@@ -5710,7 +5710,7 @@
                         <td class="at-spi">
                           <div class="general">Not mapped</div>
                         </td>
-                        <td clas="ax">
+                        <td class="ax">
                             <div class="general">Do not expose this object</div>
                         </td>
                     </tr>
@@ -6003,7 +6003,7 @@
                         </td>
                     </tr>
                     <tr tabindex="-1" id="el-template">
-                        <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/templating.html#the-template-element">template</a></code></th>
+                        <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/scripting-1.html#the-template-element">template</a></code></th>
                         <td class="html4">No</td>
                         <td class="html5">Yes</td>
                         <td class="aria">?</td>
@@ -7142,7 +7142,7 @@
                     </tr>
                     <tr tabindex="-1" id="att-contextmenu">
                         <th><code>contextmenu</code></th>
-                        <td class="elements"><a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#attr-contextmenu#attr-contextmenu">HTML elements</a></td>
+                        <td class="elements"><a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#attr-contextmenu">HTML elements</a></td>
                         <td class="html4">No</td>
                         <td class="html5">Yes</td>
                         <td class="aria"><code><a href="http://www.w3.org/WAI/PF/aria/states_and_properties#aria-haspopup">aria-haspopup</a></code>="true"</td>
@@ -7352,7 +7352,7 @@
                     </tr>
                     <tr tabindex="-1" id="att-dirname">
                         <th><code>dirname</code></th>
-                        <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#attr-input-dirname">input</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#attr-textarea-dirname">textarea</a></code></td>
+                        <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#submitting-element-directionality:-the-dirname-attribute">input</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#submitting-element-directionality:-the-dirname-attribute">textarea</a></code></td>
                         <td class="html4">?</td>
                         <td class="html5">Yes</td>
                         <td class="aria">&nbsp;</td>
@@ -7451,7 +7451,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi"
+                        <td class="at-spi">
                           <div class="general">
                             Not mapped
                           </div>
@@ -7939,7 +7939,7 @@
                     </tr>
                     <tr tabindex="-1" id="att-label">
                         <th><code>label</code></th>
-                        <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#attr-menuitem-label">menuitem</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#attr-contextmenu#attr-menu-label">menu</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#attr-optgroup-label">optgroup</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#attr-option-label">option</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#attr-track-label">track</a></code></td>
+                        <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#attr-menuitem-label">menuitem</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#attr-menu-label">menu</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#attr-optgroup-label">optgroup</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#attr-option-label">option</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#attr-track-label">track</a></code></td>
                         <td class="html4">?</td>
                         <td class="html5">Yes</td>
                         <td class="aria">&nbsp;</td>
@@ -8440,7 +8440,7 @@
                         <td class="uia"><a href="http://msdn.microsoft.com/en-us/library/system.windows.automation.expandcollapsepattern.aspx">ExpandCollapsePattern</a></td>
                         <td class="at-spi">STATE_COLLAPSED<br>STATE_EXPANDED</td>
                         <td class="ax">boolean AXExpanded</td>
-                        <td class="comments">Set properties on the <code><a href="#el-130">summary</a></code> element.</td>
+                        <td class="comments">Set properties on the <code><a href="#el-summary">summary</a></code> element.</td>
                     </tr>
                     <tr tabindex="-1" id="att-open-dialog">
                         <th><code>open</code></th>
@@ -8580,7 +8580,7 @@
                           <div class="states">
                             Adds STATE_SYSTEM_READONLY bit to
                             <a href="#el-input-text">input</a> and
-                            <a href="#el-input-textarea">textarea</a> elements
+                            <a href="#el-textarea">textarea</a> elements
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
@@ -8588,7 +8588,7 @@
                           <div class="states">
                             Removes STATE_EDITABLE bit bit from
                             <a href="#el-input-text">input</a> and
-                            <a href="#el-input-textarea">textarea</a> elements
+                            <a href="#el-textarea">textarea</a> elements
                           </div>
                         </td>
                         <td class="ax">AXEnabled="false"</td>
@@ -8897,14 +8897,14 @@
                         <td class="ia2">
                           <div class="objattrs">
                             <span class="type">Object attributes: </span>
-                            src on <a href=#el-img">img</a> only
+                            src on <a href="#el-img">img</a> only
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
                         <td class="at-spi">
                           <div class="objattrs">
                             <span class="type">Object attributes: </span>
-                            src on <a href=#el-img">img</a> only
+                            src on <a href="#el-img">img</a> only
                           </div>
                         </td>
                         <td class="ax">&nbsp;</td>
@@ -9241,13 +9241,13 @@
                         <td class="uia-express">&nbsp;</td>
                         <td class="ia2">
                           <div class="general">
-                            <a href="#el-button-submit">submit</a> type may be a default button in the form
+                            <a href="#el-input_submit">submit</a> type may be a default button in the form
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
                         <td class="at-spi">
                           <div class="general">
-                            <a href="#el-button-submit">submit</a> type may be a default button in the form
+                            <a href="#el-input_submit">submit</a> type may be a default button in the form
                           </div>
                         </td>
                         <td class="ax">&nbsp;</td>
@@ -9766,11 +9766,11 @@
                 <p>The <code>details</code> element should not focusable by default.	</p>
                 <p>Pressing the spacebar or enter key when the <code>summary</code> element has focus will show the <code>details</code> element content if the content is hidden. If the  <code>details</code> element content is showing and the <code>summary</code> element has focus, pressing the spacebar or enter key will hide the details element content.</p>
                 <h4>Role, name, state and property mapping</h4>
-                <p>The <code>summary</code> element should be mapped to a disclosure triangle role in accessibility APIs that have such a role. For example the Mac accessibility API includes the <code>AXDisclosureTriangle</code> role. In accessibility APIs that do not have such a fine grained role, the <code>summary</code> element should be mapped to a <code>button</code> role. The role mapping table contains <a href="#el-130">recommended mappings for the summary element</a>.</p>
+                <p>The <code>summary</code> element should be mapped to a disclosure triangle role in accessibility APIs that have such a role. For example the Mac accessibility API includes the <code>AXDisclosureTriangle</code> role. In accessibility APIs that do not have such a fine grained role, the <code>summary</code> element should be mapped to a <code>button</code> role. The role mapping table contains <a href="#el-summary">recommended mappings for the summary element</a>.</p>
                 <p>The default accessible name  for the <code>summary</code> element is the text content of the <code>summary</code> element. </p>
                 <p>When the <code>details</code> element content is hidden, the state of the content should be reflected by an accessible state or property. </p>
-                <p><strong>Example 1:</strong> In the Mac accessibility API on the <code>summary</code> element (<code>AXDisclosureTriangle</code>), set <code>AXExpanded</code> property to <code>false</code>.  When the <code>details</code> element content is shown, on the <code>summary</code> element (<code>AXDisclosureTriangle</code>), set the<code>AXExpanded</code> property to <code>true</code>. The hidden and shown states of the <code>details</code> element content is reflected by the absence or presence of the <code><a href="#att-39">open</a></code> attribute.</p>
-                <p><strong>Example 2:</strong> In the IA2 accessibility API on the <code>summary</code> element (<code>ROLE_SYSTEM_PUSHBUTTON</code>), set <code>STATE_SYSTEM_COLLAPSED</code>.  When the <code>details</code> element content is shown, on the <code>summary</code> element (<code>ROLE_SYSTEM_PUSHBUTTON</code>), set <code>STATE_SYSTEM_	      EXPANDED</code>. The hidden and shown states of the <code>details</code> element content is reflected by the absence or presence of the <code><a href="#att-39">open</a></code> attribute. </p>
+                <p><strong>Example 1:</strong> In the Mac accessibility API on the <code>summary</code> element (<code>AXDisclosureTriangle</code>), set <code>AXExpanded</code> property to <code>false</code>.  When the <code>details</code> element content is shown, on the <code>summary</code> element (<code>AXDisclosureTriangle</code>), set the<code>AXExpanded</code> property to <code>true</code>. The hidden and shown states of the <code>details</code> element content is reflected by the absence or presence of the <code><a href='#att-open-details'>open</a></code> attribute.</p>
+                <p><strong>Example 2:</strong> In the IA2 accessibility API on the <code>summary</code> element (<code>ROLE_SYSTEM_PUSHBUTTON</code>), set <code>STATE_SYSTEM_COLLAPSED</code>.  When the <code>details</code> element content is shown, on the <code>summary</code> element (<code>ROLE_SYSTEM_PUSHBUTTON</code>), set <code>STATE_SYSTEM_	      EXPANDED</code>. The hidden and shown states of the <code>details</code> element content is reflected by the absence or presence of the <code><a href='#att-open-details'>open</a></code> attribute. </p>
         </section>
         <section>
             <h3>The <code>figure</code> and <code>figcaption</code> elements</h3>
