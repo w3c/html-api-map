@@ -3,45 +3,45 @@
 <head>
 	<title>HTML to Platform Accessibility APIs Implementation Guide</title>
     <meta charset="charset=utf-8">
-    <link href="http://dev.w3.org/2009/dap/ReSpec.js/css/respec.css" rel="stylesheet">
     <link href="css/extra.css" rel="stylesheet">
-	<script src="http://dev.w3.org/2009/dap/ReSpec.js/js/respec.js" class="remove"></script>
+    <!--
+    <script src="js/jquery-1.9.0.min.js"></script>
+    <script src="js/jquery.details.min.js"></script>
+    <script src="js/html-api-map.js"></script>
+    -->
+	  <script src="http://www.w3.org/Tools/respec/respec-w3c-common" async class="remove"></script>
     <script class="remove">
         var respecConfig = {
-        // document info
-        specStatus:           "ED",
-        shortName:            "html-aapi",
-        // publishDate:   "2009-08-06",
-        previousMaturity: "WD",
-        // previousPublishDate:  "",
-        previousURI: "http://www.w3.org/TR/2012/WD-html-aapi-20121025/",
-        copyrightStart:       "2011",
-        edDraftURI:           "http://rawgithub.com/w3c/html-api-map/master/index.html",
-        // lcEnd:  "2010-08-06",
+          // document info
+          specStatus:           "ED",
+          shortName:            "html-aapi",
+          // publishDate:   "2009-08-06",
+          previousMaturity: "WD",
+          previousPublishDate:  "2012-10-25",
+          // previousURI: "http://www.w3.org/TR/2012/WD-html-aapi-20121025/",
+          copyrightStart:       "2011",
+          edDraftURI:           "http://rawgithub.com/w3c/html-api-map/master/index.html",
+          // lcEnd:  "2010-08-06",
 
-        // editors
-        editors:  [
-        { name: "Steve Faulkner", company: "The Paciello Group", mailto: "sfaulkner@paciellogroup.com" },
-        { name: "Cynthia Shelly", company: "Microsoft", mailto: "cyns@microsoft.com" },
-        { name: "Jason Kiss", company: "New Zealand Government", mailto: "jason.kiss@dia.govt.nz" },
-        { name: "Alexander Surkov", company: "Mozilla Foundation", mailto: "asurkov@mozilla.com" }
-        ],
+          // editors
+          editors:  [
+            { name: "Steve Faulkner", company: "The Paciello Group", mailto: "sfaulkner@paciellogroup.com" },
+            { name: "Cynthia Shelly", company: "Microsoft", mailto: "cyns@microsoft.com" },
+            { name: "Jason Kiss", company: "New Zealand Government", mailto: "jason.kiss@dia.govt.nz" },
+            { name: "Alexander Surkov", company: "Mozilla Foundation", mailto: "asurkov@mozilla.com" }
+          ],
 
-        // WG
-        wg:           "HTML Working Group",
-        wgURI:        "http://www.w3.org/html/wg/",
-        wgPublicList: "public-html-comments",
-        wgPatentURI:  "",
-      };
+          // WG
+          wg:           "HTML Working Group",
+          wgURI:        "http://www.w3.org/html/wg/",
+          wgPublicList: "public-html-comments",
+          wgPatentURI:  "http://www.w3.org/2004/01/pp-impl/40318/status"
+        };
     </script>
     <script src="js/bug-assist.js"></script>
 	<meta name="bug.short_desc" content="[AAPI]: ">
 	<meta name="bug.product" content="HTML WG">
 	<meta name="bug.component" content="HTML a11y APIs (editor: Steve Faulkner, Cynthia Shelly, Jason Kiss, Alexander Surkov)">
-	<script src="js/html5.js"></script>
-    <script src="js/jquery-1.9.0.min.js"></script>
-    <script src="js/jquery.details.min.js"></script>
-    <script src="js/html-api-map.js"></script>
 </head>
 <body>
     <section id='abstract'>
