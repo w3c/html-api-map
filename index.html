@@ -45,7 +45,7 @@
 </head>
 <body>
     <section id='abstract'>
-	   This is draft documentation mapping HTML elements and attributes to accessibility API Roles, States and Properties on a variety of platforms. It provides recommendations on deriving the accessible names and descriptions for HTML elements. It also provides accessible feature implementation examples.
+	   This is draft documentation mapping <abbr title="HyperText Markup Language">HTML</abbr> elements and attributes to accessibility <abbr title="Application Programming Interface">API</abbr> Roles, States and Properties on a variety of platforms. It provides recommendations on deriving the accessible names and descriptions for HTML elements. It also provides accessible feature implementation examples.
     </section>
     <section id="sotd">
     	<p class="warning"><strong>This document is subject to change without notice.</strong></p>
@@ -54,23 +54,23 @@
     <section class='informative'>
         <h2>Introduction: Accessibility <abbr title="Application Programming Interfaces">APIs</abbr></h2>
         <p>To provide access to desktop GUI applications, assistive technologies originally used heuristic techniques to determine the meaning of the user interface and built an alternative off screen model. For example, a row of labels displayed horizontally near the top of an application window might be a menu. Labels with a border drawn around them might be buttons. Heuristic techniques are not always accurate, however, and require assistive technologies to be updated whenever the software application is updated.</p>
-        <p>A much better technique is for the software application to   provide the necessary information for interoperability with assistive technology. To meet this need, platform owners have developed specialized interfaces, called accessibility <abbr title="Application Programming Interfaces">APIs</abbr>, which can be used to communicate accessibility information about user interfaces to assistive technologies. </p>
-        <p>In the case of static Web pages, the Document Object Model (DOM) is used to represent the structure and state of the elements in the document being rendered by a user agent. The elements of the document are organized into a hierarchy of nodes known as the <abbr title="document object model">DOM</abbr> tree. For traditional static Web pages, assistive technologies, such as screen readers, interact with user agents using the <abbr title="Document Object Model">DOM</abbr>. For UI elements that are known to be interactive, such as HTML form elements and desktop applications, assistive technologies may use platform accessibility APIs.</p>
-        <p>Accessibility <abbr title="Application Programming Interfaces">APIs</abbr> covered by this document are:</p>
+        <p>A much better technique is for the software application to   provide the necessary information for interoperability with assistive technology. To meet this need, platform owners have developed specialized interfaces, called accessibility APIs, which can be used to communicate accessibility information about user interfaces to assistive technologies. </p>
+        <p>In the case of static Web pages, the Document Object Model (DOM) is used to represent the structure and state of the elements in the document being rendered by a user agent. The elements of the document are organized into a hierarchy of nodes known as the <abbr title="Document Object Model">DOM</abbr> tree. For traditional static Web pages, assistive technologies, such as screen readers, interact with user agents using the DOM. For UI elements that are known to be interactive, such as HTML form elements and desktop applications, assistive technologies may use platform accessibility APIs.</p>
+        <p>Accessibility APIs covered by this document are:</p>
         <ul>
-            <li>Microsoft Active Accessibility (MSAA)</li>
+            <li>Microsoft Active Accessibility (<abbr title="Microsoft Active Accessibility">MSAA</abbr>)</li>
             <li>IAccessible2</li>
-            <li>User Interface Automation (UIA)</li>
-            <li>Linux Accessibility Toolkit (ATK) and Assistive Technology - Service Provider Interface (AT-SPI)</li>
-            <li>Mac OS X Accessibility Protocol</li>
+            <li>User Interface Automation (<abbr title="User Interface Automation">UIA</abbr>)</li>
+            <li>Linux Accessibility Toolkit (<abbr title="Accessibility Toolkit">ATK</abbr>) and Assistive Technology - Service Provider Interface (<abbr title="Assistive Technology - Service Provider Interface">AT-SPI</abbr>)</li>
+            <li>Mac OS X Accessibility Protocol (<abbr title="Mac OS X Accessibility Protocol">AX</abbr>)</li>
         </ul>
-        <p>If User Agent developers need to expose to other accessibility <abbr title="Application Programming Interfaces">APIs</abbr>, it is recommended that they work closely with the developer of the platform where the <abbr title="application programing interfaces">API</abbr> runs, and assistive technology developers on that platform.</p>
+        <p>If User Agent developers need to expose to other accessibility APIs, it is recommended that they work closely with the developer of the platform where the API runs, and assistive technology developers on that platform.</p>
     </section>
     <section class='informative'>
-    	<h2>Exposing HTML features that do not directly map to accessibility <abbr title="application programing interface">API</abbr> properties</h2>
-    	<p>HTML<abbr title="application programing interfaces"></abbr> may have features that are not supported by accessibility <abbr title="Application Programming Interfaces">APIs</abbr> at the time of publication. There  is not a one to one relationship between all <abbr title="Accessible Rich Internet Application">features</abbr> and platform accessibility <abbr title="application programing interfaces">APIs</abbr>. When <abbr title="Accessible Rich Internet Application">HTML</abbr> roles, states and properties do not directly map to an accessibility <abbr title="application programing interface">API</abbr>, and there is a method in the <abbr title="application programing interface">API</abbr> to expose a text string, expose the undefined role, states and properties via that method.</p>
-    	<p>IAccessible2 and <abbr title="Accessibility Toolkit">ATK</abbr> use object attributes to expose semantics that are not directly supported in the <abbr title="application programing interfaces">APIs</abbr>. Object attributes are name-value pairs that are loosely specified, and very flexible for exposing things where there is no specific interface in an accessibility <abbr title="application programing interface">API</abbr>. For example, at this time, the HTML5 <code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-header-element">header</a></code> element can be exposed via an object attribute because accessibility <abbr title="application programing interfaces">APIs</abbr> have no such role available. <!--Specific rules for exposing object   attribute name-value pairs are described throughout this document, and rules for the general cases not covered are in State and Property Mapping.    --></p>
-    	<p>For accessibility <abbr title="Application Programming Interfaces">APIs</abbr> that do not have "object attributes" per se, it is useful to find a similar mechanism or develop a new interface to expose name/value pairs. Under the Mac OS X Accessibility Protocol, all getters are already simply name-value pairs and it is possible to  expose new semantics whenever necessary. Keep in mind, this also requires working with the assistive technology developers to gain support for the new semantics.</p>
+    	<h2>Exposing HTML features that do not directly map to accessibility API properties</h2>
+    	<p>HTML may have features that are not supported by accessibility APIs at the time of publication. There is not a one to one relationship between all features and platform accessibility APIs. When HTML roles, states and properties do not directly map to an accessibility API, and there is a method in the API to expose a text string, expose the undefined role, states and properties via that method.</p>
+    	<p>IAccessible2 and ATK use object attributes to expose semantics that are not directly supported in the APIs. Object attributes are name-value pairs that are loosely specified, and very flexible for exposing things where there is no specific interface in an accessibility API. For example, at this time, the HTML5 <code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-header-element">header</a></code> element can be exposed via an object attribute because accessibility APIs have no such role available. <!--Specific rules for exposing object   attribute name-value pairs are described throughout this document, and rules for the general cases not covered are in State and Property Mapping.    --></p>
+    	<p>For accessibility APIs that do not have "object attributes" per se, it is useful to find a similar mechanism or develop a new interface to expose name/value pairs. Under the Mac OS X Accessibility Protocol, all getters are already simply name-value pairs and it is possible to  expose new semantics whenever necessary. Keep in mind, this also requires working with the assistive technology developers to gain support for the new semantics.</p>
     </section>
     <section>
     	<h2>HTML Element to Accessibility API Role Mapping Matrix</h2>
@@ -85,7 +85,7 @@
     	</ul>
     	<div class="table-container">
         	<table class="map-table" id="elements">
-        		<caption>Mappings of HTML elements to platform accessibility APIs: ARIA, MSAA + UIA Express, MSAA + IAccessible2, UIA, ATK, and AX</caption>
+        		<caption>Mappings of HTML elements to platform accessibility APIs: <abbr title="Accessible Rich Internet Applications">ARIA</abbr>, MSAA + UIA Express, MSAA + IAccessible2, UIA, ATK, and AX</caption>
         		<thead>
         			<tr>
         				<th>HTML element</th>
@@ -7628,7 +7628,7 @@
                             Makes the element not accessible
                           </div>
                         </td>
-                        <td class="ax">Not exposed in AX <abbr title="application programming interface">API</abbr></td>
+                        <td class="ax">Not exposed in AX API</td>
                         <td class="comments">&nbsp;</td>
                     </tr>
                     <tr tabindex="-1" id="att-high">
