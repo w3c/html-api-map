@@ -58,11 +58,11 @@
         <p>In the case of static Web pages, the Document Object Model (DOM) is used to represent the structure and state of the elements in the document being rendered by a user agent. The elements of the document are organized into a hierarchy of nodes known as the <abbr title="Document Object Model">DOM</abbr> tree. For traditional static Web pages, assistive technologies, such as screen readers, interact with user agents using the DOM. For UI elements that are known to be interactive, such as HTML form elements and desktop applications, assistive technologies may use platform accessibility APIs.</p>
         <p>Accessibility APIs covered by this document are:</p>
         <ul>
-            <li>Microsoft Active Accessibility (<abbr title="Microsoft Active Accessibility">MSAA</abbr>)</li>
-            <li>IAccessible2</li>
-            <li>User Interface Automation (<abbr title="User Interface Automation">UIA</abbr>)</li>
-            <li>Linux Accessibility Toolkit (<abbr title="Accessibility Toolkit">ATK</abbr>) and Assistive Technology - Service Provider Interface (<abbr title="Assistive Technology - Service Provider Interface">AT-SPI</abbr>)</li>
-            <li>Mac OS X Accessibility Protocol (<abbr title="Mac OS X Accessibility Protocol">AX</abbr>)</li>
+            <li><a href="http://msdn.microsoft.com/en-us/library/dd373592%28VS.85%29.aspx">Microsoft Active Accessibility (<abbr title="Microsoft Active Accessibility">MSAA</abbr>)</a> with <abbr title="User Interface Automation">UIA</abbr> Express (known as <a href="http://msdn.microsoft.com/en-us/library/windows/desktop/dd561898%28v=vs.85%29.aspx">IaccessibleEx</a>)</li>
+            <li><a href="http://msdn.microsoft.com/en-us/library/dd373592%28VS.85%29.aspx">MSAA</a> with <a href="http://www.linuxfoundation.org/collaborate/workgroups/accessibility/iaccessible2">IAccessible2</a></li>
+            <li><a href="http://msdn.microsoft.com/en-us/library/windows/desktop/ee684009.aspx">User Interface Automation (<abbr title="User Interface Automation">UIA</abbr>)</a></li>            
+            <li><a href="http://developer.gnome.org/atk/unstable/">Linux Accessibility Toolkit (<abbr title="Accessibility Toolkit">ATK</abbr>)</a> and <a href="https://developer.gnome.org/libatspi/stable/">Assistive Technology - Service Provider Interface (<abbr title="Assistive Technology - Service Provider Interface">AT-SPI</abbr>)</a></li>
+            <li><a href="https://developer.apple.com/library/mac/documentation/Accessibility/Conceptual/AccessibilityMacOSX/OSXAXModel/OSXAXmodel.html">Mac OS X Accessibility Protocol (<abbr title="Mac OS X Accessibility Protocol">AX</abbr>)</a></li>
         </ul>
         <p>If User Agent developers need to expose to other accessibility APIs, it is recommended that they work closely with the developer of the platform where the API runs, and assistive technology developers on that platform.</p>
     </section>
@@ -85,7 +85,7 @@
     	</ul>
     	<div class="table-container">
         	<table class="map-table" id="elements">
-        		<caption>Mappings of HTML elements to platform accessibility APIs: <abbr title="Accessible Rich Internet Applications">ARIA</abbr>, MSAA + UIA Express, MSAA + IAccessible2, UIA, ATK, and AX</caption>
+        		<caption>Mappings of HTML elements to platform accessibility APIs: <abbr title="Accessible Rich Internet Applications">ARIA</abbr>, MSAA + UIA Express, MSAA + IAccessible2, UIA, AT-SPI, and AX</caption>
         		<thead>
         			<tr>
         				<th>HTML element</th>
@@ -9446,7 +9446,7 @@
       </ul>
       <div class="table-container">
         <table class="map-table" id="obsolete-elements">
-          <caption>Mappings of obsolete HTML elements to platform accessibility APIs: ARIA, MSAA + UIA Express, MSAA + IAccessible2, UIA, ATK, and AX</caption>
+          <caption>Mappings of obsolete HTML elements to platform accessibility APIs: ARIA, MSAA + UIA Express, MSAA + IAccessible2, UIA, AT-SPI, and AX</caption>
           <thead>
             <tr>
               <th>HTML element</th>
