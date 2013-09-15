@@ -1924,82 +1924,6 @@
                             </div>
                         </td>
                     </tr>
-                    <tr tabindex="-1" id="el-frame">
-                        <th><code><a href="http://www.w3.org/TR/html401/present/frames.html#h-16.2.2">frame</a></code></th>
-                        <td class="html4">Yes</td>
-                        <td class="html5">No</td>
-                        <td class="aria">?</td>
-                        <td class="uia-express">
-                            <div class="role">
-                                <span class="type">Role: </span>ROLE_SYSTEM_DOCUMENT
-                            </div>
-                            <div class="states">
-                                <span class="type">States: </span>STATE_SYSTEM_READONLY
-                            </div>
-                            <div class="general">??currently mapped as pane not document.&nbsp; the document inside is mapped as document??</div>
-                        </td>
-                        <td class="ia2">
-                          <div class="role">
-                            <span class="type">Role: </span>
-                            tag name BSTR (MSAA) and IA2_ROLE_INTERNAL_FRAME
-                          </div>
-                          <div class="children">
-                            <span class="type">Child: </span>
-                            ROLE_SYSTEM_DOCUMENT having STATE_SYSTEM_READONLY
-                          </div>
-                        </td>
-                        <td class="uia">
-                            <div class="ctrltype">
-                                <span class="type">Control Type: </span>Document
-                            </div>
-                        </td>
-                        <td class="at-spi">
-                          <div class="role">
-                            <span class="type">Role: </span>
-                            ROLE_INTERNAL_FRAME
-                          </div>
-                          <div class="children">
-                            <span class="type">Child: </span>
-                            ROLE_DOCUMENT_FRAME
-                          </div>
-                        </td>
-                        <td class="ax">
-                            <div class="role">
-                                <span class="type">AXRole: </span>AXWebArea
-                            </div>
-                            <div class="subrole">
-                                <span class="type">AXSubrole: </span>(nil)
-                            </div>
-                            <div class="roledesc">
-                                <span class="type">AXRoleDescription: </span>HTML content
-                            </div>
-                        </td>
-                    </tr>
-                    <tr tabindex="-1" id="el-frameset">
-                        <th><code><a href="http://www.w3.org/TR/html401/present/frames.html#h-16.2.1">frameset</a></code></th>
-                        <td class="html4">Yes</td>
-                        <td class="html5">No</td>
-                        <td class="aria">?</td>
-                        <td class="uia-express">?</td>
-                        <td class="ia2">
-                          <div class="general">
-                            Doesn't have an accessible. All DOM attributes are
-                            proccessed as they belonged to its document accessible.
-                            Similar to <a href=#el-body>body</a> element.
-                          </div>
-                        </td>
-                        <td class="uia">?</td>
-                        <td class="at-spi">
-                          <div class="general">
-                            Doesn't have an accessible. All DOM attributes are
-                            proccessed as they belonged to its document accessible.
-                            Similar to <a href=#el-body>body</a> element.
-                          </div>
-                        </td>
-                        <td>
-                            <div class="general">Not mapped</div>
-                        </td>
-                    </tr>
                     <tr tabindex="-1" id="el-h1-h6">
                         <th><code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements">h1</a></code>, <code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements">h2</a></code>, <code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements">h3</a></code>, <code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements">h4</a></code>, <code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements">h5</a></code>, <code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements">h6</a></code></th>
                         <td class="html4">Yes</td>
@@ -9509,6 +9433,289 @@
                 </tbody>
         	</table>
         </div>
+    </section>
+    <section>
+      <h2>Obsolete HTML Element to Accessibility API Role Mapping Matrix</h2>
+      <p>The following mappings for obsolete HTML elements are provided for user agent support of legacy markup.</p>
+      <p><strong>Notes:</strong> </p>
+      <ul>
+        <li>A ? in a cell indicates the data has yet to be provided.</li>
+        <li>"Not mapped" (Not Applicable) means the element does not need to be exposed via an accessibility API. This is usually because the element is not displayed as part of the user interface.</li>
+        <li>User agents should return a user-presentable, localized string value for the Mac Accessibility AXRoleDescription.</li>
+        <li>All elements having an accessible object in IAccessible2 mapping are supposed to implement IAccessible, IAccessible2 and IAccessible2_2 interfaces</li>
+      </ul>
+      <div class="table-container">
+        <table class="map-table" id="obsolete-elements">
+          <caption>Mappings of obsolete HTML elements to platform accessibility APIs: ARIA, MSAA + UIA Express, MSAA + IAccessible2, UIA, ATK, and AX</caption>
+          <thead>
+            <tr>
+              <th>HTML element</th>
+              <th><a href="http://www.w3.org/TR/html401/">HTML4</a></th>
+              <th><a href="http://www.w3.org/html/wg/drafts/html/master/">HTML5</a></th>
+              <th><a href="http://www.w3.org/WAI/PF/aria/">WAI-ARIA</a></th>
+              <th><a href="http://msdn.microsoft.com/en-us/library/dd373608%28v=VS.85%29.aspx">MSAA</a> + <a href="http://msdn.microsoft.com/en-us/library/windows/desktop/dd561898%28v=vs.85%29.aspx">UIA Express</a></th>
+              <th><a href="http://msdn.microsoft.com/en-us/library/dd373608%28v=VS.85%29.aspx">MSAA</a> + <a href="http://accessibility.linuxfoundation.org/a11yspecs/ia2/docs/html/">IAccessible2</a></th>
+              <th><a href="http://msdn.microsoft.com/en-us/library/ms726297%28v=VS.85%29.aspx">UIA Control Type and Other Features</a></th>
+              <th><a href="http://people.gnome.org/%7Ebillh/at-spi-idl/html/index.html">AT-SPI</a></th>
+              <th><a href="http://developer.apple.com/library/mac/#documentation/Accessibility/Conceptual/AccessibilityMacOSX/OSXAXIntro/OSXAXintro.html">AX</a></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr tabindex="-1" id="el-applet">
+              <th><code><a href="http://www.w3.org/TR/html401/struct/objects.html#edef-APPLET">applet</a></code></th>
+              <td class="html4">Yes</td>
+              <td class="html5">No</td>
+              <td class="aria">?</td>
+              <td class="uia-express">?</td>
+              <td class="ia2">?</td>
+              <td class="uia">?</td>
+              <td class="at-spi">?</td>
+              <td class="ax">?</td>
+            </tr>
+            <tr tabindex="-1" id="el-acronym">
+              <th><code><a href="http://www.w3.org/TR/html401/struct/text.html#edef-ACRONYM">acronym</a></code></th>
+              <td class="html4">Yes</td>
+              <td class="html5">No</td>
+              <td class="aria">?</td>
+              <td class="uia-express">?</td>
+              <td class="ia2">?</td>
+              <td class="uia">?</td>
+              <td class="at-spi">?</td>
+              <td class="ax">?</td>
+            </tr>
+            <tr tabindex="-1" id="el-basefont">
+              <th><code><a href="http://www.w3.org/TR/html401/present/graphics.html#edef-BASEFONT">basefont</a></code></th>
+              <td class="html4">Yes</td>
+              <td class="html5">No</td>
+              <td class="aria">?</td>
+              <td class="uia-express">?</td>
+              <td class="ia2">?</td>
+              <td class="uia">?</td>
+              <td class="at-spi">?</td>
+              <td class="ax">?</td>
+            </tr>
+            <tr tabindex="-1" id="el-big">
+              <th><code><a href="http://www.w3.org/TR/html401/present/graphics.html#h-15.2.1">big</a></code></th>
+              <td class="html4">Yes</td>
+              <td class="html5">No</td>
+              <td class="aria">?</td>
+              <td class="uia-express">?</td>
+              <td class="ia2">?</td>
+              <td class="uia">?</td>
+              <td class="at-spi">?</td>
+              <td class="ax">?</td>
+            </tr>
+            <tr tabindex="-1" id="el-center">
+              <th><code><a href="http://www.w3.org/TR/html401/present/graphics.html#edef-CENTER">center</a></code></th>
+              <td class="html4">No</td>
+              <td class="html5">No</td>
+              <td class="aria">?</td>
+              <td class="uia-express">?</td>
+              <td class="ia2">?</td>
+              <td class="uia">?</td>
+              <td class="at-spi">?</td>
+              <td class="ax">?</td>
+            </tr>
+            <tr tabindex="-1" id="el-dir">
+              <th><code><a href="http://www.w3.org/TR/html401/struct/lists.html#edef-DIR">dir</a></code></th>
+              <td class="html4">Yes</td>
+              <td class="html5">No</td>
+              <td class="aria">?</td>
+              <td class="uia-express">?</td>
+              <td class="ia2">?</td>
+              <td class="uia">?</td>
+              <td class="at-spi">?</td>
+              <td class="ax">?</td>
+            </tr>
+            <tr tabindex="-1" id="el-font">
+              <th><code><a href="http://www.w3.org/TR/html401/present/graphics.html#edef-FONT">font</a></code></th>
+              <td class="html4">Yes</td>
+              <td class="html5">No</td>
+              <td class="aria">?</td>
+              <td class="uia-express">?</td>
+              <td class="ia2">?</td>
+              <td class="uia">?</td>
+              <td class="at-spi">?</td>
+              <td class="ax">?</td>
+            </tr>
+            <tr tabindex="-1" id="el-frame">
+              <th><code><a href="http://www.w3.org/TR/html401/present/frames.html#edef-FRAME">frame</a></code></th>
+              <td class="html4">Yes</td>
+              <td class="html5">No</td>
+              <td class="aria">?</td>
+              <td class="uia-express">
+                  <div class="role">
+                      <span class="type">Role: </span>ROLE_SYSTEM_DOCUMENT
+                  </div>
+                  <div class="states">
+                      <span class="type">States: </span>STATE_SYSTEM_READONLY
+                  </div>
+                  <div class="general">??currently mapped as pane not document.&nbsp; the document inside is mapped as document??</div>
+              </td>
+              <td class="ia2">
+                <div class="role">
+                  <span class="type">Role: </span>
+                  tag name BSTR (MSAA) and IA2_ROLE_INTERNAL_FRAME
+                </div>
+                <div class="children">
+                  <span class="type">Child: </span>
+                  ROLE_SYSTEM_DOCUMENT having STATE_SYSTEM_READONLY
+                </div>
+              </td>
+              <td class="uia">
+                  <div class="ctrltype">
+                      <span class="type">Control Type: </span>Document
+                  </div>
+              </td>
+              <td class="at-spi">
+                <div class="role">
+                  <span class="type">Role: </span>
+                  ROLE_INTERNAL_FRAME
+                </div>
+                <div class="children">
+                  <span class="type">Child: </span>
+                  ROLE_DOCUMENT_FRAME
+                </div>
+              </td>
+              <td class="ax">
+                  <div class="role">
+                      <span class="type">AXRole: </span>AXWebArea
+                  </div>
+                  <div class="subrole">
+                      <span class="type">AXSubrole: </span>(nil)
+                  </div>
+                  <div class="roledesc">
+                      <span class="type">AXRoleDescription: </span>HTML content
+                  </div>
+              </td>
+            </tr>
+            <tr tabindex="-1" id="el-frameset">
+              <th><code><a href="http://www.w3.org/TR/html401/present/frames.html#edef-FRAMESET">frameset</a></code></th>
+              <td class="html4">Yes</td>
+              <td class="html5">No</td>
+              <td class="aria">?</td>
+              <td class="uia-express">?</td>
+              <td class="ia2">
+                <div class="general">
+                  Doesn't have an accessible. All DOM attributes are
+                  proccessed as they belonged to its document accessible.
+                  Similar to <a href=#el-body>body</a> element.
+                </div>
+              </td>
+              <td class="uia">?</td>
+              <td class="at-spi">
+                <div class="general">
+                  Doesn't have an accessible. All DOM attributes are
+                  proccessed as they belonged to its document accessible.
+                  Similar to <a href=#el-body>body</a> element.
+                </div>
+              </td>
+              <td class="ax">
+                <div class="general">Not mapped</div>
+              </td>
+            </tr>
+            <tr tabindex="-1" id="el-noframes">
+              <th><code><a href="http://www.w3.org/TR/html401/present/frames.html#edef-NOFRAMES">noframes</a></code></th>
+              <td class="html4">Yes</td>
+              <td class="html5">No</td>
+              <td class="aria">?</td>
+              <td class="uia-express">?</td>
+              <td class="ia2">?</td>
+              <td class="uia">?</td>
+              <td class="at-spi">?</td>
+              <td class="ax">?</td>
+            </tr>
+            <tr tabindex="-1" id="el-hgroup">
+              <th><code>hgroup</code></th>
+              <td class="html4">No</td>
+              <td class="html5">No</td>
+              <td class="aria">None</td>
+              <td class="uia-express">?</td>
+              <td class="ia2">?</td>
+              <td class="uia">?</td>
+              <td class="at-spi">?</td>
+              <td class="ax">?</td>
+            </tr>
+            <tr tabindex="-1" id="el-isindex">
+              <th><code><a href="http://www.w3.org/TR/html401/interact/forms.html#edef-ISINDEX">isindex</a></code></th>
+              <td class="html4">Yes</td>
+              <td class="html5">No</td>
+              <td class="aria">?</td>
+              <td class="uia-express">?</td>
+              <td class="ia2">?</td>
+              <td class="uia">?</td>
+              <td class="at-spi">?</td>
+              <td class="ax">?</td>
+            </tr>
+            <tr tabindex="-1" id="el-listing">
+              <th><code><a href="http://www.w3.org/TR/REC-html32#listing">listing</a></code></th>
+              <td class="html4">No</td>
+              <td class="html5">No</td>
+              <td class="aria">?</td>
+              <td class="uia-express">?</td>
+              <td class="ia2">?</td>
+              <td class="uia">?</td>
+              <td class="at-spi">?</td>
+              <td class="ax">?</td>
+            </tr>
+            <tr tabindex="-1" id="el-plaintext">
+              <th><code><a href="http://www.w3.org/TR/REC-html32#plaintext">plaintext</a></code></th>
+              <td class="html4">No</td>
+              <td class="html5">No</td>
+              <td class="aria">?</td>
+              <td class="uia-express">?</td>
+              <td class="ia2">?</td>
+              <td class="uia">?</td>
+              <td class="at-spi">?</td>
+              <td class="ax">?</td>
+            </tr>
+            <tr tabindex="-1" id="el-rb">
+              <th><code>rb</code></th>
+              <td class="html4">No</td>
+              <td class="html5">No</td>
+              <td class="aria">?</td>
+              <td class="uia-express">?</td>
+              <td class="ia2">?</td>
+              <td class="uia">?</td>
+              <td class="at-spi">?</td>
+              <td class="ax">?</td>
+            </tr>
+            <tr tabindex="-1" id="el-strike">
+              <th><code><a href="http://www.w3.org/TR/html401/present/graphics.html#h-15.2.1">strike</a></code></th>
+              <td class="html4">Yes</td>
+              <td class="html5">No</td>
+              <td class="aria">?</td>
+              <td class="uia-express">?</td>
+              <td class="ia2">?</td>
+              <td class="uia">?</td>
+              <td class="at-spi">?</td>
+              <td class="ax">?</td>
+            </tr>
+            <tr tabindex="-1" id="el-tt">
+              <th><code><a href="http://www.w3.org/TR/html401/present/graphics.html#h-15.2.1">tt</a></code></th>
+              <td class="html4">Yes</td>
+              <td class="html5">No</td>
+              <td class="aria">?</td>
+              <td class="uia-express">?</td>
+              <td class="ia2">?</td>
+              <td class="uia">?</td>
+              <td class="at-spi">?</td>
+              <td class="ax">?</td>
+            </tr>
+            <tr tabindex="-1" id="el-xmp">
+              <th><code><a href="http://www.w3.org/TR/REC-html32#xmp">xmp</a></code></th>
+              <td class="html4">No</td>
+              <td class="html5">No</td>
+              <td class="aria">?</td>
+              <td class="uia-express">?</td>
+              <td class="ia2">?</td>
+              <td class="uia">?</td>
+              <td class="at-spi">?</td>
+              <td class="ax">?</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
     <section class="informative">
         <h2>Other Accessibility Implementations</h2>
