@@ -4056,11 +4056,7 @@
                             </div>
                             <div class="general">Use MSAA or UIA guidance</div>
                         </td>
-                        <td class="ia2">
-                          <div class="role">
-                            <span class="type">Role: </span>
-                            ROLE_SYSTEM_GROUPING
-                          </div>
+                        <td class="ia2"><div class="role"> <span class="type">Role: </span> tag name BSTR (MSAA) and IA2_ROLE_PARAGRAPH</div>
                           <div class="objattrs">
                             <span class="type">Object attributes: </span>
                             xml-roles:main
@@ -9488,11 +9484,11 @@
               <td class="html4">Yes</td>
               <td class="html5">No</td>
               <td class="aria">?</td>
-              <td class="uia-express">?</td>
-              <td class="ia2">?</td>
-              <td class="uia">?</td>
-              <td class="at-spi">?</td>
-              <td class="ax">?</td>
+              <td class="uia-express"><div class="general"> Not mapped </div></td>
+              <td class="ia2"><div class="general"> Not mapped </div></td>
+              <td class="uia"><div class="general"> Not mapped </div></td>
+              <td class="at-spi"><div class="general"> Not mapped </div></td>
+              <td class="ax"><div class="general"> Not mapped </div></td>
             </tr>
             <tr tabindex="-1" id="el-big">
               <th><code><a href="http://www.w3.org/TR/html401/present/graphics.html#h-15.2.1">big</a></code></th>
@@ -9511,7 +9507,8 @@
               <td class="html5">No</td>
               <td class="aria">?</td>
               <td class="uia-express">?</td>
-              <td class="ia2">?</td>
+              <td class="ia2"><div class="role"> <span class="type">Role: </span> tag name BSTR (MSAA) and IA2_ROLE_PARAGRAPH</div>
+                <div class="ifaces"> <span class="type">Interfaces: </span> IAccessibleText2; IAccessibleHypertext2 </div></td>
               <td class="uia">?</td>
               <td class="at-spi">?</td>
               <td class="ax">?</td>
@@ -9630,11 +9627,15 @@
               <td class="html4">No</td>
               <td class="html5">No</td>
               <td class="aria">None</td>
-              <td class="uia-express">?</td>
-              <td class="ia2">?</td>
+              <td class="uia-express"><div class="role"> <span class="type">Role: </span>ROLE_SYSTEM_GROUPING </div></td>
+              <td class="ia2"><div class="role"> <span class="type">Role: </span> tag name BSTR (MSAA) and IA2_ROLE_PARAGRAPH</div>
+              <div class="ifaces"> <span class="type">Interfaces: </span> IAccessibleText2; IAccessibleHypertext2; </div></td>
               <td class="uia">?</td>
-              <td class="at-spi">?</td>
-              <td class="ax">?</td>
+              <td class="at-spi"><div class="role"> <span class="type">Role: </span> ROLE_PARAGRAPH</div>
+              <div class="ifaces"> <span class="type">Interfaces: </span> Text; Hypertext </div></td>
+              <td class="ax"><div class="role"> <span class="type">AXRole: </span>AXGroup </div>
+                <div class="subrole"> <span class="type">AXSubrole: </span>(nil) </div>
+                <div class="roledesc"> <span class="type">AXRoleDescription: </span>group </div></td>
             </tr>
             <tr tabindex="-1" id="el-isindex">
               <th><code><a href="http://www.w3.org/TR/html401/interact/forms.html#edef-ISINDEX">isindex</a></code></th>
