@@ -84,7 +84,7 @@
     	</ul>
     	<div class="table-container">
         	<table class="map-table" id="elements">
-        		<caption>Mappings of HTML elements to platform accessibility APIs: <abbr title="Accessible Rich Internet Applications">ARIA</abbr>, MSAA + UIA Express, MSAA + IAccessible2, UIA, AT-SPI, and AX</caption>
+        		<caption>Mappings of HTML elements to platform accessibility APIs: <abbr title="Accessible Rich Internet Applications">ARIA</abbr>, MSAA + UIA Express, MSAA + IAccessible2, UIA, ATK, and AX</caption>
         		<thead>
         			<tr>
         				<th>HTML element</th>
@@ -94,7 +94,7 @@
         				<th><a href="http://msdn.microsoft.com/en-us/library/dd373608%28v=VS.85%29.aspx">MSAA</a> + <a href="http://msdn.microsoft.com/en-us/library/windows/desktop/dd561898%28v=vs.85%29.aspx">UIA Express</a></th>
         				<th><a href="http://msdn.microsoft.com/en-us/library/dd373608%28v=VS.85%29.aspx">MSAA</a> + <a href="http://accessibility.linuxfoundation.org/a11yspecs/ia2/docs/html/">IAccessible2</a></th>
                         <th><a href="http://msdn.microsoft.com/en-us/library/ms726297%28v=VS.85%29.aspx">UIA Control Type and Other Features</a></th>
-        				<th><a href="http://people.gnome.org/%7Ebillh/at-spi-idl/html/index.html">AT-SPI</a></th>
+        				<th><a href="https://developer.gnome.org/atk/stable/">ATK</a></th>
         				<th><a href="http://developer.apple.com/library/mac/#documentation/Accessibility/Conceptual/AccessibilityMacOSX/OSXAXIntro/OSXAXintro.html">AX</a></th>
         			</tr>
         		</thead>
@@ -139,13 +139,14 @@
                                 <span class="type">Control Type: </span>Hyperlink
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
-                            <span class="type">Role: </span>ROLE_LINK
+                            <span class="type">Role: </span>
+                            ATK_ROLE_LINK
                           </div>
                           <div class="states">
                             <span class="type">States: </span>
-                            If link is visited then STATE_VISITED.
+                            If link is visited then ATK_STATE_VISITED.
                           </div>
                           <div class="actions">
                             <span class="type">Actions: </span>
@@ -153,7 +154,7 @@
                           </div>
                           <div class="ifaces">
                             <span class="type">Interfaces: </span>
-                            Hyperlink; Text; Hypertext
+                            AtkHyperlink; AtkText; AtkHypertext
                           </div>
                         </td>
                         <td class="ax">
@@ -194,14 +195,14 @@
                                 <span class="type">Control Type: </span>Text
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_TEXT
+                            ATK_ROLE_TEXT
                           </div>
                           <div class="ifaces">
                             <span class="type">Interfaces: </span>
-                            Text; Hypertext
+                            AtkText; AtkHypertext
                           </div>
                         </td>
                         <td class="ax">
@@ -247,10 +248,10 @@
                                 <span class="type">Control Type: </span>Text
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_TEXT
+                            ATK_ROLE_TEXT
                           </div>
                           <div class="objattrs">
                             <span class="type">Object attributes: </span>
@@ -259,7 +260,7 @@
                           </div>
                           <div class="ifaces">
                             <span class="type">Interfaces: </span>
-                            Text; Hypertext
+                            AtkText; AtkHypertext
                           </div>
                         </td>
                         <td class="ax">
@@ -300,14 +301,14 @@
                                 <span class="type">Control Type: </span>Text
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_PARAGRAPH
+                            ATK_ROLE_PARAGRAPH
                           </div>
                           <div class="ifaces">
                             <span class="type">Interfaces: </span>
-                            Text; Hypertext
+                            AtkText; AtkHypertext
                           </div>
                         </td>
                         <td class="ax">
@@ -360,9 +361,10 @@
                                 <span class="type">Control Type: </span>Hyperlink
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
-                             <span class="type">Role: </span>ROLE_LINK
+                             <span class="type">Role: </span>
+                             ATK_ROLE_LINK
                              exposed as a child of connected <a href="#el-img">img</a> element
                           </div>
                           <div class="actions">
@@ -371,7 +373,7 @@
                           </div>
                           <div class="ifaces">
                             <span class="type">Interfaces: </span>
-                            Hyperlink
+                            AtkHyperlink
                           </div>
                         </td>
                         <td class="ax">
@@ -408,10 +410,10 @@
                                 <span class="type">Control Type: </span>Text
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_TEXT
+                            ATK_ROLE_TEXT
                           </div>
                         </td>
                         <td class="ax">
@@ -452,10 +454,10 @@
                                 <span class="type">Control Type: </span>Group
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_DOCUMENT_FRAME
+                            ATK_ROLE_DOCUMENT_FRAME
                           </div>
                           <div class="objattrs">
                             <span class="type">Object attributes: </span>
@@ -463,7 +465,7 @@
                           </div>
                           <div class="ifaces">
                             <span class="type">Interfaces: </span>
-                            Text; Hypertext
+                            AtkText; AtkHypertext
                           </div>
                         </td>
                         <td class="ax">
@@ -508,10 +510,10 @@
                                 <span class="type">Control Type: </span>Group
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_SECTION
+                            ATK_ROLE_SECTION
                           </div>
                           <div class="objattrs">
                             <span class="type">Object attributes: </span>
@@ -519,7 +521,7 @@
                           </div>
                           <div class="ifaces">
                             <span class="type">Interfaces: </span>
-                            Text; Hypertext
+                            AtkText; AtkHypertext
                           </div>
                         </td>
                         <td class="ax">
@@ -555,10 +557,10 @@
                                 <span class="type">Control Type: </span>Group
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_PANEL
+                            ATK_ROLE_PANEL
                           </div>
                         </td>
                         <td class="ax">
@@ -593,7 +595,7 @@
                             <div class="general">Doesn't have an accessible. Exposed by UIA_FontWeightAttributeId of the TextRange control pattern implemented on a parent accessible.
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Doesn't have an accessible, exposed as
                             "font-weight" text attribute on the text container.
@@ -626,7 +628,7 @@
                         <td class="uia">
                           <div class="general">Not mapped</div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="ax">
@@ -646,7 +648,7 @@
                           </div>
                         </td>
                         <td class="uia">?</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                           Doesn't have an accessible. May affect on
                           "writing-mode" text attribute on its text container.
@@ -676,7 +678,7 @@
                                 <span class="type">Control Type: </span>Text
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Doesn't have an accessible.
                             Exposed as "writing-mode" text attribute on its text container.
@@ -720,14 +722,14 @@
                                 <span class="type">Control Type: </span>Group
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_SECTION
+                            ATK_ROLE_SECTION
                           </div>
                           <div class="ifaces">
                             <span class="type">Interfaces: </span>
-                            Text; Hypertext
+                            AtkText; AtkHypertext
                           </div>
                         </td>
                         <td class="ax">
@@ -767,7 +769,7 @@
                                 <span class="type">Control Type: </span>Document
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Doesn't have an accessible. All DOM attributes are
                             proccessed as they belonged to its document accessible.
@@ -803,7 +805,7 @@
                           </div>
                         </td>
                         <td class="uia">?</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Doesn't have an accesible. Exposed as '\n' character
                             via Text interface on the text container.
@@ -849,21 +851,21 @@
                                 ?? When it is in a &lt;menu&gt; it defines a command.&nbsp; Is it still a button, or is it a menuitem??
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_PUSH_BUTTON
+                            ATK_ROLE_PUSH_BUTTON
                           </div>
                           <div class="states">
                             <span class="type">States: </span>
-                            STATE_DEFAULT if the button is default
+                            ATK_STATE_DEFAULT if the button is default
                           </div>
                           <div class="actions">
                             <span class="type">Actions: </span>press
                           </div>
                           <div class="ifaces">
                             <span class="type">Interfaces: </span>
-                            Text; Hypertext
+                            AtkText; AtkHypertext
                           </div>
                         </td>
                         <td class="ax">
@@ -903,10 +905,10 @@
                                 NOTE: subdom elements will be mapped separately.
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_CANVAS
+                            ATK_ROLE_CANVAS
                           </div>
                         </td>
                         <td class="ax">
@@ -957,18 +959,18 @@
                                 <span class="type">Properties: </span>UIA_LabeledByPropertyId on the parent table pointing to the UIA element for the caption element.
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_CAPTION
+                            ATK_ROLE_CAPTION
                           </div>
                           <div class="relations">
                             <span class="type">Relations: </span>
-                            RELATION_LABEL_FOR with containing <a href="#el-table">table</a> accessible
+                            ATK_RELATION_LABEL_FOR with containing <a href="#el-table">table</a> accessible
                           </div>
                           <div class="ifaces">
                             <span class="type">Interfaces: </span>
-                            Text; Hypertext
+                            AtkText; AtkHypertext
                           </div>
                         </td>
                         <td class="ax">
@@ -1002,7 +1004,7 @@
                           <div class="general">Doesn't have an accessible. Styles used are exposed by UIA text attribute identifiers of the TextRange control pattern implemented on a parent accessible.
                           </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Doesn't have an accessible. Used styles are
                             mapped into text attributes on its text container.
@@ -1039,7 +1041,7 @@
                             <div class="general">Doesn't have an accessible. Styles used are exposed by UIA text attribute identifiers of the TextRange control pattern implemented on a parent accessible.
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Doesn't have an accessible. Used styles are
                             mapped into text attributes on its text container.
@@ -1071,7 +1073,7 @@
                         <td class="uia">
                           <div class="general">Not mapped</div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="ax">
@@ -1097,7 +1099,7 @@
                                 ?TODO:&nbsp; look in more detail at UIA table implementation
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="ax">
@@ -1204,7 +1206,7 @@
                         <td class="uia">
                             <div class="general">Not mapped</div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="ax">
@@ -1240,7 +1242,7 @@
                                 <span class="type">Control Type: </span>Combo Box
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Used to constuct a list of options for autocompletes
                             (in other words it can have no accessible itself)
@@ -1283,14 +1285,14 @@
                           </div>
                         </td>
                         <td class="uia">?</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_PARAGRAPH
+                            ATK_ROLE_PARAGRAPH
                           </div>
                           <div class="ifaces">
                             <span class="type">Interfaces: </span>
-                            Text; Hypertext
+                            AtkText; AtkHypertext
                           </div>
                         </td>
                         <td class="ax">
@@ -1324,7 +1326,7 @@
                             <div class="general">Doesn't have an accessible. Styles used are exposed by UIA text attribute identifiers of the TextRange control pattern implemented on a parent accessible.
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Doesn't have an accessible. Used styles are mapped
                             into text attributes on its text container.
@@ -1363,10 +1365,10 @@
                                 <span class="type">Control Type: </span>Group ??window??
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_PANEL
+                            ATK_ROLE_PANEL
                           </div>
                         </td>
                         <td class="ax">?</td>
@@ -1390,7 +1392,7 @@
                           <div class="general">Doesn't have an accessible. Styles used are exposed by UIA text attribute identifiers of the TextRange control pattern implemented on a parent accessible.
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Doesn't have an accessible. Used styles are
                             exposed by text attributes on its text container.
@@ -1425,10 +1427,10 @@
                           </div>
                         </td>
                         <td class="uia"></td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_DIALOG
+                            ATK_ROLE_DIALOG
                           </div>
                         </td>
                         <td class="ax"></td>
@@ -1457,17 +1459,17 @@
                           </div>
                         </td>
                         <td class="uia">?</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             May not have an accessible if has no semantic meaning. Otherwise
                           </div>
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_SECTION
+                            ATK_ROLE_SECTION
                            </div>
                            <div class="ifaces">
                             <span class="type">Interfaces: </span>
-                            Text; Hypertext
+                            AtkText; AtkHypertext
                           </div>
                         </td>
                         <td class="ax">
@@ -1511,10 +1513,10 @@
                                 <span class="type">Control Type: </span>List
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_LIST
+                            ATK_ROLE_LIST
                           </div>
                         </td>
                         <td class="ax">
@@ -1561,14 +1563,14 @@
                                 <span class="type">Control Type: </span>List Item
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_LISTITEM
+                            ATK_ROLE_LISTITEM
                           </div>
                           <div class="ifaces">
                             <span class="type">Interfaces: </span>
-                            Text; Hypertext
+                            AtkText; AtkHypertext
                           </div>
                         </td>
                         <td class="ax">
@@ -1602,7 +1604,7 @@
                           <div class="general">Doesn't have an accessible. Styles used are exposed by UIA text attribute identifiers of the TextRange control pattern implemented on a parent accessible.
                           </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Doesn't have an accessible. Used styles are mapped
                             into text attributes on its text container
@@ -1645,10 +1647,10 @@
                                 <span class="type">Control Type: </span>?Pane? Window?
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_EMBEDDED
+                            ATK_ROLE_EMBEDDED
                           </div>
                         </td>
                         <td class="ax">Depends on format of data file</td>
@@ -1679,14 +1681,14 @@
                                 <span class="type">Control Type: </span>Group
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_PANEL
+                            ATK_ROLE_PANEL
                           </div>
                           <div class="relations">
                             <span class="type">Relations:</span>
-                            RELATION_LABELLED_BY with child <a href="#el-legend">legend</a> element
+                            ATK_RELATION_LABELLED_BY with child <a href="#el-legend">legend</a> element
                           </div>
                         </td>
                         <td class="ax">
@@ -1731,18 +1733,18 @@
                                 <span class="type">Control Type: </span>Text
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_CAPTION
+                            ATK_ROLE_CAPTION
                           </div>
                           <div class="relations">
                             <span class="type">Relations: </span>
-                            RELATION_LABEL_FOR with parent <a href="#el-figure">figure</a> element
+                            ATK_RELATION_LABEL_FOR with parent <a href="#el-figure">figure</a> element
                           </div>
                           <div class="ifaces">
                             <span class="type">Interfaces: </span>
-                            Text; Hypertext
+                            AtkText; AtkHypertext
                           </div>
                         </td>
                         <td class="ax">
@@ -1791,9 +1793,10 @@
                             </div>
                             <div class="general">??discuss graphic/image vs. group??</div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
-                            <span class="type">Role: </span>ROLE_PANEL
+                            <span class="type">Role: </span>
+                            ATK_ROLE_PANEL
                           </div>
                           <div class="objattrs">
                             <span class="type">Object attributes: </span>
@@ -1805,7 +1808,7 @@
                           </div>
                           <div class="relations">
                             <span class="type">Relations: </span>
-                            RELATION_LABELLED_BY with child <a href="#el-figcaption">figcaption</a> element
+                            ATK_RELATION_LABELLED_BY with child <a href="#el-figcaption">figcaption</a> element
                           </div>
                         </td>
                         <td class="ax">?</td>
@@ -1841,10 +1844,10 @@
                             ??discuss exposing localized type for all unmapped elements, or is it better to expose as Group??
                           </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_FOOTER
+                            ATK_ROLE_FOOTER
                           </div>
                           <div class="objattrs">
                             <span class="type">Object attributes: </span>
@@ -1853,7 +1856,7 @@
                           </div>
                           <div class="ifaces">
                             <span class="type">Interfaces: </span>
-                            Text; Hypertext
+                            AtkText; AtkHypertext
                           </div>
                         </td>
                         <td class="ax">
@@ -1905,10 +1908,10 @@
                                 <span class="type">Control Type: </span>Group
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_FORM
+                            ATK_ROLE_FORM
                           </div>
                         </td>
                         <td class="ax">
@@ -1953,10 +1956,10 @@
                                 <span class="type">Control Type: </span>Text
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_HEADING
+                            ATK_ROLE_HEADING
                           </div>
                           <div class="objattrs">
                             <span class="type">Object attributes: </span>
@@ -1964,7 +1967,7 @@
                           </div>
                           <div class="ifaces">
                             <span class="type">Interfaces: </span>
-                            Text; Hypertext
+                            AtkText; AtkHypertext
                           </div>
                         </td>
                         <td class="ax">
@@ -1996,7 +1999,7 @@
                         <td class="uia">
                             <div class="general">Not mapped</div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="ax">
@@ -2037,10 +2040,10 @@
                                 <span class="type">Properties: </span>Do not put "header" in LocalizedControlType string because there is a header role for table headers
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_HEADER
+                            ATK_ROLE_HEADER
                           </div>
                           <div class="objattrs">
                             <span class="type">Object attributes: </span>
@@ -2050,7 +2053,7 @@
                           </div>
                           <div class="ifaces">
                             <span class="type">Interfaces: </span>
-                            Text; Hypertext
+                            AtkText; AtkHypertext
                           </div>
                         </td>
                         <td class="ax">
@@ -2102,10 +2105,10 @@
                                 <span class="type">Control Type: </span>Separator
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_SEPARATOR
+                            ATK_ROLE_SEPARATOR
                           </div>
                         </td>
                         <td class="ax">?</td>
@@ -2124,7 +2127,7 @@
                         <td class="uia">
                             <div class="general">Not mapped</div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="ax">
@@ -2150,7 +2153,7 @@
                           <div class="general">Doesn't have an accessible. Exposed by UIA_IsItalicAttributeId of the TextRange control pattern implemented on a parent accessible.
                           </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Doesn't have an accessible, exposed as
                             "font-style:italic" text attribute on its text container.
@@ -2196,14 +2199,14 @@
                                 <span class="type">Control Type: </span>Document ??Pane??
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_INTERNAL_FRAME
+                            ATK_ROLE_INTERNAL_FRAME
                           </div>
                           <div class="children">
                             <span class="type">Child: </span>
-                            ROLE_DOCUMENT_FRAME
+                            ATK_ROLE_DOCUMENT_FRAME
                           </div>
                         </td>
                         <td class="ax">
@@ -2253,10 +2256,10 @@
                                 <span class="type">Control Type: </span>Image
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_IMAGE
+                            ATK_ROLE_IMAGE
                           </div>
                           <div class="actions">
                             <span class="type">Actions: </span>
@@ -2265,11 +2268,11 @@
                           </div>
                           <div class="ifaces">
                             <span class="type">Interfaces: </span>
-                            Image
+                            AtkImage
                           </div>
                           <div class="children">
                             <span class="type">Children: </span>
-                             ROLE_LINK generated from <a href="#el-area">area</a>
+                             ATK_ROLE_LINK generated from <a href="#el-area">area</a>
                              elements in case of image map
                           </div>
                         </td>
@@ -2304,7 +2307,7 @@
                                 <span class="type">Properties: </span>NameProperty set to the empty string
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                             <div class="general">Do not expose this object</div>
                         </td>
                         <td class="ax">
@@ -2336,10 +2339,10 @@
                                 <span class="type">Control Type: </span>Button
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_PUSH_BUTTON
+                            ATK_ROLE_PUSH_BUTTON
                           </div>
                           <div class="actions">
                             <span class="type">Actions: </span>
@@ -2379,10 +2382,10 @@
                                 <span class="type">Control Type: </span>Menu Item
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_MENU_ITEM
+                            ATK_ROLE_MENU_ITEM
                           </div>
                         </td>
                         <td class="ax">?</td>
@@ -2415,10 +2418,10 @@
                                 <span class="type">Control Pattern: </span>If implemented as a color picker, implement IUIAutomationSelectionPattern for the container and IUIAutomationSelectionItemPattern for each color choice
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_COLOR_CHOOSER
+                            ATK_ROLE_COLOR_CHOOSER
                           </div>
                         </td>
                         <td class="ax">
@@ -2473,14 +2476,14 @@
                                 <span class="type">Control Type: </span>Check Box
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_CHECK_BOX
+                            ATK_ROLE_CHECK_BOX
                           </div>
                           <div class="states">
                             <span class="type">States: </span>
-                            STATE_CHECKED if checked; STATE_INDETERMINATE if in mixed state
+                            ATK_STATE_CHECKED if checked; ATK_STATE_INDETERMINATE if in mixed state
                           </div>
                           <div class="objattrs">
                             <span class="type">Object attributes:</span>
@@ -2570,10 +2573,10 @@
                                 <span class="type">Control Type: </span>Calendar
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_CALENDAR
+                            ATK_ROLE_CALENDAR
                           </div>
                         </td>
                         <td class="ax">
@@ -2610,10 +2613,10 @@
                                 <span class="type">Control Type: </span>Calendar
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_CALENDAR
+                            ATK_ROLE_CALENDAR
                           </div>
                         </td>
                         <td class="ax">
@@ -2650,10 +2653,10 @@
                                 <span class="type">Control Type: </span>Calendar
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_CALENDAR
+                            ATK_ROLE_CALENDAR
                           </div>
                         </td>
                         <td class="ax">
@@ -2702,14 +2705,14 @@
                                 <span class="type">Control Type: </span>Edit
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_ENTRY
+                            ATK_ROLE_ENTRY
                           </div>
                           <div class="states">
                             <span class="type">States: </span>
-                            STATE_SINGLE_LINE; STATE_EDITABLE if not readonly
+                            ATK_STATE_SINGLE_LINE; ATK_STATE_EDITABLE if not readonly
                           </div>
                           <div class="actions">
                             <span class="type">Actions: </span>
@@ -2717,7 +2720,7 @@
                           </div>
                           <div class="ifaces">
                             <span class="type">Interfaces: </span>
-                            Text; EditableText
+                            AtkText; AtkEditableText
                           </div>
                         </td>
                         <td class="ax">
@@ -2757,14 +2760,14 @@
                                 <span class="type">Control Type: </span>Button
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_TEXT
+                            ATK_ROLE_TEXT
                           </div>
                           <div class="children">
                             <span class="type">Children: </span>
-                            ROLE_PUSH_BUTTON when pressed ROLE_FILE_CHOOSER dialog shown
+                            ATK_ROLE_PUSH_BUTTON when pressed ATK_ROLE_FILE_CHOOSER dialog shown
                           </div>
                         </td>
                         <td class="ax">
@@ -2793,7 +2796,7 @@
                         <td class="uia">
                             <div class="general">Do not expose this object</div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Not mapped</div>
                         </td>
                         <td>Do not expose this object</td>
@@ -2827,14 +2830,14 @@
                                 <span class="type">Control Type: </span>Button
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_PUSH_BUTTON
+                            ATK_ROLE_PUSH_BUTTON
                           </div>
                           <div class="states">
                             <span class="type">States: </span>
-                            STATE_DEFAULT if the button is default
+                            ATK_STATE_DEFAULT if the button is default
                           </div>
                           <div class="actions">
                             <span class="type">Actions: </span>
@@ -2863,7 +2866,7 @@
                         <td class="uia">
                             <div class="general">?? does this define a command??</div>
                         </td>
-                        <td class="at-spi">?</td>
+                        <td class="atk">?</td>
                         <td class="ax">?</td>
                     </tr>
                     <tr tabindex="-1" id="el-input-input-month">
@@ -2888,10 +2891,10 @@
                                 <span class="type">Control Type: </span>Calendar
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_DATE_EDITOR
+                            ATK_ROLE_DATE_EDITOR
                           </div>
                         </td>
                         <td class="ax">
@@ -2927,10 +2930,10 @@
                                 <span class="type">Control Type: </span>Spinner
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_SPIN_BUTTON or ROLE_ENTRY (implementation dependent)
+                            ATK_ROLE_SPIN_BUTTON or ATK_ROLE_ENTRY (implementation dependent)
                           </div>
                         </td>
                         <td class="ax">
@@ -2983,14 +2986,14 @@
                                 <span class="type">Properties: </span>UIA_IsPasswordPropertyId
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_PASSWORD_TEXT
+                            ATK_ROLE_PASSWORD_TEXT
                           </div>
                           <div class="states">
                             <span class="type">States: </span>
-                            STATE_SINGLE_LINE; STATE_EDITABLE until readonly
+                            ATK_STATE_SINGLE_LINE; ATK_STATE_EDITABLE until readonly
                           </div>
                           <div class="actions">
                             <span class="type">Actions: </span>
@@ -3038,14 +3041,14 @@
                                 <span class="type">Control Type: </span>Radio Button
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_RADIO_BUTTON
+                            ATK_ROLE_RADIO_BUTTON
                           </div>
                           <div class="states">
                             <span class="type">States: </span>
-                            STATE_CHECKED if checked
+                            ATK_STATE_CHECKED if checked
                           </div>
                           <div class="objattrs">
                             <span class="type">Object attributes: </span>
@@ -3083,7 +3086,7 @@
                                 <span class="type">Control Pattern: </span>Toggle
                             </div>
                         </td>
-                        <td class="at-spi">?</td>
+                        <td class="atk">?</td>
                         <td class="ax">?</td>
                     </tr>
                     <tr tabindex="-1" id="el-input-range">
@@ -3111,10 +3114,10 @@
                                 <span class="type">Control Type: </span>Slider
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_SLIDER
+                            ATK_ROLE_SLIDER
                           </div>
                           <div class="ifaces">
                             <span class="type">Interfaces: </span>
@@ -3175,10 +3178,10 @@
                                 <span class="type">Control Type: </span>Button
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_PUSH_BUTTON
+                            ATK_ROLE_PUSH_BUTTON
                           </div>
                           <div class="actions">
                             <span class="type">Actions: </span>
@@ -3227,14 +3230,14 @@
                                 <span class="type">Control Type: </span>Edit
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_ENTRY
+                            ATK_ROLE_ENTRY
                           </div>
                           <div class="states">
                             <span class="type">States: </span>
-                            STATE_SINGLE_LINE; STATE_EDITABLE if not readonly
+                            ATK_STATE_SINGLE_LINE; ATK_STATE_EDITABLE if not readonly
                           </div>
                           <div class="actions">
                             <span class="type">Actions: </span>
@@ -3242,7 +3245,7 @@
                           </div> 
                           <div class="ifaces">
                             <span class="type">Interfaces: </span>
-                            Text;  EditableText
+                            AtkText; AtkEditableText
                           </div>
                         </td>
                         <td class="ax">
@@ -3286,14 +3289,14 @@
                                 <span class="type">Control Type: </span>Button
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_PUSH_BUTTON
+                            ATK_ROLE_PUSH_BUTTON
                           </div>
                           <div class="states">
                             <span class="type">States: </span>
-                            STATE_DEFAULT if the button is default 
+                            ATK_STATE_DEFAULT if the button is default 
                           </div>
                           <div class="actions">
                             <span class="type">Actions: </span>
@@ -3346,14 +3349,14 @@
                                 <span class="type">Control Type: </span>Edit
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_ENTRY
+                            ATK_ROLE_ENTRY
                           </div>
                           <div class="states">
                             <span class="type">States: </span>
-                            STATE_SINGLE_LINE; STATE_EDITABLE if not readonly
+                            ATK_STATE_SINGLE_LINE; ATK_STATE_EDITABLE if not readonly
                           </div>
                           <div class="actions">
                             <span class="type">Actions: </span>
@@ -3361,7 +3364,7 @@
                           </div>
                           <div class="ifaces">
                             <span class="type">Interfaces: </span>
-                            Text;  EditableText
+                            AtkText; AtkEditableText
                           </div>
                         </td>
                         <td class="ax">
@@ -3410,14 +3413,14 @@
                                 <span class="type">Control Type: </span>Edit
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_ENTRY
+                            ATK_ROLE_ENTRY
                           </div>
                           <div class="states">
                             <span class="type">States: </span>
-                            STATE_SINGLE_LINE; STATE_EDITABLE if not readonly
+                            ATK_STATE_SINGLE_LINE; ATK_STATE_EDITABLE if not readonly
                           </div>
                           <div class="actions">
                             <span class="type">Actions: </span>
@@ -3425,7 +3428,7 @@
                           </div>
                           <div class="ifaces">
                             <span class="type">Interfaces: </span>
-                            Text; EditableText
+                            AtkText; AtkEditableText
                           </div>
                         </td>
                         <td class="ax">
@@ -3473,11 +3476,11 @@
                                 <span class="type">Control Type: </span>Combo Box
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Same as ordinal elements.</div>
                           <div class="states">
                             <span class="type">States: </span>
-                            STATE_SUPPORTS_AUTOCOMPLETION
+                            ATK_STATE_SUPPORTS_AUTOCOMPLETION
                           </div>
                           <div class="objattrs">
                             <span class="type">Object attributes: </span>
@@ -3489,7 +3492,7 @@
                           </div>
                           <div class="ifaces">
                             <span class="type">Interfaces: </span>
-                            Text; EditableText
+                            AtkText; AtkEditableText
                           </div>
                         </td>
                         <td class="ax">
@@ -3525,10 +3528,10 @@
                                 <span class="type">Control Type: </span>Spinner
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_SPIN_BUTTON
+                            ATK_ROLE_SPIN_BUTTON
                           </div>
                         </td>
                         <td class="ax">
@@ -3577,14 +3580,14 @@
                                 <span class="type">Control Type: </span>Edit
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_ENTRY
+                            ATK_ROLE_ENTRY
                           </div>
                           <div class="states">
                             <span class="type">States: </span>
-                            STATE_SINGLE_LINE; STATE_EDITABLE if not readonly
+                            ATK_STATE_SINGLE_LINE; ATK_STATE_EDITABLE if not readonly
                           </div>
                           <div class="actions">
                             <span class="type">Actions: </span>
@@ -3592,7 +3595,7 @@
                           </div>
                           <div class="ifaces">
                             <span class="type">Interfaces: </span>
-                            Text; EditableText
+                            AtkText; AtkEditableText
                           </div>
                         </td>
                         <td class="ax">
@@ -3629,10 +3632,10 @@
                                 <span class="type">Control Type: </span>Calendar
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_CALENDAR
+                            ATK_ROLE_CALENDAR
                           </div>
                         </td>
                         <td class="ax">
@@ -3666,7 +3669,7 @@
                           <div class="general">Doesn't have an accessible. Styles used are exposed by UIA text attribute identifiers of the TextRange control pattern implemented on a parent accessible.
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Doesn't have an accessible. Used styles are mapped
                             into text attributes on its text container.
@@ -3704,7 +3707,7 @@
                           <div class="general">Doesn't have an accessible. Styles used are exposed by UIA text attribute identifiers of the TextRange control pattern implemented on a parent accessible.
                           </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Doesn't have an accessible. Mapped into 
                             "font-family:monospace" text attribute on its text
@@ -3756,14 +3759,14 @@
                                 <span class="type">Control Type: </span>Combo Box
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_COMBO_BOX
+                            ATK_ROLE_COMBO_BOX
                           </div>
                           <div class="states">
                             <span class="type">States: </span>
-                            STATE_EXPANDABLE; STATE_COLLAPSED if collapsed
+                            ATK_STATE_EXPANDABLE; ATK_STATE_COLLAPSED if collapsed
                           </div>
                           <div class="objattrs">
                             <span class="type">Object attributes: </span>
@@ -3826,20 +3829,21 @@
                             pointing to the UIA element for the <code>label</code> element.
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_LABEL
+                            ATK_ROLE_LABEL
                           </div>
                           <div class="relations">
                             <span class="type">Relations: </span>
-                            RELATION_LABEL_FOR for a child form element or form element
+                            ATK_RELATION_LABEL_FOR for a child form element or form element
                             referred by <a href="#att-for-label">for</a> attribute. Note,
-                            related form element provides RELATION_LABELLED_BY pointing to the label.
+                            related form element provides ATK_RELATION_LABELLED_BY
+                            pointing to the label.
                           </div>
                           <div class="ifaces">
                             <span class="type">Interfaces: </span>
-                            Text; Hypertext
+                            AtkText; AtkHypertext
                           </div>
                         </td>
                         <td class="ax">
@@ -3889,18 +3893,18 @@
                             pointing to the UIA element for the <code>legend</code> element.
                           </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role :</span>
-                            ROLE_LABEL
+                            ATK_ROLE_LABEL
                           </div>
                           <div class="relations">
                             <span class="type">Relations: </span>
-                            RELATION_LABEL_FOR with parent <a href="#el-fieldset">fieldset</a> element
+                            ATK_RELATION_LABEL_FOR with parent <a href="#el-fieldset">fieldset</a> element
                           </div>
                           <div class="ifaces">
                             <span class="type">Interfaces: </span>
-                            Text; Hypertext
+                            AtkText; AtkHypertext
                           </div>
                        </td>
                         <td class="ax">
@@ -3947,14 +3951,14 @@
                                 <span class="type">Control Type: </span>List Item
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_LISTITEM
+                            ATK_ROLE_LISTITEM
                           </div>
                           <div class="ifaces">
                             <span class="type">Interfaces: </span>
-                            Text; Hypertext
+                            AtkText; AtkHypertext
                           </div>
                         </td>
                         <td class="ax">
@@ -4001,14 +4005,14 @@
                                 <span class="type">Control Type: </span>Menu Item
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_LISTITEM
+                            ATK_ROLE_LISTITEM
                           </div>
                           <div class="ifaces">
                             <span class="type">Interfaces: </span>
-                            Text; Hypertext
+                            AtkText; AtkHypertext
                           </div>
                         </td>
                         <td class="ax">
@@ -4037,7 +4041,7 @@
                                 <span class="type">Control Type: </span>Hyperlink
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="ax">
@@ -4070,10 +4074,10 @@
                                 <span class="type">Control Type: </span>Group
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_SECTION
+                            ATK_ROLE_SECTION
                           </div>
                           <div class="objattrs">
                             <span class="type">Object attributes: </span>
@@ -4081,7 +4085,7 @@
                           </div>
                           <div class="ifaces">
                             <span class="type">Interfaces: </span>
-                            Text; Hypertext
+                            AtkText; AtkHypertext
                           </div>
                         </td>
                         <td class="ax">
@@ -4116,13 +4120,13 @@
                         <td class="uia">
                             <div class="general">Not mapped</div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Not mapped if used as an image map, otherwise:
                           </div>
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_TEXT
+                            ATK_ROLE_TEXT
                           </div>
                         </td>
                         <td class="ax">
@@ -4150,7 +4154,7 @@
                                 <span class="type">Control Type: </span>Text
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Doesn't have an accessible. Styles used to highlight
                             the text are mapped into text attributes on the text container.
@@ -4185,10 +4189,10 @@
                           </div>
                         </td>
                         <td class="uia">?</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_UNKNOWN
+                            ATK_ROLE_UNKNOWN
                           </div>
                         </td>
                         <td class="ax">
@@ -4225,10 +4229,10 @@
                                 <span class="type">Control Type: </span>Menu
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_MENU
+                            ATK_ROLE_MENU
                           </div>
                           <div class="general">
                             These objects <em class="rfc2119">should not</em> be exposed
@@ -4269,10 +4273,10 @@
                                 <span class="type">Control Type: </span>ToolBar
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_TOOL_BAR
+                            ATK_ROLE_TOOL_BAR
                           </div>
                         </td>
                         <td class="ax">
@@ -4316,14 +4320,14 @@
                                 <span class="type">Control Pattern: </span>Toggle
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_CHECK_MENU_ITEM
+                            ATK_ROLE_CHECK_MENU_ITEM
                           </div>
                           <div class="states">
                             <span class="type">States: </span>
-                            STATE_CHECKED if checked
+                            ATK_STATE_CHECKED if checked
                           </div>
                           <div class="objattrs">
                             <span class="type">Object attributes: </span>
@@ -4364,10 +4368,10 @@
                                 <span class="type">Control Type: </span>MenuItem
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_MENU_ITEM
+                            ATK_ROLE_MENU_ITEM
                           </div>
                         </td>
                         <td class="ax">
@@ -4411,14 +4415,14 @@
                                 <span class="type">Control Pattern: </span>Toggle
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_RADIO_MENU_ITEM
+                            ATK_ROLE_RADIO_MENU_ITEM
                           </div>
                           <div class="states">
                             <span class="type">States: </span>
-                            STATE_CHECKED if checked
+                            ATK_STATE_CHECKED if checked
                           </div>
                           <div class="objattrs">
                             <span class="type">Object attributes: </span>
@@ -4451,7 +4455,7 @@
                         <td class="uia">
                             <div class="general">Not mapped</div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="ax">
@@ -4488,10 +4492,10 @@
                                 <span class="type">Properties: </span>Set the control pattern's IsReadOnly property to true. Set LocalizedControlType to "Meter".
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_PROGRESS_BAR
+                            ATK_ROLE_PROGRESS_BAR
                           </div>
                           <div class="ifaces">
                             <span class="type">Interfaces: </span>
@@ -4539,10 +4543,10 @@
                                 <span class="type">Control Type: </span>??Text
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_PANEL
+                            ATK_ROLE_PANEL
                           </div>
                           <div class="objattrs">
                             <span class="type">Object attributes: </span>
@@ -4550,7 +4554,7 @@
                           </div>
                           <div class="ifaces">
                             <span class="type">Interfaces: </span>
-                            Text; Hypertext
+                            AtkText; AtkHypertext
                           </div>
                         </td>
                         <td class="ax">
@@ -4579,7 +4583,7 @@
                         <td class="uia">
                             <div class="general">Not mapped</div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="ax">
@@ -4610,13 +4614,13 @@
                         <td class="uia">
                             <div class="general">Depends on format of data file.</div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Depends on format of data file. If contains a plugin then
                           </div>
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_EMBEDDED
+                            ATK_ROLE_EMBEDDED
                           </div>
                         </td>
                         <td class="ax">Depends on format of data file.</td>
@@ -4652,10 +4656,10 @@
                                 <span class="type">Control Type: </span>List
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_LIST
+                            ATK_ROLE_LIST
                           </div>
                         </td>
                         <td class="ax">
@@ -4692,10 +4696,10 @@
                                 <span class="type">Control Type: </span>Group
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            <em>ROLE_PANEL</em>
+                            <em>ATK_ROLE_PANEL</em>
                           </div>
                         </td>
                         <td class="ax">
@@ -4747,14 +4751,14 @@
                                 <span class="type">Control Pattern: </span>SelectionItem (required for List Item control type)
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_LIST_ITEM
+                            ATK_ROLE_LIST_ITEM
                           </div>
                           <div class="states">
                             <span class="type">States: </span>
-                            STATE_FOCUSABLE; STATE_FOCUSED if selected and the user focus is at the list
+                            ATK_STATE_FOCUSABLE; ATK_STATE_FOCUSED if selected and the user focus is at the list
                           </div>
                           <div class="actions">
                             <span class="type">Actions: </span>
@@ -4762,7 +4766,7 @@
                           </div>
                           <div class="ifaces">
                             <span class="type">Interfaces: </span>
-                            Text; Hypertext
+                            AtkText; AtkHypertext
                           </div>
                         </td>
                         <td class="ax">
@@ -4820,10 +4824,10 @@
                             pointing to the UIA element for the <code>output</code> element.
                           </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_SECTION
+                            ATK_ROLE_SECTION
                           </div>
                           <div class="objattrs">
                             <span class="type">Object attributes: </span>
@@ -4831,8 +4835,8 @@
                           </div>
                           <div class="relations">
                             <span class="type">Relations: </span>
-                            RELATION_CONTROLLED_BY with an element pointed by <a href="#att-for-output">for</a> attribute.
-                            Paired element exposes RELATION_CONTROLLER_FOR relation.
+                            ATK_RELATION_CONTROLLED_BY with an element pointed by <a href="#att-for-output">for</a> attribute.
+                            Paired element exposes ATK_RELATION_CONTROLLER_FOR relation.
                           </div>
                           <div class="ifaces">
                             <span class="type">Interfaces: </span>
@@ -4877,14 +4881,14 @@
                                 <span class="type">Control Type: </span>Text
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_PARAGRAPH
+                            ATK_ROLE_PARAGRAPH
                           </div>
                           <div class="ifaces">
                             <span class="type">Interfaces: </span>
-                            Text; Hypertext
+                            AtkText; AtkHypertext
                           </div>
                         </td>
                         <td class="ax">
@@ -4913,7 +4917,7 @@
                         <td class="uia">
                             <div class="general">Not mapped</div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="ax">
@@ -4949,17 +4953,17 @@
                                 <span class="type">Control Type: </span>Text ??Group??
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_PARAGRAPH
+                            ATK_ROLE_PARAGRAPH
                           </div>
                           <div class="general">
                             Used styles are mapped into text attributes on the accessible
                           </div>
                           <div class="ifaces">
                             <span class="type">Interfaces: </span>
-                            Text; Hypertext
+                            AtkText; AtkHypertext
                           </div>
                         </td>
                         <td class="ax">
@@ -5007,18 +5011,18 @@
                                 <span class="type">Control Type: </span>Progress Bar
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_PROGRESS_BAR
+                            ATK_ROLE_PROGRESS_BAR
                           </div>
                           <div class="states">
                             <span class="type">States: </span>
-                            STATE_INDETERMINATE if the progress is indeterminate
+                            ATK_STATE_INDETERMINATE if the progress is indeterminate
                           </div>
                           <div class="ifaces">
                             <span class="type">Interfaces: </span>
-                            Value
+                            AtkValue
                           </div>
                         </td>
                         <td class="ax">
@@ -5066,14 +5070,14 @@
                                 <span class="type">Control Type: </span>Text ??Group??
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_TEXT
+                            ATK_ROLE_TEXT
                           </div>
                           <div class="ifaces">
                             <span class="type">Interfaces: </span>
-                            Text; Hypertext
+                            AtkText; AtkHypertext
                           </div>
                         </td>
                         <td class="ax">
@@ -5110,7 +5114,7 @@
                                 <span class="type">Control Type: </span>Text ??Group??
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Doesn't have an accessible. No child elements are
                             exposed if <a href="#el-ruby">ruby</a> is supported by the browser.
@@ -5139,7 +5143,7 @@
                                 <span class="type">Control Type: </span>Text
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Doesn't have an accessible.
                           </div>
@@ -5168,10 +5172,10 @@
                                 <span class="type">Control Type: </span>Text ??Group??
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_TEXT
+                            ATK_ROLE_TEXT
                           </div>
                         </td>
                         <td class="ax">?</td>
@@ -5195,7 +5199,7 @@
                           <div class="general">Doesn't have an accessible. Styles used are exposed by UIA text attribute identifiers of the TextRange control pattern implemented on a parent accessible.
                           </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Doesn't have an accessible, exposed as
                             "text-line-through-style:solid" text attribute on the text container.
@@ -5232,7 +5236,7 @@
                           <div class="general">Doesn't have an accessible. Styles used are exposed by UIA text attribute identifiers of the TextRange control pattern implemented on a parent accessible.
                           </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Doesn't have an accessible. Styles are mapped into
                             text attributes on its text container.
@@ -5264,7 +5268,7 @@
                         <td class="uia">
                             <div class="general">Not mapped</div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="ax">
@@ -5300,10 +5304,10 @@
                                 <span class="type">Control Type: </span>Text ??Group??
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_SECTION
+                            ATK_ROLE_SECTION
                           </div>
                           <div class="objattrs">
                             <span class="type">Object attributes: </span>
@@ -5311,7 +5315,7 @@
                           </div>
                           <div class="ifaces">
                             <span class="type">Interfaces: </span>
-                            Text; Hypertext
+                            AtkText; AtkHypertext
                           </div>
                         </td>
                         <td class="ax">
@@ -5365,18 +5369,18 @@
                                 <span class="type">Control Pattern: </span>ISelectionProvider::CanSelectMultiple set to true
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_LIST
+                            ATK_ROLE_LIST
                           </div>
                           <div class="states">
                             <span class="type">States: </span>
-                            STATE_FOCUSABLE; STATE_MULTISELECTABLE if <a href="#att-multiple-select">multiple</a> presented
+                            ATK_STATE_FOCUSABLE; ATK_STATE_MULTISELECTABLE if <a href="#att-multiple-select">multiple</a> presented
                           </div>
                           <div class="ifaces">
                             <span class="type">Interfaces: </span>
-                            Selection
+                            AtkSelection
                           </div>
                         </td>
                         <td class="ax">
@@ -5434,14 +5438,14 @@
                                 <span class="type">Control Type: </span>Combo Box
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_COMBO_BOX
+                            ATK_ROLE_COMBO_BOX
                           </div>
                           <div class="states">
                             <span class="type">States: </span>
-                            STATE_FOCUSABLE; STATE_EXPANDABLE and STATE_COLLAPSED if collapsed
+                            ATK_STATE_FOCUSABLE; ATK_STATE_EXPANDABLE and ATK_STATE_COLLAPSED if collapsed
                           </div>
                           <div class="objattrs">
                             <span class="type">Object attributes: </span>
@@ -5453,7 +5457,7 @@
                           </div>
                           <div class="children">
                             <span class="type">Children: </span>
-                            intermediate ROLE_SYSTEM_LIST containing all options
+                            intermediate ATK_ROLE_SYSTEM_LIST containing all options
                           </div>
                         </td>
                         <td class="ax">
@@ -5487,7 +5491,7 @@
                           <div class="general">Doesn't have an accessible. Exposed by UIA_FontSizeAttributeId of the TextRange control pattern implemented on a parent accessible.
                           </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Doesn't have an accessible. Exposed as "font-size"
                             text attribute on the text container.
@@ -5519,7 +5523,7 @@
                         <td class="uia">
                             <div class="general">Do not expose this object</div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="ax">
@@ -5545,7 +5549,7 @@
                                 <span class="type">Control Type: </span>Group
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="ax">
@@ -5579,7 +5583,7 @@
                           <div class="general">Doesn't have an accessible. Styles used are exposed by UIA text attribute identifiers of the TextRange control pattern implemented on a parent accessible.
                           </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Doesn't have an accessible. Used styles are mapped
                             into text attributes on its text container.
@@ -5611,7 +5615,7 @@
                         <td class="uia">
                             <div class="general">Do not expose this object</div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="ax">
@@ -5637,7 +5641,7 @@
                           <div class="general">Doesn't have an accessible. Exposed by UIA_IsSubscriptAttributeId of the TextRange control pattern implemented on a parent accessible.
                           </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Doesn't have an accessible. Exposed as "text-position:sub"
                             text attribute on its text container.
@@ -5682,9 +5686,10 @@
                                 <span class="type">Control Pattern: </span>ExpandCollapse
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
-                            <span class="type">Role: </span>ROLE_PUSHBUTTON
+                            <span class="type">Role: </span>
+                            ATK_ROLE_PUSHBUTTON
                           </div>
                         </td>
                         <td class="ax">
@@ -5718,7 +5723,7 @@
                           <div class="general">Doesn't have an accessible. Exposed by UIA_IsSuperscriptAttributeId of the TextRange control pattern implemented on a parent accessible.
                           </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Doesn't have an accessible. Exposed as "text-position:super"
                             text attribute on its text container.
@@ -5756,9 +5761,10 @@
                                 <span class="type">Control Type: </span>Image
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
-                            <span class="type">Role: </span>ROLE_IMAGE
+                            <span class="type">Role: </span>
+                            ATK_ROLE_IMAGE
                           </div>
                         </td>
                         <td class="ax">
@@ -5804,16 +5810,18 @@
                                 <span class="type">Control Pattern: </span>Table
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
-                             <span class="type">Role: </span>ROLE_TABLE
+                             <span class="type">Role: </span>
+                             ATK_ROLE_TABLE
                           </div>
                           <div class="relations">
                             <span class="type">Relations: </span>
-                            RELATION_LABELLED_BY by child <a href="#el-caption">caption</a> if any
+                            ATK_RELATION_LABELLED_BY by child <a href="#el-caption">caption</a> if any
                           </div>
                           <div class="ifaces">
-                             <span class="type">Interface: </span>Table
+                            <span class="type">Interface: </span>
+                            AtkTable
                           </div>
                         </td>
                         <td class="ax">
@@ -5847,7 +5855,7 @@
                                 <span class="type">Control Type: </span>Group
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Doesn't have an accessible</div>
                         </td>
                         <td class="ax">
@@ -5879,13 +5887,14 @@
                                 <span class="type">Control Type: </span>Data Item
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
-                             <span class="type">Role: </span>ROLE_TABLE_CELL
+                            <span class="type">Role: </span>
+                            ATK_ROLE_TABLE_CELL
                           </div>
                           <div class="ifaces">
                             <span class="type">Interfaces: </span>
-                            Text; Hypertext
+                            AtkText; AtkHypertext
                           </div>
                         </td>
                         <td class="ax">
@@ -5910,7 +5919,7 @@
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="uia">?</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="ax">?</td>
@@ -5949,14 +5958,14 @@
                                 <span class="type">Control Type: </span>Text ??Edit??
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                              ROLE_ENTRY
+                            ATK_ROLE_ENTRY
                           </div>
                           <div class="states">
                             <span class="type">States: </span>
-                            STATE_MULTI_LINE; STATE_EDITABLE if not readonly
+                            ATK_STATE_MULTI_LINE; ATK_STATE_EDITABLE if not readonly
                           </div>
                           <div class="actions">
                             <span class="type">Actions: </span>
@@ -5964,7 +5973,7 @@
                           </div>
                           <div class="ifaces">
                             <span class="type">Interfaces: </span>
-                            Text; EditableText
+                            AtkText; AtkEditableText
                           </div>
                         </td>
                         <td class="ax">
@@ -5998,7 +6007,7 @@
                                 <span class="type">Control Type: </span>Group
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Doesn't have an accessible</div>
                         </td>
                         <td class="ax">
@@ -6031,14 +6040,14 @@
                                 <span class="type">Control Type: </span>Data Item
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_TABLE_CELL
+                            ATK_ROLE_TABLE_CELL
                           </div>
                           <div class="ifaces">
                             <span class="type">Interfaces: </span>
-                            Text; Hypertext
+                            AtkText; AtkHypertext
                           </div>
                         </td>
                         <td class="ax">
@@ -6083,14 +6092,14 @@
                             </div>
                             <div class="general">??seems like it should be HeaderItem.&nbsp; ARIA UAIG has DataItem??</div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_COLUMN_HEADER
+                            ATK_ROLE_COLUMN_HEADER
                           </div>
                           <div class="ifaces">
                             <span class="type">Interfaces: </span>
-                            Text; Hypertext
+                            AtkText; AtkHypertext
                           </div>
                         </td>
                         <td class="ax">
@@ -6138,14 +6147,14 @@
                             </div>
                             <div class="general">??seems like it should be HeaderItem.&nbsp; ARIA UAIG has DataItem??</div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_ROW_HEADER
+                            ATK_ROLE_ROW_HEADER
                           </div>
                           <div class="ifaces">
                             <span class="type">Interfaces: </span>
-                            Text; Hypertext
+                            AtkText; AtkHypertext
                           </div>
                         </td>
                         <td class="ax">
@@ -6181,7 +6190,7 @@
                                 <span class="type">Control Type: </span>Header
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Doesn't have an accessible</div>
                         </td>
                         <td class="ax">
@@ -6204,7 +6213,7 @@
                           </div>
                         </td>
                         <td class="uia">?</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Not mapped
                           </div>
@@ -6235,7 +6244,7 @@
                         <td class="uia">
                             <div class="general">Not mapped</div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="ax">
@@ -6264,9 +6273,10 @@
                             </div>
                             <div class="ctrlpattern">
                                 <span class="type">Control Pattern: </span>SelectionItem</div></td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
-                            <span class="type">Role: </span>ROLE_LIST_ITEM
+                            <span class="type">Role: </span>
+                            ATK_ROLE_LIST_ITEM
                           </div>
                         </td>
                         <td class="ax">
@@ -6291,7 +6301,7 @@
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="uia">?</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="ax">?</td>
@@ -6314,7 +6324,7 @@
                           <div class="general">Doesn't have an accessible. Exposed by UIA_UnderlineStyleAttributeId of the TextRange control pattern implemented on a parent accessible. 
                           </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Doesn't have an accessible, mapped as
                             "text-underline-style:solid" text attribute on its text container.
@@ -6351,10 +6361,10 @@
                                 <span class="type">Control Type: </span>List
                             </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_LIST
+                            ATK_ROLE_LIST
                           </div>
                         </td>
                         <td class="ax">
@@ -6388,7 +6398,7 @@
                           <div class="general">Doesn't have an accessible. Styles used are exposed by UIA text attribute identifiers of the TextRange control pattern implemented on a parent accessible. 
                           </div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Doesn't have an accessible, used styles are mapped
                             to text attributes on its text container.
@@ -6419,10 +6429,10 @@
                           </div>
                         </td>
                         <td class="uia">?</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="role">
                             <span class="type">Role: </span>
-                            ROLE_PANEL
+                            ATK_ROLE_PANEL
                           </div>
                         </td>
                         <td class="ax">
@@ -6452,7 +6462,7 @@
                           </div>
                         </td>
                         <td class="uia">Not mapped</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             A line break if added is exposed via Text interface on its text container
                           </div>
@@ -6508,7 +6518,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="objattrs">
                             <span class="type">Object attributes: </span>
                             "abbr" until child <a href="#el-abbr">abbr</a> element is provided
@@ -6530,7 +6540,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Not mapped
                           </div>
@@ -6551,7 +6561,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Not mapped
                           </div>
@@ -6575,11 +6585,9 @@
                         </td>
                         </td>
                         <td class="uia"><a href="http://msdn.microsoft.com/en-us/library/system.windows.automation.automationelement.automationelementinformation.acceleratorkey.aspx">AcceleratorKey</a></td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
-                            <a href="https://people.gnome.org/~billh/at-spi-idl/html/classAccessibility_1_1Action.html#a3">
-                              Action::getKeyBinding
-                            </a>
+                            atk_action_get_keybinding
                           </div>
                         </td>
                         <td class="ax">AXAccessKey</td>
@@ -6598,7 +6606,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Not mapped
                           </div>
@@ -6619,7 +6627,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Not mapped
                           </div>
@@ -6639,11 +6647,11 @@
                           <a href="http://msdn.microsoft.com/en-us/library/system.windows.automation.automationelement.automationelementinformation.name.aspx">accName</a>
                         </td>
                         <td class="uia"><a href="http://msdn.microsoft.com/en-us/library/system.windows.automation.automationelement.automationelementinformation.name.aspx">Name</a></td>
-                        <td class="at-spi">
-                          Used for accessible name, exposed via
-                          <a href="https://people.gnome.org/~billh/at-spi-idl/html/classAccessibility_1_1Accessible.html#o0">
-                            Accessible::name
-                          </a>
+                        <td class="atk">
+                          <div class="general">
+                            Used for accessible name, exposed via
+                            atk_object_get_name
+                          </div>
                         </td>
                         <td class="ax">AXDescription</td>
                         <td class="comments">&nbsp;</td>
@@ -6661,7 +6669,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Not mapped
                           </div>
@@ -6684,12 +6692,11 @@
                           </div>
                         </td>
                         <td class="uia">not mapped</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="states">
                             <span class="type">States: </span>
-                            <a href="http://people.gnome.org/%7Ebillh/at-spi-idl/html/namespaceAccessibility.html#a217">
-                              STATE_SUPPORTS_AUTOCOMPLETION
-                            </a> on text form controls unitl the value is overriden by control
+                            ATK_STATE_SUPPORTS_AUTOCOMPLETION
+                            on text form controls unitl the value is overriden by control
                           </div>
                         <td class="ax">not mapped</td>
                         <td class="comments">&nbsp;</td>
@@ -6709,12 +6716,10 @@
                           </div>
                         </td>
                         <td class="uia">not mapped</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="states">
                             <span class="type">States: </span>
-                            <a href="http://people.gnome.org/%7Ebillh/at-spi-idl/html/namespaceAccessibility.html#a217">
-                              STATE_SUPPORTS_AUTOCOMPLETION
-                            </a>
+                            ATK_STATE_SUPPORTS_AUTOCOMPLETION
                           </div>
                         </td>
                         <td class="ax">not mapped</td>
@@ -6733,7 +6738,7 @@
                           </div>
                         </td>
                         <td class="uia">N/A</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Not mapped
                           </div>
@@ -6754,7 +6759,7 @@
                           </div>
                         </td>
                         <td class="uia">N/A</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Not mapped
                           </div>
@@ -6775,7 +6780,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Not mapped
                           </div>
@@ -6796,7 +6801,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Not mapped
                           </div>
@@ -6817,7 +6822,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Not mapped
                           </div>
@@ -6838,7 +6843,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Not mapped
                           </div>
@@ -6859,9 +6864,10 @@
                           </div>
                         </td>
                         <td class="uia">Expose as ToggleState property in Toggle Control Pattern</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="states">
-                            <span class="type">States: </span>STATE_CHECKED
+                            <span class="type">States: </span>
+                            ATK_STATE_CHECKED
                           </div>
                         </td>
                         <td class="ax">AXValue="1"</td>
@@ -6880,7 +6886,7 @@
                           </div>
                         </td>
                         <td class="uia">Expose as ToggleState property in Toggle Control Pattern.</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Not mapped
                           </div>
@@ -6901,7 +6907,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Not mapped
                           </div>
@@ -6922,7 +6928,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Not mapped
                           </div>
@@ -6943,7 +6949,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Not mapped
                           </div>
@@ -6964,9 +6970,9 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
-                            exposed via Table::getColumnExtentAt
+                            exposed via atk_table_get_column_extent_at
                           </div>
                         </td>
                         <td class="ax">AXColumnIndexRange<br>pos=column index; len=colspan value</td>
@@ -6983,7 +6989,7 @@
                             Not mapped
                           </div>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi"><div class="general">
+                        <td class="atk"><div class="general">
                             Not mapped
                           </div>
                         <td class="ax">&nbsp;</td>
@@ -7002,7 +7008,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                         <div class="general">
                             Not mapped
                           </div>
@@ -7028,14 +7034,14 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="states">
                             <span class="type">States: </span>
-                            STATE_EDITABLE on this and every nested text accessible
+                            ATK_STATE_EDITABLE on this and every nested text accessible
                           </div>
                           <div class="interfaces">
                             <span class="type">Interfaces: </span>
-                            EditableText on this and every nested text accessible
+                            AtkEditableText on this and every nested text accessible
                           </div>
                         </td>
                         <td class="ax">?</td>
@@ -7054,7 +7060,7 @@
                           </div>
                         </td>
                         <td class="uia">Expose state of the pop-up activities in the ExpandCollapseState property in the ExpandCollapse Control Pattern.</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Linked menu is available in browser's context menu on the element
                           </div>
@@ -7069,13 +7075,13 @@
                         <td class="html5">Yes</td>
                         <td class="aria">&nbsp;</td>
                         <td class="uia-express">&nbsp;</td>
-                        <td class="ia2"><td class="at-spi">
+                        <td class="ia2">
                           <div class="general">
                             Not mapped.
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Not mapped.
                           </div>
@@ -7096,9 +7102,10 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
-                            Defines an accessible's dimensions (Component::getPosition and Component::getSize)
+                            Defines an accessible's dimensions, exposed via
+                            atk_component_get_position and atk_component_get_size
                           </div>
                         </td>
                         <td class="ax">&nbsp;</td>
@@ -7117,7 +7124,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                         <div class="general">
                             Not mapped
                           </div>
@@ -7138,7 +7145,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                         <div class="general">
                             Not mapped
                           </div>
@@ -7159,7 +7166,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                         <div class="general">
                             Not mapped
                           </div>
@@ -7180,7 +7187,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                         <div class="general">
                             Not mapped
                           </div>
@@ -7201,7 +7208,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                         <div class="general">
                             Not mapped
                           </div>
@@ -7222,7 +7229,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                         <div class="general">
                             Not mapped
                           </div>
@@ -7243,7 +7250,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Exposed as "writing-mode" text attribute on the text container.
                           </div>
@@ -7264,7 +7271,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                         <div class="general">
                             Not mapped
                           </div>
@@ -7286,10 +7293,10 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="states">
                             <span class="type">States: </span>
-                            No interactive states like STATE_FOCUSABLE
+                            No interactive states like ATK_STATE_FOCUSABLE
                           </div>
                         </td>
                         <td class="ax">AXEnabled="false"</td>
@@ -7308,7 +7315,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Not mapped
                           </div>
@@ -7330,7 +7337,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="objattrs">
                             <span class="objattrs">Object attributes: </span>
                             draggable:true
@@ -7352,7 +7359,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Not mapped
                           </div>
@@ -7373,7 +7380,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Not mapped
                           </div>
@@ -7399,13 +7406,13 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="name">
                             Used for accessible name
                           </div>
                           <div class="relations">
                             <span class="type">Relations: </span>
-                            RELATION_LABEL_FOR and RELATION_LABEL_BY relations between
+                            ATK_RELATION_LABEL_FOR and ATK_RELATION_LABEL_BY relations between
                             <a href="#el-label">label</a> and referred element
                           </div>
                         </td>
@@ -7426,10 +7433,11 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="relations">
                             <span class="type">Relations: </span>
-                            RELATION_CONTROLLED_BY with an element pointed by the attribute. Paired element exposes RELATION_CONTROLLER_FOR relation.
+                            ATK_RELATION_CONTROLLED_BY with an element pointed by the attribute.
+                            Paired element exposes ATK_RELATION_CONTROLLER_FOR relation.
                           </div>
                         </td>
                         <td class="ax">&nbsp;</td>
@@ -7448,7 +7456,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Not mapped
                           </div>
@@ -7469,7 +7477,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Not mapped
                           </div>
@@ -7490,7 +7498,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Not mapped
                           </div>
@@ -7511,7 +7519,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Not mapped
                           </div>
@@ -7532,7 +7540,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Not mapped
                           </div>
@@ -7553,7 +7561,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Not mapped
                           </div>
@@ -7574,11 +7582,11 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Links the cell to its row and column header cells
                             (note, only one row and one column header cells can be exposed because of API restrictions).
-                            See Table::getRowHeader and getColumnHeader.
+                            See atk_table_get_row_header and atk_table_get_column_header.
                           </div>
                         </td>
                         <td class="ax">Expose via AXColumnHeaderUIElements and AXRowHeaderUIElements</td>
@@ -7597,9 +7605,9 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
-                            Defines an accessible's height (Component::getSize)
+                            Defines an accessible's height (atk_component_get_size)
                           </div>
                         </td>
                         <td class="ax">&nbsp;</td>
@@ -7618,7 +7626,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Makes the element not accessible
                           </div>
@@ -7639,7 +7647,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Not mapped
                           </div>
@@ -7661,7 +7669,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Creates a link accessible, for details refer to
                             <a href="#el-a">a</a> and <a href="#el-area">area</a> elements mapping.
@@ -7683,7 +7691,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Not mapped
                           </div>
@@ -7704,7 +7712,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Not mapped
                           </div>
@@ -7725,7 +7733,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Not mapped
                           </div>
@@ -7746,7 +7754,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Not mapped
                           </div>
@@ -7767,7 +7775,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Not mapped
                           </div>
@@ -7788,7 +7796,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Not mapped
                           </div>
@@ -7809,7 +7817,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Not mapped
                           </div>
@@ -7830,7 +7838,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Not mapped
                           </div>
@@ -7851,7 +7859,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="name">
                             Associates the accessible name
                           </div>
@@ -7872,7 +7880,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="textattrs">
                             Exposed as "language" text attribute on the text container
                           </div>
@@ -7894,7 +7902,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Associates the autocomplete list with the control. Refer to
                             <a href="#el-input-textetc-autocomplete">input</a> elements mapping.
@@ -7919,7 +7927,7 @@
                         <td class="uia">
                             <div class="general">Not mapped</div>
                         </td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="actions">
                             <span class="type">Actions: </span>
                             showlongdesc (exposed on <a href="#el-img">img</a> only)
@@ -7941,7 +7949,7 @@
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="ax">&nbsp;</td>
@@ -7958,7 +7966,7 @@
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="ax">&nbsp;</td>
@@ -7975,7 +7983,7 @@
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="ax">&nbsp;</td>
@@ -7995,10 +8003,10 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
-                            Exposed as Value::maximumValue if the element
-                            implements the interface
+                            Exposed as atk_value_get_maximum_value if the element
+                            implements the AtkValue interface
                           </div>
                         </td>
                         <td class="ax">AXMaxValue</td>
@@ -8018,10 +8026,10 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
-                            Exposed as Value::maximumValue if the element
-                            implements the interface
+                            Exposed as atk_value_get_maximum_value if the element
+                            implements the AtkValue interface
                           </div>
                         </td>
                         <td class="ax">AXMaxValue</td>
@@ -8038,7 +8046,7 @@
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="ax">&nbsp;</td>
@@ -8055,7 +8063,7 @@
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="ax">&nbsp;</td>
@@ -8073,7 +8081,7 @@
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="ax">&nbsp;</td>
@@ -8090,7 +8098,7 @@
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="ax">&nbsp;</td>
@@ -8110,10 +8118,10 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
-                            Exposed as Value::minimumValue if the element
-                            implements the interface
+                            Exposed as atk_value_get_minimum_value if the element
+                            implements the AtkValue interface
                           </div>
                         </td>
                         <td class="ax">AXMinValue</td>
@@ -8133,10 +8141,10 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
-                            Exposed as Value::minimumValue if the element
-                            implements the interface
+                            Exposed as atk_value_get_minimum_value if the element
+                            implements the AtkValue interface
                           </div>
                         </td>
                         <td class="ax">AXMinValue</td>
@@ -8155,7 +8163,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Not mapped
                           </div>
@@ -8181,10 +8189,10 @@
                         </div>
                       </td>
                       <td class="uia">&nbsp;</td>
-                      <td class="at-spi">
+                      <td class="atk">
                         <div class="states">
                           <span class="type">States: </span>
-                          STATE_SYSTEM_MULTISELECTABLE
+                          ATK_STATE_SYSTEM_MULTISELECTABLE
                         </div>
                         <div class="general">
                           A multi selectable listbox accessible, refer to
@@ -8205,7 +8213,7 @@
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="ax">&nbsp;</td>
@@ -8222,7 +8230,7 @@
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="ax">&nbsp;</td>
@@ -8239,7 +8247,7 @@
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="ax">&nbsp;</td>
@@ -8256,7 +8264,7 @@
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="ax">&nbsp;</td>
@@ -8273,7 +8281,7 @@
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="ax">&nbsp;</td>
@@ -8290,7 +8298,7 @@
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="ax">&nbsp;</td>
@@ -8307,7 +8315,7 @@
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="ax">&nbsp;</td>
@@ -8324,7 +8332,7 @@
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="ax">&nbsp;</td>
@@ -8339,7 +8347,13 @@
                         <td class="uia-express">STATE_SYSTEM_EXPANDED<br>STATE_SYSTEM_COLLAPSED</td>
                         <td class="ia2">STATE_SYSTEM_EXPANDED<br>STATE_SYSTEM_COLLAPSED</td>
                         <td class="uia"><a href="http://msdn.microsoft.com/en-us/library/system.windows.automation.expandcollapsepattern.aspx">ExpandCollapsePattern</a></td>
-                        <td class="at-spi">STATE_COLLAPSED<br>STATE_EXPANDED</td>
+                        <td class="atk">
+                          <div class="states">
+                            <span class="type">States: </span>
+                            ATK_STATE_COLLAPSED or ATK_STATE_EXPANDED depending
+                            on the attribute value
+                          </div>
+                        </td>
                         <td class="ax">boolean AXExpanded</td>
                         <td class="comments">Set properties on the <code><a href="#el-summary">summary</a></code> element.</td>
                     </tr>
@@ -8352,7 +8366,13 @@
                         <td class="uia-express">STATE_SYSTEM_EXPANDED<br>STATE_SYSTEM_COLLAPSED</td>
                         <td class="ia2">STATE_SYSTEM_EXPANDED<br>STATE_SYSTEM_COLLAPSED</td>
                         <td class="uia"><a href="http://msdn.microsoft.com/en-us/library/system.windows.automation.expandcollapsepattern.aspx">ExpandCollapsePattern</a></td>
-                        <td class="at-spi">STATE_COLLAPSED<br>STATE_EXPANDED</td>
+                        <td class="atk">
+                          <div class="states">
+                            <span class="type">States: </span>
+                            ATK_STATE_COLLAPSED or ATK_STATE_EXPANDED depending
+                            on the attribute value
+                          </div>
+                        </td>
                         <td class="ax">boolean AXExpanded</td>
                         <td class="comments"></td>
                     </tr>
@@ -8367,7 +8387,7 @@
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="ax">&nbsp;</td>
@@ -8387,10 +8407,10 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="states">
                             <span class="type">States: </span>
-                            STATE_INVALID_ENTRY if value doesn't meet the pattern
+                            ATK_STATE_INVALID_ENTRY if value doesn't meet the pattern
                           </div>
                         </td>
                         <td class="ax">&nbsp;</td>
@@ -8410,7 +8430,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="name">
                             Associates the accessible name or if it was provided otherwise then
                             accessible description
@@ -8430,7 +8450,7 @@
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="ax">&nbsp;</td>
@@ -8447,7 +8467,7 @@
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="ax">&nbsp;</td>
@@ -8464,7 +8484,7 @@
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="ax">&nbsp;</td>
@@ -8485,9 +8505,9 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="states">
-                            Removes STATE_EDITABLE bit bit from
+                            Removes ATK_STATE_EDITABLE bit bit from
                             <a href="#el-input-text">input</a> and
                             <a href="#el-textarea">textarea</a> elements
                           </div>
@@ -8506,7 +8526,7 @@
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="ax">&nbsp;</td>
@@ -8522,13 +8542,15 @@
                       <p>* Exposed as STATE_SYSTEM_ALERT_LOW, STATE_SYSTEM_ALERT_HIGH in Firefox.</p></td>
                         <td class="ia2">
                           <div class="states">
-                            Exposes STATE_REQUIRED
+                            <span class="type">States: </span>
+                            IA2_STATE_REQUIRED
                           </div>
                         </td>
                         <td class="uia">Expose as IsrequiredForForm property.</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="states">
-                            Exposes STATE_REQUIRED
+                            <span class="type">States: </span>
+                            ATK_STATE_REQUIRED
                           </div>
                         </td>
                         <td class="ax">AXRequired="true"</td>
@@ -8547,7 +8569,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Changes the numbering of underlying list item accessibles
                           </div>
@@ -8566,7 +8588,7 @@
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="ax">&nbsp;</td>
@@ -8585,9 +8607,9 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
-                            exposed via Table::getRowExtentAt
+                            exposed via atk_table_get_row_extent_at
                           </div>
                         </td>
                         <td class="ax">AXRowIndexRange<br>pos=row index; len=rowspan value</td>
@@ -8604,7 +8626,7 @@
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="ax">&nbsp;</td>
@@ -8623,7 +8645,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="textattrs">
                             Mapped to "invalid" text attribute on the text container
                           </div>
@@ -8644,7 +8666,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Defines whether the element is a row or column header (refer to <a href="#el-th">th</a> element)
                           </div>
@@ -8663,7 +8685,7 @@
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="ax">&nbsp;</td>
@@ -8680,7 +8702,7 @@
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="ax">&nbsp;</td>
@@ -8695,15 +8717,17 @@
                         <td class="uia-express">&nbsp;</td>
                         <td class="ia2">
                           <div class="states">
-                            Exposed as STATE_SYSTEM_SELECTED and if the container widget has DOM focus then
+                            <span class="type">States: </span>
+                            STATE_SYSTEM_SELECTED; if the container widget has DOM focus then
                             STATE_SYSTEM_FOCUSED (refer to <a href="#el-option">option</a> element)
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="states">
-                            Exposed as STATE_SELECTED and if the container widget has DOM focus then
-                            STATE_FOCUSED (refer to <a href="#el-option">option</a> element)
+                            <span class="type">States: </span>
+                            ATK_STATE_SELECTED; if the container widget has DOM focus then
+                            ATK_STATE_FOCUSED (refer to <a href="#el-option">option</a> element)
                           </div>
                         </td>
                         <td class="ax">&nbsp;</td>
@@ -8720,7 +8744,7 @@
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="ax">&nbsp;</td>
@@ -8740,7 +8764,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             If greater than 1 then creates a listbox accessible,
                             refer to <a href="#el-select-listbox">select</a> element for details
@@ -8760,7 +8784,7 @@
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="ax">&nbsp;</td>
@@ -8780,9 +8804,9 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
-                            exposed via Table::getColumnExtentAt
+                            exposed via atk_table_get_column_extent_at
                           </div>
                         </td>
                         <td class="ax">&nbsp;</td>
@@ -8802,7 +8826,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="objattrs">
                             <span class="type">Object attributes: </span>
                             src on <a href="#el-img">img</a> only
@@ -8822,7 +8846,7 @@
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="ax">&nbsp;</td>
@@ -8839,7 +8863,7 @@
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="ax">&nbsp;</td>
@@ -8858,7 +8882,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Changes the numbering of underlying list item accessibles
                           </div>
@@ -8879,10 +8903,10 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
-                            Exposed as Value::minimumIncrement if the element
-                            implements the interface
+                            Exposed as atk_value_get_minimum_increment if the element
+                            implements the AtkValue interface
                           </div>
                         </td>
                         <td class="ax">&nbsp;</td>
@@ -8900,7 +8924,7 @@
                             Refer to CSS accessibility mapping
                           </div>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Refer to CSS accessibility mapping
                           </div>
@@ -8934,10 +8958,10 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="states">
                             <span class="type">States: </span>
-                            STATE_FOCUSABLE; when the element has DOM focus then STATE_FOCUSED
+                            ATK_STATE_FOCUSABLE; when the element has DOM focus then ATK_STATE_FOCUSED
                           </div>
                         </td>
                         <td class="ax">&nbsp;</td>
@@ -8954,7 +8978,7 @@
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="ax">&nbsp;</td>
@@ -8971,7 +8995,7 @@
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="ax">&nbsp;</td>
@@ -8988,7 +9012,7 @@
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="ax">&nbsp;</td>
@@ -9008,7 +9032,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="name">
                             Associates the accessible name or if it was provided otherwise then
                             accessible description
@@ -9030,7 +9054,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="name">
                             Associates the accessible name
                           </div>
@@ -9052,7 +9076,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="name">
                             Associates the accessible name or if it was provided otherwise then
                             accessible description
@@ -9072,7 +9096,7 @@
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="ax">
@@ -9091,7 +9115,7 @@
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="ax">
@@ -9110,7 +9134,7 @@
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="ax">&nbsp;</td>
@@ -9127,7 +9151,7 @@
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="ax">&nbsp;</td>
@@ -9146,7 +9170,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             <a href="#el-input_submit">submit</a> type may be a default button in the form
                           </div>
@@ -9170,7 +9194,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Defines the accessible role, states and other properties, refer to
                             type="<a href="#el-input-text">text</a>",
@@ -9195,7 +9219,7 @@
                           </div>
                         </td> 
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Defines the accessible role and states:
                             type="<a href="#el-menuitem-command">command</a>"
@@ -9215,7 +9239,7 @@
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="ax">&nbsp;</td>
@@ -9232,7 +9256,7 @@
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="ax">&nbsp;</td>
@@ -9249,7 +9273,7 @@
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">Not mapped</div>
                         </td>
                         <td class="ax">&nbsp;</td>
@@ -9268,7 +9292,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Responsible for image map creation, refer to <a href="#el-img">img</a> element
                           </div>
@@ -9289,7 +9313,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Not mapped
                           </div>
@@ -9311,7 +9335,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="name">
                             Associates the accessible value for entry type input elements
                             and accessible name for button type input elements
@@ -9333,7 +9357,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Exposed as a text of first child of the list item accessible
                           </div>
@@ -9354,9 +9378,9 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
-                            Exposed as Value::currentValue
+                            Exposed as atk_value_get_current_value
                           </div>
                         </td>
                         <td class="ax">AXValue</td>
@@ -9375,7 +9399,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Not mapped
                           </div>
@@ -9396,9 +9420,9 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
-                            Defines an accessible's width (Component::getSize)
+                            Defines an accessible's width (atk_component_get_size)
                           </div>
                         </td>
                         <td class="ax">AXSize<br>w=<i>n</i></td>
@@ -9417,7 +9441,7 @@
                           </div>
                         </td>
                         <td class="uia">&nbsp;</td>
-                        <td class="at-spi">
+                        <td class="atk">
                           <div class="general">
                             Not mapped
                           </div>
@@ -9464,7 +9488,7 @@
               <td class="uia-express">?</td>
               <td class="ia2">?</td>
               <td class="uia">?</td>
-              <td class="at-spi">?</td>
+              <td class="atk">?</td>
               <td class="ax">?</td>
             </tr>
             <tr tabindex="-1" id="el-acronym">
@@ -9475,7 +9499,7 @@
               <td class="uia-express">?</td>
               <td class="ia2">?</td>
               <td class="uia">?</td>
-              <td class="at-spi">?</td>
+              <td class="atk">?</td>
               <td class="ax">?</td>
             </tr>
             <tr tabindex="-1" id="el-basefont">
@@ -9486,7 +9510,7 @@
               <td class="uia-express"><div class="general"> Not mapped </div></td>
               <td class="ia2"><div class="general"> Not mapped </div></td>
               <td class="uia"><div class="general"> Not mapped </div></td>
-              <td class="at-spi"><div class="general"> Not mapped </div></td>
+              <td class="atk"><div class="general"> Not mapped </div></td>
               <td class="ax"><div class="general"> Not mapped </div></td>
             </tr>
             <tr tabindex="-1" id="el-big">
@@ -9497,7 +9521,7 @@
               <td class="uia-express">?</td>
               <td class="ia2">?</td>
               <td class="uia">?</td>
-              <td class="at-spi">?</td>
+              <td class="atk">?</td>
               <td class="ax">?</td>
             </tr>
             <tr tabindex="-1" id="el-center">
@@ -9509,7 +9533,7 @@
               <td class="ia2"><div class="role"> <span class="type">Role: </span> tag name BSTR (MSAA) and IA2_ROLE_PARAGRAPH</div>
                 <div class="ifaces"> <span class="type">Interfaces: </span> IAccessibleText2; IAccessibleHypertext2 </div></td>
               <td class="uia">?</td>
-              <td class="at-spi">?</td>
+              <td class="atk">?</td>
               <td class="ax">?</td>
             </tr>
             <tr tabindex="-1" id="el-dir">
@@ -9520,7 +9544,7 @@
               <td class="uia-express">?</td>
               <td class="ia2">?</td>
               <td class="uia">?</td>
-              <td class="at-spi">?</td>
+              <td class="atk">?</td>
               <td class="ax">?</td>
             </tr>
             <tr tabindex="-1" id="el-font">
@@ -9531,7 +9555,7 @@
               <td class="uia-express">?</td>
               <td class="ia2">?</td>
               <td class="uia">?</td>
-              <td class="at-spi">?</td>
+              <td class="atk">?</td>
               <td class="ax">?</td>
             </tr>
             <tr tabindex="-1" id="el-frame">
@@ -9563,14 +9587,14 @@
                       <span class="type">Control Type: </span>Document
                   </div>
               </td>
-              <td class="at-spi">
+              <td class="atk">
                 <div class="role">
                   <span class="type">Role: </span>
-                  ROLE_INTERNAL_FRAME
+                  ATK_ROLE_INTERNAL_FRAME
                 </div>
                 <div class="children">
                   <span class="type">Child: </span>
-                  ROLE_DOCUMENT_FRAME
+                  ATK_ROLE_DOCUMENT_FRAME
                 </div>
               </td>
               <td class="ax">
@@ -9599,7 +9623,7 @@
                 </div>
               </td>
               <td class="uia">?</td>
-              <td class="at-spi">
+              <td class="atk">
                 <div class="general">
                   Doesn't have an accessible. All DOM attributes are
                   proccessed as they belonged to its document accessible.
@@ -9618,7 +9642,7 @@
               <td class="uia-express">?</td>
               <td class="ia2">?</td>
               <td class="uia">?</td>
-              <td class="at-spi">?</td>
+              <td class="atk">?</td>
               <td class="ax">?</td>
             </tr>
             <tr tabindex="-1" id="el-hgroup">
@@ -9630,8 +9654,16 @@
               <td class="ia2"><div class="role"> <span class="type">Role: </span> tag name BSTR (MSAA) and IA2_ROLE_PARAGRAPH</div>
               <div class="ifaces"> <span class="type">Interfaces: </span> IAccessibleText2; IAccessibleHypertext2; </div></td>
               <td class="uia">?</td>
-              <td class="at-spi"><div class="role"> <span class="type">Role: </span> ROLE_PARAGRAPH</div>
-              <div class="ifaces"> <span class="type">Interfaces: </span> Text; Hypertext </div></td>
+              <td class="atk">
+                <div class="role">
+                  <span class="type">Role: </span>
+                  ATK_ROLE_PARAGRAPH
+                </div>
+                <div class="ifaces">
+                  <span class="type">Interfaces: </span>
+                  AtkText; AtkHypertext 
+                </div>
+              </td>
               <td class="ax"><div class="role"> <span class="type">AXRole: </span>AXGroup </div>
                 <div class="subrole"> <span class="type">AXSubrole: </span>(nil) </div>
                 <div class="roledesc"> <span class="type">AXRoleDescription: </span>group </div></td>
@@ -9644,7 +9676,7 @@
               <td class="uia-express">?</td>
               <td class="ia2">?</td>
               <td class="uia">?</td>
-              <td class="at-spi">?</td>
+              <td class="atk">?</td>
               <td class="ax">?</td>
             </tr>
             <tr tabindex="-1" id="el-listing">
@@ -9655,7 +9687,7 @@
               <td class="uia-express">?</td>
               <td class="ia2">?</td>
               <td class="uia">?</td>
-              <td class="at-spi">?</td>
+              <td class="atk">?</td>
               <td class="ax">?</td>
             </tr>
             <tr tabindex="-1" id="el-plaintext">
@@ -9666,7 +9698,7 @@
               <td class="uia-express">?</td>
               <td class="ia2">?</td>
               <td class="uia">?</td>
-              <td class="at-spi">?</td>
+              <td class="atk">?</td>
               <td class="ax">?</td>
             </tr>
             <tr tabindex="-1" id="el-rb">
@@ -9677,7 +9709,7 @@
               <td class="uia-express">?</td>
               <td class="ia2">?</td>
               <td class="uia">?</td>
-              <td class="at-spi">?</td>
+              <td class="atk">?</td>
               <td class="ax">?</td>
             </tr>
             <tr tabindex="-1" id="el-strike">
@@ -9688,7 +9720,7 @@
               <td class="uia-express">?</td>
               <td class="ia2">?</td>
               <td class="uia">?</td>
-              <td class="at-spi">?</td>
+              <td class="atk">?</td>
               <td class="ax">?</td>
             </tr>
             <tr tabindex="-1" id="el-tt">
@@ -9699,7 +9731,7 @@
               <td class="uia-express">?</td>
               <td class="ia2">?</td>
               <td class="uia">?</td>
-              <td class="at-spi">?</td>
+              <td class="atk">?</td>
               <td class="ax">?</td>
             </tr>
             <tr tabindex="-1" id="el-xmp">
@@ -9710,7 +9742,7 @@
               <td class="uia-express">?</td>
               <td class="ia2">?</td>
               <td class="uia">?</td>
-              <td class="at-spi">?</td>
+              <td class="atk">?</td>
               <td class="ax">?</td>
             </tr>
           </tbody>
