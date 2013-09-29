@@ -25,8 +25,8 @@ $(document).ready(function() {
 					$('tbody tr', $tableContainer).each(function() {
 						$(this).attr('id', ids[$(this).index()]);
 					});
-					if ($table.attr('id') == 'properties') {
-						$(this).text('View by state and property');
+					if ($table.hasClass('attributes')) {
+						$(this).text('View by attribute');
 					} else {
 						$(this).text('View by element');
 					}
@@ -74,8 +74,8 @@ $(document).ready(function() {
 				});
 				//clone colHeaders array for use in details table row headers
 				var rowHeaders = colHeaders.slice(0);
-				//if properties mapping table...
-				if ($table.attr('id') == 'properties') {
+				//if attributes mapping table...
+				if ($table.hasClass('attributes')) {
 					//remove second column header from array
 					rowHeaders.shift();
 					//remove and store "HTML elements" cell from rowCells array for use in details' summary and table caption
@@ -84,12 +84,12 @@ $(document).ready(function() {
 				}
 				//create content for each <details> element; add row header's content to summary
 				var details = '<details class="map"><summary id="' + id + '">' + $summary;
-				//if properties mapping table, append relevant elements to summary
-				if ($table.attr('id') == 'properties') {
+				//if attributes mapping table, append relevant elements to summary
+				if ($table.hasClass('attributes')) {
 					details += ' [' + relevantElsSummary + ']';
 				}
 				details += '</summary><table><caption>' + $caption;
-				if ($table.attr('id') == 'properties') {
+				if ($table.hasClass('attributes')) {
 					details += ' [' + relevantElsCaption + ']';
 				}
 				details += '</caption><tbody>';

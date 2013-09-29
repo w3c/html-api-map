@@ -81,17 +81,17 @@
         </li>
     	</ul>
     	<div class="table-container">
-        	<table class="map-table" id="elements">
+        	<table class="map-table elements" id="elements">
         		<caption>Mappings of HTML elements to platform accessibility APIs: <abbr title="Accessible Rich Internet Applications">ARIA</abbr>, MSAA + UIA Express, MSAA + IAccessible2, UIA, ATK, and AX</caption>
         		<thead>
         			<tr>
-        				<th>HTML element</th>
+        				<th>Element</th>
         				<th><a href="http://www.w3.org/TR/html401/">HTML4</a></th>
         				<th><a href="http://www.w3.org/html/wg/drafts/html/master/">HTML5</a></th>
         				<th><a href="http://www.w3.org/WAI/PF/aria/">WAI-ARIA</a></th>
         				<th><a href="http://msdn.microsoft.com/en-us/library/dd373608%28v=VS.85%29.aspx">MSAA</a> + <a href="http://msdn.microsoft.com/en-us/library/windows/desktop/dd561898%28v=vs.85%29.aspx">UIA Express</a></th>
         				<th><a href="http://msdn.microsoft.com/en-us/library/dd373608%28v=VS.85%29.aspx">MSAA</a> + <a href="http://accessibility.linuxfoundation.org/a11yspecs/ia2/docs/html/">IAccessible2</a></th>
-                <th><a href="http://msdn.microsoft.com/en-us/library/ms726297%28v=VS.85%29.aspx">UIA Control Type and Other Features</a></th>
+                <th><a href="http://msdn.microsoft.com/en-us/library/ms726297%28v=VS.85%29.aspx">UIA</a></th>
         				<th><a href="https://developer.gnome.org/atk/stable/">ATK</a></th>
         				<th><a href="http://developer.apple.com/library/mac/#documentation/Accessibility/Conceptual/AccessibilityMacOSX/OSXAXIntro/OSXAXintro.html">AX</a></th>
         			</tr>
@@ -6484,7 +6484,7 @@
     <section>
         <h2>HTML Attribute to Accessibility API State and Property Mapping Matrix</h2>
         <div class="table-container">
-            <table class="map-table" id="properties">
+            <table class="map-table attributes" id="attributes">
         		<caption>Mappings of HTML attributes (excluding event handler content attributes) to platform accessibility APIs: ARIA, MSAA + UIA Express, MSAA + IAccessible2, UIA, ATK, and AX </caption>
         		<thead>
         			<tr>
@@ -6580,7 +6580,6 @@
                             <a href="http://msdn.microsoft.com/en-us/library/accessibility.iaccessible.acckeyboardshortcut.aspx">accKeyboardShortcut</a>
                             and IAccessibleAction::keyBinding
                           </div>
-                        </td>
                         </td>
                         <td class="uia"><a href="http://msdn.microsoft.com/en-us/library/system.windows.automation.automationelement.automationelementinformation.acceleratorkey.aspx">AcceleratorKey</a></td>
                         <td class="atk">
@@ -9476,23 +9475,23 @@
         <li>All elements having an accessible object in IAccessible2 mapping are supposed to implement IAccessible, IAccessible2 and IAccessible2_2 interfaces</li>
       </ul>
       <div class="table-container">
-        <table class="map-table" id="obsolete-elements">
+        <table class="map-table elements" id="obsolete-elements">
           <caption>Mappings of obsolete HTML elements to platform accessibility APIs: ARIA, MSAA + UIA Express, MSAA + IAccessible2, UIA, ATK, and AX</caption>
           <thead>
             <tr>
-              <th>HTML element</th>
+              <th>Element</th>
               <th><a href="http://www.w3.org/TR/html401/">HTML4</a></th>
               <th><a href="http://www.w3.org/html/wg/drafts/html/master/">HTML5</a></th>
               <th><a href="http://www.w3.org/WAI/PF/aria/">WAI-ARIA</a></th>
               <th><a href="http://msdn.microsoft.com/en-us/library/dd373608%28v=VS.85%29.aspx">MSAA</a> + <a href="http://msdn.microsoft.com/en-us/library/windows/desktop/dd561898%28v=vs.85%29.aspx">UIA Express</a></th>
               <th><a href="http://msdn.microsoft.com/en-us/library/dd373608%28v=VS.85%29.aspx">MSAA</a> + <a href="http://accessibility.linuxfoundation.org/a11yspecs/ia2/docs/html/">IAccessible2</a></th>
-              <th><a href="http://msdn.microsoft.com/en-us/library/ms726297%28v=VS.85%29.aspx">UIA Control Type and Other Features</a></th>
+              <th><a href="http://msdn.microsoft.com/en-us/library/ms726297%28v=VS.85%29.aspx">UIA</a></th>
               <th><a href="https://developer.gnome.org/atk/stable/">ATK</a></th>
               <th><a href="http://developer.apple.com/library/mac/#documentation/Accessibility/Conceptual/AccessibilityMacOSX/OSXAXIntro/OSXAXintro.html">AX</a></th>
             </tr>
           </thead>
           <tbody>
-            <tr tabindex="-1" id="el-applet">
+            <tr tabindex="-1" id="obs-el-applet">
               <th><code><a href="http://www.w3.org/TR/html401/struct/objects.html#edef-APPLET">applet</a></code></th>
               <td class="html4">Yes</td>
               <td class="html5">No</td>
@@ -9503,7 +9502,7 @@
               <td class="atk">?</td>
               <td class="ax">?</td>
             </tr>
-            <tr tabindex="-1" id="el-acronym">
+            <tr tabindex="-1" id="obs-el-acronym">
               <th><code><a href="http://www.w3.org/TR/html401/struct/text.html#edef-ACRONYM">acronym</a></code></th>
               <td class="html4">Yes</td>
               <td class="html5">No</td>
@@ -9514,7 +9513,7 @@
               <td class="atk">?</td>
               <td class="ax">?</td>
             </tr>
-            <tr tabindex="-1" id="el-basefont">
+            <tr tabindex="-1" id="obs-el-basefont">
               <th><code><a href="http://www.w3.org/TR/html401/present/graphics.html#edef-BASEFONT">basefont</a></code></th>
               <td class="html4">Yes</td>
               <td class="html5">No</td>
@@ -9525,7 +9524,7 @@
               <td class="atk"><div class="general"> Not mapped </div></td>
               <td class="ax"><div class="general"> Not mapped </div></td>
             </tr>
-            <tr tabindex="-1" id="el-big">
+            <tr tabindex="-1" id="obs-el-big">
               <th><code><a href="http://www.w3.org/TR/html401/present/graphics.html#h-15.2.1">big</a></code></th>
               <td class="html4">Yes</td>
               <td class="html5">No</td>
@@ -9536,7 +9535,7 @@
               <td class="atk">?</td>
               <td class="ax">?</td>
             </tr>
-            <tr tabindex="-1" id="el-center">
+            <tr tabindex="-1" id="obs-el-center">
               <th><code><a href="http://www.w3.org/TR/html401/present/graphics.html#edef-CENTER">center</a></code></th>
               <td class="html4">No</td>
               <td class="html5">No</td>
@@ -9548,7 +9547,7 @@
               <td class="atk">?</td>
               <td class="ax">?</td>
             </tr>
-            <tr tabindex="-1" id="el-dir">
+            <tr tabindex="-1" id="obs-el-dir">
               <th><code><a href="http://www.w3.org/TR/html401/struct/lists.html#edef-DIR">dir</a></code></th>
               <td class="html4">Yes</td>
               <td class="html5">No</td>
@@ -9559,7 +9558,7 @@
               <td class="atk">?</td>
               <td class="ax">?</td>
             </tr>
-            <tr tabindex="-1" id="el-font">
+            <tr tabindex="-1" id="obs-el-font">
               <th><code><a href="http://www.w3.org/TR/html401/present/graphics.html#edef-FONT">font</a></code></th>
               <td class="html4">Yes</td>
               <td class="html5">No</td>
@@ -9570,7 +9569,7 @@
               <td class="atk">?</td>
               <td class="ax">?</td>
             </tr>
-            <tr tabindex="-1" id="el-frame">
+            <tr tabindex="-1" id="obs-el-frame">
               <th><code><a href="http://www.w3.org/TR/html401/present/frames.html#edef-FRAME">frame</a></code></th>
               <td class="html4">Yes</td>
               <td class="html5">No</td>
@@ -9621,7 +9620,7 @@
                   </div>
               </td>
             </tr>
-            <tr tabindex="-1" id="el-frameset">
+            <tr tabindex="-1" id="obs-el-frameset">
               <th><code><a href="http://www.w3.org/TR/html401/present/frames.html#edef-FRAMESET">frameset</a></code></th>
               <td class="html4">Yes</td>
               <td class="html5">No</td>
@@ -9646,7 +9645,7 @@
                 <div class="general">Not mapped</div>
               </td>
             </tr>
-            <tr tabindex="-1" id="el-noframes">
+            <tr tabindex="-1" id="obs-el-noframes">
               <th><code><a href="http://www.w3.org/TR/html401/present/frames.html#edef-NOFRAMES">noframes</a></code></th>
               <td class="html4">Yes</td>
               <td class="html5">No</td>
@@ -9657,7 +9656,7 @@
               <td class="atk">?</td>
               <td class="ax">?</td>
             </tr>
-            <tr tabindex="-1" id="el-hgroup">
+            <tr tabindex="-1" id="obs-el-hgroup">
               <th><code>hgroup</code></th>
               <td class="html4">No</td>
               <td class="html5">No</td>
@@ -9680,7 +9679,7 @@
                 <div class="subrole"> <span class="type">AXSubrole: </span>(nil) </div>
                 <div class="roledesc"> <span class="type">AXRoleDescription: </span>group </div></td>
             </tr>
-            <tr tabindex="-1" id="el-isindex">
+            <tr tabindex="-1" id="obs-el-isindex">
               <th><code><a href="http://www.w3.org/TR/html401/interact/forms.html#edef-ISINDEX">isindex</a></code></th>
               <td class="html4">Yes</td>
               <td class="html5">No</td>
@@ -9691,7 +9690,7 @@
               <td class="atk">?</td>
               <td class="ax">?</td>
             </tr>
-            <tr tabindex="-1" id="el-listing">
+            <tr tabindex="-1" id="obs-el-listing">
               <th><code><a href="http://www.w3.org/TR/REC-html32#listing">listing</a></code></th>
               <td class="html4">No</td>
               <td class="html5">No</td>
@@ -9702,7 +9701,7 @@
               <td class="atk">?</td>
               <td class="ax">?</td>
             </tr>
-            <tr tabindex="-1" id="el-plaintext">
+            <tr tabindex="-1" id="obs-el-plaintext">
               <th><code><a href="http://www.w3.org/TR/REC-html32#plaintext">plaintext</a></code></th>
               <td class="html4">No</td>
               <td class="html5">No</td>
@@ -9713,7 +9712,7 @@
               <td class="atk">?</td>
               <td class="ax">?</td>
             </tr>
-            <tr tabindex="-1" id="el-rb">
+            <tr tabindex="-1" id="obs-el-rb">
               <th><code>rb</code></th>
               <td class="html4">No</td>
               <td class="html5">No</td>
@@ -9724,7 +9723,7 @@
               <td class="atk">?</td>
               <td class="ax">?</td>
             </tr>
-            <tr tabindex="-1" id="el-strike">
+            <tr tabindex="-1" id="obs-el-strike">
               <th><code><a href="http://www.w3.org/TR/html401/present/graphics.html#h-15.2.1">strike</a></code></th>
               <td class="html4">Yes</td>
               <td class="html5">No</td>
@@ -9735,7 +9734,7 @@
               <td class="atk">?</td>
               <td class="ax">?</td>
             </tr>
-            <tr tabindex="-1" id="el-tt">
+            <tr tabindex="-1" id="obs-el-tt">
               <th><code><a href="http://www.w3.org/TR/html401/present/graphics.html#h-15.2.1">tt</a></code></th>
               <td class="html4">Yes</td>
               <td class="html5">No</td>
@@ -9746,7 +9745,7 @@
               <td class="atk">?</td>
               <td class="ax">?</td>
             </tr>
-            <tr tabindex="-1" id="el-xmp">
+            <tr tabindex="-1" id="obs-el-xmp">
               <th><code><a href="http://www.w3.org/TR/REC-html32#xmp">xmp</a></code></th>
               <td class="html4">No</td>
               <td class="html5">No</td>
@@ -9756,6 +9755,1631 @@
               <td class="uia">?</td>
               <td class="atk">?</td>
               <td class="ax">?</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section>
+      <h2>Obsolete HTML Attribute to Accessibility API Role Mapping Matrix</h2>
+      <p>The following mappings for obsolete HTML attributes are provided for user agent support of legacy markup.</p>
+      <div class="table-container">
+        <table class="map-table attributes" id="obsolete-attributes">
+          <caption>Mappings of obsolete HTML elements to platform accessibility APIs: ARIA, MSAA + UIA Express, MSAA + IAccessible2, UIA, ATK, and AX</caption>
+          <thead>
+            <tr>
+                <th>Attribute</th>
+                <th>Element(s)</th>
+                <th><a href="http://www.w3.org/TR/html401/">HTML4</a></th>
+                <th><a href="http://www.w3.org/html/wg/drafts/html/master/">HTML5</a></th>
+                <th><a href="http://www.w3.org/WAI/PF/aria/">WAI-ARIA</a></th>
+                <th><a href="http://msdn.microsoft.com/en-us/library/dd373608%28v=VS.85%29.aspx">MSAA</a> + <a href="http://msdn.microsoft.com/en-us/library/windows/desktop/dd561898%28v=vs.85%29.aspx">UIA Express</a></th>
+                <th><a href="http://msdn.microsoft.com/en-us/library/dd373608%28v=VS.85%29.aspx">MSAA</a> + <a href="http://accessibility.linuxfoundation.org/a11yspecs/ia2/docs/html/">IAccessible2</a></th>
+                <th><a href="http://msdn.microsoft.com/en-us/library/ms726297%28v=VS.85%29.aspx">UIA</a></th>
+                <th><a href="https://developer.gnome.org/atk/stable/">ATK</a></th>
+                <th><a href="http://developer.apple.com/library/mac/#documentation/Accessibility/Conceptual/AccessibilityMacOSX/OSXAXIntro/OSXAXintro.html">AX</a></th>
+                <th>Comments</th>
+              </tr>
+          </thead>
+          <tbody>
+            <tr tabindex="-1" id="obs-att-accept">
+                <th><code>accept</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-form-element">form</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-align-caption">
+                <th><code>align</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-caption-element">caption</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-align-col">
+                <th><code>align</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-col-element">col</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-align-div">
+                <th><code>align</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-div-element">div</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-align-embed">
+                <th><code>align</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-embed-element">embed</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-align-h1">
+                <th><code>align</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements">h1</a></code>-<code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements">h6</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-align-hr">
+                <th><code>align</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-hr-element">hr</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-align-iframe">
+                <th><code>align</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-iframe-element">iframe</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-align-img">
+                <th><code>align</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-img-element">img</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-align-input">
+                <th><code>align</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-input-element">input</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-align-legend">
+                <th><code>align</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-legend-element">legend</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-align-object">
+                <th><code>align</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-object-element">object</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-align-p">
+                <th><code>align</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-p-element">p</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-align-table">
+                <th><code>align</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-table-element">table</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-align-tbody">
+                <th><code>align</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-tbody-element">tbody</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-thead-element">thead</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-tfoot-element">tfoot</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-align-td">
+                <th><code>align</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-td-element">td</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-th-element">th</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-align-tr">
+                <th><code>align</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-tr-element">tr</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-alink">
+                <th><code>alink</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-body-element">body</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-allowtransparency">
+                <th><code>allowtransparency</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-iframe-element">iframe</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-archive">
+                <th><code>archive</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-object-element">object</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-axis">
+                <th><code>axis</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-td-element">td</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-th-element">th</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-background">
+                <th><code>background</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-body-element">body</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-table-element">table</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-thead-element">thead</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-tbody-element">tbody</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-tfoot-element">tfoot</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-tr-element">tr</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-td-element">td</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-th-element">th</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-bgcolor-body">
+                <th><code>bgcolor</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-body-element">body</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-bgcolor-table">
+                <th><code>bgcolor</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-table-element">table</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-bgcolor-td">
+                <th><code>bgcolor</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-td-element">td</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-th-element">th</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-bgcolor-tr">
+                <th><code>bgcolor</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-tr-element">tr</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-border-img">
+                <th><code>border</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-img-element">img</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-border-object">
+                <th><code>border</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-object-element">object</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-cellpadding">
+                <th><code>cellpadding</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-table-element">table</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-cellspacing">
+                <th><code>cellspacing</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-table-element">table</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-char-col">
+                <th><code>char</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-col-element">col</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-char-tbody">
+                <th><code>char</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-tbody-element">tbody</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-thead-element">thead</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-tfoot-element">tfoot</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-char-td">
+                <th><code>char</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-td-element">td</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-th-element">th</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-char-tr">
+                <th><code>char</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-tr-element">tr</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-charoff-col">
+                <th><code>charoff</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-col-element">col</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-charoff-tbody">
+                <th><code>charoff</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-tbody-element">tbody</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-thead-element">thead</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-tfoot-element">tfoot</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-charoff-td">
+                <th><code>charoff</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-td-element">td</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-th-element">th</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-charoff-tr">
+                <th><code>charoff</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-tr-element">tr</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-charset-a">
+                <th><code>charset</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-a-element">a</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-charset-link">
+                <th><code>charset</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/document-metadata.html#the-link-element">link</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-classid">
+                <th><code>classid</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-object-element">object</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-clear">
+                <th><code>clear</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-br-element">br</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-code">
+                <th><code>code</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-object-element">object</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-codebase">
+                <th><code>codebase</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-object-element">object</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-codetype">
+                <th><code>codetype</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-object-element">object</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-color">
+                <th><code>color</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-hr-element">hr</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-compact-dl">
+                <th><code>compact</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-dl-element">dl</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-compact-menu">
+                <th><code>compact</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#the-menu-element">menu</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-compact-ol">
+                <th><code>compact</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-ol-element">ol</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-compact-ul">
+                <th><code>compact</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-ul-element">ul</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-coords">
+                <th><code>coords</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-a-element">a</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-datafld">
+                <th><code>datafld</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-a-element">a</a></code>; <code><a href="http://www.w3.org/TR/html401/struct/objects.html#edef-APPLET">applet</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-button-element">button</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-div-element">div</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-fieldset-element">fieldset</a></code>; <code><a href="http://www.w3.org/TR/html401/present/frames.html#edef-FRAME">frame</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-iframe-element">iframe</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-img-element">img</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-input-element">input</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-label-element">label</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-legend-element">legend</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-object-element">object</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-param-element">param</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-select-element">select</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-span-element">span</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-textarea-element">textarea</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-dataformatas">
+                <th><code>dataformatas</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-button-element">button</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-div-element">div</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-input-element">input</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-label-element">label</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-legend-element">legend</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-object-element">object</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-option-element">option</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-select-element">select</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-span-element">span</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-table-element">table</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-datapagesize">
+                <th><code>datapagesize</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-table-element">table</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-datasrc">
+                <th><code>datasrc</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-a-element">a</a></code>; <code><a href="http://www.w3.org/TR/html401/struct/objects.html#edef-APPLET">applet</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-button-element">button</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-div-element">div</a></code>; <code><a href="http://www.w3.org/TR/html401/present/frames.html#edef-FRAME">frame</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-iframe-element">iframe</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-img-element">img</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-input-element">input</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-label-element">label</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-legend-element">legend</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-object-element">object</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-option-element">option</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-select-element">select</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-span-element">span</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-table-element">table</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-textarea-element">textarea</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-declare">
+                <th><code>declare</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-object-element">object</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-event">
+                <th><code>event</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/scripting-1.html#the-script-element">script</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-for">
+                <th><code>for</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/scripting-1.html#the-script-element">script</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-frame">
+                <th><code><code><a href="http://www.w3.org/TR/html401/present/frames.html#edef-FRAME">frame</a></code></code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-table-element">table</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-frameborder">
+                <th><code>frameborder</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-iframe-element">iframe</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-height">
+                <th><code>height</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-td-element">td</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-th-element">th</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-hspace-embed">
+                <th><code>hspace</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-embed-element">embed</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-hspace-iframe">
+                <th><code>hspace</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-iframe-element">iframe</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-hspace-img">
+                <th><code>hspace</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-img-element">img</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-hspace-input">
+                <th><code>hspace</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-input-element">input</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-hspace-object">
+                <th><code>hspace</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-object-element">object</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-ismap">
+                <th><code>ismap</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-input-element">input</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-language">
+                <th><code>language</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/scripting-1.html#the-script-element">script</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-link">
+                <th><code><code><a href="http://www.w3.org/html/wg/drafts/html/master/document-metadata.html#the-link-element">link</a></code></code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-body-element">body</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-lowsrc">
+                <th><code>lowsrc</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-img-element">img</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-marginbottom">
+                <th><code>marginbottom</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-body-element">body</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-marginheight-body">
+                <th><code>marginheight</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-body-element">body</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-marginheight-iframe">
+                <th><code>marginheight</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-iframe-element">iframe</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-marginleft">
+                <th><code>marginleft</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-body-element">body</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-marginright">
+                <th><code>marginright</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-body-element">body</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-margintop">
+                <th><code>margintop</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-body-element">body</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-marginwidth-body">
+                <th><code>marginwidth</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-body-element">body</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-marginwidth-iframe">
+                <th><code>marginwidth</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-iframe-element">iframe</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-methods-a">
+                <th><code>methods</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-a-element">a</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-methods-link">
+                <th><code>methods</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/document-metadata.html#the-link-element">link</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-name-a">
+                <th><code>name</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-a-element">a</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-name-embed">
+                <th><code>name</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-embed-element">embed</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-name-img">
+                <th><code>name</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-img-element">img</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-name-option">
+                <th><code>name</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-option-element">option</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-nohref">
+                <th><code>nohref</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-area-element">area</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-noshade">
+                <th><code>noshade</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-hr-element">hr</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-nowrap">
+                <th><code>nowrap</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-td-element">td</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-th-element">th</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-profile">
+                <th><code>profile</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/document-metadata.html#the-head-element">head</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-rev-a">
+                <th><code>rev</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-a-element">a</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-rev-link">
+                <th><code>rev</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/document-metadata.html#the-link-element">link</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-rules">
+                <th><code>rules</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-table-element">table</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-scheme">
+                <th><code>scheme</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/document-metadata.html#the-meta-element">meta</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-scope">
+                <th><code>scope</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-td-element">td</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-scrolling">
+                <th><code>scrolling</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-iframe-element">iframe</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-shape">
+                <th><code>shape</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-a-element">a</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-size">
+                <th><code>size</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-hr-element">hr</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-standby">
+                <th><code>standby</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-object-element">object</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-summary">
+                <th><code>summary</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-table-element">table</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-target">
+                <th><code>target</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/document-metadata.html#the-link-element">link</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-text">
+                <th><code>text</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-body-element">body</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-type-li">
+                <th><code>type</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-li-element">li</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-type-param">
+                <th><code>type</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-param-element">param</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-type-ul">
+                <th><code>type</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-ul-element">ul</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-urn-a">
+                <th><code>urn</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-a-element">a</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-urn-link">
+                <th><code>urn</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/document-metadata.html#the-link-element">link</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-usemap">
+                <th><code>usemap</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-input-element">input</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-valign-col">
+                <th><code>valign</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-col-element">col</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-valign-tbody">
+                <th><code>valign</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-tbody-element">tbody</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-thead-element">thead</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-tfoot-element">tfoot</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-valign-td">
+                <th><code>valign</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-td-element">td</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-th-element">th</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-valign-tr">
+                <th><code>valign</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-tr-element">tr</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-valuetype">
+                <th><code>valuetype</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-param-element">param</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-version">
+                <th><code>version</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/the-root-element.html#the-html-element">html</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-vlink">
+                <th><code>vlink</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-body-element">body</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-vspace-embed">
+                <th><code>vspace</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-embed-element">embed</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-vspace-iframe">
+                <th><code>vspace</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-iframe-element">iframe</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-vspace-img">
+                <th><code>vspace</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-img-element">img</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-vspace-input">
+                <th><code>vspace</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-input-element">input</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-vspace-object">
+                <th><code>vspace</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#the-object-element">object</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-width-col">
+                <th><code>width</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-col-element">col</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-width-hr">
+                <th><code>width</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-hr-element">hr</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-width-pre">
+                <th><code>width</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-pre-element">pre</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-width-table">
+                <th><code>width</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-table-element">table</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
+            </tr>
+            <tr tabindex="-1" id="obs-att-width-td">
+                <th><code>width</code></th>
+                <td class="elements"><code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-td-element">td</a></code>; <code><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-th-element">th</a></code></td>
+                <td class="html4"></td>
+                <td class="html5"></td>
+                <td class="aria"></td>
+                <td class="uia-express"></td>
+                <td class="ia2"></td>
+                <td class="uia"></td>
+                <td class="atk"></td>
+                <td class="ax"></td>
+                <td class="comments"></td>
             </tr>
           </tbody>
         </table>
