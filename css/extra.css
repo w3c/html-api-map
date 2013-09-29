@@ -50,8 +50,8 @@ summary:hover, summary:focus, details[open] summary:hover, details[open] summary
 .show-hide-cols span {margin: 0.25em 0; vertical-align: middle;}
 .show-hide-cols button {background-color: #ddd; font-size: 80%; margin: 0 5px; padding-right: 15px;}
 .show-hide-cols .action {position: absolute; left: -9999em;}
-.show-col {background: url(../img/cross.png) no-repeat right center;}
-.hide-col {background: url(../img/tick.png) no-repeat right center;}
+.show-col {background: url(../img/tick.png) no-repeat right center;}
+.hide-col {background: url(../img/cross.png) no-repeat right center;}
 
 .general, .role, .states, .name, .actions, .objattrs, .textattrs, .relations,
 .ifaces, .children, .ctrltype, .ctrlpattern, .properties, .subrole, .roledesc {
