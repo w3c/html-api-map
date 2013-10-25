@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var blocked = inputs.blocked;
 
     var form = document.body.appendChild(document.createElement('form'));
-    form.style.cssText = 'position:fixed;padding:5px;top:1em;right:2em;font-family:sans-serif;font-size:0.8em;background-color:#ffffff;border: 1px solid #f00;';
+    form.style.cssText = 'position:fixed;padding:5px;top:45px;right:20px;font-family:sans-serif;font-size:0.8em;background-color:#ffffff;border: 1px solid #f00;';
     form.action = 'http://www.w3.org/Bugs/Public/enter_bug.cgi';
     form.target = '_blank';
     form.textContent = 'Select text and ';
