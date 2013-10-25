@@ -7297,7 +7297,7 @@
                             No interactive states like ATK_STATE_FOCUSABLE
                           </div>
                         </td>
-                        <td class="ax">AXEnabled="false"</td>
+                        <td class="ax">AXEnabled: NO</td>
                         <td class="comments">&nbsp;</td>
                     </tr>
                     <tr tabindex="-1" id="att-download">
@@ -7792,7 +7792,7 @@
                       Propagate to all descendants of the element.</td>
                       <td class="uia">Set <code>IsEnabled</code> to "false"</td>
                       <td class="atk">Not mapped</td>
-                      <td class="ax">boolean <code>AXEnabled=&quot;false&quot;</code></td>
+                      <td class="ax">AXEnabled: NO</td>
                       <td class="comments">&nbsp;</td>
                     </tr>
                     <tr tabindex="-1" id="att-ismap">
@@ -8366,7 +8366,7 @@
                             on the attribute value
                           </div>
                         </td>
-                        <td class="ax">boolean AXExpanded</td>
+                        <td class="ax">AXExpanded: YES|NO</td>
                         <td class="comments">Set properties on the <code><a href="#el-summary">summary</a></code> element.</td>
                     </tr>
                     <tr tabindex="-1" id="att-open-dialog">
@@ -8385,7 +8385,7 @@
                             on the attribute value
                           </div>
                         </td>
-                        <td class="ax">boolean AXExpanded</td>
+                        <td class="ax">AXExpanded: YES|NO</td>
                         <td class="comments"></td>
                     </tr>
                     <tr tabindex="-1" id="att-optimum">
@@ -8524,7 +8524,7 @@
                             <a href="#el-textarea">textarea</a> elements
                           </div>
                         </td>
-                        <td class="ax">AXEnabled="false"</td>
+                        <td class="ax">AXEnabled: NO</td>
                         <td class="comments">&nbsp;</td>
                     </tr>
                     <tr tabindex="-1" id="att-rel">
@@ -8565,7 +8565,7 @@
                             ATK_STATE_REQUIRED
                           </div>
                         </td>
-                        <td class="ax">AXRequired="true"</td>
+                        <td class="ax">AXRequired: YES</td>
                         <td class="comments">?</td>
                     </tr>
                     <tr tabindex="-1" id="att-reversed">
@@ -11640,7 +11640,7 @@
                 <p>The <code>summary</code> element should be mapped to a disclosure triangle role in accessibility APIs that have such a role. For example the Mac accessibility API includes the <code>AXDisclosureTriangle</code> role. In accessibility APIs that do not have such a fine grained role, the <code>summary</code> element should be mapped to a <code>button</code> role. The role mapping table contains <a href="#el-summary">recommended mappings for the summary element</a>.</p>
                 <p>The default accessible name  for the <code>summary</code> element is the text content of the <code>summary</code> element. </p>
                 <p>When the <code>details</code> element content is hidden, the state of the content should be reflected by an accessible state or property. </p>
-                <p><strong>Example 1:</strong> In the Mac accessibility API on the <code>summary</code> element (<code>AXDisclosureTriangle</code>), set <code>AXExpanded</code> property to <code>false</code>.  When the <code>details</code> element content is shown, on the <code>summary</code> element (<code>AXDisclosureTriangle</code>), set the<code>AXExpanded</code> property to <code>true</code>. The hidden and shown states of the <code>details</code> element content is reflected by the absence or presence of the <code><a href='#att-open-details'>open</a></code> attribute.</p>
+                <p><strong>Example 1:</strong> In the Mac accessibility API on the <code>summary</code> element (<code>AXDisclosureTriangle</code>), set <code>AXExpanded</code> property to <code>NO</code>.  When the <code>details</code> element content is shown, on the <code>summary</code> element (<code>AXDisclosureTriangle</code>), set the<code>AXExpanded</code> property to <code>YES</code>. The hidden and shown states of the <code>details</code> element content is reflected by the absence or presence of the <code><a href='#att-open-details'>open</a></code> attribute.</p>
                 <p><strong>Example 2:</strong> In the IA2 accessibility API on the <code>summary</code> element (<code>ROLE_SYSTEM_PUSHBUTTON</code>), set <code>STATE_SYSTEM_COLLAPSED</code>.  When the <code>details</code> element content is shown, on the <code>summary</code> element (<code>ROLE_SYSTEM_PUSHBUTTON</code>), set <code>STATE_SYSTEM_	      EXPANDED</code>. The hidden and shown states of the <code>details</code> element content is reflected by the absence or presence of the <code><a href='#att-open-details'>open</a></code> attribute. </p>
         </section>
         <section>
