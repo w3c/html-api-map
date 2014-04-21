@@ -134,17 +134,17 @@ $(document).ready(function() {
 			//add collapsible table columns functionality
 			var $showHideCols = $('<div class="show-hide-cols removeOnSave"><span>Show/Hide Columns: </span></div>');
 			for(var i=0, len=colHeaders.length; i < len; i++) {
-				var $showHideColButton = $('<button class="hide-col" title="Hide this column"><span class="action">Hide</span> ' + colHeaders[i] + '</button>').on('click', function() {
+				var $showHideColButton = $('<button class="hide-col" aria-pressed="false" title="Hide column"><span class="action">Hide</span> ' + colHeaders[i] + '</button>').on('click', function() {
 					var index = $(this).index() + 1;
 					if ($(this).attr('class') == 'hide-col') {
 						$('tr>th:nth-child('+index+')', $table).hide();
 						$('tr>td:nth-child('+index+')', $table).hide();
-						$(this).attr({'class': 'show-col', 'title': 'Show this column'});
+						$(this).attr({'class': 'show-col', 'aria-pressed': 'true', 'title': 'Show column'});
 						$('span', $(this)).text('Show');
 					} else {
 						$('tr>th:nth-child('+index+')', $table).show();
 						$('tr>td:nth-child('+index+')', $table).show();
-						$(this).attr({'class': 'hide-col', 'title': 'Hide this column'});
+						$(this).attr({'class': 'hide-col', 'aria-pressed': 'false', 'title': 'Hide column'});
 						$('span', $(this)).text('Hide');
 					}
 				});
