@@ -24,7 +24,6 @@ body code {
   color: #C83500;
 }
 code *:link, code *:visited {color: inherit;}
-a[href|="#el"], a[href|="#att"] {color: #C83500;}
 .warning {color: #900; font-size: x-large; font-weight: normal;}
 .map-table, .details {clear: left; margin-bottom: 2em;}
 .map-table tr:nth-child(2n+2) {background-color: #fafafa;}
