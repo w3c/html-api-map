@@ -48,7 +48,7 @@ $(document).ready(function() {
 			//store the table's column headers in array colHeaders
 			var colHeaders = [];
 			$('thead th', $table).each(function() {
-                var colHead = $(this).html().replace(/<a[^<]+>|<\/a>/g,'');
+                var colHead = $(this).html().replace(/<a [^>]+>|<\/a>/g,'');
 				colHeaders.push(colHead);
 			});
 			//remove first column header from array
@@ -59,7 +59,7 @@ $(document).ready(function() {
 				var $row = $(this),
 				//store a reference to the row header for use in details' summary and table caption
 				$caption = $('th', $row).html(),
-				$summary = $caption.replace(/<a[^>]+>|<\/a>/g,'');
+				$summary = $caption.replace(/<a [^>]+>|<\/a>/g,'');
 				//get the tr's @id
 				var id = $row.attr('id');
                 //store the row's @id
@@ -80,7 +80,7 @@ $(document).ready(function() {
 					rowHeaders.shift();
 					//remove and store "HTML elements" cell from rowCells array for use in details' summary and table caption
 					var relevantElsCaption = rowCells.shift(),
-					relevantElsSummary = relevantElsCaption.replace(/<a[^>]+>|<\/a>/g,'');
+					relevantElsSummary = relevantElsCaption.replace(/<a [^>]+>|<\/a>/g,'');
 				}
 				//create content for each <details> element; add row header's content to summary
 				var details = '<details class="map"><summary id="' + id + '">' + $summary;
