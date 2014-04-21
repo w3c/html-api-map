@@ -1,40 +1,35 @@
-body {line-height: 1.4;}
+body {line-height: 1.25;}
 caption {
-    text-align:left;
-    font-size: 120%;
-    font-weight:bold;
-    margin-bottom: 0.25em;
+  color: #555;
+  text-align:left;
+  font-size: 1.2em;
+  font-weight:bold;
+  margin: 0.75em 0 0.25em;
 }
 table {
-    width:100%;
-    border-collapse: collapse;
-    border: 1px solid #630;
-    font: normal 81.25% arial, Verdana, helvetica, sans-serif;
+  width:100%;
+  border-collapse: collapse;
+  border: 1px solid #999;
 }
 th, td {
-    text-align: left;
-    vertical-align: top;
-    padding: 0.3em;
-    border-collapse: collapse;
-    border: 1px solid #630;
+  text-align: left;
+  vertical-align: top;
+  padding: 0.3em;
+  border-collapse: collapse;
+  border: 1px solid #999;
 }
-th code, td code {font-size: 123%;}
-code {
-  color: #D93B00;
+th {background-color: #eee;}
+body code {
+  font-size: 1.2308em;
+  color: #C83500;
 }
-code *:link, code *:visited {
-  color: inherit;
-}
-a[href|="#el"], a[href|="#att"] {
-  color: #D93B00;
-  font-family: monospace;
-  font-size: larger;
-}
-.warning {color: #990000; font-size: x-large; font-weight: normal;}
+code *:link, code *:visited {color: inherit;}
+a[href|="#el"], a[href|="#att"] {color: #C83500;}
+.warning {color: #900; font-size: x-large; font-weight: normal;}
 .map-table, .details {clear: left; margin-bottom: 2em;}
-.map-table thead {background-color: #ddd;}
 .map-table tr:nth-child(2n+2) {background-color: #fafafa;}
 .map-table tbody th {max-width: 200px;}
+.map-table tr:focus {outline: none;}
 details, summary {display: block;}
 details {border-bottom: 1px solid #ccc; padding: 0.5em;}
 summary {padding: 0.25em;background: #fff url(../img/plus.png) no-repeat 0.5em center; padding: 0.25em 0.25em 0.25em 2em;}
@@ -48,7 +43,7 @@ summary:hover, summary:focus, details[open] summary:hover, details[open] summary
 .switch-view {font-size: 100%; margin-bottom: 1.5em;}
 .show-hide-cols {border: 1px solid #ccc; float: left; margin-bottom: 0.5em; padding: 10px;}
 .show-hide-cols span {margin: 0.25em 0; vertical-align: middle;}
-.show-hide-cols button {background-color: #ddd; font-size: 80%; margin: 0 5px; padding-right: 15px;}
+.show-hide-cols button {background-color: #eee; font-size: 80%; margin: 0 5px; padding-right: 15px;}
 .show-hide-cols .action {position: absolute; left: -9999em;}
 .show-col {background: url(../img/tick.png) no-repeat right center;}
 .hide-col {background: url(../img/cross.png) no-repeat right center;}
@@ -56,7 +51,6 @@ summary:hover, summary:focus, details[open] summary:hover, details[open] summary
 .general, .role, .states, .name, .actions, .objattrs, .textattrs, .relations,
 .ifaces, .children, .ctrltype, .ctrlpattern, .properties, .subrole, .roledesc {
     margin: 0 0 6px;
-    line-height: 1.3;
 }
 
 .type {
