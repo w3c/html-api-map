@@ -8,8 +8,8 @@ $(document).ready(function() {
 			$detailsContainer = $('<div class="details" id="' + $table.attr('id') + '-details"></div>');
 			//insert $detailsContainer after the table
 			$tableContainer.after($detailsContainer);
-            //array to store table rows' @ids
-            var ids = [];
+			//array to store table rows' @ids
+			var ids = [];
 			//add switch to view as single table or details/summary
 			$viewSwitch = $('<button class="switch-view removeOnSave">View as a single table</button>').on('click', function() {
 				//array to store summary/tr @ids
@@ -18,7 +18,7 @@ $(document).ready(function() {
 					$detailsContainer.hide();
 					//add <summary> @id to ids array and remove @id from summary
 					$('summary', $detailsContainer).each(function() {
-						$(this).attr('id', '');
+						$(this).removeAttr('id');
 					});
 					$tableContainer.show();
 					//add relevant @id to tr
@@ -34,7 +34,7 @@ $(document).ready(function() {
 					$tableContainer.hide();
 					//add tr @id to ids array and remove @id from tr
 					$('tbody tr', $tableContainer).each(function() {
-						$(this).attr('id', '');
+						$(this).removeAttr('id');
 					});
 					$detailsContainer.show();
 					//add relevant @id to summary
@@ -62,10 +62,10 @@ $(document).ready(function() {
 				$summary = $caption.replace(/<a [^>]+>|<\/a>/g,'');
 				//get the tr's @id
 				var id = $row.attr('id');
-                //store the row's @id
-                ids.push(id);
-                //empty the tr's @id since same id will be used in the relevant summary element
-                $row.attr('id','');
+				//store the row's @id
+				ids.push(id);
+				//remove the tr's @id since same id will be used in the relevant summary element
+				$row.removeAttr('id');
 				//store the row's cells in array rowCells
 				rowCells = [];
 				//add row cells to array rowCells for use in the details' table
