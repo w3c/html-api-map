@@ -5,7 +5,7 @@ $(document).ready(function() {
 			//store a reference to the table
 			var $table = $('table', $tableContainer),
 			//create a container div to hold all the details element and insert after table
-			$detailsContainer = $('<div class="details" id="' + $table.attr('id') + '-details"></div>');
+			$detailsContainer = $('<div class="details removeOnSave" id="' + $table.attr('id') + '-details"></div>');
 			//insert $detailsContainer after the table
 			$tableContainer.after($detailsContainer);
 			//array to store table rows' @ids
@@ -83,7 +83,7 @@ $(document).ready(function() {
 					relevantElsSummary = relevantElsCaption.replace(/<a [^>]+>|<\/a>/g,'');
 				}
 				//create content for each <details> element; add row header's content to summary
-				var details = '<details class="map"><summary id="' + id + '">' + $summary;
+				var details = '<details class="map removeOnSave"><summary id="' + id + '">' + $summary;
 				//if attributes mapping table, append relevant elements to summary
 				if ($table.hasClass('attributes')) {
 					details += ' [' + relevantElsSummary + ']';
